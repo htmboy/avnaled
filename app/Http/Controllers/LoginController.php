@@ -26,7 +26,7 @@ class LoginController extends Controller
          if(Auth::attempt($user, $is_remember)){
              return redirect('/backstage/index');
          }
-        return Redirect::back();
+        return Redirect::back()->withErrors("用户名或密码不匹配");
     }
 
     public function logout()
