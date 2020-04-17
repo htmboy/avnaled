@@ -46,7 +46,7 @@ create table avna_product(
 	id tinyint unsigned not null primary key auto_increment,
 	cat_id tinyint unsigned not null,
 	title varchar(255) not null,
-	Thumbnail varchar(255) not null,
+	thumbnail varchar(255) not null,
 	`number` varchar(255) not null,
 	size varchar(255) not null,
 	color varchar(255) not null,

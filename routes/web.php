@@ -39,7 +39,10 @@ Route::post('/user/setting', 'UserController@settingStore');
 Route::get('/backstage/product/category', 'Product\CategoryController@index');
 Route::post('/backstage/product/category', 'Product\CategoryController@add');
 Route::post('/backstage/product/category/edit', 'Product\CategoryController@edit');
-Route::post('/backstage/product/category/del', 'Product\CategoryController@del');
 
 // 产品表
-Route::get('/backstage/product/', 'Product/ProductController@index');
+Route::get('/backstage/product/', 'Product\ProductController@index');
+Route::get('/backstage/product/add', 'Product\ProductController@addView');
+Route::post('/backstage/product/add', 'Product\ProductController@add');
+Route::post('/backstage/product/edit', 'Product\ProductController@edit');
+Route::post('/backstage/product/del', 'Product\ProductController@del');

@@ -710,12 +710,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>产品类型</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">新增</a></li>
-            </ol>
+            <h1>产品列表</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -727,9 +722,8 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">DataTable with minimal features & hover style</h3>
                 <div class="card-tools">
-                    <button type="button" class="btn btn-block btn-primary btn-sm">新增</button>
+                    <a href="/backstage/product/add" class="btn btn-block btn-primary btn-sm">新增</a>
                 </div>
             </div>
             <!-- /.card-header -->
