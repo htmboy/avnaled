@@ -21,7 +21,8 @@ class LoginController extends Controller
 
          $username = $request->get('username');
          $password = $request->get('password');
-         $user = compact('username', 'password');
+         $active = 1;
+         $user = compact('username', 'password', 'active');
          $is_remember = boolval($request->get('is_remember'));
          if(Auth::attempt($user, $is_remember)){
              return redirect('/backstage/index');
@@ -31,6 +32,6 @@ class LoginController extends Controller
 
     public function logout()
     {
-        return null;
+        return Auth::logout();
     }
 }

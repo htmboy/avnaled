@@ -21,8 +21,9 @@ class RegisterController extends Controller
         $name = $request->get('name');
         $username = $request->get('username');
         $password = bcrypt($request->get('password'));
+        $active = 1;
         // compact 打包成数组
-        $user = User::create(compact('name','username', 'password'));
+        User::create(compact('name','username', 'password', 'active'));
 
         // 渲染
         return redirect('/backstage/login');

@@ -33,3 +33,13 @@ Route::get('/backstage/logout', 'LoginController@logout');
 Route::get('/user/setting', 'UserController@setting');
 // 个人设置行为
 Route::post('/user/setting', 'UserController@settingStore');
+
+
+// 产品类目表
+Route::get('/backstage/product/category', 'Product\CategoryController@index');
+Route::post('/backstage/product/category', 'Product\CategoryController@add');
+Route::post('/backstage/product/category/edit', 'Product\CategoryController@edit');
+Route::post('/backstage/product/category/del', 'Product\CategoryController@del');
+
+// 产品表
+Route::get('/backstage/product/', 'Product/ProductController@index');
