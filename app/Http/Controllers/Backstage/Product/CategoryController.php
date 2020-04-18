@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Product;
+namespace App\Http\Controllers\Backstage\Product;
 
 use App\Http\Requests\CategoryPost;
 use App\ProductCategory;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Backstage\Controller;
 
 class CategoryController extends Controller
 {

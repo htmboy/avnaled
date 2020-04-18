@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backstage;
 
 use App\Http\Requests\RegisterPost;
 use App\User;
-use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {

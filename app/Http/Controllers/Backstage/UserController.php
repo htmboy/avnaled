@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backstage;
 
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {

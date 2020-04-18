@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backstage;
 
 use App\Http\Requests\LoginPost;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Routing\Controller as BaseController;
 
-class LoginController extends Controller
+class LoginController extends BaseController
 {
 
     public function index()

@@ -23,8 +23,8 @@ create table avna_carousel(
 	title varchar(255) not null,
 	alt varchar(255) not null,
 	site varchar(255) not null,
-	created_time timestamp not null,
-	updated_time timestamp not null,
+	created_at timestamp not null,
+	updated_at timestamp not null,
 	is_show tinyint unsigned not null,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
@@ -60,8 +60,8 @@ create table avna_product(
 	material varchar(255) not null,
 	characteristic varchar(255) not null,
 	content tinytext not null,
-	created_time timestamp not null,
-	updated_time timestamp not null,
+	created_at timestamp not null,
+	updated_at timestamp not null,
 	is_show tinyint unsigned not null,
 	sort tinyint unsigned not null,
 	cat_sort tinyint unsigned not null
@@ -75,8 +75,8 @@ create table avna_product_picture(
 	title varchar(255) not null,
 	alt varchar(255) not null,
 	site varchar(255) not null,
-	created_time timestamp not null,
-	updated_time timestamp not null,
+	created_at timestamp not null,
+	updated_at timestamp not null,
 	is_show tinyint unsigned not null,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
@@ -86,8 +86,8 @@ create table avna_product_picture(
 create table avna_article_category(
 	id tinyint unsigned not null primary key auto_increment,
 	name varchar(255) not null,
-	created_time timestamp not null,
-	updated_time timestamp not null,
+	created_at timestamp not null,
+	updated_at timestamp not null,
     is_show tinyint unsigned not null,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
@@ -101,8 +101,8 @@ create table avna_article(
 	author varchar(255) not null,
 	frequency tinyint unsigned not null, 
 	content tinytext not null,
-	created_time timestamp not null,
-	updated_time timestamp not null,
+	created_at timestamp not null,
+	updated_at timestamp not null,
     is_show tinyint unsigned not null,
 	sort tinyint unsigned not null,
 	cat_sort tinyint unsigned not null
@@ -116,8 +116,8 @@ create table avna_product_cover(
 	title varchar(255) not null,
 	alt varchar(255) not null,
 	site varchar(255) not null,
-	created_time timestamp not null,
-	updated_time timestamp not null,
+	created_at timestamp not null,
+	updated_at timestamp not null,
     is_show tinyint unsigned not null,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;

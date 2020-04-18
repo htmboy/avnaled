@@ -709,7 +709,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>新增产品信息</h1>
+            <h1>新增产品信息
+              @if($errors->any())
+                {{$errors->first()}}
+              @endif
+            </h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -724,12 +728,14 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">产品信息</h3>
+                <h3 class="card-title">产品信息
+
+                </h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form">
-
+              <form action="" method="post" enctype="multipart/form-data">
+                {{csrf_field()}}
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-1"></div>
@@ -791,7 +797,7 @@
 
                       <div class="form-group">
                         <label>使用寿命</label>
-                        <input type="text" name="lift" class="form-control">
+                        <input type="text" name="life" class="form-control">
                       </div>
 
                       <div class="form-group">
@@ -818,7 +824,7 @@
                         <label for="exampleInputFile">产品缩率主图</label>
                         <div class="input-group">
                           <div class="custom-file">
-                            <input type="file" name="" class="custom-file-input" id="exampleInputFile">
+                            <input type="file" name="thumbnail" class="custom-file-input" id="exampleInputFile">
                             <label class="custom-file-label" for="exampleInputFile">选择图片</label>
                           </div>
                           <div class="input-group-append">
