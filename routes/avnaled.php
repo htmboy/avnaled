@@ -28,7 +28,8 @@ Route::prefix('backstage')->group(function(){
     Route::get('/product', 'Backstage\Product\ProductController@index');
     Route::get('/product/add', 'Backstage\Product\ProductController@addView');
     Route::post('/product/add', 'Backstage\Product\ProductController@addProduct');
-    Route::post('/product/edit', 'Backstage\Product\ProductController@edit');
-    Route::post('/product/del', 'Backstage\Product\ProductController@del');
+    Route::get('/product/{product}/edit', 'Backstage\Product\ProductController@editView');
+    Route::put('/product/{product}/edit', 'Backstage\Product\ProductController@editProduct');
+    Route::get('/product/{product}/del', 'Backstage\Product\ProductController@del');
 
 });

@@ -28,6 +28,7 @@ class ProductPost extends FormRequest
             'title' => 'required',
             'thumbnail' => 'required',
             'number' => 'required',
+            'watts' => 'required',
             'size' => 'required',
             'color' => 'required',
             'package' => 'required',

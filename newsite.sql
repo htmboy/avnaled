@@ -48,6 +48,7 @@ create table avna_product(
 	title varchar(255) not null,
 	thumbnail varchar(255) not null,
 	`number` varchar(255) not null,
+	watts varchar(20) not null,
 	size varchar(255) not null,
 	color varchar(255) not null,
 	package varchar(255) not null,

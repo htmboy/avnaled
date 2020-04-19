@@ -760,6 +760,10 @@
                         <label>产品型号</label>
                         <input type="text" name="number" class="form-control">
                       </div>
+                      <div class="form-group">
+                        <label>产品瓦数</label>
+                        <input type="text" name="watts" class="form-control">
+                      </div>
 
                       <div class="form-group">
                         <label>产品尺寸</label>
@@ -834,7 +838,7 @@
                       </div>
 
                         <div class="input-group">
-                      <img class="img-fluid pad" src="../dist/img/photo2.png" alt="Photo">
+                      <img class="img-fluid pad" src="/backstage/dist/img/photo2.png" alt="Photo">
                         </div>
                       </div>
                     </div>

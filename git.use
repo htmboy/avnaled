@@ -1,3 +1,20 @@
+…or create a new repository on the command line
+
+echo "# php" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/htmboy/avnaled.git
+git push -u origin master
+
+
+…or push an existing repository from the command line
+
+git add *
+git commit -m "comment"
+git remote add origin https://github.com/htmboy/avnaled.git
+git push -u origin master
+
 git强制覆盖本地命令（单条执行）：
     git fetch --all && git reset --hard origin/master && git pull
 
