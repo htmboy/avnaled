@@ -73,12 +73,10 @@ create table avna_product(
 create table avna_product_gallery(
 	id tinyint unsigned not null primary key auto_increment,
 	pro_id tinyint unsigned not null,
-	title varchar(255) not null,
-	alt varchar(255) not null,
-	site varchar(255) not null,
+	gallery varchar(255) not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
-	is_show tinyint unsigned not null,
+	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 # 
@@ -89,7 +87,7 @@ create table avna_article_category(
 	name varchar(255) not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
-    is_show tinyint unsigned not null,
+  is_show tinyint unsigned not null,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 # 

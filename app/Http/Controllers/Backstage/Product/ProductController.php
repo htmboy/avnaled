@@ -9,7 +9,9 @@ use App\Models\ProductCategory;
 use App\Models\ProductGallery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Backstage\Controller;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
+use Ramsey\Uuid\Uuid;
 
 class ProductController extends Controller
 {
@@ -83,8 +85,8 @@ class ProductController extends Controller
 
     public function gallery($pro_id)
     {
-        $gallery = ProductGallery::where('pro_id', $pro_id)->orderBy('sort', 'desc')->get();
-        return view('product.gallery', compact('gallery', 'pro_id'));
+        $galleries = ProductGallery::where('pro_id', $pro_id)->orderBy('sort', 'desc')->get();
+        return view('product.gallery', compact('galleries', 'pro_id'));
     }
 
     public function galleryAddView($pro_id)
@@ -95,16 +97,17 @@ class ProductController extends Controller
     public function galleryAdd(ProductGalleryPost $request, $pro_id)
     {
         // 处理图片
-        $file = $request->file('gallery');
+        $file = $request->file('file');
         $path = date('Ym', time());
-        $name = date('dHis', time()).$file->getClientOriginalExtension();
+
+        $name = uniqid().'.'.$file->getClientOriginalExtension();
         $mimeType = $file->getClientMimeType();
         // 验证图片 type
         $gallery = $file->storeAs('products/'.$path, $name);
-        $new_gallery = $request->only('cat_id', 'title', 'number', 'watts','size', 'color',
-            'package', 'weight', 'voltage', 'angle', 'waterproof', 'life', 'distance', 'material',
-            'characteristic', 'content');
-        return null;
+
+        $sort = ProductGallery::where('pro_id', $pro_id)->count()+1;
+        ProductGallery::create(compact('pro_id', 'gallery', 'sort'));
+        return Response::HTTP_CREATED;
     }
 
     public function galleryUpdate()
@@ -112,8 +115,10 @@ class ProductController extends Controller
         return null;
     }
 
-    public function galleryDel()
+    public function galleryDel($pro_id, ProductGallery $productGallery)
     {
-        return null;
+        Storage::delete($productGallery->gallery);
+        $productGallery->delete();
+        return redirect('/backstage/product/gallery/'.$pro_id);
     }
 }

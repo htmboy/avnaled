@@ -35,7 +35,7 @@ Route::prefix('backstage')->group(function(){
     Route::get('/product/gallery/{pro_id}/add', 'Backstage\Product\ProductController@galleryAddView');
     Route::post('/product/gallery/{pro_id}/add', 'Backstage\Product\ProductController@galleryAdd');
     Route::put('/product/gallery/{pro_id}/edit', 'Backstage\Product\ProductController@galleryUpdate');
-    Route::get('/product/gallery/{pro_id}/del', 'Backstage\Product\ProductController@galleryDel');
+    Route::get('/product/gallery/{pro_id}/{productGallery}/del', 'Backstage\Product\ProductController@galleryDel');
 
 
 });

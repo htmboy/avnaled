@@ -24,7 +24,7 @@ class ProductGalleryPost extends FormRequest
     public function rules()
     {
         return [
-            'gallery' => 'required',
+            'file' => 'required',
         ];
     }
 }

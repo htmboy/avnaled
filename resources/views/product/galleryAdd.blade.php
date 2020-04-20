@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | General Form Elements</title>
+  <title>AdminLTE 3 | Blank Page</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta name="pro_id" content="{{ $pro_id }}">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,14 +13,15 @@
   <link rel="stylesheet" href="/backstage/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-  <!-- Theme style -->
+  <!-- overlayScrollbars -->
   <link rel="stylesheet" href="/backstage/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <script src="/backstage/ueditor/ueditor.config.js"></script>
-    <script src="/backstage/ueditor/ueditor.all.min.js"></script>
+  <link rel="stylesheet" href="/backstage/webuploader/webuploader.css">
+  <link rel="stylesheet" href="/backstage/css/productGalleryAdd.css">
 </head>
 <body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -351,8 +354,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Forms
@@ -361,7 +364,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../forms/general.html" class="nav-link active">
+                <a href="../forms/general.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>General Elements</p>
                 </a>
@@ -521,8 +524,8 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
               <i class="nav-icon far fa-plus-square"></i>
               <p>
                 Extras
@@ -591,7 +594,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../examples/blank.html" class="nav-link">
+                <a href="../examples/blank.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Blank Page</p>
                 </a>
@@ -709,11 +712,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>添加图片
-              @if($errors->any())
-                {{$errors->first()}}
-              @endif
-            </h1>
+            <h1>添加图片</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/backstage/product/gallery/{{$pro_id}}">返回</a></li>
+            </ol>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -721,121 +725,68 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-12">
-            <!-- general form elements -->
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">产品信息
 
-                </h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form action="" method="post" enctype="multipart/form-data">
-                {{csrf_field()}}
-                <div class="card-body">
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Title</h3>
 
-                    <div class="row">
-                      <div class="col-sm-1"></div>
-                    <div class="col-sm-5">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>图片标题</label>
-                        <input type="text" name="number" class="form-control">
-                      </div>
-
-                    </div>
-                    <div class="col-sm-5">
-                      <!-- text input -->
-                      <div class="form-group">
-                        <label>照射角度</label>
-                        <input type="text" name="angle" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <label>防水等级</label>
-                        <input type="text" name="waterproof" class="form-control">
-                      </div>
-
-                      <div class="form-group">
-                        <label>使用寿命</label>
-                        <input type="text" name="life" class="form-control">
-                      </div>
-
-                      <div class="form-group">
-                        <label>照射距离</label>
-                        <input type="text" name="distance" class="form-control">
-                      </div>
-
-                      <div class="form-group">
-                        <label>外壳材质</label>
-                        <input type="text" name="material" class="form-control">
-                      </div>
-
-                      <div class="form-group">
-                        <label>产品特性</label>
-                        <input type="text" name="characteristic" class="form-control">
-                      </div>
-                    </div>
-                      <div class="col-sm-1"></div>
-                    </div>
-
-
-                      <div class="row">
-                        <div class="col-sm-3"></div>
-                        <div class="col-sm-6">
-                      <div class="form-group">
-                        <label for="exampleInputFile">产品缩率主图</label>
-                        <div class="input-group">
-                          <div class="custom-file">
-                            <input type="file" name="thumbnail" class="custom-file-input" id="exampleInputFile">
-                            <label class="custom-file-label" for="exampleInputFile">选择图片</label>
-                          </div>
-                          <div class="input-group-append">
-                            <span class="input-group-text" id="">说明</span>
-                          </div>
-                        </div>
-                      </div>
-
-                        <div class="input-group">
-                      <img class="img-fluid pad" src="/backstage/dist/img/photo2.png" alt="Photo">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                  <div class="col-sm-1"></div>
-                    <div class="col-sm-10">
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">内容</label>
-                        <script id="editor" name="content" type="text/plain">
-
-                        </script>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">新增</button>
-                  <a href="/backstage/product" class="btn btn-default">取消</a>
-                </div>
-              </form>
-            </div>
-            <!-- /.card -->
-
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
+            <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fas fa-times"></i></button>
           </div>
-          <!--/.col (left) -->
         </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <div id="uploader" class="wu-example">
+                <div class="queueList">
+                  <div id="dndArea" class="placeholder">
+                    <div id="filePicker" class="webuploader-container">
+                      <div class="webuploader-pick">点击选择图片</div>
+                      <div id="rt_rt_1e6bl0ubk1uro1sao1madn3m1lh81" style="position: absolute; inset: 0px auto auto 448px; width: 168px; height: 44px; overflow: hidden;">
+                        <input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*">
+                        <label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></label>
+                      </div>
+                    </div>
+                    <p>或将照片拖到这里，单次最多可选10张</p>
+                  </div>
+                  <ul class="filelist"></ul></div>
+                <div class="statusBar" style="display:none;">
+                  <div class="progress" style="display: none;">
+                    <span class="text">0%</span>
+                    <span class="percentage" style="width: 0%;"></span>
+                  </div><div class="info">共0张（0B），已上传0张</div>
+                  <div class="btns">
+                    <div id="filePicker2" class="webuploader-container">
+                      <div class="webuploader-pick">继续添加</div>
+                      <div id="rt_rt_1e6bl0ubu1kgm1bafll4nur6o76" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; overflow: hidden;">
+                        <input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*">
+                        <label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></label>
+                      </div>
+                    </div>
+                    <div class="uploadBtn state-pedding">开始上传</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          Footer
+        </div>
+        <!-- /.card-footer-->
+      </div>
+      <!-- /.card -->
+
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.0.4
@@ -856,21 +807,10 @@
 <script src="/backstage/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/backstage/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- bs-custom-file-input -->
-<script src="/backstage/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/backstage/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="/backstage/dist/js/demo.js"></script>
-<script type="text/javascript">
-$(document).ready(function () {
-  bsCustomFileInput.init();
-});
-</script>
-
-
-<script>
-    var ue = UE.getEditor('editor');
-</script>
+<script src="/backstage/webuploader/webuploader.js"></script>
+<script src="/backstage/js/productGalleryAdd.js"></script>
 </body>
 </html>
