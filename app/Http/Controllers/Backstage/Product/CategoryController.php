@@ -28,6 +28,7 @@ class CategoryController extends Controller
         return null;
     }
 
+    // 产品分类表不提供删除，只提供软删除
     public function del()
     {
         return null;

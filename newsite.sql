@@ -70,7 +70,7 @@ create table avna_product(
 #
 #
 -- 产品轮播图表
-create table avna_product_picture(
+create table avna_product_gallery(
 	id tinyint unsigned not null primary key auto_increment,
 	pro_id tinyint unsigned not null,
 	title varchar(255) not null,
@@ -111,7 +111,7 @@ create table avna_article(
 #
 #
 -- 文章封面图表
-create table avna_product_cover(
+create table avna_article_cover(
 	id tinyint unsigned not null primary key auto_increment,
 	art_id tinyint unsigned not null,
 	title varchar(255) not null,

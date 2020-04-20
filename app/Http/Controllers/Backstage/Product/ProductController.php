@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Backstage\Product;
 
+use App\Http\Requests\ProductGalleryPost;
 use App\Http\Requests\ProductPost;
-use App\Product;
-use App\ProductCategory;
+use App\Models\Product;
+use App\Models\ProductCategory;
+use App\Models\ProductGallery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Backstage\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -54,8 +56,6 @@ class ProductController extends Controller
     {
 
         if($request->hasFile('thumbnail')){
-
-
             // 处理图片
             $file = $request->file('thumbnail');
             $path = date('Ym', time());
@@ -74,9 +74,46 @@ class ProductController extends Controller
         return redirect('backstage/product/'.$product->id.'/edit');
     }
 
+
     public function del(Product $product)
     {
         $product->delete();
         return redirect('/backstage/product');
+    }
+
+    public function gallery($pro_id)
+    {
+        $gallery = ProductGallery::where('pro_id', $pro_id)->orderBy('sort', 'desc')->get();
+        return view('product.gallery', compact('gallery', 'pro_id'));
+    }
+
+    public function galleryAddView($pro_id)
+    {
+        return view('product.galleryAdd', compact('pro_id'));
+    }
+
+    public function galleryAdd(ProductGalleryPost $request, $pro_id)
+    {
+        // 处理图片
+        $file = $request->file('gallery');
+        $path = date('Ym', time());
+        $name = date('dHis', time()).$file->getClientOriginalExtension();
+        $mimeType = $file->getClientMimeType();
+        // 验证图片 type
+        $gallery = $file->storeAs('products/'.$path, $name);
+        $new_gallery = $request->only('cat_id', 'title', 'number', 'watts','size', 'color',
+            'package', 'weight', 'voltage', 'angle', 'waterproof', 'life', 'distance', 'material',
+            'characteristic', 'content');
+        return null;
+    }
+
+    public function galleryUpdate()
+    {
+        return null;
+    }
+
+    public function galleryDel()
+    {
+        return null;
     }
 }
