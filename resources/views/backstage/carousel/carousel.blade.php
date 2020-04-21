@@ -48,7 +48,7 @@
           <div class="card">
             <div class="card-header">
                 <div class="card-tools">
-                    <a href="/backstage/product/add" class="btn btn-block btn-primary btn-sm">新增</a>
+                    <a href="/backstage/carousel/add" class="btn btn-block btn-primary btn-sm">新增</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -68,7 +68,7 @@
                 @foreach($carousels as $carousel)
                 <tr>
                   <td>{{$carousel->id}}</td>
-                  <td><img width="50" src="{{$carousel->site}}"></td>
+                  <td><img width="50" src="/storage/{{$carousel->site}}"></td>
                   <td>{{$carousel->title}}</td>
                   <td>{{$carousel->alt}}</td>
                   <td>{{$carousel->sort}}</td>

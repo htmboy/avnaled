@@ -23,11 +23,12 @@ Route::prefix('backstage')->group(function(){
     Route::put('/setting', 'Backstage\SettingController@edit');
 
     // 轮播图
-    Route::get('/carousel', 'Backstage\SettingController@index');
-    Route::get('/carousel/add', 'Backstage\SettingController@addView');
-    Route::post('/carousel/add', 'Backstage\SettingController@addCarousel');
-    Route::put('/carousel/{carousel}/edit', 'Backstage\SettingController@edit');
-    Route::put('/carousel/{carousel}/del', 'Backstage\SettingController@del');
+    Route::get('/carousel', 'Backstage\CarouselController@index');
+    Route::get('/carousel/add', 'Backstage\CarouselController@addView');
+    Route::post('/carousel/add', 'Backstage\CarouselController@addCarousel');
+    Route::get('/carousel/{carousel}/edit', 'Backstage\CarouselController@editView');
+    Route::put('/carousel/{carousel}/edit', 'Backstage\CarouselController@editCarousel');
+    Route::get('/carousel/{carousel}/del', 'Backstage\CarouselController@del');
 
     // 产品
     Route::get('/product', 'Backstage\Product\ProductController@index');
