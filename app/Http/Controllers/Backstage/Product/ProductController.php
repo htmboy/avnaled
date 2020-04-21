@@ -11,20 +11,19 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Backstage\Controller;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
-use Ramsey\Uuid\Uuid;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::orderBy('sort', 'desc')->get();
-        return view('product.product', compact('products'));
+        $products = Product::orderBy('sort', 'desc')->paginate(15);
+        return view('backstage.product.product', compact('products'));
     }
 
     public function addView()
     {
         $categories = ProductCategory::orderBy('sort', 'desc')->get();
-        return view('product.productAdd', compact('categories'));
+        return view('backstage.product.productAdd', compact('categories'));
     }
 
     public function addProduct(Request $request)
@@ -32,12 +31,12 @@ class ProductController extends Controller
         // 处理图片
         $file = $request->file('thumbnail');
         $path = date('Ym', time());
-        $name = date('dHis', time()).$file->getClientOriginalExtension();
+        $name = date('dHis', time()).'.'.$file->getClientOriginalExtension();
         $mimeType = $file->getClientMimeType();
         // 验证图片 type
         $thumbnail = $file->storeAs('products/'.$path, $name);
 
-        $product = $request->only('cat_id', 'title', 'thumbnail', 'number', 'watts', 'size', 'color',
+        $product = $request->only('cat_id', 'seo_title', 'seo_keyword', 'seo_description', 'title', 'thumbnail', 'number', 'watts', 'size', 'color',
             'package', 'weight', 'voltage', 'angle', 'waterproof', 'life', 'distance', 'material',
             'characteristic', 'content');
         $product['thumbnail'] = $thumbnail;
@@ -51,7 +50,7 @@ class ProductController extends Controller
     {
 
         $categories = ProductCategory::orderBy('sort', 'desc')->get();
-        return view('product.productEdit', compact('product', 'categories'));
+        return view('backstage.product.productEdit', compact('product', 'categories'));
     }
 
     public function editProduct(Product $product, Request $request)
@@ -61,7 +60,7 @@ class ProductController extends Controller
             // 处理图片
             $file = $request->file('thumbnail');
             $path = date('Ym', time());
-            $name = date('dHis', time()).$file->getClientOriginalExtension();
+            $name = date('dHis', time()).'.'.$file->getClientOriginalExtension();
             $mimeType = $file->getClientMimeType();
             // 验证图片 type
             $thumbnail = $file->storeAs('products/'.$path, $name);
@@ -86,12 +85,12 @@ class ProductController extends Controller
     public function gallery($pro_id)
     {
         $galleries = ProductGallery::where('pro_id', $pro_id)->orderBy('sort', 'desc')->get();
-        return view('product.gallery', compact('galleries', 'pro_id'));
+        return view('backstage.product.gallery', compact('galleries', 'pro_id'));
     }
 
     public function galleryAddView($pro_id)
     {
-        return view('product.galleryAdd', compact('pro_id'));
+        return view('backstage.product.galleryAdd', compact('pro_id'));
     }
 
     public function galleryAdd(ProductGalleryPost $request, $pro_id)

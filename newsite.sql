@@ -25,7 +25,7 @@ create table avna_carousel(
 	site varchar(255) not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
-	is_show tinyint unsigned not null,
+	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
@@ -36,7 +36,7 @@ create table avna_product_category(
 	name varchar(255) not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
-	is_show tinyint unsigned not null default 2,
+	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
@@ -45,6 +45,9 @@ create table avna_product_category(
 create table avna_product(
 	id tinyint unsigned not null primary key auto_increment,
 	cat_id tinyint unsigned not null,
+	seo_title varchar(128) not null,
+	seo_keywords varchar(128) not null,
+	seo_description varchar(255) not null,
 	title varchar(255) not null,
 	thumbnail varchar(255) not null,
 	`number` varchar(255) not null,
@@ -87,7 +90,7 @@ create table avna_article_category(
 	name varchar(255) not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
-  is_show tinyint unsigned not null,
+	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 # 
@@ -96,13 +99,17 @@ create table avna_article_category(
 create table avna_article(
 	id int unsigned not null primary key auto_increment,
 	cat_id tinyint unsigned not null,
+	seo_title varchar(128) not null,
+	seo_keywords varchar(128) not null,
+	seo_description varchar(255) not null,
 	title varchar(255) not null,
+	thumbnail varchar(255) not null,
 	author varchar(255) not null,
-	frequency tinyint unsigned not null, 
+	clicks tinyint unsigned not null,
 	content tinytext not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
-    is_show tinyint unsigned not null,
+    is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null,
 	cat_sort tinyint unsigned not null
 )engine=myisam default charset=utf8;

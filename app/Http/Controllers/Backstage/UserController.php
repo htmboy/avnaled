@@ -7,7 +7,7 @@ class UserController extends Controller
 {
     public function setting()
     {
-        return view('user.setting');
+        return view('backstage.user.setting');
     }
 
     public function settingStore()

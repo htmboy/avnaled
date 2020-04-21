@@ -1,7 +1,6 @@
 <?php
 Route::prefix('backstage')->group(function(){
     // 用户模块
-    // 注册页面
     Route::get('/register', 'Backstage\RegisterController@index');
     // 注册行为
     Route::post('/register', 'Backstage\RegisterController@register');
@@ -19,6 +18,17 @@ Route::prefix('backstage')->group(function(){
     // 个人设置行为
     Route::post('/user/setting', 'Backstage\UserController@settingStore');
 
+    // 网站设置
+    Route::get('/setting', 'Backstage\SettingController@index');
+    Route::put('/setting', 'Backstage\SettingController@edit');
+
+    // 轮播图
+    Route::get('/carousel', 'Backstage\SettingController@index');
+    Route::get('/carousel/add', 'Backstage\SettingController@addView');
+    Route::post('/carousel/add', 'Backstage\SettingController@addCarousel');
+    Route::put('/carousel/{carousel}/edit', 'Backstage\SettingController@edit');
+    Route::put('/carousel/{carousel}/del', 'Backstage\SettingController@del');
+
     // 产品
     Route::get('/product', 'Backstage\Product\ProductController@index');
     Route::get('/product/add', 'Backstage\Product\ProductController@addView');
@@ -27,15 +37,31 @@ Route::prefix('backstage')->group(function(){
     Route::put('/product/{product}/edit', 'Backstage\Product\ProductController@editProduct');
     Route::get('/product/{product}/del', 'Backstage\Product\ProductController@del');
 
-    Route::get('/product/category', 'Backstage\Product\CategoryController@index');
-    Route::get('/product/category', 'Backstage\Product\CategoryController@add');
-    Route::post('/product/category/edit', 'Backstage\Product\CategoryController@edit');
+
+    Route::get('/product/category', 'Backstage\Product\ProductCategoryController@index');
+    Route::post('/product/category', 'Backstage\Product\ProductCategoryController@add');
+    Route::post('/product/category/edit', 'Backstage\Product\ProductCategoryController@edit');
+
 
     Route::get('/product/gallery/{pro_id}', 'Backstage\Product\ProductController@gallery');
     Route::get('/product/gallery/{pro_id}/add', 'Backstage\Product\ProductController@galleryAddView');
     Route::post('/product/gallery/{pro_id}/add', 'Backstage\Product\ProductController@galleryAdd');
     Route::put('/product/gallery/{pro_id}/edit', 'Backstage\Product\ProductController@galleryUpdate');
     Route::get('/product/gallery/{pro_id}/{productGallery}/del', 'Backstage\Product\ProductController@galleryDel');
+
+    // 文章
+    Route::get('/article', 'Backstage\Article\ArticleController@index');
+    Route::get('/article/add', 'Backstage\Article\ArticleController@addView');
+    Route::post('/article/add', 'Backstage\Article\ArticleController@addArticle');
+    Route::get('/article/{article}/edit', 'Backstage\Article\ArticleController@editView');
+    Route::put('/article/{article}/edit', 'Backstage\Article\ArticleController@editArticle');
+    Route::get('/article/{article}/del', 'Backstage\Article\ArticleController@del');
+
+
+    Route::get('/article/category', 'Backstage\Article\ArticleCategoryController@index');
+    Route::post('/article/category', 'Backstage\Article\ArticleCategoryController@add');
+    Route::post('/article/category/edit', 'Backstage\Article\ArticleCategoryController@edit');
+
 
 
 });

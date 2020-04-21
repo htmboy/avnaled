@@ -12,7 +12,7 @@ class LoginController extends BaseController
 
     public function index()
     {
-        return view('login.login');
+        return view('backstage.login.login');
     }
 
     public function login(LoginPost $request)
@@ -25,7 +25,7 @@ class LoginController extends BaseController
          $user = compact('username', 'password', 'active');
          $is_remember = boolval($request->get('is_remember'));
          if(Auth::attempt($user, $is_remember)){
-             return redirect('/backstage/index');
+             return redirect('/backstage/product');
          }
         return Redirect::back()->withErrors("用户名或密码不匹配");
     }

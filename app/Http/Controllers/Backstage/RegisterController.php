@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Backstage;
 
 use App\Http\Requests\RegisterPost;
-use App\User;
+use App\Models\User;
 
 class RegisterController extends Controller
 {
     public function index()
     {
-        return view('register.register');
+        return view('backstage.register.register');
     }
 
     public function register(RegisterPost $request)

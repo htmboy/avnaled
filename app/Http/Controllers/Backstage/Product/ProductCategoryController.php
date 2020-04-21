@@ -3,16 +3,16 @@
 namespace App\Http\Controllers\Backstage\Product;
 
 use App\Http\Requests\CategoryPost;
-use App\ProductCategory;
+use App\Models\ProductCategory;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Backstage\Controller;
 
-class CategoryController extends Controller
+class ProductCategoryController extends Controller
 {
     public function index()
     {
-        $productCategories = ProductCategory::orderBy('sort','desc')->get();
-        return view('product.category', compact('productCategories'));
+        $productCategories = ProductCategory::orderBy('sort','desc')->paginate(15);
+        return view('backstage.product.category', compact('productCategories'));
     }
 
     public function add(CategoryPost $request)
