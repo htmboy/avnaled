@@ -16,5 +16,7 @@ Route::get('/', function () {
 });
 
 // avnaled 路由
-include_once "avnaled.php";
+include_once 'avnaled.php';
 
+// spectacle 路由
+include_once 'spectacle.php';

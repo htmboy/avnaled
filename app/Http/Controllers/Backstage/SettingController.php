@@ -10,4 +10,10 @@ class SettingController extends Controller
     public function index(){
         return view('backstage.setting');
     }
+
+    public function setting(Request $request)
+    {
+
+        return redirect('/backstage/setting');
+    }
 }
