@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | General Form Elements</title>
+  <title>Aooled站群 | 新闻中心</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -60,6 +60,7 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form action="" method="post" enctype="multipart/form-data">
+                {{method_field('put')}}
                 {{csrf_field()}}
                 <div class="card-body">
                   <div class="row">
@@ -73,7 +74,7 @@
                     <label>新闻类目</label>
                     <select name="cat_id" class="custom-select">
                       @foreach($categories as $category)
-                      <option value="{{$category->id}}">{{$category->name}}</option>
+                      <option value="{{$category->id}}" {{$category->id == $article->cat_id ? 'selected' : ''}}>{{$category->name}}</option>
                       @endforeach
                     </select>
                   </div>
@@ -138,7 +139,7 @@
                     <div class="col-sm-10">
                     <div class="form-group">
                         <label for="exampleInputPassword1">内容</label>
-                        <script id="editor" name="content" type="text/plain">
+                        <script id="editor" name="content" type="text/plain" style="width: 100%;height: 50rem;">
                           {{$article->content}}
                         </script>
                     </div>
@@ -185,8 +186,6 @@ $(document).ready(function () {
 </script>
 
 
-<script>
-    var ue = UE.getEditor('editor');
-</script>
+<script src="/backstage/js/editor.js"></script>
 </body>
 </html>

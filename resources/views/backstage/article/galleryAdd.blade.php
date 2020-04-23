@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Blank Page</title>
+  <title>Aooled站群 | 新闻中心</title>
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="pro_id" content="{{ $pro_id }}">
   <!-- Tell the browser to be responsive to screen width -->

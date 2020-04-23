@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | DataTables</title>
+  <title>Aooled站群 | 轮播图</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -56,10 +56,10 @@
               <table id="example1" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>图片id</th>
                   <th>图片</th>
                   <th>标题</th>
                   <th>图片描述</th>
+                  <th>链接</th>
                   <th>排序</th>
                   <th>操作</th>
                 </tr>
@@ -67,10 +67,10 @@
                 <tbody>
                 @foreach($carousels as $carousel)
                 <tr>
-                  <td>{{$carousel->id}}</td>
                   <td><img width="50" src="/storage/{{$carousel->site}}"></td>
                   <td>{{$carousel->title}}</td>
                   <td>{{$carousel->alt}}</td>
+                  <td>{{$carousel->link}}</td>
                   <td>{{$carousel->sort}}</td>
                   <td>
                     <a href="/backstage/carousel/{{$carousel->id}}/edit">编辑</a>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | General Form Elements</title>
+  <title>Aooled站群 | 网址设置</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -37,7 +37,6 @@
           <div class="col-sm-6">
             <h1>页面设置
               <span class="feedback">
-                444节哀吧
               @if($errors->any())
                 {{$errors->first()}}
               @endif
@@ -57,25 +56,25 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">SEO</h3>
+                <h3 class="card-title">首页_SEO</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" method="post">
-                {{method_field('put')}}
+              <form role="form" action="" method="post">
                 {{csrf_field()}}
+                <input type="hidden" name="key" value="index_seo">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputEmail1">标题</label>
-                    <input type="text" name="seo_title" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="text" name="seo_title" value="{{explode("%/%", $index->value)[0]}}" class="form-control" id="exampleInputEmail1">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">关键词</label>
-                    <input type="text" name="seo_keywords" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="text" name="seo_keywords" value="{{explode("%/%", $index->value)[1]}}" class="form-control" id="exampleInputPassword1">
                   </div>
                   <div class="form-group">
                     <label>描述</label>
-                    <textarea name="seo_description" class="form-control" rows="4"></textarea>
+                    <textarea name="seo_description" class="form-control" rows="4">{{explode("%/%", $index->value)[2]}}</textarea>
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -94,41 +93,31 @@
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h3 class="card-title">联系我们_SEO</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form">
+              <form role="form" action="" method="post">
+                {{csrf_field()}}
+                <input type="hidden" name="key" value="contact_seo">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">标题</label>
+                    <input type="text" name="seo_title" value="{{explode("%/%", $contact->value)[0]}}" class="form-control" id="exampleInputEmail1">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">关键词</label>
+                    <input type="text" name="seo_keywords" class="form-control" value="{{explode("%/%", $contact->value)[1]}}" id="exampleInputPassword1">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <div class="input-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                      </div>
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="">Upload</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <label>描述</label>
+                    <textarea name="seo_description" class="form-control" rows="4">{{explode("%/%", $contact->value)[2]}}</textarea>
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">提交</button>
                 </div>
               </form>
             </div>

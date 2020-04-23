@@ -23,12 +23,22 @@ create table avna_carousel(
 	title varchar(255) not null,
 	alt varchar(255) not null,
 	site varchar(255) not null,
+	link varchar(255) not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
+create table avna_links(
+	id tinyint unsigned not null primary key auto_increment,
+	name varchar(255) not null,
+	link tinytext not null,
+	created_at timestamp not null,
+	updated_at timestamp not null,
+	is_show tinyint unsigned not null default 0,
+	sort tinyint unsigned not null
+)engine=myisam default charset=utf8;
 #
 -- 分类表
 create table avna_product_category(
@@ -106,7 +116,7 @@ create table avna_article(
 	thumbnail varchar(255) not null,
 	author varchar(255) not null,
 	clicks tinyint unsigned not null,
-	content tinytext not null,
+	content text not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
     is_show tinyint unsigned not null default 0,
@@ -136,6 +146,14 @@ create table avna_user(
 	created_at timestamp not null,
 	updated_at timestamp not null,
 	active tinyint unsigned not null
+)engine=myisam default charset=utf8;
+
+create table avna_setting(
+	`key` varchar(255) not null,
+	value varchar(255) not null,
+	description varchar(255) not null,
+	created_at timestamp not null,
+	updated_at timestamp not null
 )engine=myisam default charset=utf8;
 #############################
 # 

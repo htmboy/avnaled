@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | General Form Elements</title>
+  <title>Aooled站群 | 轮播图</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -72,6 +72,10 @@
                     <div class="form-group">
                       <label for="exampleInputEmail1">图片描述</label>
                       <input type="text" name="alt" class="form-control" id="exampleInputEmail1">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">链接</label>
+                      <input type="text" name="link" class="form-control" id="exampleInputEmail1">
                     </div>
                   </div>
                   <div class="col-sm-5">

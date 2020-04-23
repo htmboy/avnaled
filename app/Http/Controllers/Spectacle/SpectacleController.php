@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Spectacle;
 
+use App\Models\Carousel;
+use App\Models\Links;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -9,11 +11,15 @@ class SpectacleController extends Controller
 {
     public function index()
     {
-        return view('spectacle.index');
+        $links = Links::where('is_show', 1)->orderBy('sort', 'desc')->get();
+        $carousels = Carousel::where('is_show', 1)->orderBy('sort', 'desc')->get();
+
+        return view('spectacle.index', compact('links', 'carousels'));
     }
 
     public function zsjm()
     {
+
         return view('spectacle.zsjm');
     }
 

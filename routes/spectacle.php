@@ -1,4 +1,5 @@
 <?php
+
 Route::prefix('spectacle')->group(function(){
 
     Route::get('/index.html', 'Spectacle\SpectacleController@index');

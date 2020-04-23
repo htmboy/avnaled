@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/backstage/index3.html" class="brand-link">
+    <a href="#" class="brand-link">
         <img src="/backstage/dist/img/AdminLTELogo.png"
              alt="AdminLTE Logo"
              class="brand-image img-circle elevation-3"
@@ -34,6 +34,14 @@
                     </a>
                 </li>
                 <li class="nav-item has-treeview">
+                    <a href="/backstage/links" class="nav-link">
+                        <i class="nav-icon fas fa-tree"></i>
+                        <p>
+                            友情链接
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -57,18 +65,16 @@
                     </ul>
                 </li>
 
-                <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             文章
-                            <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">6</span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <li class="nav-item active">
-                            <a href="/backstage/article" class="nav-link active">
+                        <li class="nav-item">
+                            <a href="/backstage/article" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>新闻列表</p>
                             </a>
@@ -86,7 +92,6 @@
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             设置
-                            <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
                 </li>
@@ -97,3 +102,4 @@
     </div>
     <!-- /.sidebar -->
 </aside>
+<script src="/backstage/js/sidebar.js"></script>

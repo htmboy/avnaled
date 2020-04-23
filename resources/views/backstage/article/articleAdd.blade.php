@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | General Form Elements</title>
+  <title>Aooled站群 | 新闻中心</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -138,7 +138,7 @@
                     <div class="col-sm-10">
                     <div class="form-group">
                         <label for="exampleInputPassword1">内容</label>
-                        <script id="editor" name="content" type="text/plain">
+                        <script id="editor" name="content" type="text/plain" style="width: 100%;height: 50rem;">
 
                         </script>
                     </div>
@@ -183,10 +183,6 @@ $(document).ready(function () {
   bsCustomFileInput.init();
 });
 </script>
-
-
-<script>
-    var ue = UE.getEditor('editor');
-</script>
+<script src="/backstage/js/editor.js"></script>
 </body>
 </html>

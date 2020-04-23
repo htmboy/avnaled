@@ -37,6 +37,7 @@ class ArticleController extends Controller
         // 验证图片 type
         $thumbnail = $file->storeAs('articles/'.$path, $name);
         $article = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'title', 'author', 'clicks', 'content');
+        $article['content'] = htmlspecialchars_decode($request->get('content'));
         $article['thumbnail'] = $thumbnail;
         $article['cat_sort'] = ArticleCategory::where('id', $request->get('cate_id'))->count() + 1;
         $article['sort'] = Article::count() + 1;

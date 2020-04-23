@@ -277,11 +277,11 @@
 
         //autoHeightEnabled
         // 是否自动长高,默认true
-        ,autoHeightEnabled:false
+        //,autoHeightEnabled:false
 
         //scaleEnabled
         //是否可以拉伸长高,默认true(当开启时，自动长高失效)
-        ,scaleEnabled:false
+        //,scaleEnabled:false
         //,minFrameWidth:800    //编辑器拖动时最小宽度,默认800
         //,minFrameHeight:220  //编辑器拖动时最小高度,默认220
 
@@ -302,23 +302,23 @@
 
         //autotypeset
         //自动排版参数
-        //,autotypeset: {
-        //    mergeEmptyline: true,           //合并空行
-        //    removeClass: true,              //去掉冗余的class
+        ,autotypeset: {
+            mergeEmptyline: true,           //合并空行
+            removeClass: true,              //去掉冗余的class
         //    removeEmptyline: false,         //去掉空行
         //    textAlign:"left",               //段落的排版方式，可以是 left,right,center,justify 去掉这个属性表示不执行排版
         //    imageBlockLine: 'center',       //图片的浮动方式，独占一行剧中,左右浮动，默认: center,left,right,none 去掉这个属性表示不执行排版
         //    pasteFilter: false,             //根据规则过滤没事粘贴进来的内容
         //    clearFontSize: false,           //去掉所有的内嵌字号，使用编辑器默认的字号
         //    clearFontFamily: false,         //去掉所有的内嵌字体，使用编辑器默认的字体
-        //    removeEmptyNode: false,         // 去掉空节点
+            removeEmptyNode: true,         // 去掉空节点
         //    //可以去掉的标签
         //    removeTagNames: {标签名字:1},
         //    indent: false,                  // 行首缩进
         //    indentValue : '2em',            //行首缩进的大小
         //    bdc2sb: false,
         //    tobdc: false
-        //}
+        }
 
         //tableDragable
         //表格是否可以拖拽
@@ -356,11 +356,11 @@
         //,rgb2Hex:true               //默认产出的数据中的color自动从rgb格式变成16进制格式
 
 		// xss 过滤是否开启,inserthtml等操作
-		,xssFilterRules: true
+		//,xssFilterRules: true
 		//input xss过滤
 		,inputXssFilter: true
 		//output xss过滤
-		,outputXssFilter: true
+		//,outputXssFilter: true
 		// xss过滤白名单 名单来源: https://raw.githubusercontent.com/leizongmin/js-xss/master/lib/default.js
 		,whitList: {
 			a:      ['target', 'href', 'title', 'class', 'style'],

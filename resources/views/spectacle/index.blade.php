@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit" />
   <title>大荷水性漆厂家招商加盟代理,水性木器漆,乳胶漆,外墙涂料_官网</title>
   <meta name="keywords" content="大荷|大荷漆|大荷科技|深圳大荷漆|大荷水性漆|水性木器漆|水性木器漆厂家|水性木器漆加盟|水性木器漆代理|水性木器漆招商|水性漆|水性漆招商|水性漆代理|水性漆加盟|水性漆厂家|水性漆招商加盟|水性地板漆|木器漆|墙漆|墙面漆|外墙漆|乳胶漆|水漆|漆|外墙涂料" /><meta name="description" content="大荷漆,水性漆高端品牌,公司生产并销售水性漆产品:水性木器漆,乳胶漆,外墙涂料,艺术涂料等.大荷品牌六大加盟优势保障,欢迎加盟代理,热线4001181123.大荷水性漆全国招商加盟及代理火热进行中【官网】" /><link href="/spectacle/css/base.css" rel="stylesheet">
-  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.png" />
   <!--[if IE 9]>
   <link href="/spectacle/css/ie9.css" rel="stylesheet">
   <![endif]-->
@@ -50,7 +50,25 @@
 
 
 <div class="banner">
-  <div id="slide" class="slide"> <div class="slide-item"><a href="http://www.dhq898.com/jmys.html"><img src="/spectacle/img/5c74a5fb11ca0.jpg" alt="大荷水性漆2019招商加盟闪耀起航" width="1920" height="527" /></a></div><div class="slide-item" style="display:none;"><a href="http://www.dhq898.com/#2"><img src="/spectacle/img/5c79e6253b542.jpg" alt="大荷水性漆一直专注水性漆水性乳胶漆技术研发和运用" width="1920" height="527" /></a></div><div class="slide-item" style="display:none;"><a href="http://www.dhq898.com/#1"><img src="/spectacle/img/5c79f6a62f5b9.jpg" alt="油漆改水性漆势不可挡，90%市场空白急待开发，水性乳胶漆" width="1920" height="527" /></a></div>    <div class="slide-prev"></div>
+  <div id="slide" class="slide">
+    @foreach($carousels as $carousel)
+    <div class="slide-item">
+      <a href="http://{{$carousel->link}}">
+        <img src="/storage/{{$carousel->site}}" alt="{{$carousel->alt}}" width="1920" height="527" />
+      </a>
+    </div>
+    @endforeach
+    <div class="slide-item" style="display:none;">
+      <a href="http://www.dhq898.com/#2">
+        <img src="/spectacle/img/5c79e6253b542.jpg" alt="大荷水性漆一直专注水性漆水性乳胶漆技术研发和运用" width="1920" height="527" />
+      </a>
+    </div>
+    <div class="slide-item" style="display:none;">
+      <a href="http://www.dhq898.com/#1">
+        <img src="/spectacle/img/5c79f6a62f5b9.jpg" alt="油漆改水性漆势不可挡，90%市场空白急待开发，水性乳胶漆" width="1920" height="527" />
+      </a>
+    </div>
+    <div class="slide-prev"></div>
     <div class="slide-next"></div>
     <div class="slide-paging"></div>
   </div>
@@ -336,42 +354,66 @@
 
 <div class="footer">
   <div class="foot">
-    <div class="foot_t"><ul class="foot_link" style="width:118px"><h3>产品系列</h3><li><a href="/sxmqq/">水性木器漆</a></li><li><a href="/sxqmq/">墙面乳胶漆</a></li><li><a href="/sxdbq/">水性地板漆</a></li><li><a href="/sxhwmq/">户外木器漆</a></li></ul><ul class="foot_link" style="width:118px"><h3>招商加盟</h3><li><a href="/jmys.html">加盟优势</a></li><li><a href="/jmtj.html">加盟条件</a></li><li><a href="/jmlc.html">加盟流程</a></li><li><a href="/jmjz/">客户见证</a></li></ul><ul class="foot_link" style="width:118px"><h3>大荷品牌</h3><li><a href="/gsjjz.html">关于大荷</a></li><li><a href="/fzlc.html">发展历程</a></li><li><a href="/dhkx">大荷快讯</a></li><li><a href="/qiyewenhua">企业文化</a></li></ul><div class="foot_code" style="width:490px"><ul class="code">
+    <div class="foot_t">
+      <ul class="foot_link" style="width:118px">
+        <h3>产品系列</h3>
+        <li><a href="/sxmqq/">星脉系列工矿灯</a></li>
+        <li><a href="/sxqmq/">黑豹系列泛光灯</a></li>
+        <li><a href="/sxdbq/">天梭系列飞碟灯</a></li>
+        <li><a href="/sxhwmq/">瑞星系列投光灯</a></li>
+      </ul>
+      <ul class="foot_link" style="width:118px">
+        <h3>招商加盟</h3>
+        <li><a href="/jmys.html">加盟优势</a></li>
+        <li><a href="/jmtj.html">加盟条件</a></li>
+        <li><a href="/jmlc.html">加盟流程</a></li>
+        <li><a href="/jmjz/">客户见证</a></li>
+      </ul>
+      <ul class="foot_link" style="width:118px">
+        <h3>澳镭品牌</h3>
+        <li><a href="/gsjjz.html">关于澳镭</a></li>
+        <li><a href="/fzlc.html">发展历程</a></li>
+        <li><a href="/dhkx">澳镭动态</a></li>
+        <li><a href="/qiyewenhua">企业文化</a></li>
+      </ul>
+      <div class="foot_code" style="width:490px">
+        <ul class="code">
           <li>
-            <img src="/spectacle/img/20160724234311_72454.gif" width="80" height="80" alt="大荷漆" title="大荷漆" align="" /><em>微信公众号</em>
+            <img src="/spectacle/img/indimg30.gif" width="80" height="80" alt="大荷漆" title="大荷漆" align="" />
+            <em>微信公众号</em>
           </li>
           <li>
-            <img src="/spectacle/img/20160724234422_63481.jpg" alt="大荷水性漆" title="大荷水性漆" width="80" height="80" align="" /><em>手机客户端</em>
+            <img src="/spectacle/img/indimg30.gif" alt="大荷水性漆" title="大荷水性漆" width="80" height="80" align="" />
+            <em>手机客户端</em>
           </li>
         </ul>
-        <p>
-          服务热线：400 118 1123
-        </p>
-        <p class="p04">
-          公司地址：深圳罗湖区梨园路东583号
-        </p>
-        <p class="p02">
-          公司传真：0755-8243 8377
-        </p>
-        <p class="p03">
-          总经理信箱：zkhotline@vip.sina.com
-        </p></div></div>
+        <p>服务热线：400 6666 804</p>
+        <p class="p02">咨询电话：18923117087</p>
+        <p class="p03">总经理信箱：755930694@qq.com</p>
+        <p class="p04">地址：广东省佛山市南海区罗村华南国际LED电光源灯饰城C区8路36~38栋</p>
+      </div>
+    </div>
     <div class="copyright">
-      版权所有 &copy;2016 深圳市大荷科技有限公司, All Rights Reserved. &nbsp;备案号:
+      版权所有 &copy;{{date('Y'), time()}} 广东澳镭照明电器有限公司, All Rights Reserved. &nbsp;备案号:
       <a href="http://www.beian.miit.gov.cn" title="粤ICP备10222602号-2" target="_blank" rel="nofollow">粤ICP备10222602号-2</a>
-      <a href="/sitemap.html">网站地图</a>
       <span style="white-space:normal;"> </span>
       <span style="white-space:normal;"></span>
     </div>
     <div class="frilinks">
-      <a href="http://www.dhq898.com" target="_blank">乳胶漆</a><a href="http://www.dhq898.com" target="_blank">水性漆</a><a href="http://www.dhq898.com" target="_blank">水性木器漆</a><a href="http://www.boowin.cn" target="_blank">商会云</a><a href="http://www.daohuoniu.com" target="_blank">导火牛设计</a><a href="http://www.shuangshituliao.com" target="_blank">无机富锌底漆</a><a href="http://www.smc18.com" target="_blank">乳胶漆加盟</a><a href="http://www.sspyq.com" target="_blank">耐高温漆</a><a href="http://www.chinahaomuwu.com" target="_blank">木屋厂家</a><a href="http://www.gaopaiwood.com/" target="_blank">木地板厂家</a><a href="http://www.oushios.com.cn" target="_blank">运动木地板</a><a href="http://www.dhq898.com" target="_blank">木器漆</a>  </div>
-    <div class="frilinksSubmit"><a href="javascript:;">友情链接（联系QQ:2365591356）</a></div>
+      @foreach($links as $link)
+      <a href="http://{{$link->$link}}" target="_blank">{{$link->name}}</a>
+      @endforeach
+    </div>
+    <div class="frilinksSubmit">
+      <a href="javascript:;" class="wap_qq">联系QQ:755930694</a>
+    </div>
   </div>
 </div>
 <!--footer-->
 <div id="roll" style="display:none"><div title="回到顶部" id="roll_top"></div></div>
 
 <script type="text/javascript" src="/spectacle/js/nav.hover.js"></script>
+<script type="text/javascript" src="/spectacle/js/open_qq_chat.js"></script>
 
 </body>
 

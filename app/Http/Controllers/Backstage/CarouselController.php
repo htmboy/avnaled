@@ -28,7 +28,7 @@ class CarouselController extends Controller
         $mimeType = $file->getClientMimeType();
         // 验证图片 type
         $photo = $file->storeAs('carousel/'.$path, $name);
-        $carousel = $request->only('title', 'alt');
+        $carousel = $request->only('title', 'alt', 'link');
         $carousel['site'] = $photo;
         $carousel['sort'] = Carousel::count() + 1;
         Carousel::create($carousel);
@@ -52,7 +52,7 @@ class CarouselController extends Controller
             $photo = $file->storeAs('carousel/'.$path, $name);
             Storage::delete($carousel->site);
         }
-        $new_carousel = $request->only('title', 'alt');
+        $new_carousel = $request->only('title', 'alt', 'link');
         if(isset($photo)){
             $new_carousel['site'] = $photo;
         }
