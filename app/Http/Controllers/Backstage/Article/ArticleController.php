@@ -15,10 +15,16 @@ use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $articles = Article::orderBy('sort', 'desc')->paginate(15);
-        return view('backstage.article.article', compact('articles'));
+        $categories = ArticleCategory::orderBy('sort', 'desc')->get();
+        $cat = $request->get('cat');
+        if($cat)
+            $articles = Article::where('cat_id', $cat)->orderBy('sort', 'desc');
+        else
+            $articles = Article::orderBy('sort', 'desc');
+        $articles = $articles->paginate(15);
+        return view('backstage.article.article', compact('articles', 'categories'));
     }
 
     public function addView()
@@ -66,7 +72,8 @@ class ArticleController extends Controller
             $thumbnail = $file->storeAs('articles/'.$path, $name);
             Storage::delete($article->thumbnail);
         }
-        $new_article = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'title', 'author', 'clicks', 'content');
+        $new_article = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'title', 'author', 'clicks');
+        $new_article['content'] =  htmlspecialchars_decode($request->get('content'));
         if (isset($thumbnail))
             $new_article['thumbnail'] = $thumbnail;
         $article->update($new_article);

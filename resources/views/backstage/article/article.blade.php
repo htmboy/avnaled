@@ -47,8 +47,14 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-                <div class="card-tools">
-                    <a href="/backstage/article/add" class="btn btn-block btn-primary btn-sm">新增</a>
+              <div class="btn-group">
+                @foreach($categories as $category)
+                  <a href="/backstage/article?cat={{$category->id}}" class="btn btn-info btn-sm">{{$category->name}}</a>
+                @endforeach
+                  <a href="/backstage/article" class="btn btn-info btn-sm">所有</a>
+              </div>
+              <div class="card-tools">
+                  <a href="/backstage/article/add" class="btn btn-block btn-primary btn-sm">新增</a>
                 </div>
             </div>
             <!-- /.card-header -->

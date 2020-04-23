@@ -64,6 +64,6 @@ Route::prefix('backstage')->group(function(){
     Route::post('/article/category/edit', 'Backstage\Article\ArticleCategoryController@edit');
 
     Route::resource('links', 'Backstage\LinksController')->only(['index', 'store', 'update', 'destroy']);
-    Route::resource('setting', 'Backstage\settingController')->only(['index', 'store']);
+    Route::resource('setting', 'Backstage\SettingController')->only(['index', 'store']);
 
 });
