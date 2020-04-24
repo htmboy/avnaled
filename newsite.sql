@@ -73,10 +73,10 @@ create table avna_product(
 	distance varchar(255) not null,
 	material varchar(255) not null,
 	characteristic varchar(255) not null,
-	content tinytext not null,
+	content text not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
-	is_show tinyint unsigned not null,
+	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null,
 	cat_sort tinyint unsigned not null
 )engine=myisam default charset=utf8;

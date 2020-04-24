@@ -42,7 +42,7 @@ class ArticleController extends Controller
         $mimeType = $file->getClientMimeType();
         // 验证图片 type
         $thumbnail = $file->storeAs('articles/'.$path, $name);
-        $article = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'title', 'author', 'clicks', 'content');
+        $article = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'created_at', 'title', 'author', 'clicks');
         $article['content'] = htmlspecialchars_decode($request->get('content'));
         $article['thumbnail'] = $thumbnail;
         $article['cat_sort'] = ArticleCategory::where('id', $request->get('cate_id'))->count() + 1;
@@ -72,7 +72,7 @@ class ArticleController extends Controller
             $thumbnail = $file->storeAs('articles/'.$path, $name);
             Storage::delete($article->thumbnail);
         }
-        $new_article = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'title', 'author', 'clicks');
+        $new_article = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'created_at', 'title', 'author', 'clicks');
         $new_article['content'] =  htmlspecialchars_decode($request->get('content'));
         if (isset($thumbnail))
             $new_article['thumbnail'] = $thumbnail;

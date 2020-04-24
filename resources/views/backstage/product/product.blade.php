@@ -47,6 +47,12 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
+              <div class="btn-group">
+                @foreach($categories as $category)
+                  <a href="/backstage/product?cat={{$category->id}}" class="btn btn-info btn-sm">{{$category->name}}</a>
+                @endforeach
+                <a href="/backstage/product" class="btn btn-info btn-sm">所有</a>
+              </div>
                 <div class="card-tools">
                     <a href="/backstage/product/add" class="btn btn-block btn-primary btn-sm">新增</a>
                 </div>
@@ -56,10 +62,14 @@
               <table id="example1" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>产品id</th>
+                  <th>id</th>
+                  <th>类目</th>
                   <th>标题</th>
                   <th>编号</th>
+
                   <th>瓦数</th>
+                  <th>是否显示</th>
+                  <th width="80px">排序</th>
                   <th>操作</th>
                 </tr>
                 </thead>
@@ -67,9 +77,17 @@
                 @foreach($products as $product)
                 <tr>
                   <td>{{$product->id}}</td>
+                  <td>{{$product->category->name}}</td>
                   <td>{{$product->title}}</td>
                   <td>{{$product->number}}</td>
                   <td>{{$product->watts}}</td>
+
+                  <td>
+                    <input type="checkbox" name="is_show" {{$product->is_show?'checked':''}} data-bootstrap-switch>
+                  </td>
+                  <td>
+                    <input type="text" value="{{$product->sort}}" class="form-control">
+                  </td>
                   <td>
                     <a href="/backstage/product/{{$product->id}}/edit">编辑</a>
                     <a href="/backstage/product/{{$product->id}}/del">删除</a>
@@ -118,11 +136,13 @@
 <script src="/backstage/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="/backstage/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="/backstage/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="/backstage/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/backstage/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backstage/dist/js/demo.js"></script>
 <!-- page script -->
+<script src="/backstage/js/product.js"></script>
 <script>
   $(function () {
     $('#example1').DataTable({
@@ -135,6 +155,13 @@
       "responsive": true,
     });
   });
+
+  $(function () {
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
+
+  })
 </script>
 </body>
 </html>

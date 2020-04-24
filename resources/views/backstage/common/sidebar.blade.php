@@ -70,6 +70,7 @@
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             文章
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">

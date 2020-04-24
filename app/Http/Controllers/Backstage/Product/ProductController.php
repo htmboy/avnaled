@@ -14,10 +14,16 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::orderBy('sort', 'desc')->paginate(15);
-        return view('backstage.product.product', compact('products'));
+        $categories = ProductCategory::orderBy('sort', 'desc')->get();
+        $cat = $request->get('cat');
+        if($cat)
+            $products = Product::where('cat_id', $cat)->orderBy('sort', 'desc');
+        else
+            $products = Product::orderBy('sort', 'desc');
+        $products = $products->paginate(15);
+        return view('backstage.product.product', compact('products', 'categories'));
     }
 
     public function addView()
@@ -36,7 +42,7 @@ class ProductController extends Controller
         // 验证图片 type
         $thumbnail = $file->storeAs('products/'.$path, $name);
 
-        $product = $request->only('cat_id', 'seo_title', 'seo_keyword', 'seo_description', 'title', 'thumbnail', 'number', 'watts', 'size', 'color',
+        $product = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'created_at', 'title', 'thumbnail', 'number', 'watts', 'size', 'color',
             'package', 'weight', 'voltage', 'angle', 'waterproof', 'life', 'distance', 'material',
             'characteristic', 'content');
         $product['thumbnail'] = $thumbnail;
@@ -66,9 +72,9 @@ class ProductController extends Controller
             $thumbnail = $file->storeAs('products/'.$path, $name);
             Storage::delete($product->thumbnail);
         }
-        $new_product = $request->only('cat_id', 'title', 'number', 'watts','size', 'color',
+        $new_product = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'created_at', 'title', 'number', 'watts','size', 'color',
             'package', 'weight', 'voltage', 'angle', 'waterproof', 'life', 'distance', 'material',
-            'characteristic', 'content');
+            'characteristic');
         if (isset($thumbnail))
             $new_product['thumbnail'] = $thumbnail;
         $product->update($new_product);

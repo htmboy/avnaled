@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Spectacle;
 
 use App\Models\Carousel;
 use App\Models\Links;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -11,10 +12,13 @@ class SpectacleController extends Controller
 {
     public function index()
     {
+        $seo = Setting::find('index_seo');
+        list($title, $keywords, $description) = explode("%/%", $seo->value);
+
         $links = Links::where('is_show', 1)->orderBy('sort', 'desc')->get();
         $carousels = Carousel::where('is_show', 1)->orderBy('sort', 'desc')->get();
 
-        return view('spectacle.index', compact('links', 'carousels'));
+        return view('spectacle.index', compact('links', 'carousels', 'title', 'keywords', 'description'));
     }
 
     public function zsjm()

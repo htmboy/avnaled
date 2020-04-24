@@ -77,14 +77,15 @@
                         @endforeach
                     </select>
                   </div>
+                    <div class="form-group">
+                      <label>产品型号</label>
+                      <input type="text" name="number" class="form-control">
+                    </div>
                     <div class="row">
 
                     <div class="col-sm-6">
                       <!-- text input -->
-                      <div class="form-group">
-                        <label>产品型号</label>
-                        <input type="text" name="number" class="form-control">
-                      </div>
+
                       <div class="form-group">
                         <label>产品瓦数</label>
                         <input type="text" name="watts" class="form-control">
@@ -96,7 +97,7 @@
                       </div>
                       <!-- text input -->
                       <div class="form-group">
-                        <label>产品颜色</label>
+                        <label>灯光颜色</label>
                         <input type="text" name="color" class="form-control">
                       </div>
                       <div class="form-group">
@@ -144,11 +145,27 @@
                         <input type="text" name="characteristic" class="form-control">
                       </div>
                     </div>
+
+                    </div>
+                    <div class="form-group">
+                      <label>时间</label>
+                      <input type="date" name="created_at" value="{{date('Y-m-d', time())}}" class="form-control">
                     </div>
                   </div>
                     <div class="col-sm-1"></div>
                   <div class="col-sm-4">
-                      <div class="row">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">seo标题</label>
+                          <input type="text" name="seo_title" class="form-control" id="exampleInputEmail1">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">seo关键词</label>
+                          <input type="text" name="seo_keywords" class="form-control" id="exampleInputEmail1">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">seo描述</label>
+                          <textarea class="form-control" name="seo_description" rows="4"></textarea>
+                        </div>
                       <div class="form-group">
                         <label for="exampleInputFile">产品缩率主图</label>
                         <div class="input-group">
@@ -165,7 +182,6 @@
                         <div class="input-group">
                       <img class="img-fluid pad" src="/backstage/dist/img/photo2.png" alt="Photo">
                         </div>
-                      </div>
                     </div>
                   </div>
                   <div class="row">
@@ -173,7 +189,7 @@
                     <div class="col-sm-10">
                     <div class="form-group">
                         <label for="exampleInputPassword1">内容</label>
-                        <script id="editor" name="content" type="text/plain">
+                        <script id="editor" name="content" type="text/plain" style="width: 100%;height: 50rem;">
 
                         </script>
                     </div>

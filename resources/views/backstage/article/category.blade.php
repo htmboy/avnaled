@@ -56,6 +56,7 @@
                     <th>#</th>
                     <th>产品类名</th>
                     <th>显示</th>
+
                     <th style="width: 80px">排序</th>
                   </tr>
                   </thead>
@@ -143,6 +144,6 @@ $(document).ready(function () {
 
   })
 </script>
-<script src="/backstage/js/productCategory.js"></script>
+<script src="/backstage/js/articleCategory.js"></script>
 </body>
 </html>

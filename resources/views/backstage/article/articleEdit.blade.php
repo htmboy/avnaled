@@ -89,7 +89,7 @@
                     </div>
                     <div class="form-group">
                       <label>时间</label>
-                      <input type="date" name="updated_at" value="{{date('Y-m-d', strtotime($article->updated_at))}}" class="form-control">
+                      <input type="date" name="created_at" value="{{date('Y-m-d', strtotime($article->created_at))}}" class="form-control">
                     </div>
                   </div>
                   <div class="col-sm-5">
@@ -139,7 +139,7 @@
                     <div class="col-sm-10">
                     <div class="form-group">
                         <label for="exampleInputPassword1">内容</label>
-                        <script id="editor" name="content" style='width:100%;height:50rem;'>{!!htmlspecialchars_decode($article->content)!!}</script>
+                        <script id="editor" name="content" style='width:100%;height:50rem;'>{!!$article->content!!}</script>
                     </div>
                     </div>
                   </div>

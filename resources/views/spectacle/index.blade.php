@@ -4,8 +4,11 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="renderer" content="webkit" />
-  <title>大荷水性漆厂家招商加盟代理,水性木器漆,乳胶漆,外墙涂料_官网</title>
-  <meta name="keywords" content="大荷|大荷漆|大荷科技|深圳大荷漆|大荷水性漆|水性木器漆|水性木器漆厂家|水性木器漆加盟|水性木器漆代理|水性木器漆招商|水性漆|水性漆招商|水性漆代理|水性漆加盟|水性漆厂家|水性漆招商加盟|水性地板漆|木器漆|墙漆|墙面漆|外墙漆|乳胶漆|水漆|漆|外墙涂料" /><meta name="description" content="大荷漆,水性漆高端品牌,公司生产并销售水性漆产品:水性木器漆,乳胶漆,外墙涂料,艺术涂料等.大荷品牌六大加盟优势保障,欢迎加盟代理,热线4001181123.大荷水性漆全国招商加盟及代理火热进行中【官网】" /><link href="/spectacle/css/base.css" rel="stylesheet">
+  <title>{{$title}}</title>
+  <meta name="title" content="{{$title}}">
+  <meta name="keywords" content="{{$keywords}}" />
+  <meta name="description" content="{{$description}}" />
+  <link href="/spectacle/css/base.css" rel="stylesheet">
   <link rel="shortcut icon" href="/favicon.png" />
   <!--[if IE 9]>
   <link href="/spectacle/css/ie9.css" rel="stylesheet">
@@ -37,17 +40,71 @@
 <body>
 <div id="header">
   <div class="header_top">
-    大荷水性漆全国招商加盟火热进行中【官网】<span><a href="javascript:void(0);" onClick="javascript:addBookmark(this)" title="收藏本站">收藏大荷</a>|<a href="/lxwm.html" title="联系我们">联系我们</a>|<a href="/sitemap.html" title="网站地图" target="_blank">网站地图</a></span></div>
+    澳镭照明工矿灯消费补贴火热进行中【官网】
+    <span>
+      <a href="javascript:void(0);" onClick="javascript:addBookmark(this)" title="收藏本站">收藏澳镭工矿灯</a>
+      |
+      <a href="/lxwm.html" title="联系我们">联系我们</a>
+      |
+      <a href="/sitemap.html" title="网站地图" target="_blank">网站地图</a>
+    </span>
+  </div>
 </div><!--head_top-->
 <div class="header_m">
-  <h2><a href="/"><img src="/spectacle/img/59783c238cd42.jpg" alt="大荷水性漆招商加盟"></a></h2>
-  <h3>专注水性漆核心技术<em>SINCE  2006</em></h3>
-  <h4><p>诚招全国涂料代理商<em>400 118 1123</em></p><span>低成本高品质、低投入高回报</span></h4>
+  <h2><a href="/"><img src="/spectacle/img/logo.png" alt="澳镭照明工矿灯"></a></h2>
+  <h3>工业照明领域首选服务品牌<em>SINCE  2007</em></h3>
+  <h4>
+    <p>免费咨询热线<em>400 6666 804</em></p>
+    <span>专注工业照明13年</span>
+  </h4>
 </div><!--head_middle-->
 <div class="header_nav">
-  <ul id="nav" class="nav-bar ul-list"><li><a href="/">大荷首页</a></li><li><a href="/zsjm.html">招商加盟</a></li><li><a href="/sxmqq/">水性木器漆</a><ul><li><a href="http://www.dhq898.com/sxmqq/tqmqsxmqq.html"_blank>特清面漆</a></li><li><a href="http://www.dhq898.com/sxmqq/tqdqsxmqq.html"_blank>特清底漆</a></li><li><a href="http://www.dhq898.com/sxmqq/hbmqsxmqq.html">皓白面漆</a></li><li><a href="http://www.dhq898.com/sxmqq/hbdqsxmqq.html"_blank>皓白底漆</a></li><li><a href="http://www.dhq898.com/sxmqq/fbdqsxmqq.html"_blank>封闭底漆</a></li></ul></li><li><a href="/sxqmq/">墙面乳胶漆</a><ul><li><a href="http://www.dhq898.com/sxqmq/xqjjwqmq.html"_blank>消醛净</a></li><li><a href="/sxqmq/bzwjwqmq.html"_blank>不沾污</a></li><li><a href="http://www.dhq898.com/sxqmq/cqxjwqmq.html"_blank>超全效</a></li><li><a href="http://www.dhq898.com/sxqmq/qgljwqmq.html"_blank>多功能</a></li><li><a href="http://www.dhq898.com/sxqmq/qxdqsxqmq.html"_blank>全效底漆</a></li></ul></li><li><a href="/products/">产品中心</a><ul><li><a href="/sxmqq/" >水性木器漆</a></li><li><a href="/sxqmq/" >墙面乳胶漆</a></li><li><a href="/wqtl/" >外墙涂料</a></li><li><a href="/sxdbq/" >水性地板漆</a></li><li><a href="/sxhwmq/" >水性户外漆</a></li></ul></li><li><a href="/help/">解决方案</a><ul><li><a href="/sxqjc/">焕新服务</a></li><li><a href="/wddiy/">施工园地</a></li><li><a href="/alzs/">装修案例</a></li><li><a href="/help/">常见问题</a></li></ul></li><li><a href="/news/">新闻中心</a><ul><li><a href="/dhkx/">大荷快讯</a></li><li><a href="/hyxw/">行业新闻</a></li><li><a href="/shiping/">加盟资讯</a></li></ul></li><li><a href="/gsjjz.html">走进大荷</a><ul><li><a href="/gsjjz.html">公司简介</a></li><li><a href="/fzlc.html">发展历程</a></li><li><a href="/qiyewenhua/">企业文化</a></li><li><a href="/lxwm.html">联系我们</a></li></ul></li></ul></div><!--head_nav-->
-
-
+  <ul id="nav" class="nav-bar ul-list">
+    <li><a href="/">澳镭首页</a></li>
+    <li><a href="/zsjm.html">案例抢先看</a></li>
+    <li><a href="/sxmqq/">客户好评工矿灯</a>
+      <ul>
+        <li><a href="http://www.dhq898.com/sxmqq/tqmqsxmqq.html">星脉系列工矿灯</a></li>
+        <li><a href="http://www.dhq898.com/sxmqq/tqdqsxmqq.html">紫铜系列工矿灯</a></li>
+        <li><a href="http://www.dhq898.com/sxmqq/hbmqsxmqq.html">黑金刚系列工矿灯</a></li>
+        <li><a href="http://www.dhq898.com/sxmqq/hbdqsxmqq.html">金钻系列工矿灯</a></li>
+      </ul>
+    </li>
+    <li><a href="/sxqmq/">星脉系列三代工矿灯</a>
+      <ul>
+        <li><a href="http://www.dhq898.com/sxqmq/xqjjwqmq.html">星脉工矿灯100w</a></li>
+        <li><a href="http://www.dhq898.com/sxqmq/cqxjwqmq.html">星脉工矿灯150w</a></li>
+        <li><a href="http://www.dhq898.com/sxqmq/qgljwqmq.html">星脉工矿灯200w</a></li>
+        <li><a href="http://www.dhq898.com/sxqmq/qxdqsxqmq.html">星脉工矿灯250w</a></li>
+        <li><a href="http://www.dhq898.com/sxqmq/qxdqsxqmq.html">星脉工矿灯更多瓦数</a></li>
+      </ul>
+    </li>
+    <li><a href="/products/">产品中心</a>
+      <ul>
+        <li><a href="/sxmqq/">工矿灯</a></li>
+        <li><a href="/sxqmq/">泛光灯</a></li>
+        <li><a href="/wqtl/">投光灯</a></li>
+        <li><a href="/sxdbq/">防爆灯</a></li>
+        <li><a href="/sxhwmq/">路灯</a></li>
+      </ul>
+    </li>
+    <li><a href="/help/">解决方案</a>
+      <ul>
+        <li><a href="/sxqjc/">焕新服务</a></li>
+        <li><a href="/wddiy/">施工服务</a></li>
+        <li><a href="/alzs/">装灯案例</a></li>
+        <li><a href="/help/">常见问题</a></li>
+      </ul>
+    </li>
+    <li><a href="/news/">新闻中心</a>
+      <ul>
+        <li><a href="/dhkx/">澳镭快讯</a></li>
+        <li><a href="/hyxw/">行业新闻</a></li>
+        <li><a href="/shiping/">案例前线</a></li>
+      </ul>
+    </li>
+  </ul>
+</div><!--head_nav-->
 
 <div class="banner">
   <div id="slide" class="slide">
@@ -58,16 +115,6 @@
       </a>
     </div>
     @endforeach
-    <div class="slide-item" style="display:none;">
-      <a href="http://www.dhq898.com/#2">
-        <img src="/spectacle/img/5c79e6253b542.jpg" alt="大荷水性漆一直专注水性漆水性乳胶漆技术研发和运用" width="1920" height="527" />
-      </a>
-    </div>
-    <div class="slide-item" style="display:none;">
-      <a href="http://www.dhq898.com/#1">
-        <img src="/spectacle/img/5c79f6a62f5b9.jpg" alt="油漆改水性漆势不可挡，90%市场空白急待开发，水性乳胶漆" width="1920" height="527" />
-      </a>
-    </div>
     <div class="slide-prev"></div>
     <div class="slide-next"></div>
     <div class="slide-paging"></div>
@@ -76,33 +123,48 @@
 <!--banner-->
 <div class="home_ss">
   <div class="content">
-    <div class="home_ss_l"> <b>他们还在搜：</b><a href="/sxmqq/" title="水性木器漆">水性木器漆</a>|<a href="/sxqmq/" title="水性墙面漆">水性墙面漆</a>|<a href="/sxhwmq/" title="户外木漆">户外木漆</a>|<a href="/sxdbq/" title="水性地板漆">水性地板漆</a>|<a href="/jmys.html" title="水性漆招商">水性漆招商</a> </div>
+    <div class="home_ss_l">
+      <b>他们还在搜：</b>
+      <a href="/sxmqq/">13米厂房照明灯</a>
+      |
+      <a href="/sxqmq/">工矿灯品牌</a>
+      |
+      <a href="/sxhwmq/">工矿灯批发</a>
+      |
+      <a href="/sxdbq/">工矿灯厂家</a>
+      |
+      <a href="/sxdbq/">厂房照明灯</a>
+    </div>
     <div class="home_ss_r"><form name="searchForm" method="get" action="/search/">
-        <input type="text" onclick="this.value=''" name="keyword" class="inp01" value="大荷水性漆" onfocus="if(this.value=='大荷水性漆'){this.value='';}"  onblur="if(this.value==''){this.value='大荷水性漆';}" />
+        <input type="text" onclick="this.value=''" name="keyword" class="inp01" value="led工矿灯" onfocus="if(this.value=='工矿灯'){this.value='';}"  onblur="if(this.value==''){this.value='想要咨询哪款灯具呢';}" />
         <input type="submit" value="" class="inp02" />
       </form></div>
   </div>
 </div>
 <!--search-->
 <div class="ds" style="margin-bottom:50px">
-  <div class="tit1"><a href="/products/" title="大荷水性漆">大荷水性漆  追寻天然质朴的艺术大师<em>glotus，Pursue natural plain master of art</em></a><span>18年水性漆研发技术和12年应用技术的沉淀</span></div>
+  <div class="tit1">
+    <a href="/products/" title="大荷水性漆">
+      澳镭照明工矿灯 用灯光点亮世界<em>Light the world with aooled</em>
+    </a>
+    <span>13年生产研发和9年装灯经验</span></div>
   <div class="ds2">
     <div class="content">
       <dl class="dl01">
-        <dt>无毒无味，可亲吻的木板</dt>
-        <dd>大荷产品通过国际SGS欧盟玩具标准EN71.PART3及美国标准ASTM963，并严格按中国GB/T23999-2009和GB18582-2008标准生产</dd>
+        <dt>地处国家高新工业区，认证齐全，品质过硬</dt>
+        <dd>通过了国家ISO9001质量管理体系认证、ISO14000环境管理认证及国家强制性3C产品认证，为制造品质过硬的LED灯具提供了可靠的技术保障</dd>
       </dl>
       <dl class="dl02">
-        <dt>让生活中的每个角落都环保</dt>
-        <dd>环保无毒的大荷漆可根本杜绝油性漆释放的有毒物质，从公共环境到家庭的每个角落，大荷水性漆给您全面呵护！</dd>
+        <dt>多款工业照明灯具，覆盖180多种生产环境</dt>
+        <dd>系列产品适用于各种大中小型工厂，安装高度覆盖3米到150米高的应用场景；工业防护全面覆盖防油、防尘、防腐、防蚊虫；防火、防爆、防水、防雷击等多种复杂工业环境</dd>
       </dl>
       <dl class="dl03">
-        <dt>色泽纯正，装饰和保护性强</dt>
-        <dd>可用于家具、门窗、地板、墙面等各种表面的装饰和保护，色泽亮丽，演绎天然质朴。</dd>
+        <dt>13年坚守品质至上和客户第一的理念</dt>
+        <dd>为中国工厂的LED节能照明改造事业贡献出一份坚实的企业力量及科学先进的工业级LED照明产品。成为中国LED工业照明领域首选服务品牌！</dd>
       </dl>
       <dl class="dl04">
-        <dt>核心竞争力，创新无止境</dt>
-        <dd>专业技术团队将持续不断地突破水性漆核心技术，让加盟商拥有可持续发展的竞争力。</dd>
+        <dt>专利LED工业照明节能系统</dt>
+        <dd>工业照明节能管理系统也已经升级为3.0版本，领先行业标准的节能照明效果及高于行业标准的产品品质</dd>
       </dl>
       <h3><img src="/spectacle/img/ds1.jpg" alt="水性漆涂料加盟"></h3>
       <h4><img src="/spectacle/img/ds2.jpg" alt="乳胶漆涂料加盟"></h4>
@@ -113,15 +175,20 @@
 
 <div class="bz">
   <div class="content">
-    <div class="tit1"><a href="/products/" title="六大盈利保证" target="_blank">六大盈利保证<em>Six profit guarantee</em></a><span>加盟商的实力后盾</span></div>
+    <div class="tit1">
+      <a href="/products/" title="" target="_blank">
+        六大品质 买得放心<em>Six qualities for buying with confidence</em>
+      </a>
+      <span>共同见证澳镭品质</span>
+    </div>
     <div class="bz2">
       <dl class="dl01">
-        <dt><em>01</em>整店输出 轻松开店</dt>
-        <dd>专业选址分析；<b>统一VI及SI店面形象系统</b>，提供开店相关支持。</dd>
+        <dt><em>01</em>品质高端</dt>
+        <dd>3年免维护的<b>工业级</b>产品结构设计</dd>
       </dl>
       <dl class="dl02">
-        <dt><em>02</em>统一价格 区域保护</dt>
-        <dd>执行全国<b>统一零售价格</b>，保证加盟商的区域权益。</dd>
+        <dt><em>02</em>配置一流</dt>
+        <dd>全部采用工业级电子配件<b>免除工程商售后烦恼</b></dd>
       </dl>
       <dl class="dl03">
         <dt><em>03</em>全网营销 塑造品牌</dt>
@@ -136,8 +203,8 @@
         <dd><b>六大系列产品</b>，专业的调色系统和配套的辅料产品；环保健康，性能优异</dd>
       </dl>
       <dl class="dl06">
-        <dt>个性定制 提升优势<em>06</em></dt>
-        <dd>引领潮流的<b>个性化定制服务</b>，提升差异化市场竞争力</dd>
+        <dt>三年免费 质保售后<em>06</em></dt>
+        <dd>提供<b>三年免费质保</b>售后无忧服务</dd>
       </dl>
     </div>
   </div>

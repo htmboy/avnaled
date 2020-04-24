@@ -60,7 +60,8 @@
                   <th>标题</th>
                   <th>图片描述</th>
                   <th>链接</th>
-                  <th>排序</th>
+                  <th>是否显示</th>
+                  <th width="80px">排序</th>
                   <th>操作</th>
                 </tr>
                 </thead>
@@ -71,7 +72,8 @@
                   <td>{{$carousel->title}}</td>
                   <td>{{$carousel->alt}}</td>
                   <td>{{$carousel->link}}</td>
-                  <td>{{$carousel->sort}}</td>
+                  <td><input type="checkbox" name="is_show" {{$carousel->is_show?'checked':''}} data-bootstrap-switch></td>
+                  <td><input type="text" value="{{$carousel->sort}}" class="form-control"></td>
                   <td>
                     <a href="/backstage/carousel/{{$carousel->id}}/edit">编辑</a>
                     <a href="/backstage/carousel/{{$carousel->id}}/del">删除</a>
@@ -119,6 +121,7 @@
 <script src="/backstage/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="/backstage/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="/backstage/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="/backstage/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
 <!-- AdminLTE App -->
 <script src="/backstage/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
@@ -136,6 +139,13 @@
       "responsive": true,
     });
   });
+
+  $(function () {
+    $("input[data-bootstrap-switch]").each(function(){
+      $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    });
+
+  })
 </script>
 </body>
 </html>
