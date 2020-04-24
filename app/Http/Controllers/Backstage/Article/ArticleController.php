@@ -19,12 +19,14 @@ class ArticleController extends Controller
     {
         $categories = ArticleCategory::orderBy('sort', 'desc')->get();
         $cat = $request->get('cat');
-        if($cat)
+        if($cat){
             $articles = Article::where('cat_id', $cat)->orderBy('sort', 'desc');
+            $cat = compact('cat');
+        }
         else
             $articles = Article::orderBy('sort', 'desc');
         $articles = $articles->paginate(15);
-        return view('backstage.article.article', compact('articles', 'categories'));
+        return view('backstage.article.article', compact('articles', 'categories', 'cat'));
     }
 
     public function addView()

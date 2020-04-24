@@ -18,12 +18,14 @@ class ProductController extends Controller
     {
         $categories = ProductCategory::orderBy('sort', 'desc')->get();
         $cat = $request->get('cat');
-        if($cat)
+        if($cat){
             $products = Product::where('cat_id', $cat)->orderBy('sort', 'desc');
+            $cat = compact('cat');
+        }
         else
             $products = Product::orderBy('sort', 'desc');
         $products = $products->paginate(15);
-        return view('backstage.product.product', compact('products', 'categories'));
+        return view('backstage.product.product', compact('products', 'categories', 'cat'));
     }
 
     public function addView()

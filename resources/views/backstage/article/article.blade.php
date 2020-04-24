@@ -75,7 +75,7 @@
                 @foreach($articles as $article)
                 <tr>
                   <td>{{$article->id}}</td>
-                  <td>{{$article->category->name}}</td>
+                  <td>{{isset($article->category->name)?$article->category->name:'未知'}}</td>
                   <td>{{$article->title}}</td>
                   <td>{{$article->updated_at}}</td>
                   <td>
@@ -102,7 +102,7 @@
         <!-- /.col -->
       </div>
       <!-- /.row -->
-      {{$articles->links('backstage/common/artProPagination')}}
+      {{$articles->appends($cat)->links('backstage/common/artProPagination')}}
     </section>
     <!-- /.content -->
   </div>

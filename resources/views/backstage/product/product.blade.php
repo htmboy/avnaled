@@ -100,13 +100,17 @@
               </table>
             </div>
             <!-- /.card-body -->
+            {{$products->appends($cat)->links('backstage/common/artProPagination')}}
+
           </div>
           <!-- /.card -->
 
         </div>
         <!-- /.col -->
+
       </div>
       <!-- /.row -->
+
     </section>
     <!-- /.content -->
   </div>
