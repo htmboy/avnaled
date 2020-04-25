@@ -30,7 +30,7 @@ class ProductController extends Controller
 
     public function addView()
     {
-        $categories = ProductCategory::orderBy('sort', 'desc')->get();
+        $categories = ProductCategory::where('pid', '>', 0)->orderBy('sort', 'desc')->get();
         return view('backstage.product.productAdd', compact('categories'));
     }
 

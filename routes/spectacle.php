@@ -3,7 +3,7 @@
 Route::prefix('spectacle')->group(function(){
 
     Route::get('/index.html', 'Spectacle\SpectacleController@index');
-    Route::get('/zsjm.html', 'Spectacle\SpectacleController@zsjm');
+    Route::get('/cases.html', 'Spectacle\SpectacleController@cases');
     Route::get('/product.html', 'Spectacle\SpectacleController@product');
     Route::get('/product_detail.html', 'Spectacle\SpectacleController@product_detail');
     Route::get('/news.html', 'Spectacle\SpectacleController@news');

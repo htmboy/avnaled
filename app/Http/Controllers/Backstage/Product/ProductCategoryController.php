@@ -9,9 +9,12 @@ use App\Http\Controllers\Backstage\Controller;
 
 class ProductCategoryController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $productCategories = ProductCategory::orderBy('sort','desc')->paginate(15);
+        $pid = $request->get('pid');
+        if(!$pid)
+            $pid = 0;
+        $productCategories = ProductCategory::where('pid', $pid)->orderBy('sort','desc')->paginate(15);
         return view('backstage.product.category', compact('productCategories'));
     }
 
@@ -19,8 +22,12 @@ class ProductCategoryController extends Controller
     {
         $name = $request->get('name');
         $sort = ProductCategory::count() +1;
-        ProductCategory::create(compact('name', 'sort'));
-        return redirect('backstage/product/category');
+        $category = compact('name', 'sort');
+        $pid = $request->get('pid');
+        if($pid)
+            $category['pid'] = $pid;
+        ProductCategory::create($category);
+        return redirect('backstage/product/category'.($pid?'?pid='.$pid:''));
     }
 
     public function edit()

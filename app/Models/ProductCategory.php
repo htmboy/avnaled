@@ -8,4 +8,9 @@ class ProductCategory extends Model
 {
     protected $table = 'avna_product_category';
     protected $guarded = [];
+
+    public function product()
+    {
+        return $this->hasMany('App\Models\Product', 'cat_id', 'id');
+    }
 }

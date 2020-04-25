@@ -78,9 +78,15 @@ create table avna_product(
 	updated_at timestamp not null,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null,
-	cat_sort tinyint unsigned not null
+	cat_sort tinyint unsigned not null default 0,
 )engine=myisam default charset=utf8;
 #
+-- 首页产品展现
+create table avna_index_product(
+	id tinyint unsigned not null primary key auto_increment,
+	pro_id tinyint unsigned not null,
+	sort tinyint unsigned not null
+)engine=myisam default charset=utf8;
 #
 -- 产品轮播图表
 create table avna_product_gallery(
@@ -97,13 +103,19 @@ create table avna_product_gallery(
 -- 文章类目
 create table avna_article_category(
 	id tinyint unsigned not null primary key auto_increment,
+	pid tinyint unsigned not null default 0,
 	name varchar(255) not null,
 	created_at timestamp not null,
 	updated_at timestamp not null,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
-# 
+#
+create table avna_index_article(
+   id tinyint unsigned not null primary key auto_increment,
+   art_id tinyint unsigned not null,
+   sort tinyint unsigned not null
+)engine=myisam default charset=utf8;
 # 
 -- 文章
 create table avna_article(

@@ -63,7 +63,7 @@
                   @foreach($productCategories as $category)
                   <tr>
                     <td id="cate">{{$category->id}}</td>
-                    <td>{{$category->name}}</td>
+                    <td>@if($category->pid){{$category->name}}@else<a href="?pid={{$category->id}}">{{$category->name}}</a>@endif</td>
                     <td>
                       <input type="checkbox" name="is_show" {{$category->is_show?'checked':''}} data-bootstrap-switch>
                     </td>
