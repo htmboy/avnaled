@@ -2,22 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1adf72b5-8a91-4124-8640-0790e3811ff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/caseslist.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/common/leftBar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/common/pagination.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/common/search.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/search.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/spectacle/img/banner4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/articleDetail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/articleList.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/common/recommended.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/spectacle/common/recommendedArticle.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductCategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductCategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/ProductCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/ProductCategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsite.sql" beforeDir="false" afterPath="$PROJECT_DIR$/newsite.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/product/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/product/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/caseslist.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/leftBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/common/leftBar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/spectacle/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/list.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/news_detail.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/productList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/product_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/productDetail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/spectacle.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/spectacle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,42 +47,12 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/spectacle/caseslist.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/leftBar.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="418">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -87,20 +60,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/spectacle.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+            <state relative-caret-position="352">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/spectacle/contact.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#4;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#5;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#6;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#p#6;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/spectacle/search.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-              <folding>
-                <element signature="e#50#74#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="264">
+              <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -117,10 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>product</find>
-      <find>Product</find>
-      <find>specs</find>
-      <find>home</find>
       <find>spectacle/</find>
       <find>spectacle</find>
       <find>../spectacle</find>
@@ -142,11 +135,15 @@
       <find>/Template/default/Public/</find>
       <find>buyno</find>
       <find>/spet</find>
-      <find>/Template/default/Public</find>
       <find>Str::</find>
       <find>limit</find>
-      <find>/Uploads/Picture</find>
       <find>产品中心</find>
+      <find>&quot;/article/</find>
+      <find>/Uploads/Picture/</find>
+      <find>sptctacle</find>
+      <find>/Template/default/Public</find>
+      <find>/Uploads/Picture</find>
+      <find>=&quot;&quot;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,16 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/backstage/login/login.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/register/register.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/routes/avnaled.php" />
-        <option value="$PROJECT_DIR$/app/Models/Setting.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Backstage/SettingController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/setting.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Backstage/CarouselController.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/carousel/carouselAdd.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/carousel/carouselEdit.blade.php" />
         <option value="$PROJECT_DIR$/public/spectacle/js/open_qq_chat.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backstage/LinksController.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/links/links.blade.php" />
@@ -188,7 +175,6 @@
         <option value="$PROJECT_DIR$/git.use" />
         <option value="$PROJECT_DIR$/app/Models/IndexProduct.php" />
         <option value="$PROJECT_DIR$/app/Models/IndexArticle.php" />
-        <option value="$PROJECT_DIR$/resources/views/spectacle/search.blade.php" />
         <option value="$PROJECT_DIR$/newsite.sql" />
         <option value="$PROJECT_DIR$/resources/views/backstage/article/category.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/product/category.blade.php" />
@@ -196,16 +182,27 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php" />
         <option value="$PROJECT_DIR$/app/Models/ProductCategory.php" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/list.blade.php" />
-        <option value="$PROJECT_DIR$/routes/spectacle.php" />
-        <option value="$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/common/search.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/common/paginate.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/common/pagination.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php" />
-        <option value="$PROJECT_DIR$/resources/views/spectacle/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/spectacle/caseslist.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/common/recommendedNews.blade.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/common/recommendedArticle.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/common/leftBar.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/article_detail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/caseslist.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/index.blade.php" />
+        <option value="$PROJECT_DIR$/storage/framework/views/782daeeedcb001133e85ded19dc813c14ff8e821.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/articleList.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/productList.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/common/recommended.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/productDetail.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php" />
+        <option value="$PROJECT_DIR$/routes/spectacle.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/search.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spectacle/contact.blade.php" />
       </list>
     </option>
   </component>
@@ -296,10 +293,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="248" />
-    <option name="y" value="158" />
-    <option name="width" value="1603" />
-    <option name="height" value="928" />
+    <option name="x" value="81" />
+    <option name="y" value="104" />
+    <option name="width" value="1744" />
+    <option name="height" value="929" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -309,6 +306,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -345,6 +343,17 @@
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
               <item name="avnaled" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,14 +368,6 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="spectacle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="spectacle" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
@@ -378,88 +379,36 @@
               <item name="avnaled" type="462c0819:PsiDirectoryNode" />
               <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="articles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="articles" type="462c0819:PsiDirectoryNode" />
-              <item name="202004" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="carousel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="carousel" type="462c0819:PsiDirectoryNode" />
-              <item name="202004" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="storage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="products" type="462c0819:PsiDirectoryNode" />
-              <item name="202004" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/spectacle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/spectacle/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\avnaled\public\spectacle\img" />
+      <recent name="D:\avnaled\resources\views\spectacle" />
+      <recent name="D:\avnaled\resources\views\backstage\links" />
+      <recent name="D:\avnaled\public\spectacle" />
+      <recent name="D:\avnaled\app\Http\Controllers" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\avnaled\public\spectacle\img" />
       <recent name="D:\avnaled\public" />
       <recent name="D:\avnaled\app\Models" />
       <recent name="D:\avnaled\public\spectacle\js" />
       <recent name="D:\avnaled\public\spectacle\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\avnaled\resources\views\spectacle" />
-      <recent name="D:\avnaled\public\spectacle\img" />
-      <recent name="D:\avnaled\resources\views\backstage\links" />
-      <recent name="D:\avnaled\public\spectacle" />
-      <recent name="D:\avnaled\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -501,22 +450,23 @@
       <workItem from="1587601735212" duration="23908000" />
       <workItem from="1587636653306" duration="103000" />
       <workItem from="1587687546980" duration="21409000" />
-      <workItem from="1587779842899" duration="23358000" />
+      <workItem from="1587779842899" duration="23650000" />
+      <workItem from="1587865296182" duration="20084000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161516000" />
+    <option name="totallyTimeSpent" value="181892000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.1652452" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.14925373" />
       <window_info id="Structure" order="1" sideWeight="0.5006784" side_tool="true" weight="0.15884861" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32832617" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3274559" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -525,7 +475,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.30686694" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.35974842" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -557,56 +507,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/spectacle/productDetail.blade.php</url>
+          <line>124</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/setting.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="105" column="65" lean-forward="true" selection-start-line="105" selection-start-column="65" selection-end-line="105" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/SettingController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/login/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/carousel/carouselAdd.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/carousel/carouselEdit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/CarouselController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="57" column="9" lean-forward="true" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/LinksController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="69" column="6" lean-forward="true" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/backstage/ueditor/themes/iframe.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -770,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/newsite.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="105" column="44" lean-forward="true" selection-start-line="105" selection-start-column="44" selection-end-line="105" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -801,24 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#1;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#2;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#20635#20641#0#HTML" expanded="true" />
-            <element signature="e#20680#20686#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backstage/article/category.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="792">
@@ -833,34 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#1;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#2;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#21201#21207#0#HTML" expanded="true" />
-            <element signature="e#21246#21252#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#div#6;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/ProductCategory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -868,34 +727,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/head.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/pagination.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="594">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/head.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/recommendedArticle.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/leftBar.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/spectacle/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4267">
-          <caret line="242" column="13" lean-forward="true" selection-start-line="242" selection-start-column="13" selection-end-line="242" selection-end-column="13" />
+        <state relative-caret-position="2024">
+          <caret line="186" column="53" selection-start-line="186" selection-start-column="53" selection-end-line="186" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/spectacle.php">
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/782daeeedcb001133e85ded19dc813c14ff8e821.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        <state relative-caret-position="494">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/articleDetail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="133" column="37" lean-forward="true" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/articleList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/productList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+          <folding>
+            <element signature="n#style#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/recommended.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="31" />
+          <folding>
+            <element signature="e#33#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsite.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/productDetail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="973">
+          <caret line="100" column="51" lean-forward="true" selection-start-line="100" selection-start-column="51" selection-end-line="100" selection-end-column="51" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#4;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="38" column="11" lean-forward="true" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+        <state relative-caret-position="247">
+          <caret line="74" column="5" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
           <folding>
             <element signature="e#50#74#0#PHP" expanded="true" />
           </folding>
@@ -904,31 +840,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="47" />
+        <state relative-caret-position="242">
+          <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="418">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/common/leftBar.blade.php">
+    <entry file="file://$PROJECT_DIR$/routes/spectacle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/caseslist.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+        <state relative-caret-position="264">
+          <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spectacle/contact.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
           <folding>
-            <element signature="n#div#1;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#3;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#4;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#5;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#6;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#p#6;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#span#0;n#p#7;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

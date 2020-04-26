@@ -20,22 +20,14 @@ class SpectacleController extends Controller
     {
         $seo = Setting::find('index_seo');
         list($title, $keywords, $description) = explode("%/%", $seo->value);
-        $gongkuandengCategories = ProductCategory::where('pid', 1)->orderBy('sort', 'desc')->get();
-        $productCategories = ProductCategory::where('pid', 0)->orderBy('sort', 'desc')->get();
-        $articleCategories = ArticleCategory::orderBy('sort', 'desc')->get();
-        $xingmais = ProductCategory::find(4)->product;
-
-        $links = Links::where('is_show', 1)->orderBy('sort', 'desc')->get();
         $carousels = Carousel::where('is_show', 1)->orderBy('sort', 'desc')->get();
         $products = IndexProduct::orderBy('sort', 'desc')->get();
         $conpany_news = Article::where('cat_id', 1)->orderBy('sort', 'desc')->limit(3)->get();
         $news = Article::where('cat_id', 2)->orderBy('sort', 'desc')->limit(3)->get();
         $answers = Article::where('cat_id', 3)->orderBy('sort', 'desc')->limit(10)->get();
         $cases = Article::where('cat_id', 4)->orderBy('sort', 'desc')->get();
-        return view('spectacle.index', compact(
-            'links', 'carousels', 'title', 'keywords', 'description', 'products', 'articles',
-            'conpany_news', 'news', 'answers', 'cases', 'gongkuandengCategories', 'productCategories',
-            'xingmais', 'articleCategories'
+        return view('spectacle.index', compact('carousels', 'title', 'keywords', 'description', 'products', 'articles',
+            'conpany_news', 'news', 'answers', 'cases'
         ));
     }
 
@@ -43,47 +35,52 @@ class SpectacleController extends Controller
     {
         $seo = Setting::find('index_seo');
         list($title, $keywords, $description) = explode("%/%", $seo->value);
-        $cases = Article::where('cat_id', 2)->orderBy('sort', 'desc')->paginate(10);
-        $gongkuandengCategories = ProductCategory::where('pid', 1)->orderBy('sort', 'desc')->get();
-        $productCategories = ProductCategory::where('pid', 0)->orderBy('sort', 'desc')->get();
-        $xingmais = ProductCategory::find(4)->product;
-        $articleCategories = ArticleCategory::orderBy('sort', 'desc')->get();
-        $links = Links::where('is_show', 1)->orderBy('sort', 'desc')->get();
-        $recommend = Product::where('cat_id', 4)->orderBy('sort', 'desc')->limit(3)->get();
-        return view('spectacle.caseslist', compact(
-            'title', 'keywords', 'description', 'cases', 'gongkuandengCategories', 'productCategories', 'xingmais',
-            'articleCategories', 'links', 'recommend'
+        $articles = Article::where('cat_id', 2)->orderBy('sort', 'desc')->paginate(10);
+        return view('spectacle.articleList', compact(
+            'title', 'keywords', 'description', 'articles'
         ));
     }
 
-    public function product()
-    {
+    public function product(){
         return view('spectacle.product');
     }
 
-    public function product_detail()
+    public function productList(string $id)
     {
-        return view('spectacle.detail');
+        $products = Product::where('cat_id', $id)->orderBy('sort', 'desc')->paginate(10);
+
+        return view('spectacle.productList', compact('products'));
     }
 
-    public function news()
+    public function productDetail(Product $product)
     {
-        return view('spectacle.news');
+        $product_recommends = Product::where('cat_id', 1)->orderBy('sort', 'desc')->limit(4)->get();
+        $article_recommends = Article::orderBy('sort', 'desc')->limit(10)->get();
+        return view('spectacle.productDetail', compact('product', 'product_recommends', 'article_recommends'));
     }
 
-    public function news_detail()
+    public function article()
     {
-        return view('spectacle.news_detail');
+        return view('spectacle.article');
     }
 
-    public function gsjj()
+    public function articleList(ProductCategory $productCategory)
     {
-        return view('sepctacle.gsjj');
+        $seo = Setting::find('index_seo');
+        list($title, $keywords, $description) = explode("%/%", $seo->value);
+        $articles = Article::where('cat_id', 2)->orderBy('sort', 'desc')->paginate(10);
+        return view('spectacle.articleList', compact(
+            'title', 'keywords', 'description', 'articles'
+        ));
     }
 
-    public function fzlc()
+    public function articleDetail(Article $article)
     {
-        return view('spectacle.fzlc');
+        $related = Article::where('cat_id', 4)->orderBy('sort', 'desc')->limit(10)->get();
+        $article_recommends = Article::orderBy('sort', 'desc')->limit(10)->get();
+        $sql = Article::where('id', '<', $article->id)->latest('id')->take(1);
+        $last_next = Article::where('id', '>', $article->id)->oldest('id')->take(1)->union($sql)->orderBy('id', 'asc')->get();
+        return view('spectacle.articleDetail', compact('article', 'related', 'article_recommends', 'last_next'));
     }
 
     public function contact()

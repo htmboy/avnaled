@@ -90,7 +90,7 @@
 <div class="bz">
   <div class="content">
     <div class="tit1">
-      <a href="/products/" title="" target="_blank">
+      <a href="/spectacle/products/list.html" title="" target="_blank">
         六大产品共同特性介绍<em>Six qualities for buying with confidence</em>
       </a>
       <span>六大品质保障为您的工厂及客户提供一站式的保姆服务</span>
@@ -227,7 +227,7 @@
         <a href="/help/" title="常见问答" target="_blank">常见问答/<span>QUESTIONS</span></a>
       </div>
       <h4>
-        <a href='/help/'>
+        <a href='/spectacle/article/3.html'>
           <img src='/spectacle/img/20160520111402_6290.jpg' alt='大荷水性漆常见问答分类广告' />
         </a>
       </h4>
@@ -235,7 +235,7 @@
         @foreach($answers as $answer)
         <dl>
           <dt>
-            <a href="/help/20200420-885.html" target="_blank">
+            <a href="/spectacle/article/detail/{{$answer->id}}.html" target="_blank">
               {{$answer->title}}
             </a>
           </dt>
@@ -258,7 +258,7 @@
     <div id="fangan" class="owl-carousel" style="width:1080px">
       @foreach($cases as $case)
       <div class="item">
-        <a href="/alzs/20200421-886.html">
+        <a href="/spectacle/article/detail/{{$case->id}}.html">
           <img src="/storage/{{$case->thumbnail}}" alt="「和风煦日」阳明山庄经典美式（三米家居设计）" />
         </a>
         <div class="txt">{{$case->title}}</div>

@@ -4,12 +4,15 @@ Route::prefix('spectacle')->group(function(){
 
     Route::get('/index.html', 'Spectacle\SpectacleController@index');
     Route::get('/cases.html', 'Spectacle\SpectacleController@cases');
-    Route::get('/product.html', 'Spectacle\SpectacleController@product');
-    Route::get('/product_detail.html', 'Spectacle\SpectacleController@product_detail');
-    Route::get('/news.html', 'Spectacle\SpectacleController@news');
-    Route::get('/news_detail.html', 'Spectacle\SpectacleController@news_detail');
-    Route::get('/gsjj.html', 'Spectacle\SpectacleController@gsjj');
-    Route::get('/fzlc.html', 'Spectacle\SpectacleController@fzlc');
     Route::get('/contact.html', 'Spectacle\SpectacleController@contact');
+
+    Route::get('/product.html', 'Spectacle\SpectacleController@product');
+    Route::get('/product/{product}.html', 'Spectacle\SpectacleController@productList');
+    Route::get('/product/detail/{product}.html', 'Spectacle\SpectacleController@productDetail');
+
+    Route::get('/article.html', 'Spectacle\SpectacleController@article');
+    Route::get('/article/{articleCategory}.html', 'Spectacle\SpectacleController@articleDetail');
+    Route::get('/article/detail/{article}.html', 'Spectacle\SpectacleController@articleDetail');
+
 
 });

@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit" />
     <title>搜索：大荷水性漆</title>
-    <meta name="keywords" content="大荷水性漆" /><meta name="description" content="搜索大荷水性漆的结果" /><link href="/Template/default/Public/css/base.css" rel="stylesheet">
+    <meta name="keywords" content="大荷水性漆" /><meta name="description" content="搜索大荷水性漆的结果" />
+    <link href="/Template/default/Public/css/base.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" />
     <!--[if IE 9]>
     <link href="/Template/default/Public/css/ie9.css" rel="stylesheet">
