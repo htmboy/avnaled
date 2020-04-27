@@ -13,4 +13,9 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\ProductCategory', 'cat_id', 'id');
     }
+
+    public function gallery()
+    {
+        return $this->hasMany('App\Models\ProductGallery', 'pro_id', 'id');
+    }
 }

@@ -10,13 +10,6 @@
   <meta name="description" content="{{$description}}" />
   <link href="/spectacle/css/base.css" rel="stylesheet">
   <link rel="shortcut icon" href="/favicon.png" />
-  <!--[if IE 9]>
-  <link href="/spectacle/css/ie9.css" rel="stylesheet">
-  <![endif]-->
-  <!--[if lt IE 9]>
-  <link href="/spectacle/css/ie8.css" rel="stylesheet">
-  <script src="/spectacle/js/html5shiv.min.js"></script>
-  <![endif]-->
   <script src="/spectacle/js/index.js"></script>
   <link type="text/css" rel="stylesheet" href="/spectacle/css/slider.css">
   <link type="text/css" rel="stylesheet" href="/spectacle/css/owl.carousel.css">
@@ -58,7 +51,7 @@
 <!--search-->
 <div class="ds" style="margin-bottom:50px">
   <div class="tit1">
-    <a href="/products/">
+    <a href="/spectacle/product.html">
       澳镭照明工矿灯 用灯光点亮世界<em>Light the world with aooled</em>
     </a>
     <span>13年生产研发和9年装灯经验</span></div>
@@ -90,7 +83,7 @@
 <div class="bz">
   <div class="content">
     <div class="tit1">
-      <a href="/spectacle/products/list.html" title="" target="_blank">
+      <a href="/spectacle/product.html" title="" target="_blank">
         六大产品共同特性介绍<em>Six qualities for buying with confidence</em>
       </a>
       <span>六大品质保障为您的工厂及客户提供一站式的保姆服务</span>
@@ -124,28 +117,26 @@
 <!--bz-->
 <div class="jm">
   <div class="tit1">
-    <a href="/jmjz/" target="_blank">
+    <a href="/spectacle/product/1.html" target="_blank">
       产品中心<em>Franchisees to witness</em>
     </a>
     <span>澳镭照明工业级照明专用系列LED工矿灯</span></div>
   <div class="jm2">
     <div class="cccc">
       @foreach($products as $product)
-        @if($product->product->cat_id == 1)
       <dl>
         <dt>
-          <a href="/jmjz/20160810-54.html" target="_blank">
-            <img src="/storage/{{$product->product->thumbnail}}" alt="深圳梨园旗舰店" title="深圳梨园旗舰店" />
+          <a href="/product/detail/{{$product->id}}.html" target="_blank">
+            <img src="/storage/{{$product->thumbnail}}" alt="{{$product->title}}"/>
           </a>
         </dt>
         <dd>
           <p>{{$product->characteristic}}</p>
           <span>
-            <a href="/jmjz/20160810-54.html" target="_blank">{{$product->product->title}}</a>
+            <a href="/product/detail/{{$product->id}}.html" target="_blank">{{$product->title}}</a>
           </span>
         </dd>
       </dl>
-        @endif
       @endforeach
     </div>
     <div class="p01">
@@ -156,21 +147,21 @@
     </div>
   </div>
   <div class="jmmore">
-    <a href="http://chat.talk99.cn/chat/chat/p.do?c=10040101&f=10068155&g=10066948" rel="nofollow" title="现在咨询" target="_blank">
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=755930694&site=qq&menu=yes" rel="nofollow" title="现在咨询" target="_blank">
       现在咨询
     </a>
   </div>
 </div>
 <!--jm-->
 <div class="new" style="margin-bottom:50px">
-  <div class="tit1"><a href="/news/" title="新闻中心" target="_blank">新闻中心<em>latest　news</em></a></div>
+  <div class="tit1"><a href="/spectacle/article.html" title="新闻中心" target="_blank">新闻中心<em>latest　news</em></a></div>
   <div class="content">
     <div class="dy fl">
       <div class="tit2">
         <span class="fr">
-          <a href="/hyxw/" title="more" target="_blank">more +</a>
+          <a href="/spectacle/article/4.html" title="more" target="_blank">more +</a>
         </span>
-        <a href="/hyxw/" title="行业新闻" target="_blank">
+        <a href="/spectacle/article/4.html" title="行业新闻" target="_blank">
           行业新闻/
           <span>NEWS</span>
         </a>
@@ -178,13 +169,13 @@
       @foreach($news as $new)
       <dl>
         <dt>
-          <a href="/hyxw/20190912-743.html" target="_blank">
+          <a href="/spectacle/article/detail/{{$new->id}}.html" target="_blank">
             <img src="/storage/{{$new->thumbnail}}" style="display: block;">
           </a>
         </dt>
         <dd>
           <h3>
-            <a href="/hyxw/20190912-743.html" target="_blank">
+            <a href="/spectacle/article/detail/{{$new->id}}.html" target="_blank">
               {{$new->title}}
             </a>
           </h3>
@@ -196,9 +187,9 @@
     <div class="dy dy2 fl">
       <div class="tit2">
         <span class="fr">
-          <a href="/dhkx/" title="more" target="_blank">more +</a>
+          <a href="/spectacle/article/1.html" title="more" target="_blank">more +</a>
         </span>
-        <a href="/dhkx/" title="澳镭动态" target="_blank">
+        <a href="/spectacle/article/1.html" title="澳镭动态" target="_blank">
           澳镭动态/
           <span>INFORMATION</span>
         </a>
@@ -206,13 +197,13 @@
       @foreach($conpany_news as $conpany_new)
       <dl>
         <dt>
-          <a href="/dhkx/20190225-523.html" target="_blank">
-            <img src="/storage/{{$conpany_new->thumbnail}}" title="墙面装修乳胶漆色彩搭配要注意哪些事项" style="display: block;">
+          <a href="/spectacle/article/detail/{{$conpany_new->id}}.html" target="_blank">
+            <img src="/storage/{{$conpany_new->thumbnail}}" title="{{$conpany_new->title}}" style="display: block;">
           </a>
         </dt>
         <dd>
           <h3>
-            <a href="/dhkx/20190225-523.html" target="_blank">{{$conpany_new->title}}</a>
+            <a href="/spectacle/article/detail/{{$conpany_new->id}}.html" target="_blank">{{$conpany_new->title}}</a>
           </h3>
           <p>{{mb_substr(strip_tags($conpany_new->content), 0, 40)}}</p>
         </dd>
@@ -222,13 +213,13 @@
     <div class="faq fr">
       <div class="tit2">
         <span class="fr">
-          <a href="/help/" title="more" target="_blank">more +</a>
+          <a href="/spectacle/article/3.html" target="_blank">more +</a>
         </span>
-        <a href="/help/" title="常见问答" target="_blank">常见问答/<span>QUESTIONS</span></a>
+        <a href="/spectacle/article/3.html" target="_blank">常见问答/<span>QUESTIONS</span></a>
       </div>
       <h4>
         <a href='/spectacle/article/3.html'>
-          <img src='/spectacle/img/20160520111402_6290.jpg' alt='大荷水性漆常见问答分类广告' />
+          <img src='/spectacle/img/20160520111402_6290.jpg' alt='常见问答' />
         </a>
       </h4>
       <div class="faq2" id="cjwt">
@@ -253,13 +244,13 @@
 </script>
 <!--new-->
 <div class="fangan">
-  <div class="tit1"><a href="/alzs/" target="_blank">客户案例<em>Cases Show</em></a></div>
+  <div class="tit1"><a href="/spectacle/article/2.html" target="_blank">客户案例<em>Cases Show</em></a></div>
   <div class="fangan_main">
     <div id="fangan" class="owl-carousel" style="width:1080px">
       @foreach($cases as $case)
       <div class="item">
         <a href="/spectacle/article/detail/{{$case->id}}.html">
-          <img src="/storage/{{$case->thumbnail}}" alt="「和风煦日」阳明山庄经典美式（三米家居设计）" />
+          <img src="/storage/{{$case->thumbnail}}" alt="{{$case->title}}" />
         </a>
         <div class="txt">{{$case->title}}</div>
       </div>

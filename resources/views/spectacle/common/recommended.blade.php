@@ -32,7 +32,7 @@
             </dt>
             <dd>
                 <p>{{$article_recommends->first()->title}}</p>
-                <span>我们都知道，家具漆是家具生产工艺中常见的一种工艺，在给房子装修时，家具漆是必不可少的一种材料。但家具漆有很多种效果，开放式和封闭式是常见的两种，很多朋友不知道两者的区别在哪，今天，小编就为大家详细介绍一下。</span>
+                <span>{{mb_substr(strip_tags($article_recommends->first()->content), 0, 200)}}</span>
                 <a href="/spectacle/article/detail/{{$article_recommends->first()->id}}.html" target="_blank">【更多详情】</a>
             </dd>
         </dl>

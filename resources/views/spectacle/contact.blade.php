@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit" />
-    <title>联系我们_大荷水性木器漆,乳胶漆,外墙涂料招商加盟</title>
-    <meta name="keywords" content="大荷水性漆,水性木器漆,乳胶漆,外墙涂料招商加盟代理" />
-    <meta name="description" content="深圳市大荷科技有限公司地址：深圳市罗湖区梨园路东583号，公司电话：400 118 1123" />
+    <title>{{$title}}</title>
+    <meta name="keywords" content="{{$keywords}}" />
+    <meta name="description" content="{{$description}}" />
     <link href="/spectacle/css/base.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" />
     <script src="/spectacle/js/index.js"></script>
@@ -21,7 +21,13 @@
 
 <section class="pagemenu tr">
     <div class="container">
-        <ul class="ul-list"><li><a href="/gsjjz.html" >公司简介</a></li><li><a href="/fzlc.html" >发展历程</a></li><li><a href="/qiyewenhua/" >企业文化</a></li><li><a href="/lxwm.html" class="this">联系我们</a></li></ul> </div>
+        <ul class="ul-list">
+            <li><a href="/spectacle/introduction.html" >公司简介</a></li>
+            <li><a href="/spectacle/history.html" >发展历程</a></li>
+            <li><a href="/spectacle/article/1.html" >企业文化</a></li>
+            <li><a href="/spectacle/contact.html" class="this">联系我们</a></li>
+        </ul>
+    </div>
 </section>
 <!--pagemenu-->
 <div class="content">

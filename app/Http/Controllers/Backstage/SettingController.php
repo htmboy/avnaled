@@ -16,8 +16,15 @@ class SettingController extends Controller
     public function index()
     {
         $index = Setting::find('index_seo');
+        $cases = Setting::find('cases_seo');
+        $product = Setting::find('product_seo');
+        $article = Setting::find('article_seo');
+        $history = Setting::find('history_seo');
+        $introduction = Setting::find('introduction_seo');
         $contact = Setting::find('contact_seo');
-        return view('backstage.setting', compact('index', 'contact'));
+        return view('backstage.setting', compact(
+            'index', 'cases', 'product', 'article', 'contact', 'history', 'introduction'
+        ));
     }
 
     /**

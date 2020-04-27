@@ -47,7 +47,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer('spectacle.common.leftBar', function ($view){
-            $productCategories = ProductCategory::where('pid', 0)->orderBy('sort', 'desc')->get();
+            $productCategories = ProductCategory::where('pid', '>', 0)->orderBy('sort', 'desc')->get();
             $view->with(compact('productCategories'));
         });
 

@@ -5,8 +5,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit" />
-    <title>特清底漆 水性木器漆_大荷水性漆</title>
-    <meta name="keywords" content="特清底漆,水性木器漆,大荷科技" /><meta name="description" content="特清底漆_清澈通透,细致刻画木材纹理,增加漆膜丰满度,使漆膜手感细腻滑润.大荷科技公司销售热线：400-118-1123" /><link href="/spectacle/css/base.css" rel="stylesheet">
+    <title>{{$product->seo_title}}</title>
+    <meta name="keywords" content="{{$product->seo_keywords}}" />
+    <meta name="description" content="{{$product->seo_description}}" />
+    <link href="/spectacle/css/base.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" />
     <script src="/spectacle/js/index.js"></script>
 
@@ -57,6 +59,7 @@
     <div class="pro_details details">
         <div class="details-slider-box">
             <ul>
+
             </ul>
             <span class="btnl"></span> <span class="btnr"></span> </div>
         <div class="pro_attr">
@@ -117,7 +120,7 @@
     </div>
     <div class="clear"></div>
     <script type="text/javascript">
-        var temp_html = '<li><img src="/spectacle/img/5a59ee2c52aed.jpg" title="特清底漆 水性木器漆" alt="特清底漆 水性木器漆" /></li>';
+        var temp_html = '@foreach($product->gallery as $key => $gallery)<li><img src="/storage/{{$gallery->gallery}}" alt="{{$product->title.$key}}" /></li>@endforeach';
         $(".details-slider-box ul").html(temp_html);
         $('.details').slide({ mainCell: ".details-slider-box ul", effect: "leftLoop", autoPlay: true, vis: 1, prevCell: ".btnl", nextCell: ".btnr" });
 

@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit" />
-    <title>水性漆该如何选择？看完就是专家_水性油漆|大荷水性漆</title>
-    <meta name="keywords" content="水性漆,水性油漆,水性涂料,水性木器漆,环保水性漆" /><meta name="description" content="一、要清楚是用什么树脂制造的水性漆，水性树脂分类非常清晰，各类树脂性能、功能和价格不一或相差甚大，直接影响水性漆的品质、性能、效果和成本，一定要选择能满足自己需求的产品。" /><link href="/spectacle/css/base.css" rel="stylesheet">
+    <title>{{$article->seo_title}}</title>
+    <meta name="keywords" content="{{$article->seo_keywords}}" />
+    <meta name="description" content="{{$article->seo_description}}" /><link href="/spectacle/css/base.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" />
     <!--[if IE 9]>
     <link href="/spectacle/css/ie9.css" rel="stylesheet">

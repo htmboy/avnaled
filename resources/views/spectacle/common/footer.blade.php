@@ -9,27 +9,25 @@
                 <li><a href="/spectacle/product/3.html">瑞星系列投光灯</a></li>
             </ul>
             <ul class="foot_link" style="width:118px">
-                <h3>招商加盟</h3>
-                <li><a href="/jmys.html">加盟优势</a></li>
-                <li><a href="/jmtj.html">加盟条件</a></li>
-                <li><a href="/jmlc.html">加盟流程</a></li>
-                <li><a href="/jmjz/">客户见证</a></li>
+                <h3>解决方案</h3>
+                <li><a href="/spectacle/article/2.html">装灯案例</a></li>
+                <li><a href="/spectacle/article/3.html">常见问题</a></li>
+                <li><a href="/spectacle/contact.html">联系我们</a></li>
             </ul>
             <ul class="foot_link" style="width:118px">
                 <h3>澳镭品牌</h3>
-                <li><a href="/gsjjz.html">关于澳镭</a></li>
-                <li><a href="/fzlc.html">发展历程</a></li>
-                <li><a href="/dhkx">澳镭动态</a></li>
-                <li><a href="/qiyewenhua">企业文化</a></li>
+                <li><a href="/spectacle/introduction.html">关于澳镭</a></li>
+                <li><a href="/spectacle/history.html">发展历程</a></li>
+                <li><a href="/spectacle/article/1.html">澳镭动态</a></li>
             </ul>
             <div class="foot_code" style="width:490px">
                 <ul class="code">
                     <li>
-                        <img src="/spectacle/img/indimg30.gif" width="80" height="80" alt="大荷漆" title="大荷漆" align="" />
+                        <img src="/spectacle/img/indimg30.gif" width="80" height="80" align="" />
                         <em>微信公众号</em>
                     </li>
                     <li>
-                        <img src="/spectacle/img/indimg30.gif" alt="大荷水性漆" title="大荷水性漆" width="80" height="80" align="" />
+                        <img src="/spectacle/img/indimg30.gif" width="80" height="80" align="" />
                         <em>手机客户端</em>
                     </li>
                 </ul>
@@ -47,7 +45,7 @@
         </div>
         <div class="frilinks">
             @foreach($links as $link)
-                <a href="http://{{$link->$link}}" target="_blank">{{$link->name}}</a>
+                <a href="http://{{$link->link}}" target="_blank">{{$link->name}}</a>
             @endforeach
         </div>
         <div class="frilinksSubmit">
