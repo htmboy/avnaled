@@ -47,7 +47,7 @@
             <div class="card card-primary">
               <div class="card-header">
                 <div class="card-title">
-                  Ekko Lightbox
+                  产品轮播图
                 </div>
               </div>
               <div class="card-body">

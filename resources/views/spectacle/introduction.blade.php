@@ -31,26 +31,29 @@
 <!--pagemenu-->
 <div class="content">
     <div class="container info p45"><p>
-            <img src="/spectacle/img/20160809204514_41083.jpg" title="大荷水性漆" alt="大荷水性漆" width="641" height="293" align="right">
+            <img src="/spectacle/img/20160809204514_41083.jpg" width="641" height="293" align="right">
         </p>
         <p style="font-size:24px;color:#0e7939;">
-            <span style="font-weight:bold;">深圳市大荷科技有限公司</span><span style="display:block;font-size:14px;line-height:35px;">ShenZhenGlotusTechnologyCO.,LTD.</span>
+            <span style="font-weight:bold;">广东澳镭照明有限公司</span><span style="display:block;font-size:14px;line-height:35px;">AOOLED lighting electrical CO.,LTD.</span>
         </p>
         <p style="text-indent:2em;">
-            深圳市大荷科技有限公司是一家从事高性能水性漆研发、生产、销售及服务的高科技企业。公司以水性漆为核心产品，应用于家具、玩具、门窗、户外木、地板、竹器及藤器等各种表面的装饰和保护，是国内具有影响力的水性漆产品供应商。公司与杜邦、拜耳、赢创-德固萨、陶氏化学、帝斯曼等著名企业密切合作，制造出品质优良、环保健康的环境友好型水性漆产品。
+            广东澳镭照明电器有限公司成立于2006年，是一家集LED灯具研发、生产和销售于一体的综合型照明企业。历经14年的发展，公司注册资金高达6000万，现有员工200多人，拥有广东总部及6万平方佛山工业园、2万平方狮山工业园、4千平方南海营销总部和售后中心多个产业链；14年来，LED工业照明是一直作为公司的核心竞争力，且未来14年，澳镭也会继续坚持工业照明，用品质真诚服务客户。
         </p>
         <p style="text-indent:2em;">
-            公司旗下知名品牌"大荷"水性漆，现经营产品有水性木器漆、水性墙面漆、水性界面漆、水性地板漆、水性地坪漆、水性户外木漆等，具有环保、安全、耐用，施工简单快捷的特点。并以优质的产品和专业、敬业的服务，为广大用户提供一个美好、舒适、环保、健康的生活和工作环境。
+            公司产品涵盖LED工矿灯、LED泛光灯、LED天棚灯、LED投光灯、LED防爆灯、LED路灯、LED隧道灯等等，产品遍布全国660多个城市，并畅销亚洲、欧洲、北美洲、南美洲等110多个国家。
+        </p>
+        <p style="text-indent:2em;">
+            澳镭照明，14年来始终坚守品质至上的产品理念及客户第一的服务原则，开拓出一条集照明产品、经济效益与环境保护于一体的可持续发展道路，为中国工厂的LED节能照明改造事业贡献出一份坚实的企业力量及科学先进的工业级LED照明产品；未来10年，澳镭照明团队将继续携手全国各大客户，勇创为客户节省电费100亿的辉煌目标，成为中国LED工业照明领域首选服务品牌！
         </p>
         <p>
             <br>
         </p>
-        <img src="/spectacle/img/20160809204529_38679.jpg" title="大荷水性漆研发团队" alt="大荷水性漆研发团队" style="word-spacing:-1.5px;" width="399" height="339" align="left">
+        <img src="/spectacle/img/20160809204529_38679.jpg"  style="word-spacing:-1.5px;" width="399" height="339" align="left">
         <p style="text-indent:2em;">
-            公司水性漆产品从2006年进入深圳市场，系采用国家"863"计划最新成果，通过了国家部门（深圳市计量质量检测研究院）和SGS（国际第三方公正机构）的检测和认证，其产品性能指标均达到国际先进水平，符合欧盟玩具标准EN71.PART3及美国标准ASTM963、FDA175.300等多种环保技术要求，并严格按中国GB/T23999-2009和GB18582-2008等国家强制标准生产，在市场上具有很高的性价比和极强的竞争力。
+            佛山，作为全国领先的工业制造示范基地，素有世界工厂的美誉。而澳镭照明的生产研发基地，正是位于佛山的工业制造中心--南海国家高新工业区。工厂建筑面积39000平方米，拥有独立的LED模具车间、LED五金车间及LED组装车间，制造环节全面覆盖LED产业链上下游，并率先通过了国家ISO9001质量管理体系认证、ISO14000环境管理认证及国家强制性3C产品认证，为制造品质过硬的LED灯具提供了可靠的技术保障。
         </p>
         <p style="text-indent:2em;">
-            经过多年来长期大量的市场应用，验证了我们的产品完全能满足家庭、别墅、酒店、办公室、学校、医院等不同场所装修的高品质需求，并得到了深圳涂料销售、装修、设计、订制家具、门窗、地板等行业内外的一致认同，建立了良好的品牌形象，奠定大荷漆在水性漆市场的主导地位。
+            14年来，澳镭照明已经在LED工业照明领域成功开发了150多款产品，其中LED工矿灯、LED投光灯、LED泛光灯、LED隧道灯、LED路灯等工业LED灯具均为澳镭的核心产品。系列产品全面适用于各种大中小型工厂，安装高度全面覆盖3米到150米高的应用场景；工业防护全面覆盖防油、防尘、防腐、防蚊虫；防火、防爆、防水、防雷击等多种复杂工业环境；应用范围全面覆盖食品、五金、化工、冶金、矿业、煤炭、公路、桥梁等多种使用环境，真正做到以产品为客户解决一切照明烦恼。
         </p>
         <p style="text-indent:2em;">
             <br>
@@ -59,13 +62,13 @@
             <tbody>
             <tr>
                 <td style="text-align:center;">
-                    <img src="/spectacle/img/20160810052711_80922.jpg" alt="水性漆生产车间" width="360" height="231" title="水性漆生产车间" align="" style="white-space:normal;">
+                    <img src="/spectacle/img/20160810052711_80922.jpg" width="360" height="231" align="" style="white-space:normal;">
                 </td>
                 <td style="text-align:center;">
-                    <img src="/spectacle/img/20160810052709_65810.jpg" alt="水性漆生产车间" width="360" height="232" title="水性漆生产车间" align="" style="text-align:center;white-space:normal;">
+                    <img src="/spectacle/img/20160810052709_65810.jpg" width="360" height="232" align="" style="text-align:center;white-space:normal;">
                 </td>
                 <td style="text-align:center;">
-                    <img src="/spectacle/img/20160810052707_26443.jpg" alt="水性漆生产车间" width="360" height="232" title="水性漆生产车间" align="" style="text-align:center;white-space:normal;">
+                    <img src="/spectacle/img/20160810052707_26443.jpg" width="360" height="232" align="" style="text-align:center;white-space:normal;">
                 </td>
             </tr>
             <tr>

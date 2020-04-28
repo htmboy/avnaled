@@ -10,6 +10,7 @@ Route::prefix('spectacle')->group(function(){
 
     Route::get('/product.html', 'Spectacle\SpectacleController@product');
     Route::get('/product/{product}.html', 'Spectacle\SpectacleController@productList');
+    Route::get('/product/secondary/{product}.html', 'Spectacle\SpectacleController@productSecondaryList');
     Route::get('/product/detail/{product}.html', 'Spectacle\SpectacleController@productDetail');
 
     Route::get('/article.html', 'Spectacle\SpectacleController@article');

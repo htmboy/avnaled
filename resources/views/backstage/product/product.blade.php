@@ -75,18 +75,18 @@
                 </thead>
                 <tbody>
                 @foreach($products as $product)
-                <tr>
+                <tr id="{{$product->id}}" of="product">
                   <td>{{$product->id}}</td>
                   <td>{{$product->category->name}}</td>
                   <td>{{$product->title}}</td>
                   <td>{{$product->number}}</td>
                   <td>{{$product->watts}}</td>
 
-                  <td>
+                  <td class="is_show">
                     <input type="checkbox" name="is_show" {{$product->is_show?'checked':''}} data-bootstrap-switch>
                   </td>
-                  <td>
-                    <input type="text" value="{{$product->sort}}" class="form-control">
+                  <td class="sort" old="{{$product->sort}}">
+                    <input type="text" name="sort" value="{{$product->sort}}" class="form-control">
                   </td>
                   <td>
                     <a href="/backstage/product/{{$product->id}}/edit">编辑</a>
@@ -147,6 +147,7 @@
 <script src="/backstage/dist/js/demo.js"></script>
 <!-- page script -->
 <script src="/backstage/js/product.js"></script>
+<script src="/backstage/js/listview.js"></script>
 <script>
   $(function () {
     $('#example1').DataTable({

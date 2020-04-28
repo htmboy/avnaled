@@ -73,16 +73,16 @@
                 </thead>
                 <tbody>
                 @foreach($articles as $article)
-                <tr>
+                <tr id="{{$article->id}}" of="article">
                   <td>{{$article->id}}</td>
                   <td>{{isset($article->category->name)?$article->category->name:'未知'}}</td>
                   <td>{{$article->title}}</td>
                   <td>{{$article->updated_at}}</td>
-                  <td>
+                  <td class="is_show">
                     <input type="checkbox" name="is_show" {{$article->is_show?'checked':''}} data-bootstrap-switch>
                   </td>
-                  <td>
-                    <input type="text" value="{{$article->sort}}" class="form-control">
+                  <td class="sort" old="{{$article->sort}}">
+                    <input type="text" name="sort" value="{{$article->sort}}" class="form-control">
                   </td>
                   <td>
                     <a href="/backstage/article/{{$article->id}}/edit">编辑</a>
@@ -127,6 +127,7 @@
 <script src="/backstage/dist/js/demo.js"></script>
 <!-- page script -->
 <script src="/backstage/js/article.js"></script>
+<script src="/backstage/js/listview.js"></script>
 <script>
   $(function () {
     $('#example1').DataTable({

@@ -56,12 +56,11 @@ class ProductController extends Controller
 
     public function editView(Product $product)
     {
-
-        $categories = ProductCategory::orderBy('sort', 'desc')->get();
+        $categories = ProductCategory::where('pid', '>', 0)->orderBy('sort', 'desc')->get();
         return view('backstage.product.productEdit', compact('product', 'categories'));
     }
 
-    public function editProduct(Product $product, Request $request)
+    public function editProduct(Product $product, ProductPost $request)
     {
 
         if($request->hasFile('thumbnail')){
@@ -75,8 +74,7 @@ class ProductController extends Controller
             Storage::delete($product->thumbnail);
         }
         $new_product = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'created_at', 'title', 'number', 'watts','size', 'color',
-            'package', 'weight', 'voltage', 'angle', 'waterproof', 'life', 'distance', 'material',
-            'characteristic');
+            'package', 'weight', 'voltage', 'angle', 'waterproof', 'life', 'distance', 'material', 'characteristic', 'content');
         if (isset($thumbnail))
             $new_product['thumbnail'] = $thumbnail;
         $product->update($new_product);
@@ -93,6 +91,8 @@ class ProductController extends Controller
     public function gallery($pro_id)
     {
         $galleries = ProductGallery::where('pro_id', $pro_id)->orderBy('sort', 'desc')->get();
+        if ($galleries->isEmpty())
+            return redirect('/backstage/product/gallery/'.$pro_id.'/add');
         return view('backstage.product.gallery', compact('galleries', 'pro_id'));
     }
 

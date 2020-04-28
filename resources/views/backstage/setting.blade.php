@@ -38,8 +38,10 @@
             <h1>页面设置
               <span class="feedback">
               @if($errors->any())
+                  <span style="color: red">
                 {{$errors->first()}}
-              @endif
+                </span>
+                @endif
               </span>
             </h1>
           </div>

@@ -36,7 +36,9 @@
           <div class="col-sm-6">
             <h1>修改轮播图片
               @if($errors->any())
+                <span style="color: red">
                 {{$errors->first()}}
+                </span>
               @endif
             </h1>
           </div>
@@ -54,7 +56,11 @@
             <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">产品信息
-
+                  @if($errors->any())
+                    <span style="color: red">
+                {{$errors->first()}}
+                </span>
+                  @endif
                 </h3>
               </div>
               <!-- /.card-header -->

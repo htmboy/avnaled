@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::prefix('backstage')->group(function (){
+    Route::post('/isshow', 'Backstage\ApiController@isShow');
+    Route::post('/sort', 'Backstage\ApiController@sort');
+});

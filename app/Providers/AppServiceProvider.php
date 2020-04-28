@@ -30,12 +30,17 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer('spectacle.common.header', function($view){
+            $param = [
+                'gongkuangdeng' => 1,
+                'fanguangdeng' => 2,
+                'touguangdeng' => 3
+            ];
             $gongkuandengCategories = ProductCategory::where('pid', 1)->orderBy('sort', 'desc')->get();
             $xingmais = ProductCategory::find(4)->product;
             $productCategories = ProductCategory::where('pid', 0)->orderBy('sort', 'desc')->get();
             $articleCategories = ArticleCategory::orderBy('sort', 'desc')->get();
             $view->with(compact(
-                'gongkuandengCategories', 'xingmais', 'productCategories', 'articleCategories'
+                'gongkuandengCategories', 'xingmais', 'productCategories', 'articleCategories', 'param'
             ));
         });
 

@@ -36,7 +36,9 @@
           <div class="col-sm-6">
             <h1>新增文章
               @if($errors->any())
+                <span style="color: red">
                 {{$errors->first()}}
+                </span>
               @endif
             </h1>
           </div>

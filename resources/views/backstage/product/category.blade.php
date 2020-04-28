@@ -61,13 +61,13 @@
                   </thead>
                   <tbody>
                   @foreach($productCategories as $category)
-                  <tr>
-                    <td id="cate">{{$category->id}}</td>
+                  <tr id="{{$category->id}}" of="productCategory">
+                    <td>{{$category->id}}</td>
                     <td>@if($category->pid){{$category->name}}@else<a href="?pid={{$category->id}}">{{$category->name}}</a>@endif</td>
-                    <td>
+                    <td class="is_show">
                       <input type="checkbox" name="is_show" {{$category->is_show?'checked':''}} data-bootstrap-switch>
                     </td>
-                    <td><input type="text" value="{{$category->sort}}" class="form-control" placeholder=".col-3"></td>
+                    <td class="sort" old="{{$category->sort}}"><input type="text" name="sort" value="{{$category->sort}}" class="form-control" placeholder=".col-3"></td>
                   </tr>
                   @endforeach
                   </tbody>
@@ -129,6 +129,7 @@
 <script src="/backstage/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backstage/dist/js/demo.js"></script>
+<script src="/backstage/js/listview.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
   bsCustomFileInput.init();

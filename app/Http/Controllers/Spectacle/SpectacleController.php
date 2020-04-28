@@ -36,7 +36,7 @@ class SpectacleController extends Controller
         $seo = Setting::find('cases_seo');
         list($title, $keywords, $description) = explode("%/%", $seo->value);
         $articles = Article::where('cat_id', 2)->orderBy('sort', 'desc')->paginate(10);
-        return view('spectacle.articleList', compact(
+        return view('spectacle.casesList', compact(
             'title', 'keywords', 'description', 'articles'
         ));
     }
@@ -48,13 +48,27 @@ class SpectacleController extends Controller
         return view('spectacle.product', compact('title', 'keywords', 'description', 'products'));
     }
 
-    public function productList(string $id)
+    public function productList($id)
+    {
+        // TODO: 优化拼英库
+        $param = [
+            'gongkuangdeng' => 1,
+            'fanguangdeng' => 2,
+            'touguangdeng' => 3
+         ];
+        $seo = Setting::find('product_seo');
+        list($title, $keywords, $description) = explode("%/%", $seo->value);
+        $products = Product::where('cat_id', $param[$id])->orderBy('sort', 'desc')->paginate(10);
+        return view('spectacle.productList', compact('title', 'keywords', 'description', 'products'));
+    }
+    public function productSecondaryList($id)
     {
         $seo = Setting::find('product_seo');
         list($title, $keywords, $description) = explode("%/%", $seo->value);
         $products = Product::where('cat_id', $id)->orderBy('sort', 'desc')->paginate(10);
         return view('spectacle.productList', compact('title', 'keywords', 'description', 'products'));
     }
+
 
     public function productDetail(Product $product)
     {
@@ -71,7 +85,7 @@ class SpectacleController extends Controller
         return view('spectacle.article', compact('title', 'keywords', 'description', 'articles'));
     }
 
-    public function articleList(ProductCategory $productCategory)
+    public function articleList()
     {
         $seo = Setting::find('article_seo');
         list($title, $keywords, $description) = explode("%/%", $seo->value);

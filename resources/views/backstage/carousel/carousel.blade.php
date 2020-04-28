@@ -67,13 +67,13 @@
                 </thead>
                 <tbody>
                 @foreach($carousels as $carousel)
-                <tr>
-                  <td><img width="50" src="/storage/{{$carousel->site}}"></td>
+                <tr id="{{$carousel->id}}" of="carousel">
+                  <td><img width="200" src="/storage/{{$carousel->site}}"></td>
                   <td>{{$carousel->title}}</td>
                   <td>{{$carousel->alt}}</td>
                   <td>{{$carousel->link}}</td>
-                  <td><input type="checkbox" name="is_show" {{$carousel->is_show?'checked':''}} data-bootstrap-switch></td>
-                  <td><input type="text" value="{{$carousel->sort}}" class="form-control"></td>
+                  <td class="is_show"><input type="checkbox" {{$carousel->is_show?'checked':''}} data-bootstrap-switch></td>
+                  <td class="sort" old="{{$carousel->sort}}"><input type="text" name="sort" value="{{$carousel->sort}}" class="form-control"></td>
                   <td>
                     <a href="/backstage/carousel/{{$carousel->id}}/edit">编辑</a>
                     <a href="/backstage/carousel/{{$carousel->id}}/del">删除</a>
@@ -127,6 +127,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/backstage/dist/js/demo.js"></script>
 <!-- page script -->
+<script src="/backstage/js/listview.js"></script>
 <script>
   $(function () {
     $('#example1').DataTable({

@@ -25,14 +25,14 @@
         <li><a href="/spectacle/product/4.html">星脉系列三代工矿灯</a>
             <ul>
                 @foreach($xingmais as $xingmai)
-                    <li><a href="/spectacle/product/{{$xingmai->id}}.html">{{$xingmai->title}}</a></li>
+                    <li><a href="/spectacle/product/detail/{{$xingmai->id}}.html">{{$xingmai->title}}</a></li>
                 @endforeach
             </ul>
         </li>
         <li><a href="/spectacle/product.html">产品中心</a>
             <ul>
                 @foreach($productCategories as $productCategory)
-                    <li><a href="/spectacle/product/{{$productCategory->id}}.html">{{$productCategory->name}}</a></li>
+                    <li><a href="/spectacle/product/{{array_search($productCategory->id, $param)}}.html">{{$productCategory->name}}</a></li>
                 @endforeach
             </ul>
         </li>

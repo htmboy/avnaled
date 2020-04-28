@@ -32,7 +32,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>产品类目</h1>
+            <h1>产品类目
+              @if($errors->any())
+                <span style="color: red">
+                {{$errors->first()}}
+                </span>
+              @endif
+            </h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -62,13 +68,13 @@
                   </thead>
                   <tbody>
                   @foreach($articleCategories as $category)
-                  <tr>
-                    <td id="cate">{{$category->id}}</td>
+                  <tr id="{{$category->id}}" of="articleCategory">
+                    <td>{{$category->id}}</td>
                     <td>{{$category->name}}</td>
-                    <td>
+                    <td class="is_show">
                       <input type="checkbox" name="is_show" {{$category->is_show?'checked':''}} data-bootstrap-switch>
                     </td>
-                    <td><input type="text" value="{{$category->sort}}" class="form-control" placeholder=".col-3"></td>
+                    <td class="sort" old="{{$category->sort}}"><input type="text" name="sort" value="{{$category->sort}}" class="form-control" placeholder=".col-3"></td>
                   </tr>
                   @endforeach
                   </tbody>
@@ -130,6 +136,7 @@
 <script src="/backstage/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backstage/dist/js/demo.js"></script>
+<script src="/backstage/js/listview.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
   bsCustomFileInput.init();

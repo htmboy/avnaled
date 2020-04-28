@@ -62,14 +62,14 @@
                   </thead>
                   <tbody>
                   @foreach($links as $link)
-                  <tr>
-                    <td id="cate">{{$link->id}}</td>
+                  <tr id="{{$link->id}}" of="link">
+                    <td>{{$link->id}}</td>
                     <td>{{$link->name}}</td>
                     <td>{{$link->link}}</td>
-                    <td>
+                    <td class="is_show">
                       <input type="checkbox" name="is_show" {{$link->is_show?'checked':''}} data-bootstrap-switch>
                     </td>
-                    <td><input type="text" value="{{$link->sort}}" class="form-control" placeholder=".col-3"></td>
+                    <td class="sort" old="{{$link->sort}}"><input type="text" name="sort" value="{{$link->sort}}" class="form-control" placeholder=".col-3"></td>
                   </tr>
                   @endforeach
                   </tbody>
@@ -135,6 +135,7 @@
 <script src="/backstage/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backstage/dist/js/demo.js"></script>
+<script src="/backstage/js/listview.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
   bsCustomFileInput.init();
