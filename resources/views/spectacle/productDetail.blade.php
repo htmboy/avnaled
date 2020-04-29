@@ -37,20 +37,11 @@
 @include('spectacle.common.header')
 
 
-<div class="page_banner"><a href="http://www.dhq898.com/products"><img src="/spectacle/img/5795e2caca5c5.jpg"></a></div>
-<!--banner-bar-->
-<div class="page_search">
-    <div class="content">
-        <div class="home_ss_l">
-            <span>当前位置：</span>
-            <a href='/'>澳镭首页</a> » <a href='/sxmqq/'>{{$product->category->name}}</a> » <a href="http://www.dhq898.com/sxmqq/tqdqsxmqq.html">{{$product->title}}</a>
-        </div>
-        <div class="home_ss_r"><form name="searchForm" method="get" action="/search/">
-                <input type="text" onclick="this.value=''" name="keyword" class="inp01" value="led工矿灯" onfocus="if(this.value=='大荷水性漆'){this.value='';}"  onblur="if(this.value==''){this.value='大荷水性漆';}" />
-                <input type="submit" value="" class="inp02" />
-            </form></div>
-    </div>
+<div class="page_banner">
+    <img src="/spectacle/img/5795e2caca5c5.jpg">
 </div>
+<!--banner-bar-->
+@include('spectacle.common.search')
 <!--page-search-->
 
 

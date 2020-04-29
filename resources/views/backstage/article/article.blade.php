@@ -37,6 +37,11 @@
           <div class="col-sm-6">
             <h1>新闻列表</h1>
           </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="location.href=document.referrer">返回</a></li>
+            </ol>
+          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -64,6 +69,7 @@
                 <tr>
                   <th>新闻id</th>
                   <th>新闻类型</th>
+                  <th>封面</th>
                   <th>标题</th>
                   <th>更新时间</th>
                   <th>是否显示</th>
@@ -75,6 +81,7 @@
                 @foreach($articles as $article)
                 <tr id="{{$article->id}}" of="article">
                   <td>{{$article->id}}</td>
+                  <td><img src="/storage/{{$article->thumbnail}}" width="80"></td>
                   <td>{{isset($article->category->name)?$article->category->name:'未知'}}</td>
                   <td>{{$article->title}}</td>
                   <td>{{$article->updated_at}}</td>

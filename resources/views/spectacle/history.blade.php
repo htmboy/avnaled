@@ -14,7 +14,9 @@
 <body>
 @include('spectacle.common.header')
 
-<div class="page_banner"><a href="http://www.dhq898.com/gsjjz.html"><img src="/spectacle/img/banner4.jpg" width="100%"></a></div>
+<div class="page_banner">
+    <img src="/spectacle/img/banner4.jpg" width="100%">
+</div>
 <!--banner-bar-->
 
 

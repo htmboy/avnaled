@@ -29,11 +29,11 @@
                 @foreach($articles as $article)
                 <div class="new2_con">
                     <a href="/spectacle/article/detail/{{$article->id}}.html" target="_blank" class="new2_img">
-                        <img src="/storage/{{$article->thumbnail}}" width="200" height="150" alt="{{$article->title}}">
+                        <img src="/storage/{{$article->thumbnail}}" width="150" alt="{{$article->title}}">
                     </a>
                     <div class="new2_txt">
                         <h2><a href="/spectacle/article/detail/{{$article->id}}.html" target="_blank">{{$article->title}}</a></h2>
-                        <p>{{mb_substr(strip_tags($article->content), 0, 130)}}</p>
+                        <p>{{mb_substr(strip_tags($article->content), 0, 300)}}</p>
                         <span>
                             <h3><a href="/spectacle/article/detail/{{$article->id}}.html" class="btn_more">查看详情</a></h3>
                         </span>

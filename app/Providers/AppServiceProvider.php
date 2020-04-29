@@ -4,14 +4,14 @@ namespace App\Providers;
 
 use App\Models\Article;
 use App\Models\ArticleCategory;
-use App\Models\Links;
-use App\Models\Product;
-use App\Models\ProductCategory;
-use Illuminate\Support\Facades\View;
-use Illuminate\Support\ServiceProvider;
+    use App\Models\Links;
+    use App\Models\Product;
+    use App\Models\ProductCategory;
+    use Illuminate\Support\Facades\View;
+    use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider
-{
+    class AppServiceProvider extends ServiceProvider
+    {
     /**
      * Register any application services.
      *
@@ -57,7 +57,9 @@ class AppServiceProvider extends ServiceProvider
         });
 
         View::composer('spectacle.common.recommended', function ($view){
-            $product_recommends = Product::where('cat_id', 1)->orderBy('sort', 'desc')->limit(3)->get();
+            $productCategory = ProductCategory::where('pid', 1)->get('id');
+            $product_recommends = Product::whereIn('cat_id', array_values($productCategory->toArray()))->orderBy('sort', 'desc')->limit(3)->get();
+            // $product_recommends = Product::where('cat_id', 1)->orderBy('sort', 'desc')->limit(3)->get();
             $article_recommends = Article::orderBy('sort', 'desc')->limit(10)->get();
             $view->with(compact('product_recommends', 'article_recommends'));
         });

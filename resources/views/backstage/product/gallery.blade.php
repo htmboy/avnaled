@@ -35,6 +35,11 @@
           <div class="col-sm-6">
             <h1>产品图片</h1>
           </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="/backstage/product">返回</a></li>
+            </ol>
+          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -52,12 +57,14 @@
               </div>
               <div class="card-body">
                 <div class="row">
-                  @foreach($galleries as $gallery)
+                  @foreach($galleries as $key => $gallery)
                   <div class="col-sm-2">
-                    <a href="/storage/{{$gallery->gallery}}?text={{$gallery->sort}}" data-toggle="lightbox" data-title="sample 1 - white" data-gallery="gallery">
-                      <img src="/storage/{{$gallery->gallery}}?text={{$gallery->sort}}" class="img-fluid mb-2" alt="white sample"/>
+                    <a href="/storage/{{$gallery->gallery}}" data-toggle="lightbox" data-title="sample 1 - white" data-gallery="gallery">
+                      <img src="/storage/{{$gallery->gallery}}" name="gallery" id="{{$gallery->id}}" sort="{{$gallery->sort}}" class="img-fluid mb-2"/>
                     </a>
-                    <a href="/backstage/product/gallery/{{$pro_id}}/{{$gallery->id}}/del">删除</a>
+                    <span>排序：{{$key + 1}}</span>
+                    <a class="float-sm-right" href="/backstage/product/gallery/{{$pro_id}}/{{$gallery->id}}/del">删除</a>
+
                   </div>
                   @endforeach
                   <div class="col-sm-2">
@@ -78,13 +85,7 @@
   </div>
   <!-- /.content-wrapper -->
 
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.4
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
+@include('backstage.common.footer')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -108,6 +109,7 @@
 <script src="/backstage/dist/js/demo.js"></script>
 <!-- Filterizr-->
 <script src="/backstage/plugins/filterizr/jquery.filterizr.min.js"></script>
+<script src="/backstage/js/photoSort.js"></script>
 <!-- Page specific script -->
 <script>
   $(function () {

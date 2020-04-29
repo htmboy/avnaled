@@ -53,7 +53,7 @@
                         <li class="nav-item">
                             <a href="/backstage/product" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>产品目录</p>
+                                <p>产品列表</p>
                             </a>
                         </li>
                         <li class="nav-item">

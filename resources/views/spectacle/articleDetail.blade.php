@@ -24,18 +24,7 @@
 
 <div class="page_banner"></div>
 <!--banner-bar-->
-<div class="page_search">
-    <div class="content">
-        <div class="home_ss_l">
-            <span>当前位置：</span>
-            <a href='/spectacle/index.html'>澳镭首页</a>  » <a href="/spectacle/article/list.html">新闻中心</a>  » <a href="#">{{$article->category->name}}</a> </div>
-        <div class="home_ss_r">
-            <form name="searchForm" method="get" action="/search/">
-                <input type="text" onclick="this.value=''" name="keyword" class="inp01" value="led工矿灯" onfocus="if(this.value=='大荷水性漆'){this.value='';}"  onblur="if(this.value==''){this.value='大荷水性漆';}" />
-                <input type="submit" value="" class="inp02" />
-            </form></div>
-    </div>
-</div>
+@include('spectacle.common.search')
 <!--page-search-->
 
 

@@ -42,6 +42,11 @@
               @endif
             </h1>
           </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="location.href=document.referrer">返回</a></li>
+            </ol>
+          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -126,13 +131,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.4
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
+@include('backstage.common.footer')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

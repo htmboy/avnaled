@@ -22,7 +22,7 @@
     <ul id="nav" class="nav-bar ul-list">
         <li><a href="/spectacle/index.html">澳镭首页</a></li>
         <li><a href="/spectacle/cases.html">案例抢先看</a></li>
-        <li><a href="/spectacle/product/4.html">星脉系列三代工矿灯</a>
+        <li><a href="javascript:void(0)">星脉系列三代工矿灯</a>
             <ul>
                 @foreach($xingmais as $xingmai)
                     <li><a href="/spectacle/product/detail/{{$xingmai->id}}.html">{{$xingmai->title}}</a></li>

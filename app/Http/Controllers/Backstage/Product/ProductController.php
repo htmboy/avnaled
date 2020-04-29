@@ -16,7 +16,7 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $categories = ProductCategory::orderBy('sort', 'desc')->get();
+        $categories = ProductCategory::where('pid', '>', '0')->orderBy('sort', 'desc')->get();
         $cat = $request->get('cat');
         if($cat){
             $products = Product::where('cat_id', $cat)->orderBy('sort', 'desc');
@@ -60,7 +60,7 @@ class ProductController extends Controller
         return view('backstage.product.productEdit', compact('product', 'categories'));
     }
 
-    public function editProduct(Product $product, ProductPost $request)
+    public function editProduct(Product $product, Request $request)
     {
 
         if($request->hasFile('thumbnail')){

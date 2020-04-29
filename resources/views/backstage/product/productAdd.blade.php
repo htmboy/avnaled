@@ -42,6 +42,11 @@
               @endif
             </h1>
           </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="location.href=document.referrer">返回</a></li>
+            </ol>
+          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -172,7 +177,7 @@
                         <label for="exampleInputFile">产品缩率主图</label>
                         <div class="input-group">
                           <div class="custom-file">
-                            <input type="file" name="thumbnail" class="custom-file-input" id="exampleInputFile">
+                            <input type="file" name="thumbnail" of="product" class="custom-file-input" id="exampleInputFile">
                             <label class="custom-file-label" for="exampleInputFile">选择图片</label>
                           </div>
                           <div class="input-group-append">
@@ -182,7 +187,7 @@
                       </div>
 
                         <div class="input-group">
-                      <img class="img-fluid pad" src="/backstage/dist/img/photo2.png" alt="Photo">
+                      <img class="img-fluid pad" name="photo" src="/backstage/dist/img/photo2.png" alt="Photo">
                         </div>
                     </div>
                   </div>
@@ -201,7 +206,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">新增</button>
+                  <button type="submit" class="btn btn-primary">保存</button>
                   <a href="/backstage/product" class="btn btn-default">取消</a>
                 </div>
               </form>
@@ -217,13 +222,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.4
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
+@include('backstage.common.footer')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -243,6 +242,8 @@
 <script src="/backstage/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backstage/dist/js/demo.js"></script>
+<script src="/backstage/js/imgValidate.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function () {
   bsCustomFileInput.init();

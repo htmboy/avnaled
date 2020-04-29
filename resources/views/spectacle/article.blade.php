@@ -7,14 +7,15 @@
     <title>{{$title}}</title>
     <meta name="keywords" content="{{$keywords}}" />
     <meta name="description" content="{{$description}}" />
-    <link href="/Template/default/Public/css/base.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="/spectacle/css/base.css" rel="stylesheet">
     <script src="/spectacle/js/index.js"></script>
 </head><body>
 @include('spectacle.common.header')
 
-<div class="page_banner"><a href="http://www.dhq898.com/help"><img src="/spectacle/img/5795e3e9ce74a.jpg"></a></div>
+<div class="page_banner">
+    <img src="/spectacle/img/5795e3e9ce74a.jpg">
+</div>
 <!--banner-bar-->
 @include('spectacle.common.search')
 <!--page-search-->
@@ -27,7 +28,7 @@
                 @foreach($articles as $article)
                 <div class="new2_con">
                     <a href="/spectacle/article/detail/{{$article->id}}.html" target="_blank" class="new2_img">
-                        <img src="/storage/{{$article->thumbnail}}" width="200" height="150">
+                        <img src="/storage/{{$article->thumbnail}}" width="150">
                     </a>
                     <div class="new2_txt">
                         <h2><a href="/spectacle/article/detail/{{$article->id}}.html" target="_blank">{{$article->title}}</a></h2>

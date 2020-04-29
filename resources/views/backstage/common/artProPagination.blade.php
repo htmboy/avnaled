@@ -28,7 +28,9 @@
                 @if (is_array($element))
                 @foreach ($element as $page => $url)
                 @if ($page == $paginator->currentPage())
-                <li><span>{{ $page }}</span></li>
+                <li class="paginate_button page-item disabled">
+                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">{{ $page }}</a>
+                </li>
                 @else
                 <li class="paginate_button page-item active">
                     <a href="{{ $url }}" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">{{ $page }}</a>
@@ -37,6 +39,17 @@
                 @endforeach
                 @endif
                 @endforeach
+
+                {{-- Next Page Link --}}
+                @if ($paginator->hasMorePages())
+                    <li class="paginate_button page-item previous" id="example1_previous">
+                        <a href="{{ $paginator->nextPageUrl() }}" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">下一页</a>
+                    </li>
+                @else
+                    <li class="paginate_button page-item previous disabled" id="example1_previous">
+                        <a href="#" aria-controls="example1" data-dt-idx="0" tabindex="0" class="page-link">下一页</a>
+                    </li>
+                @endif
             </ul>
         </div>
     </div>

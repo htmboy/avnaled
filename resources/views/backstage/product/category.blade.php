@@ -34,6 +34,11 @@
           <div class="col-sm-6">
             <h1>产品类目</h1>
           </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="location.href=document.referrer">返回</a></li>
+            </ol>
+          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>

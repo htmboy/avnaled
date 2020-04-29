@@ -42,6 +42,11 @@
               @endif
             </h1>
           </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="location.href=document.referrer">返回</a></li>
+            </ol>
+          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -92,48 +97,44 @@
                       <label>时间</label>
                       <input type="date" name="created_at" value="{{date('Y-m-d', time())}}" class="form-control">
                     </div>
-                  </div>
-                  <div class="col-sm-5">
-                        <div class="form-group">
-                          <label>seo标题</label>
-                          <input type="text" name="seo_title" class="form-control">
-                        </div>
-                        <div class="form-group">
-                          <label>seo关键词</label>
-                          <input type="text" name="seo_keywords" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                          <label>seo描述</label>
-                          <textarea class="form-control" name="seo_description" rows="4"></textarea>
-                        </div>
-
-                      </div>
-
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-5">
-
-                        <div class="form-group">
-                          <label for="exampleInputFile">产品缩率主图</label>
-                          <div class="input-group">
-                            <div class="custom-file">
-                              <input type="file" name="thumbnail" class="custom-file-input" id="exampleInputFile">
-                              <label class="custom-file-label" for="exampleInputFile">选择图片</label>
-                            </div>
-                            <div class="input-group-append">
-                              <span class="input-group-text" id="">说明</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="input-group">
-                          <img class="img-fluid pad" src="/backstage/dist/img/photo2.png" alt="Photo">
-                        </div>
-
+                    <div class="form-group">
+                      <label>seo标题</label>
+                      <input type="text" name="seo_title" class="form-control">
                     </div>
-                    <div class="col-sm-4"></div>
+                    <div class="form-group">
+                      <label>seo关键词</label>
+                      <input type="text" name="seo_keywords" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                      <label>seo描述</label>
+                      <textarea class="form-control" name="seo_description" rows="4"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-5">
+
+
+                    <div class="form-group">
+                      <label for="exampleInputFile">产品缩率主图</label>
+                      <div class="input-group">
+                        <div class="custom-file">
+                          <input type="file" name="thumbnail" of="article" class="custom-file-input" id="exampleInputFile">
+                          <label class="custom-file-label" for="exampleInputFile">选择图片</label>
+                        </div>
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="">说明</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-8">
+                    <div class="input-group">
+                      <img class="img-fluid pad" name="photo" src="/backstage/dist/img/photo2.png" alt="Photo">
+                    </div>
+                      </div>
+                  </div>
+
                   </div>
                   <div class="row">
                   <div class="col-sm-1"></div>
@@ -150,7 +151,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">新增</button>
+                  <button type="submit" class="btn btn-primary">保存</button>
                   <a href="/backstage/article" class="btn btn-default">取消</a>
                 </div>
               </form>
@@ -180,6 +181,7 @@
 <script src="/backstage/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backstage/dist/js/demo.js"></script>
+<script src="/backstage/js/imgValidate.js"></script>
 <script type="text/javascript">
 $(document).ready(function () {
   bsCustomFileInput.init();

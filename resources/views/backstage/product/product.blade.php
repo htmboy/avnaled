@@ -64,9 +64,9 @@
                 <tr>
                   <th>id</th>
                   <th>类目</th>
+                  <th>封面</th>
                   <th>标题</th>
                   <th>编号</th>
-
                   <th>瓦数</th>
                   <th>是否显示</th>
                   <th width="80px">排序</th>
@@ -78,6 +78,7 @@
                 <tr id="{{$product->id}}" of="product">
                   <td>{{$product->id}}</td>
                   <td>{{$product->category->name}}</td>
+                  <td><img src="/storage/{{$product->thumbnail}}" width="80"></td>
                   <td>{{$product->title}}</td>
                   <td>{{$product->number}}</td>
                   <td>{{$product->watts}}</td>
@@ -115,13 +116,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.4
-    </div>
-    <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
-    reserved.
-  </footer>
+@include('backstage.common.footer')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

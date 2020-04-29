@@ -126,14 +126,14 @@
       @foreach($products as $product)
       <dl>
         <dt>
-          <a href="/product/detail/{{$product->id}}.html" target="_blank">
+          <a href="/spectacle/product/detail/{{$product->id}}.html" target="_blank">
             <img src="/storage/{{$product->thumbnail}}" alt="{{$product->title}}"/>
           </a>
         </dt>
         <dd>
           <p>{{$product->characteristic}}</p>
           <span>
-            <a href="/product/detail/{{$product->id}}.html" target="_blank">{{$product->title}}</a>
+            <a href="/spectacle/product/detail/{{$product->id}}.html" target="_blank">{{$product->title}}</a>
           </span>
         </dd>
       </dl>

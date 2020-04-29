@@ -21,7 +21,8 @@ class SpectacleController extends Controller
         $seo = Setting::find('index_seo');
         list($title, $keywords, $description) = explode("%/%", $seo->value);
         $carousels = Carousel::where('is_show', 1)->orderBy('sort', 'desc')->get();
-        $products = Product::where('cat_id', 1)->orderBy('sort', 'desc')->limit(5)->get();
+        $productCategory = ProductCategory::where('pid', 1)->get('id');
+        $products = Product::whereIn('cat_id', array_values($productCategory->toArray()))->orderBy('sort', 'desc')->limit(8)->get();
         $conpany_news = Article::where('cat_id', 1)->orderBy('sort', 'desc')->limit(3)->get();
         $news = Article::where('cat_id', 2)->orderBy('sort', 'desc')->limit(3)->get();
         $answers = Article::where('cat_id', 3)->orderBy('sort', 'desc')->limit(10)->get();
@@ -58,7 +59,9 @@ class SpectacleController extends Controller
          ];
         $seo = Setting::find('product_seo');
         list($title, $keywords, $description) = explode("%/%", $seo->value);
-        $products = Product::where('cat_id', $param[$id])->orderBy('sort', 'desc')->paginate(10);
+        $productCategory = ProductCategory::where('pid', $param[$id])->get('id');
+        $products = Product::whereIn('cat_id', array_values($productCategory->toArray()))->orderBy('sort', 'desc')->paginate(12);
+        // $products = Product::where('cat_id', $param[$id])->orderBy('sort', 'desc')->paginate(10);
         return view('spectacle.productList', compact('title', 'keywords', 'description', 'products'));
     }
     public function productSecondaryList($id)
@@ -72,7 +75,9 @@ class SpectacleController extends Controller
 
     public function productDetail(Product $product)
     {
-        $product_recommends = Product::where('cat_id', 1)->orderBy('sort', 'desc')->limit(4)->get();
+        $productCategory = ProductCategory::where('pid', 1)->get('id');
+        $product_recommends = Product::whereIn('cat_id', array_values($productCategory->toArray()))->orderBy('sort', 'desc')->limit(4)->get();
+        // $product_recommends = Product::where('cat_id', 1)->orderBy('sort', 'desc')->limit(4)->get();
         $article_recommends = Article::orderBy('sort', 'desc')->limit(10)->get();
         return view('spectacle.productDetail', compact('product', 'product_recommends', 'article_recommends'));
     }
