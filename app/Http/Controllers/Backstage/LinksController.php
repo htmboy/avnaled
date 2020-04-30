@@ -51,7 +51,7 @@ class LinksController extends Controller
      */
     public function show(Links $links)
     {
-        //
+
     }
 
     /**
@@ -60,9 +60,10 @@ class LinksController extends Controller
      * @param  \App\Links  $links
      * @return \Illuminate\Http\Response
      */
-    public function edit(Links $links)
+    public function edit(Links $link)
     {
-        //
+
+        return view('backstage.links.linkEdit', compact('link'));
     }
 
     /**
@@ -72,11 +73,11 @@ class LinksController extends Controller
      * @param  \App\Links  $links
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Links $links)
+    public function update(Request $request, Links $link)
     {
         $new_links = $request->only(['name', 'link']);
-        $links->update($new_links);
-        return redirect('/backstage/links');
+        $link->update($new_links);
+        return redirect('/backstage/links/'.$link->id.'/edit');
     }
 
     /**
@@ -85,9 +86,11 @@ class LinksController extends Controller
      * @param  \App\Links  $links
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Links $links)
+    public function del($id)
     {
-        $links->delete();
+
+        $link = Links::find($id);
+        $link->delete();
         return redirect('/backstage/links');
     }
 }

@@ -59,12 +59,11 @@
                 <div class="row">
                   @foreach($galleries as $key => $gallery)
                   <div class="col-sm-2">
-                    <a href="/storage/{{$gallery->gallery}}" data-toggle="lightbox" data-title="sample 1 - white" data-gallery="gallery">
+                    <a href="/storage/{{$gallery->gallery}}" data-toggle="lightbox" data-title="" data-gallery="gallery">
                       <img src="/storage/{{$gallery->gallery}}" name="gallery" id="{{$gallery->id}}" sort="{{$gallery->sort}}" class="img-fluid mb-2"/>
                     </a>
-                    <span>排序：{{$key + 1}}</span>
-                    <a class="float-sm-right" href="/backstage/product/gallery/{{$pro_id}}/{{$gallery->id}}/del">删除</a>
-
+                      <span>排序：{{$gallery->sort}}</span>
+                      <a class="float-sm-right" href="/backstage/product/gallery/{{$pro_id}}/{{$gallery->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
                   </div>
                   @endforeach
                   <div class="col-sm-2">

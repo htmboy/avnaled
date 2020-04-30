@@ -1,4 +1,3 @@
-console.log('listview.js');
 function xhrHttp(of, id, method, value = null) {
     var xhr = new XMLHttpRequest();
     xhr.open("post", "/api/backstage/" + method);
@@ -11,7 +10,6 @@ function xhrHttp(of, id, method, value = null) {
         }
     }
     xhr.send(JSON.stringify({"of":of, "id": id, "value": value}));
-
 }
 
 function isShow() {

@@ -63,7 +63,11 @@ Route::prefix('backstage')->group(function(){
     Route::post('/article/category', 'Backstage\Article\ArticleCategoryController@add');
     Route::post('/article/category/edit', 'Backstage\Article\ArticleCategoryController@edit');
 
-    Route::resource('links', 'Backstage\LinksController')->only(['index', 'store', 'update', 'destroy']);
+    Route::get('links', 'Backstage\LinksController@index');
+    Route::post('links', 'Backstage\LinksController@store');
+    Route::get('links/{links}', 'Backstage\LinksController@edit');
+    Route::post('links/{links}', 'Backstage\LinksController@update');
+    Route::get('links/{links}/del', 'Backstage\LinksController@del');
     Route::resource('setting', 'Backstage\SettingController')->only(['index', 'store']);
 
 });

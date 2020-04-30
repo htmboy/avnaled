@@ -91,8 +91,8 @@
                   </td>
                   <td>
                     <a href="/backstage/product/{{$product->id}}/edit">编辑</a>
-                    <a href="/backstage/product/{{$product->id}}/del">删除</a>
-                    <a href="/backstage/product/gallery/{{$product->id}}">图片</a>
+                    <a href="/backstage/product/{{$product->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
+                    <a href="/backstage/product/gallery/{{$product->id}}">轮播图</a>
                   </td>
                 </tr>
                 @endforeach

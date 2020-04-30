@@ -2,41 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1adf72b5-8a91-4124-8640-0790e3811ff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/backstage/js/imgValidate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/backstage/js/photoSort.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backstage/common/navbar_backup.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backstage/links/linkEdit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/spectacle/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backstage/LinksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backstage/LinksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backstage/js/listview.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backstage/js/listview.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/backstage/js/photoSort.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/backstage/js/photoSort.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backstage/article/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/article/article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/article/articleAdd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/article/articleAdd.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/article/articleEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/article/articleEdit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backstage/carousel/carousel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/carousel/carousel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/carousel/carouselAdd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/carousel/carouselAdd.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/carousel/carouselEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/carousel/carouselEdit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/common/artProPagination.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/common/artProPagination.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/common/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/common/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/common/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/common/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/common/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/common/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/product/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/product/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backstage/links/links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/links/links.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backstage/product/gallery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/product/gallery.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/product/galleryAdd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/product/galleryAdd.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backstage/product/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/product/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/product/productAdd.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/product/productAdd.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backstage/product/productEdit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backstage/product/productEdit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/articleDetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/articleDetail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/articleList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/articleList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/history.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/history.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/introduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/introduction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/productDetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/productDetail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/productList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/spectacle/productList.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/avnaled.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/avnaled.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,21 +38,30 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/backstage/product/gallery.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="403">
+              <caret line="62" column="99" selection-start-line="62" selection-start-column="83" selection-end-line="62" selection-end-column="99" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/backstage/js/photoSort.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+            <state relative-caret-position="374">
+              <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/backstage/product/gallery.blade.php">
+        <entry file="file://$PROJECT_DIR$/public/backstage/js/listview.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="62" column="123" selection-start-line="62" selection-start-column="123" selection-end-line="62" selection-end-column="123" />
+            <state relative-caret-position="508">
+              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -131,9 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/spectacle/searchList.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Backstage/SettingController.php" />
-        <option value="$PROJECT_DIR$/app/Models/Product.php" />
         <option value="$PROJECT_DIR$/newsite.sql" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/setting.blade.php" />
@@ -142,10 +124,8 @@
         <option value="$PROJECT_DIR$/resources/views/spectacle/casesList.blade.php" />
         <option value="$PROJECT_DIR$/public/backstage/js/list.js" />
         <option value="$PROJECT_DIR$/routes/api.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/links/links.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/article/category.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backstage/ApiController.php" />
-        <option value="$PROJECT_DIR$/public/backstage/js/listview.js" />
         <option value="$PROJECT_DIR$/resources/views/backstage/article/gallery.blade.php" />
         <option value="$PROJECT_DIR$/public/spectacle/js/imgValidate.js" />
         <option value="$PROJECT_DIR$/resources/views/backstage/product/category.blade.php" />
@@ -156,14 +136,11 @@
         <option value="$PROJECT_DIR$/resources/views/backstage/common/navbar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/article/articleAdd.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/article/articleEdit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/article/article.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/common/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/product/productAdd.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/product/product.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/product/galleryAdd.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/carousel/carouselEdit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/carousel/carouselAdd.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/carousel/carousel.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backstage/product/productEdit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/index.blade.php" />
@@ -180,8 +157,16 @@
         <option value="$PROJECT_DIR$/resources/views/spectacle/productDetail.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/productList.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/spectacle/article.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/backstage/product/gallery.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backstage/product/product.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backstage/carousel/carousel.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backstage/article/article.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backstage/links/linkEdit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/backstage/links/links.blade.php" />
+        <option value="$PROJECT_DIR$/routes/avnaled.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Backstage/LinksController.php" />
+        <option value="$PROJECT_DIR$/public/backstage/js/listview.js" />
         <option value="$PROJECT_DIR$/public/backstage/js/photoSort.js" />
+        <option value="$PROJECT_DIR$/resources/views/backstage/product/gallery.blade.php" />
       </list>
     </option>
   </component>
@@ -271,11 +256,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="440" />
-    <option name="y" value="368" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="569" />
+    <option name="y" value="126" />
     <option name="width" value="1456" />
-    <option name="height" value="953" />
+    <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -285,6 +270,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,39 +325,67 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="backstage" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backstage" type="462c0819:PsiDirectoryNode" />
+              <item name="carousel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backstage" type="462c0819:PsiDirectoryNode" />
+              <item name="links" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="backstage" type="462c0819:PsiDirectoryNode" />
               <item name="product" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backstage/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backstage/links" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\avnaled\resources\views\backstage\links" />
+      <recent name="D:\avnaled\resources\views\backstage\common" />
+      <recent name="D:\avnaled\app\Http\Controllers\Backstage" />
+      <recent name="D:\avnaled\resources\views\spectacle" />
+      <recent name="D:\avnaled\resources\views\spectacle\common" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\avnaled\public\backstage\js" />
       <recent name="D:\avnaled\public\spectacle" />
       <recent name="D:\avnaled\resources\views\spectacle" />
       <recent name="D:\avnaled\public\spectacle\img" />
       <recent name="D:\avnaled\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\avnaled\resources\views\backstage\common" />
-      <recent name="D:\avnaled\app\Http\Controllers\Backstage" />
-      <recent name="D:\avnaled\resources\views\spectacle" />
-      <recent name="D:\avnaled\resources\views\spectacle\common" />
-      <recent name="D:\avnaled\public\spectacle\img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -417,18 +431,19 @@
       <workItem from="1587865296182" duration="20288000" />
       <workItem from="1587947320272" duration="21745000" />
       <workItem from="1588037778798" duration="27319000" />
-      <workItem from="1588123833363" duration="24758000" />
+      <workItem from="1588123833363" duration="25330000" />
+      <workItem from="1588230803638" duration="9122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="255918000" />
+    <option name="totallyTimeSpent" value="265612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.14392324" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.13486141" />
       <window_info id="Structure" order="1" sideWeight="0.5006784" side_tool="true" weight="0.15884861" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -441,7 +456,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.22961374" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.26609442" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -474,59 +489,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/backstage/js/listview.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1760">
-          <caret line="80" column="22" lean-forward="true" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-          <folding>
-            <element signature="e#50#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/links/links.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="64" column="51" lean-forward="true" selection-start-line="64" selection-start-column="51" selection-end-line="64" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Carousel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/article/gallery.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/setting.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/common/artProPagination.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backstage/common/navbar_backup.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -536,13 +498,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backstage/common/head.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/backstage/js/imgValidate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backstage/common/navbar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -561,24 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/product/product.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="118" column="35" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backstage/product/galleryAdd.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="114" column="35" selection-start-line="114" selection-start-column="35" selection-end-line="114" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/product/category.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1200">
-          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -596,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/carousel/carousel.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backstage/article/category.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="516">
@@ -614,20 +548,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2474">
           <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/article/articleAdd.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1097">
-          <caret line="99" column="37" selection-start-line="99" selection-start-column="37" selection-end-line="99" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backstage/article/article.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
         </state>
       </provider>
     </entry>
@@ -656,16 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="74" column="35" selection-start-line="74" selection-start-column="35" selection-end-line="74" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-          <folding>
-            <element signature="e#58#99#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -777,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/avnaled.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="53" column="67" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newsite.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -815,17 +718,135 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/backstage/js/imgValidate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backstage/product/category.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backstage/product/product.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="95" column="23" lean-forward="true" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backstage/article/articleAdd.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="41" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backstage/article/article.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="142" column="25" lean-forward="true" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backstage/links/linkEdit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backstage/carousel/carousel.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/Product/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+          <folding>
+            <element signature="e#58#99#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backstage/links/links.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="82" column="29" lean-forward="true" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backstage/LinksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="91" column="33" lean-forward="true" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+          <folding>
+            <element signature="e#50#71#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/avnaled.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1280">
+          <caret line="69" column="69" lean-forward="true" selection-start-line="69" selection-start-column="69" selection-end-line="69" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/backstage/js/listview.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backstage/product/gallery.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="62" column="123" selection-start-line="62" selection-start-column="123" selection-end-line="62" selection-end-column="123" />
+        <state relative-caret-position="403">
+          <caret line="62" column="99" selection-start-line="62" selection-start-column="83" selection-end-line="62" selection-end-column="99" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/backstage/js/photoSort.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="81" column="36" selection-start-line="81" selection-start-column="36" selection-end-line="81" selection-end-column="36" />
+        <state relative-caret-position="374">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
       </provider>
     </entry>

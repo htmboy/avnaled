@@ -76,7 +76,7 @@
                   <td class="sort" old="{{$carousel->sort}}"><input type="text" name="sort" value="{{$carousel->sort}}" class="form-control"></td>
                   <td>
                     <a href="/backstage/carousel/{{$carousel->id}}/edit">编辑</a>
-                    <a href="/backstage/carousel/{{$carousel->id}}/del">删除</a>
+                    <a href="/backstage/carousel/{{$carousel->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
                   </td>
                 </tr>
                 @endforeach

@@ -93,7 +93,7 @@
                   </td>
                   <td>
                     <a href="/backstage/article/{{$article->id}}/edit">编辑</a>
-                    <a href="/backstage/article/{{$article->id}}/del">删除</a>
+                    <a href="/backstage/article/{{$article->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
                   </td>
                 </tr>
                 @endforeach
