@@ -14,7 +14,7 @@
         </div>
         <div class="home_ss_r">
             <form name="searchForm" method="get" action="/spectacle/search.html">
-                <input type="text" onclick="this.value=''" name="word" class="inp01" value="led工矿灯" onfocus="if(this.value=='工矿灯'){this.value='';}"  onblur="if(this.value==''){this.value='想要咨询哪款灯具呢';}" />
+                <input type="text" onclick="this.value=''" name="query" class="inp01" value="led工矿灯" onfocus="if(this.value=='工矿灯'){this.value='';}"  onblur="if(this.value==''){this.value='想要咨询哪款灯具呢';}" />
                 <input type="submit" value="" class="inp02" />
             </form>
         </div>

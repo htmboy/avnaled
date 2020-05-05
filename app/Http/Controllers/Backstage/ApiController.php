@@ -12,8 +12,9 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Links;
+use Illuminate\Routing\Controller as BaseController;
 
-class ApiController extends Controller
+class ApiController extends BaseController
 {
     /*
      * json格式

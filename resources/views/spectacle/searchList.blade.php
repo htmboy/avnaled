@@ -4,9 +4,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit" />
-    <title>搜索_{{$word}}_澳镭工矿灯</title>
-    <meta name="keywords" content="{{$word}},澳镭工矿灯" />
-    <meta name="description" content="{{$word}}的搜索结果。" />
+    <title>搜索_{{$query}}_澳镭工矿灯</title>
+    <meta name="keywords" content="{{$query}},澳镭工矿灯" />
+    <meta name="description" content="{{$query}}的搜索结果。" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="/spectacle/css/base.css" rel="stylesheet" />
     <script src="/spectacle/js/index.js"></script>
@@ -22,10 +22,10 @@
     <div class="content">
         <div class="home_ss_l">
             <span>当前位置：</span>
-            <a href="">首页</a> » 站内搜索 » 关键词：{{$word}}</div>
+            <a href="">首页</a> » 站内搜索 » 关键词：{{$query}}</div>
         <div class="home_ss_r">
             <form name="searchForm" method="get" action="/spectacle/search.html/">
-                <input type="text" onclick="this.value=''" name="word" class="inp01" value="{{$word}}" onfocus="if(this.value=='大荷水性漆'){this.value='';}"  onblur="if(this.value==''){this.value='大荷水性漆';}" />
+                <input type="text" onclick="this.value=''" name="word" class="inp01" value="{{$query}}" onfocus="if(this.value=='大荷水性漆'){this.value='';}"  onblur="if(this.value==''){this.value='led工矿灯';}" />
                 <input type="submit" value="" class="inp02" />
             </form>
         </div>
@@ -59,7 +59,7 @@
 
             </div>
             @endif
-            {{$articles->appends(['word', $word])->links('spectacle.common.pagination')}}
+            {{$articles->links('spectacle.common.pagination')}}
         </div>
     @include('spectacle.common.recommended')
     </div>
