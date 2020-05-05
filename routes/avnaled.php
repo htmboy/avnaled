@@ -6,12 +6,12 @@ Route::prefix('backstage')->group(function(){
     Route::post('/register', 'Backstage\RegisterController@register');
 
     // 登录页面
-    Route::get('/login', 'Backstage\LoginController@index');
+    Route::get('/login', 'Backstage\LoginController@index')->name('login');
     // 登录行为
     Route::post('/login', 'Backstage\LoginController@login');
 
     // 登出行为
-    Route::get('/logout', 'Backstage\LoginController@logout');
+    Route::get('/logout', 'Backstage\LoginController@logout')->name('logout');
 
     // 个人设置页面
     Route::get('/user/setting', 'Backstage\UserController@setting');

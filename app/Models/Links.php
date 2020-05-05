@@ -8,4 +8,6 @@ class Links extends Model
 {
     protected $table = 'avna_links';
     protected $guarded = [];
+
+
 }

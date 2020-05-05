@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\Backstage\Article;
 
-use App\Http\Requests\CategoryPost;
 use App\Models\ArticleCategory;
-use App\Models\ProductCategory;
 use App\Http\Controllers\Backstage\Controller;
 use Illuminate\Http\Request;
 

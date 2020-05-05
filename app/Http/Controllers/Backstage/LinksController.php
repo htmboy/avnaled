@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Backstage;
 
 use App\Models\Links;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class LinksController extends Controller
 {

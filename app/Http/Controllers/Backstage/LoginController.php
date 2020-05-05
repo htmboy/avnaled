@@ -24,7 +24,8 @@ class LoginController extends BaseController
          $active = 1;
          $user = compact('username', 'password', 'active');
          $is_remember = boolval($request->get('is_remember'));
-         if(Auth::attempt($user, $is_remember)){
+         if(Auth::guard('admin')->attempt($user, $is_remember)){
+             Auth::guard('admin')->logoutOtherDevices($password);
              return redirect('/backstage/product');
          }
         return Redirect::back()->withErrors("用户名或密码不匹配");
@@ -32,6 +33,7 @@ class LoginController extends BaseController
 
     public function logout()
     {
-        return Auth::logout();
+        Auth::guard('admin')->logout();
+        return redirect()->route('login');
     }
 }

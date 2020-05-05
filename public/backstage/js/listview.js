@@ -1,4 +1,4 @@
-function xhrHttp(of, id, method, value = null) {
+function xhrHttp(of, method, data) {
     var xhr = new XMLHttpRequest();
     xhr.open("post", "/api/backstage/" + method);
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -6,10 +6,10 @@ function xhrHttp(of, id, method, value = null) {
         if(this.readyState == 4 && this.status == 200)
         {
             console.log(this.responseText);
-            location.reload();
+            // location.reload();
         }
     }
-    xhr.send(JSON.stringify({"of":of, "id": id, "value": value}));
+    xhr.send(JSON.stringify({"of":of, "data": data}));
 }
 
 function isShow() {
@@ -22,7 +22,7 @@ function isShow() {
                 var id = this.parentElement.getAttribute('id');
                 var of = this.parentElement.getAttribute('of');
                 // console.log(of, id);
-                xhrHttp(of, id, 'isshow');
+                xhrHttp(of, 'isshow', {'id': id});
             }
         }, true);
     }
@@ -41,7 +41,7 @@ function sort() {
             var value = e.target.value;
             console.log(this, of, id, 'sort', old, value);
             if (old != value)
-                xhrHttp(of, id, 'sort', value);
+                xhrHttp(of,  'sort', {'id': id, 'value': value});
         }, true);
     }
 }

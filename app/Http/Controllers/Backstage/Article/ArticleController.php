@@ -2,15 +2,10 @@
 
 namespace App\Http\Controllers\Backstage\Article;
 
-use App\Http\Requests\ProductGalleryPost;
 use App\Models\Article;
 use App\Models\ArticleCategory;
-use App\Models\Product;
-use App\Models\ProductCategory;
-use App\Models\ProductGallery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Backstage\Controller;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller

@@ -7,6 +7,7 @@ use App\Models\ArticleCategory;
 use App\Models\Carousel;
 use App\Models\Product;
 use App\Models\ProductCategory;
+use App\Models\ProductGallery;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
@@ -16,6 +17,17 @@ class ApiController extends Controller
 {
     /*
      * json格式
+     *
+     * 接收
+     * {
+     *      of: "link",
+     *      data: {
+     *          id: 1,
+     *          value: 350
+     *      }
+     * }
+     *
+     * 返回
      * {
      *      code: 200,
      *      message: "ok",
@@ -28,10 +40,10 @@ class ApiController extends Controller
      * */
     public function isShow(Request $request)
     {
-        $data = json_decode($request->getContent(),true);
-
+        $origin = json_decode($request->getContent(),true);
+        $data = $origin['data'];
         $result = '';
-        switch ($data['of']){
+        switch ($origin['of']){
             case 'carousel':
                 $result = $this->setIsShow(Carousel::class, $data['id']);
                 break;
@@ -57,10 +69,10 @@ class ApiController extends Controller
 
     public function sort(Request $request)
     {
-        $data = json_decode($request->getContent(),true);
-
+        $origin = json_decode($request->getContent(),true);
+        $data = $origin['data'];
         $result = '';
-        switch ($data['of']){
+        switch ($origin['of']){
             case 'carousel':
                 $result = $this->setSort(Carousel::class, $data['id'], $data['value']);
                 break;
@@ -78,6 +90,9 @@ class ApiController extends Controller
                 break;
             case 'link':
                 $result = $this->setSort(Links::class, $data['id'], $data['value']);
+                break;
+            case 'gallery':
+                $result = $this->setGallerySort($data['firId'], $data['firSort'], $data['secId'], $data['secSort']);
                 break;
         }
         return $this->ok($result);
@@ -97,6 +112,14 @@ class ApiController extends Controller
         $model = $clazz::find($id);
         $model->sort = $value;
         return $model->save();
+    }
+
+    private function setGallerySort($firId, $firSort, $secId, $secSort){
+        $firGallery = ProductGallery::find($firId);
+        $secGallery = ProductGallery::find($secId);
+        $firGallery->sort = $secSort;
+        $secGallery->sort = $firSort;
+        return ($firGallery->save() && $secGallery->save());
     }
 
 }

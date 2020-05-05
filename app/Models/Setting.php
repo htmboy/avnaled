@@ -11,4 +11,9 @@ class Setting extends Model
     protected $primaryKey = 'key';
     public $incrementing = false;
     protected $guarded = [];
+
+    public static function getSeo($param)
+    {
+        return explode("%/%", self::find($param)->value);
+    }
 }

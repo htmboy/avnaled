@@ -1,4 +1,4 @@
-function xhrHttp(of, id, method, value = null) {
+function xhrHttp(of, method, data) {
     var xhr = new XMLHttpRequest();
     xhr.open("post", "/api/backstage/" + method);
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -6,29 +6,31 @@ function xhrHttp(of, id, method, value = null) {
         if(this.readyState == 4 && this.status == 200)
         {
             console.log(this.responseText);
-            location.reload();
+            // location.reload();
         }
     }
-    xhr.send(JSON.stringify({"of":of, "id": id, "value": value}));
+    xhr.send(JSON.stringify({"of":of, "data": data}));
 }
 
 function gallery() {
     var gallery = document.getElementsByName('gallery');
-    var currentId = '';
-    var currentSort = '';
-    var aimId = '';
-    var aimSort = '';
+    var firId = '';
+    var firSort = '';
+    var secId = '';
+    var secSort = '';
     for (var i = 0; i < gallery.length; i++){
         gallery[i].addEventListener('dragend', function () {
-            currentId = this.getAttribute('id');
-            currentSort = this.getAttribute('sort');
-            console.log(currentId + ',' + currentSort + '==>' + aimId +',' + aimSort);
+            firId = this.getAttribute('id');
+            firSort = this.getAttribute('sort');
+            console.log(firId + ',' + firSort + '==>' + secId +',' + secSort);
+            if(firId != secId)
+                xhrHttp('gallery', 'sort', { 'firId': firId, 'firSort': firSort, 'secId': secId, 'secSort': secSort});
         });
         gallery[i].addEventListener('dragenter', function () {
-            aimId = this.getAttribute('id');
-            aimSort = this.getAttribute('sort');
+            secId = this.getAttribute('id');
+            secSort = this.getAttribute('sort');
         });
     }
-    console.log(gallery);
+    // console.log(currentId, currentSort, aimId, aimSort);
 }
 gallery();

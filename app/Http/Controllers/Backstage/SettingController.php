@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Backstage;
 
 use App\Models\Setting;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 class SettingController extends Controller
 {
