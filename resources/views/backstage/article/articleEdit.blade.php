@@ -44,7 +44,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/backstage/article">返回</a></li>
+              <li class="breadcrumb-item"><a href="{{route('articles.index')}}">返回</a></li>
             </ol>
           </div>
         </div>
@@ -66,7 +66,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="" method="post" enctype="multipart/form-data">
+              <form action="{{route('articles.update', ['article' => $article->id])}}" method="post" enctype="multipart/form-data">
                 {{method_field('put')}}
                 {{csrf_field()}}
                 <div class="card-body">
@@ -150,7 +150,7 @@
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">保存</button>
-                  <a href="/backstage/article" class="btn btn-default">取消</a>
+                  <a href="{{route('articles.index')}}" class="btn btn-default">取消</a>
                 </div>
               </form>
             </div>

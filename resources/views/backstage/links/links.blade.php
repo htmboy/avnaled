@@ -76,8 +76,12 @@
                     <td class="sort" old="{{$link->sort}}">
                       <input type="text" name="sort" value="{{$link->sort}}" class="form-control" placeholder=".col-3"></td>
                     <td>
-                      <a href="/backstage/links/{{$link->id}}/edit">修改</a>
-                      <a href="/backstage/links/{{$link->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
+                      <a href="{{route('links.edit', ['link' => $link->id])}}">修改</a>
+                      <a href="javascript:void(0)" onclick="if(confirm('确定要删除此项吗？')) this.nextElementSibling.submit()">删除</a>
+                      <form action="{{route('links.destroy', ['link' => $link->id])}}" method="post">
+                        @method('delete')
+                        {{csrf_field()}}
+                      </form>
                     </td>
                   </tr>
                   @endforeach
@@ -100,7 +104,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="" method="post">
+              <form role="form" action="{{route('links.store')}}" method="post">
                 {{csrf_field()}}
                 <div class="card-body">
                   <div class="form-group">

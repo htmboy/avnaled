@@ -14,12 +14,12 @@ class ArticleCategoryController extends Controller
         return view('backstage.article.category', compact('articleCategories'));
     }
 
-    public function add(Request $request)
+    public function store(Request $request)
     {
         $name = $request->get('name');
         $sort = ArticleCategory::count() +1;
         ArticleCategory::create(compact('name', 'sort'));
-        return redirect('backstage/article/category');
+        return redirect()->route('art_category.index');
     }
 
     public function edit()
@@ -28,7 +28,7 @@ class ArticleCategoryController extends Controller
     }
 
     // 产品分类表不提供删除，只提供软删除
-    public function del()
+    public function destroy()
     {
         return null;
     }

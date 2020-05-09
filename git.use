@@ -20,6 +20,11 @@ git强制覆盖本地命令（单条执行）：
 
 https://github.com/htmboy/avnaled.git
 
+git回滚
+查看记录
+git reflog
+回滚reset：
+git reset --hard 98abc5a
 
 修改软链接
 ln -snf 【新目标目录】 【软链接地址】

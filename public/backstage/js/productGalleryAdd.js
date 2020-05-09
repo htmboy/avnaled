@@ -86,7 +86,7 @@ jQuery(function() {
 
         chunked: true,
         // server: 'http://webuploader.duapp.com/server/fileupload.php',
-        server: '',
+        server: location.href.substring(0, location.href.lastIndexOf('/')),
         fileNumLimit: 10,
         fileSizeLimit: 5 * 1024 * 1024,    // 200 M
         fileSingleSizeLimit: 1 * 1024 * 1024    // 50 M

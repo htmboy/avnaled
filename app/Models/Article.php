@@ -7,7 +7,7 @@ use Laravel\Scout\Searchable;
 
 class Article extends Model
 {
-    use Searchable;
+//    use Searchable;
 
     protected $table = 'avna_article';
     protected $guarded = [];

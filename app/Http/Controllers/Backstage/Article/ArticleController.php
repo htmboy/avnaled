@@ -24,13 +24,13 @@ class ArticleController extends Controller
         return view('backstage.article.article', compact('articles', 'categories', 'cat'));
     }
 
-    public function addView()
+    public function create()
     {
         $categories = ArticleCategory::orderBy('sort', 'desc')->get();
         return view('backstage.article.articleAdd', compact('categories'));
     }
 
-    public function addArticle(Request $request)
+    public function store(Request $request)
     {
         // 处理图片
         $file = $request->file('thumbnail');
@@ -46,17 +46,17 @@ class ArticleController extends Controller
         $article['sort'] = Article::count() + 1;
         $article['cat_sort'] = Article::where('cat_id', $request->get('cat_id'))->count() + 1;
         Article::create($article);
-        return redirect('/backstage/article');
+        return redirect()->route('articles.index');
     }
 
-    public function editView(Article $article)
+    public function edit(Article $article)
     {
 
         $categories = ArticleCategory::orderBy('sort', 'desc')->get();
         return view('backstage.article.articleEdit', compact('article', 'categories'));
     }
 
-    public function editArticle(Article $article, Request $request)
+    public function update(Article $article, Request $request)
     {
 
         if($request->hasFile('thumbnail')){
@@ -74,14 +74,14 @@ class ArticleController extends Controller
         if (isset($thumbnail))
             $new_article['thumbnail'] = $thumbnail;
         $article->update($new_article);
-        return redirect('backstage/article/'.$article->id.'/edit');
+        return redirect()->route('articles.edit', ['article' => $article->id]);
     }
 
 
-    public function del(Article $article)
+    public function destroy(Article $article)
     {
         $article->delete();
-        return redirect('/backstage/article');
+        return redirect()->route('articles.index');
     }
 
 }

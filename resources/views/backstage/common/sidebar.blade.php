@@ -26,7 +26,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="/backstage/carousel" class="nav-link">
+                    <a href="{{route('carousels.index')}}" class="nav-link">
                         <i class="nav-icon far fa-image"></i>
                         <p>
                             轮播图
@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li class="nav-item has-treeview">
-                    <a href="/backstage/links" class="nav-link">
+                    <a href="{{route('links.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-tree"></i>
                         <p>
                             友情链接
@@ -51,13 +51,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/backstage/product" class="nav-link">
+                            <a href="{{route('products.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>产品列表</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/backstage/product/category" class="nav-link">
+                            <a href="{{route('pro_category.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>产品类型目录</p>
                             </a>
@@ -75,13 +75,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="/backstage/article" class="nav-link">
+                            <a href="{{route('articles.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>新闻列表</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/backstage/article/category" class="nav-link">
+                            <a href="{{route('art_category.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>新闻目录</p>
                             </a>
@@ -89,7 +89,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="/backstage/setting" class="nav-link">
+                    <a href="{{route('setting.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             设置

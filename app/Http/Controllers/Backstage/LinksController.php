@@ -19,16 +19,6 @@ class LinksController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -39,18 +29,7 @@ class LinksController extends Controller
         $links = $request->only(['name', 'link']);
         $links['sort'] = Links::count() + 1;
         Links::create($links);
-        return redirect('/backstage/links');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Links  $links
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Links $links)
-    {
-
+        return redirect()->route('links.index');
     }
 
     /**
@@ -74,9 +53,9 @@ class LinksController extends Controller
      */
     public function update(Request $request, Links $link)
     {
-        $new_links = $request->only(['name', 'link']);
-        $link->update($new_links);
-        return redirect('/backstage/links/'.$link->id.'/edit');
+        $new_link = $request->only(['name', 'link']);
+        $link->update($new_link);
+        return redirect()->route('links.edit', ['link' => $link->id]);
     }
 
     /**
@@ -85,11 +64,10 @@ class LinksController extends Controller
      * @param  \App\Links  $links
      * @return \Illuminate\Http\Response
      */
-    public function del($id)
+    public function destroy(Links $link)
     {
 
-        $link = Links::find($id);
         $link->delete();
-        return redirect('/backstage/links');
+        return redirect()->route('links.index');
     }
 }

@@ -54,12 +54,12 @@
             <div class="card-header">
               <div class="btn-group">
                 @foreach($categories as $category)
-                  <a href="/backstage/article?cat={{$category->id}}" class="btn btn-info btn-sm">{{$category->name}}</a>
+                  <a href="{{route('articles.index')}}?cat={{$category->id}}" class="btn btn-info btn-sm">{{$category->name}}</a>
                 @endforeach
-                  <a href="/backstage/article" class="btn btn-info btn-sm">所有</a>
+                  <a href="{{route('articles.index')}}" class="btn btn-info btn-sm">所有</a>
               </div>
               <div class="card-tools">
-                  <a href="/backstage/article/add" class="btn btn-block btn-primary btn-sm">新增</a>
+                  <a href="{{route('articles.create')}}" class="btn btn-block btn-primary btn-sm">新增</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -92,8 +92,12 @@
                     <input type="text" name="sort" value="{{$article->sort}}" class="form-control">
                   </td>
                   <td>
-                    <a href="/backstage/article/{{$article->id}}/edit">编辑</a>
-                    <a href="/backstage/article/{{$article->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
+                    <a href="{{route('articles.edit', ['article' => $article->id])}}">编辑</a>
+                    <a href="javascript:void(0)" onclick="if (confirm('确定要删除此项吗？')) this.nextSibling.submit()">删除</a>
+                    <form action="{{route('articles.destroy', ['article' => $article->id])}}" method="post">
+                      @method('delete')
+                      {{csrf_field()}}
+                    </form>
                   </td>
                 </tr>
                 @endforeach

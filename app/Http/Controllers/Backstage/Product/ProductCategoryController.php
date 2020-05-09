@@ -18,8 +18,9 @@ class ProductCategoryController extends Controller
         return view('backstage.product.category', compact('productCategories'));
     }
 
-    public function add(CategoryPost $request)
+    public function update(Request $request)
     {
+        dd($request->input());
         $name = $request->get('name');
         $sort = ProductCategory::count() +1;
         $category = compact('name', 'sort');
@@ -27,7 +28,7 @@ class ProductCategoryController extends Controller
         if($pid)
             $category['pid'] = $pid;
         ProductCategory::create($category);
-        return redirect('backstage/product/category'.($pid?'?pid='.$pid:''));
+        return redirect()->route('pro_category.index');
     }
 
     public function edit()
@@ -36,7 +37,7 @@ class ProductCategoryController extends Controller
     }
 
     // 产品分类表不提供删除，只提供软删除
-    public function del()
+    public function destory()
     {
         return null;
     }

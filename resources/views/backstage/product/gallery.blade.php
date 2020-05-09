@@ -63,11 +63,15 @@
                       <img src="/storage/{{$gallery->gallery}}" name="gallery" id="{{$gallery->id}}" sort="{{$gallery->sort}}" class="img-fluid mb-2"/>
                     </a>
                       <span>排序：{{$gallery->sort}}</span>
-                      <a class="float-sm-right" href="/backstage/product/gallery/{{$pro_id}}/{{$gallery->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
+                      <a class="float-sm-right" href="javascript:void(0)" onclick="if(confirm('确定要删除此项吗？')) this.nextElementSibling.submit()">删除</a>
+                    <form action="{{route('gallery.destroy', ['pro_id' => $pro_id, 'productGallery' => $gallery->id])}}" method="post">
+                      @method('delete')
+                      {{csrf_field()}}
+                    </form>
                   </div>
                   @endforeach
                   <div class="col-sm-2">
-                    <a href="/backstage/product/gallery/{{$pro_id}}/add">
+                    <a href="{{route('gallery.create', ['pro_id' => $pro_id])}}">
                       <img src="/backstage/dist/img/uploadImage.jpg" class="img-fluid mb-2" alt="black sample"/>
                     </a>
                   </div>

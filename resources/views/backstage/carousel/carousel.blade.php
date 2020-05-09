@@ -48,7 +48,7 @@
           <div class="card">
             <div class="card-header">
                 <div class="card-tools">
-                    <a href="/backstage/carousel/add" class="btn btn-block btn-primary btn-sm">新增</a>
+                    <a href="{{route('carousels.create')}}" class="btn btn-block btn-primary btn-sm">新增</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -75,8 +75,12 @@
                   <td class="is_show"><input type="checkbox" {{$carousel->is_show?'checked':''}} data-bootstrap-switch></td>
                   <td class="sort" old="{{$carousel->sort}}"><input type="text" name="sort" value="{{$carousel->sort}}" class="form-control"></td>
                   <td>
-                    <a href="/backstage/carousel/{{$carousel->id}}/edit">编辑</a>
-                    <a href="/backstage/carousel/{{$carousel->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
+                    <a href="{{route('carousels.edit', ['carousel' => $carousel->id])}}">编辑</a>
+                    <a href="javascript:void(0)" onclick="if(confirm('确定要删除此项吗？')) this.nextElementSibling.submit()">删除</a>
+                    <form action="{{route('carousels.destroy', ['carousel' => $carousel->id])}}" method="post">
+                      @method('delete')
+                      {{csrf_field()}}
+                    </form>
                   </td>
                 </tr>
                 @endforeach

@@ -14,12 +14,12 @@ class CarouselController extends Controller
         return view('backstage.carousel.carousel', compact('carousels'));
     }
 
-    public function addView()
+    public function create()
     {
         return view('backstage.carousel.carouselAdd');
     }
 
-    public function addCarousel(Request $request)
+    public function store(Request $request)
     {
         // 处理图片
         $file = $request->file('photo');
@@ -32,16 +32,16 @@ class CarouselController extends Controller
         $carousel['site'] = $photo;
         $carousel['sort'] = Carousel::count() + 1;
         Carousel::create($carousel);
-        return redirect('/backstage/carousel');
+        return redirect()->route('carousel.index');
     }
 
-    public function editView(Carousel $carousel)
+    public function edit(Carousel $carousel)
     {
 
         return view('backstage.carousel.carouselEdit', compact('carousel'));
     }
 
-    public function editCarousel(Carousel $carousel, Request $request)
+    public function update(Carousel $carousel, Request $request)
     {
         if($request->hasFile('photo')){
             $file = $request->file('photo');
@@ -57,13 +57,13 @@ class CarouselController extends Controller
             $new_carousel['site'] = $photo;
         }
         $carousel->update($new_carousel);
-        return redirect('/backstage/carousel');
+        return redirect()->route('carousel.index');
     }
 
-    public function del(Carousel $carousel)
+    public function destroy(Carousel $carousel)
     {
         Storage::delete($carousel->site);
         $carousel->delete();
-        return redirect('/backstage/carousel');
+        return redirect()->route('carousel.index');
     }
 }

@@ -26,7 +26,7 @@ class LoginController extends BaseController
          $is_remember = boolval($request->get('is_remember'));
          if(Auth::guard('admin')->attempt($user, $is_remember)){
              Auth::guard('admin')->logoutOtherDevices($password);
-             return redirect('/backstage/product');
+             return redirect()->route('products.index');
          }
         return Redirect::back()->withErrors("用户名或密码不匹配");
     }

@@ -126,8 +126,8 @@ class SpectacleController extends Controller
         list($title, $keywords, $description) = Setting::getSeo('index_seo');
         $query = $request->get('query');
 
-//        $articles = Article::where('content', 'like', '%'.$word.'%')->paginate(15);
-        $articles = Article::search($query)->paginate(1);
+        $articles = Article::where('content', 'like', '%'.$query.'%')->paginate(15);
+//        $articles = Article::search($query)->paginate(16);
         return view('spectacle.searchList', compact('title', 'keywords', 'description', 'articles', 'query'));
     }
 }

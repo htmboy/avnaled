@@ -25,6 +25,6 @@ class RegisterController extends Controller
         User::create(compact('name','username', 'password', 'active'));
 
         // 渲染
-        return redirect('/backstage/login');
+        return redirect()->route('login');
     }
 }

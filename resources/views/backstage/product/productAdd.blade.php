@@ -66,7 +66,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="" method="post" enctype="multipart/form-data">
+              <form action="{{route('products.store')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="card-body">
                   <div class="row">
@@ -207,7 +207,7 @@
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">保存</button>
-                  <a href="/backstage/product" class="btn btn-default">取消</a>
+                  <a href="{{route('products.index')}}" class="btn btn-default">取消</a>
                 </div>
               </form>
             </div>

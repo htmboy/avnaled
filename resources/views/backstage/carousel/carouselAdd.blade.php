@@ -66,7 +66,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="" method="post" enctype="multipart/form-data">
+              <form action="{{route('carousels.store')}}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <div class="card-body">
                   <div class="row">
@@ -111,7 +111,7 @@
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">新增</button>
-                  <a href="/backstage/carousel" class="btn btn-default">取消</a>
+                  <a href="{{route('carousels.index')}}" class="btn btn-default">取消</a>
                 </div>
               </form>
             </div>

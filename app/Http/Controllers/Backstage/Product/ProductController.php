@@ -28,13 +28,13 @@ class ProductController extends Controller
         return view('backstage.product.product', compact('products', 'categories', 'cat'));
     }
 
-    public function addView()
+    public function create()
     {
         $categories = ProductCategory::where('pid', '>', 0)->orderBy('sort', 'desc')->get();
         return view('backstage.product.productAdd', compact('categories'));
     }
 
-    public function addProduct(Request $request)
+    public function store(Request $request)
     {
         // 处理图片
         $file = $request->file('thumbnail');
@@ -51,16 +51,16 @@ class ProductController extends Controller
         $product['cat_sort'] = ProductCategory::where('id', $request->get('cate_id'))->count() + 1;
         $product['sort'] = Product::count() + 1;
         Product::create($product);
-        return redirect('/backstage/product');
+        return redirect()->route('products.index');
     }
 
-    public function editView(Product $product)
+    public function edit(Product $product)
     {
         $categories = ProductCategory::where('pid', '>', 0)->orderBy('sort', 'desc')->get();
         return view('backstage.product.productEdit', compact('product', 'categories'));
     }
 
-    public function editProduct(Product $product, Request $request)
+    public function update(Product $product, Request $request)
     {
 
         if($request->hasFile('thumbnail')){
@@ -78,54 +78,15 @@ class ProductController extends Controller
         if (isset($thumbnail))
             $new_product['thumbnail'] = $thumbnail;
         $product->update($new_product);
-        return redirect('backstage/product/'.$product->id.'/edit');
+        return redirect()->route('products.edit', ['product' => $product->id]);
     }
 
 
-    public function del(Product $product)
+    public function destroy(Product $product)
     {
         $product->delete();
-        return redirect('/backstage/product');
+        return redirect()->route('products.index');
     }
 
-    public function gallery($pro_id)
-    {
-        $galleries = ProductGallery::where('pro_id', $pro_id)->orderBy('sort', 'desc')->get();
-        if ($galleries->isEmpty())
-            return redirect('/backstage/product/gallery/'.$pro_id.'/add');
-        return view('backstage.product.gallery', compact('galleries', 'pro_id'));
-    }
 
-    public function galleryAddView($pro_id)
-    {
-        return view('backstage.product.galleryAdd', compact('pro_id'));
-    }
-
-    public function galleryAdd(ProductGalleryPost $request, $pro_id)
-    {
-        // 处理图片
-        $file = $request->file('file');
-        $path = date('Ym', time());
-
-        $name = uniqid().'.'.$file->getClientOriginalExtension();
-        $mimeType = $file->getClientMimeType();
-        // 验证图片 type
-        $gallery = $file->storeAs('products/'.$path, $name);
-
-        $sort = ProductGallery::where('pro_id', $pro_id)->count()+1;
-        ProductGallery::create(compact('pro_id', 'gallery', 'sort'));
-        return Response::HTTP_CREATED;
-    }
-
-    public function galleryUpdate()
-    {
-        return null;
-    }
-
-    public function galleryDel($pro_id, ProductGallery $productGallery)
-    {
-        Storage::delete($productGallery->gallery);
-        $productGallery->delete();
-        return redirect('/backstage/product/gallery/'.$pro_id);
-    }
 }

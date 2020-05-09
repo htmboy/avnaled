@@ -50,7 +50,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="/backstage/links/{{$link->id}}" method="post">
+              <form role="form" action="{{route('links.update', ['links' => $link->id])}}" method="post">
                 {{method_field('PUT')}}
                 {{csrf_field()}}
                 <div class="card-body">

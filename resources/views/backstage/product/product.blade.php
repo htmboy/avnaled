@@ -49,12 +49,12 @@
             <div class="card-header">
               <div class="btn-group">
                 @foreach($categories as $category)
-                  <a href="/backstage/product?cat={{$category->id}}" class="btn btn-info btn-sm">{{$category->name}}</a>
+                  <a href="{{route('products.index')}}?cat={{$category->id}}" class="btn btn-info btn-sm">{{$category->name}}</a>
                 @endforeach
-                <a href="/backstage/product" class="btn btn-info btn-sm">所有</a>
+                <a href="{{route('products.index')}}" class="btn btn-info btn-sm">所有</a>
               </div>
                 <div class="card-tools">
-                    <a href="/backstage/product/add" class="btn btn-block btn-primary btn-sm">新增</a>
+                    <a href="{{route('products.create')}}" class="btn btn-block btn-primary btn-sm">新增</a>
                 </div>
             </div>
             <!-- /.card-header -->
@@ -90,9 +90,13 @@
                     <input type="text" name="sort" value="{{$product->sort}}" class="form-control">
                   </td>
                   <td>
-                    <a href="/backstage/product/{{$product->id}}/edit">编辑</a>
-                    <a href="/backstage/product/{{$product->id}}/del" onclick="return confirm('确定要删除此项吗？')">删除</a>
-                    <a href="/backstage/product/gallery/{{$product->id}}">轮播图</a>
+                    <a href="{{route('products.edit', ['product' => $product->id])}}">编辑</a>
+                    <a href="javascript:void(0)" onclick="if(confirm('确定要删除此项吗？')) this.nextElementSibling.submit()">删除</a>
+                    <form action="{{route('products.destroy', ['product' => $product->id])}}" method="post">
+                      @method('delete')
+                      {{csrf_field()}}
+                    </form>
+                    <a href="{{route('gallery.index', ['pro_id' => $product->id])}}">轮播图</a>
                   </td>
                 </tr>
                 @endforeach

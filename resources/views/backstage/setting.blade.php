@@ -62,7 +62,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="" method="post">
+              <form role="form" action="{{route('setting.store')}}" method="post">
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="index_seo">
                 <div class="card-body">
@@ -98,7 +98,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="" method="post">
+              <form role="form" action="{{route('setting.store')}}" method="post">
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="cases_seo">
                 <div class="card-body">
@@ -134,7 +134,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="" method="post">
+              <form role="form" action="{{route('setting.store')}}" method="post">
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="product_seo">
                 <div class="card-body">
@@ -170,7 +170,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="" method="post">
+              <form role="form" action="{{route('setting.store')}}" method="post">
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="article_seo">
                 <div class="card-body">
@@ -206,7 +206,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="" method="post">
+              <form role="form" action="{{route('setting.store')}}" method="post">
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="history_seo">
                 <div class="card-body">
@@ -242,7 +242,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="" method="post">
+              <form role="form" action="{{route('setting.store')}}" method="post">
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="introduction_seo">
                 <div class="card-body">
@@ -278,7 +278,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form role="form" action="" method="post">
+              <form role="form" action="{{route('setting.store')}}" method="post">
                 {{csrf_field()}}
                 <input type="hidden" name="key" value="contact_seo">
                 <div class="card-body">
