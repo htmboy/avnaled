@@ -32,20 +32,20 @@
         <li><a href="/spectacle/product.html">产品中心</a>
             <ul>
                 @foreach($productCategories as $productCategory)
-                    <li><a href="/spectacle/product/{{array_search($productCategory->id, $param)}}.html">{{$productCategory->name}}</a></li>
+                    <li><a href="/spectacle/product/{{array_search($productCategory->id, $typePro)}}.html">{{$productCategory->name}}</a></li>
                 @endforeach
             </ul>
         </li>
         <li><a href="javascript:void(0)">解决方案</a>
             <ul>
-                <li><a href="/spectacle/article/2.html">装灯案例</a></li>
-                <li><a href="/spectacle/article/3.html">常见问题</a></li>
+                <li><a href="/spectacle/article/{{array_search(2, $typeArt)}}.html">装灯案例</a></li>
+                <li><a href="/spectacle/article/{{array_search(3, $typeArt)}}.html">常见问题</a></li>
             </ul>
         </li>
         <li><a href="/spectacle/article.html">新闻中心</a>
             <ul>
                 @foreach($articleCategories as $articleCategory)
-                    <li><a href="/spectacle/article/{{$articleCategory->id}}.html">{{$articleCategory->name}}</a></li>
+                    <li><a href="/spectacle/article/{{array_search($articleCategory->id, $typeArt)}}.html">{{$articleCategory->name}}</a></li>
                 @endforeach
             </ul>
         </li>

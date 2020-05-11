@@ -3,10 +3,10 @@
         <div class="foot_t">
             <ul class="foot_link" style="width:118px">
                 <h3>产品系列</h3>
-                <li><a href="/spectacle/product/1.html">星脉系列工矿灯</a></li>
-                <li><a href="/spectacle/product/2.html">黑豹系列泛光灯</a></li>
-                <li><a href="/spectacle/product/1.html">天梭系列飞碟灯</a></li>
-                <li><a href="/spectacle/product/3.html">瑞星系列投光灯</a></li>
+                <li><a href="/spectacle/product/gongkuangdeng.html">星脉系列工矿灯</a></li>
+                <li><a href="/spectacle/product/fanguangdeng.html">黑豹系列泛光灯</a></li>
+                <li><a href="/spectacle/product/gongkuangdeng.html">天梭系列飞碟灯</a></li>
+                <li><a href="/spectacle/product/touguangdeng.html">瑞星系列投光灯</a></li>
             </ul>
             <ul class="foot_link" style="width:118px">
                 <h3>解决方案</h3>

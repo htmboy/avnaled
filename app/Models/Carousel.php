@@ -4,8 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Carousel extends Model
+class Carousel extends BaseModel
 {
     protected $table = 'avna_carousel';
-    protected $guarded = [];
 }

@@ -4,10 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Links extends Model
+class Links extends BaseModel
 {
     protected $table = 'avna_links';
-    protected $guarded = [];
-
 
 }

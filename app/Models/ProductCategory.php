@@ -4,10 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProductCategory extends Model
+class ProductCategory extends BaseModel
 {
     protected $table = 'avna_product_category';
-    protected $guarded = [];
 
     public function product()
     {
