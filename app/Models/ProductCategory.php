@@ -12,4 +12,18 @@ class ProductCategory extends BaseModel
     {
         return $this->hasMany('App\Models\Product', 'cat_id', 'id');
     }
+
+    public static function getProductCategoryChain($id)
+    {
+        $category = self::find($id);
+        if((bool) $category->pid)
+        {
+
+            $category = ProductCategory::where('id', $category->pid)->get();
+            $category->put('secondCategory', ProductCategory::where('pid', $id)->get());
+        } else {
+            $category->put('secondCategory', ProductCategory::where('pid', $id)->get());
+        }
+        return $category;
+    }
 }

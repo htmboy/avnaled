@@ -11,12 +11,15 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return redirect()->route('avnaled.index');
+});
 
 // spectacle 路由
 include_once 'spectacle.php';
 
 // avnaled 路由
 include_once 'avnaled.php';
+
+// avnaled 路由
+include_once 'backstage.php';

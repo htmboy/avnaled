@@ -1,40 +1,22 @@
 <?php
-Route::prefix('backstage')->group(function(){
-    // 用户模块
-    Route::get('/register', 'Backstage\RegisterController@index')->name('register.index');
-    // 注册行为
-    Route::post('/register', 'Backstage\RegisterController@register')->name('register.store');
 
-    // 登录页面
-    Route::get('/login', 'Backstage\LoginController@index')->name('login.index');
-    // 登录行为
-    Route::post('/login', 'Backstage\LoginController@login')->name('login');
+Route::prefix('avnaled')->group(function(){
 
-    // 登出行为
-    Route::get('/logout', 'Backstage\LoginController@logout')->name('logout');
+    Route::get('/index.html', 'Avnaled\IndexController@index')->name('avnaled.index');
+    Route::get('/cases.html', 'Avnaled\CasesController@cases');
+    Route::get('/contact.html', 'Avnaled\ContactController@contact');
+    Route::get('/history.html', 'Avnaled\HistoryController@history');
+    Route::get('/introduction.html', 'Avnaled\IntroductionController@introduction');
 
-    // 个人设置页面
-    Route::get('/user/setting', 'Backstage\UserController@index')->name('user.index');
-    // 个人设置行为
-    Route::post('/user/setting', 'Backstage\UserController@update')->name('user.update');
+    Route::get('/product.html', 'Avnaled\ProductsController@product');
+    Route::get('/product/{product}.html', 'Avnaled\ProductsController@productList');
+    Route::get('/product/secondary/{product}.html', 'Avnaled\ProductsController@productSecondaryList');
+    Route::get('/product/detail/{product}.html', 'Avnaled\ProductsController@productDetail');
 
-    Route::resources([
-        // 轮播图
-        'carousels' => 'Backstage\CarouselController',
-        // 友情链接
-        'links' => 'Backstage\LinksController',
-        // 产品目录
-        '/product/pro_category' => 'Backstage\Product\ProductCategoryController',
-        // 产品图片
-        'product/{pro_id}/gallery' => 'Backstage\Product\ProductGalleryController',
-        // 产品中心
-        'products' => 'Backstage\Product\ProductController',
-        // 文章目录
-        'article/art_category' => 'Backstage\Article\ArticleCategoryController',
-        // 文章中心
-        'articles' => 'Backstage\Article\ArticleController',
-        ]);
+    Route::get('/article.html', 'Avnaled\ArticlesController@article');
+    Route::get('/article/{articleCategory}.html', 'Avnaled\ArticlesController@articleList');
+    Route::get('/article/detail/{article}.html', 'Avnaled\ArticlesController@articleDetail');
 
-    Route::resource('setting', 'Backstage\SettingController')->only(['index', 'store']);
+    Route::get('/search.html', 'Avnaled\SearchController@search');
 
 });
