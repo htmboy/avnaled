@@ -20,20 +20,21 @@
     16 => 'Illuminate\\Redis\\RedisServiceProvider',
     17 => 'Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider',
     18 => 'Illuminate\\Session\\SessionServiceProvider',
-    19 => 'Illuminate\\Translation\\TranslationServiceProvider',
-    20 => 'Illuminate\\Validation\\ValidationServiceProvider',
-    21 => 'Illuminate\\View\\ViewServiceProvider',
-    22 => 'BeyondCode\\DumpServer\\DumpServerServiceProvider',
+    19 => 'Illuminate\\Validation\\ValidationServiceProvider',
+    20 => 'Illuminate\\View\\ViewServiceProvider',
+    21 => 'BeyondCode\\DumpServer\\DumpServerServiceProvider',
+    22 => 'Encore\\Admin\\AdminServiceProvider',
     23 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
     24 => 'Laravel\\Scout\\ScoutServiceProvider',
     25 => 'Laravel\\Tinker\\TinkerServiceProvider',
     26 => 'Carbon\\Laravel\\ServiceProvider',
     27 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     28 => 'ScoutEngines\\Elasticsearch\\ElasticsearchProvider',
-    29 => 'App\\Providers\\AppServiceProvider',
-    30 => 'App\\Providers\\AuthServiceProvider',
-    31 => 'App\\Providers\\EventServiceProvider',
-    32 => 'App\\Providers\\RouteServiceProvider',
+    29 => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
+    30 => 'App\\Providers\\AppServiceProvider',
+    31 => 'App\\Providers\\AuthServiceProvider',
+    32 => 'App\\Providers\\EventServiceProvider',
+    33 => 'App\\Providers\\RouteServiceProvider',
   ),
   'eager' => 
   array (
@@ -48,14 +49,15 @@
     8 => 'Illuminate\\Session\\SessionServiceProvider',
     9 => 'Illuminate\\View\\ViewServiceProvider',
     10 => 'BeyondCode\\DumpServer\\DumpServerServiceProvider',
-    11 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
-    12 => 'Laravel\\Scout\\ScoutServiceProvider',
-    13 => 'Carbon\\Laravel\\ServiceProvider',
-    14 => 'ScoutEngines\\Elasticsearch\\ElasticsearchProvider',
-    15 => 'App\\Providers\\AppServiceProvider',
-    16 => 'App\\Providers\\AuthServiceProvider',
-    17 => 'App\\Providers\\EventServiceProvider',
-    18 => 'App\\Providers\\RouteServiceProvider',
+    11 => 'Encore\\Admin\\AdminServiceProvider',
+    12 => 'Fideloper\\Proxy\\TrustedProxyServiceProvider',
+    13 => 'Laravel\\Scout\\ScoutServiceProvider',
+    14 => 'Carbon\\Laravel\\ServiceProvider',
+    15 => 'ScoutEngines\\Elasticsearch\\ElasticsearchProvider',
+    16 => 'App\\Providers\\AppServiceProvider',
+    17 => 'App\\Providers\\AuthServiceProvider',
+    18 => 'App\\Providers\\EventServiceProvider',
+    19 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (
@@ -159,12 +161,13 @@
     'redis.connection' => 'Illuminate\\Redis\\RedisServiceProvider',
     'auth.password' => 'Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider',
     'auth.password.broker' => 'Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider',
-    'translator' => 'Illuminate\\Translation\\TranslationServiceProvider',
-    'translation.loader' => 'Illuminate\\Translation\\TranslationServiceProvider',
     'validator' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
     'NunoMaduro\\Collision\\Contracts\\Provider' => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    'translator' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
+    'translation.loader' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
+    'Overtrue\\LaravelLang\\Commands\\Publish' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
   ),
   'when' => 
   array (
@@ -198,9 +201,6 @@
     'Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider' => 
     array (
     ),
-    'Illuminate\\Translation\\TranslationServiceProvider' => 
-    array (
-    ),
     'Illuminate\\Validation\\ValidationServiceProvider' => 
     array (
     ),
@@ -208,6 +208,9 @@
     array (
     ),
     'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => 
+    array (
+    ),
+    'Overtrue\\LaravelLang\\TranslationServiceProvider' => 
     array (
     ),
   ),

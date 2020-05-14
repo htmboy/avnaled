@@ -21,7 +21,7 @@ class IndexController extends Controller
     public function index()
     {
 
-        dd(ProductCategory::getProductCategoryChain(2));
+        dd(ProductCategory::getProductCategoryChain(2)->first());
         list($title, $keywords, $description) = Setting::getSeo('index_seo');
         $carousels = Carousel::spectacle()->get();
         $productCategory = ProductCategory::spectacle()->where('pid', 2)->get();

@@ -1,0 +1,12 @@
+{
+  "ID": "ID",
+  "Created at":"创建时间",
+  "Updated at":"更新时间",
+  "name":"名称",
+  "email":"邮箱",
+  "Title": "标题",
+  "Site":"预览",
+  "Is show": "是否显示",
+  "Sort": "排序",
+  "Link": "链接"
+}

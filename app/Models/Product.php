@@ -27,9 +27,4 @@ class Product extends BaseModel
     {
         return $this->hasMany('App\Models\ProductGallery', 'pro_id', 'id');
     }
-
-    public function scopeSpectacle($query)
-    {
-        return $query->where('is_show', '1')->orderBy('sort', 'desc');
-    }
 }

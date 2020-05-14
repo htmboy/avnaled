@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Resources\ProductCategoryCollection;
+use App\Http\Resources\ProductCategoryResource;
+use App\Models\ProductCategory;
 use Illuminate\Http\Request;
 
 /*
