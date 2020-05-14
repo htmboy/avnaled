@@ -76,6 +76,13 @@ class ProductsController extends AdminController
         $show->field('is_show');
         $show->field('sort');
         $show->field('cat_sort');
+        $show->gallery('产品图片', function ($gallery) {
+            $gallery->resource('/admin/product-galleries');
+            $gallery->id();
+            $gallery->gallery()->image();
+            $gallery->is_show();
+            $gallery->sort();
+        });
 
         return $show;
     }
@@ -89,22 +96,22 @@ class ProductsController extends AdminController
     {
         $form = new Form(new Product());
         $form->column(1/2, function ($form) {
-            dd(ProductCategory::where('pid', 0)->get()->map(function ($item, $key){
-                dd($item);
+            $form->select('cat_id')->options(ProductCategory::getChildCategory(['id', 'name'])->keyBy('id')->map(function ($item){
+                return $item->name;
             }));
-            $form->select('cat_id')->options();
             $form->text('seo_title', __('Seo title'));
-            $form->text('seo_keywords', __('Seo keywords'));
-            $form->text('seo_description', __('Seo description'));
-            $form->text('title', __('Title'));
-            $form->text('thumbnail', __('Thumbnail'));
-            $form->text('number', __('Number'));
-            $form->text('watts', __('Watts'));
-            $form->text('size', __('Size'));
+            $form->text('seo_keywords');
+            $form->text('seo_description');
+            $form->text('title');
+            $form->image('thumbnail');
+
 
         });
 
         $form->column(1/2, function ($form) {
+            $form->text('number');
+            $form->text('watts');
+            $form->text('size');
             $form->text('color', __('Color'));
             $form->text('package', __('Package'));
             $form->text('weight', __('Weight'));
@@ -115,14 +122,15 @@ class ProductsController extends AdminController
             $form->text('distance', __('Distance'));
             $form->text('material', __('Material'));
             $form->text('characteristic', __('Characteristic'));
+            $form->switch('is_show', __('Is show'));
+            $form->number('sort')->default(ProductCategory::count() + 1);
         });
 
         $form->column(12, function ($form) {
-            $form->switch('is_show', __('Is show'));
-            $form->switch('sort', __('Sort'));
-            $form->switch('cat_sort', __('Cat sort'));
-            $form->textarea('content');
+
+            $form->ckeditor('content');
         });
+
 
 
 

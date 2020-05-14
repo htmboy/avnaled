@@ -28,7 +28,7 @@ Route::prefix('backstage')->group(function(){
         // 产品图片
         'product/{pro_id}/gallery' => 'Backstage\Product\ProductGalleryController',
         // 产品中心
-        'products' => 'Backstage\Product\ProductController',
+        'product' => 'Backstage\Product\ProductController',
         // 文章目录
         'article/art_category' => 'Backstage\Article\ArticleCategoryController',
         // 文章中心

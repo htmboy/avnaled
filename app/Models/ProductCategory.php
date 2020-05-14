@@ -26,19 +26,13 @@ class ProductCategory extends BaseModel
         return $this->hasMany('App\Models\Product', 'cat_id', 'id');
     }
 
-    public static function getProductCategoryChain($id)
+    public static function getParentCategory($field = null)
     {
-        $category = self::where('id', $id)->get();
-        if((bool) $category->pid)
-        {
+        return self::where('pid', 0)->get($field);
+    }
 
-            $category = ProductCategory::where('id', $category->pid)->get();
-            $category->merge('secondCategory', ProductCategory::where('pid', $id)->get());
-        }else{
-
-            $category->merge('secondCategory', ProductCategory::where('pid', $id)->get());
-        }
-
-        return $category;
+    public static function getChildCategory($field = null)
+    {
+        return self::where('pid', '>', 0)->get($field);
     }
 }

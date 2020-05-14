@@ -36,9 +36,9 @@ class ProductCategoryController extends AdminController
     {
         $form = new Form(new ProductCategory());
 
-        $form->select('pid')->options(ProductCategory::where('pid', 0)->get(['id', 'name'])->map(function ($item){
-            return [$item->id => $item->name];
-        })->collapse()->all());
+        $form->select('pid')->options(ProductCategory::getParentCategory(['id', 'name'])->keyBy('id')->map(function ($item) {
+            return $item->name;
+        }));
         $form->text('name')->rules('required');
         $form->switch('is_show');
         $form->number('sort')->default(ProductCategory::count() + 1);

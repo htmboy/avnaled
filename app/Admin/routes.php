@@ -14,4 +14,5 @@ Route::group([
     $router->resource('carousels', 'CarouselController');
     $router->resource('product-categories', 'ProductCategoryController');
     $router->resource('products', 'ProductsController');
+    $router->resource('product-galleries', 'ProductGalleryController');
 });
