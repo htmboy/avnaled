@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Actions\Product\Gallery;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use Encore\Admin\Controllers\AdminController;
@@ -26,6 +27,9 @@ class ProductsController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Product());
+        $grid->actions(function ($actions){
+            $actions->add(new Gallery);
+        });
         $grid->model()->orderByDesc('sort');
         $grid->column('id');
         $grid->category()->name();
@@ -51,37 +55,22 @@ class ProductsController extends AdminController
     protected function detail($id)
     {
         $show = new Show(Product::findOrFail($id));
-        $show->field('cat_id');
-        $show->field('seo_title');
-        $show->field('seo_keywords');
-        $show->field('seo_description');
+
+
+
         $show->field('title');
-        $show->field('thumbnail');
-        $show->field('number');
-        $show->field('watts');
-        $show->field('size');
-        $show->field('color');
-        $show->field('package');
-        $show->field('weight');
-        $show->field('voltage');
-        $show->field('angle');
-        $show->field('waterproof');
-        $show->field('life');
-        $show->field('distance');
-        $show->field('material');
-        $show->field('characteristic');
-        $show->field('content');
-        $show->field('created_at');
-        $show->field('updated_at');
-        $show->field('is_show');
-        $show->field('sort');
-        $show->field('cat_sort');
+        $show->thumbnail()->image();
+
         $show->gallery('产品图片', function ($gallery) {
             $gallery->resource('/admin/product-galleries');
             $gallery->id();
             $gallery->gallery()->image();
-            $gallery->is_show();
-            $gallery->sort();
+            $states = [
+                'on' => ['value' => 1, 'text' => '显示'],
+                'off' => ['value' => 0, 'text' => '不显示'],
+            ];
+            $gallery->is_show()->switch($states);
+            $gallery->sort()->editable();
         });
 
         return $show;
@@ -104,8 +93,8 @@ class ProductsController extends AdminController
             $form->text('seo_description');
             $form->text('title');
             $form->image('thumbnail');
-
-
+            $form->switch('is_show', __('Is show'));
+            $form->number('sort')->default(ProductCategory::count() + 1);
         });
 
         $form->column(1/2, function ($form) {
@@ -122,8 +111,7 @@ class ProductsController extends AdminController
             $form->text('distance', __('Distance'));
             $form->text('material', __('Material'));
             $form->text('characteristic', __('Characteristic'));
-            $form->switch('is_show', __('Is show'));
-            $form->number('sort')->default(ProductCategory::count() + 1);
+
         });
 
         $form->column(12, function ($form) {

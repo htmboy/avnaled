@@ -15,4 +15,6 @@ Route::group([
     $router->resource('product-categories', 'ProductCategoryController');
     $router->resource('products', 'ProductsController');
     $router->resource('product-galleries', 'ProductGalleryController');
+    $router->resource('articles', 'ArticlesController');
+    $router->resource('article-categories', 'ArticleCategoryController');
 });

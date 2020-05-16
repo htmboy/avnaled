@@ -28,3 +28,7 @@ git reset --hard 98abc5a
 
 修改软链接
 ln -snf 【新目标目录】 【软链接地址】
+
+window创建软链接
+cd public
+mklink /d storage ..\storage\app

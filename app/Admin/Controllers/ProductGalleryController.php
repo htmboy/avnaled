@@ -32,14 +32,17 @@ class ProductGalleryController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new ProductGallery());
-
+        $grid->model()->where('pro_id', $this->request->get('pro_id'));
         $grid->column('id', __('Id'));
         $grid->column('pro_id', __('Pro id'));
-        $grid->image('gallery', __('Gallery'));
-        $grid->column('created_at', __('Created at'));
+        $grid->gallery()->image('/storage', '80');
         $grid->column('updated_at', __('Updated at'));
-        $grid->column('is_show', __('Is show'));
-        $grid->column('sort', __('Sort'));
+        $states = [
+            'on' => ['value' => 1, 'text' => '显示'],
+            'off' => ['value' => 0, 'text' => '不显示'],
+        ];
+        $grid->is_show()->switch($states);
+        $grid->column('sort', __('Sort'))->editable();
 
         return $grid;
     }
