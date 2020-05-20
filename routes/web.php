@@ -16,10 +16,10 @@ Route::get('/', function () {
 });
 
 // spectacle 路由
-include_once 'spectacle.php';
-
-// avnaled 路由
 include_once 'avnaled.php';
 
-// avnaled 路由
+// pok 路由
+include_once 'pok.php';
+
+
 include_once 'backstage.php';

@@ -45,4 +45,15 @@
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
+  'overtrue/laravel-pinyin' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Overtrue\\LaravelPinyin\\ServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Pinyin' => 'Overtrue\\LaravelPinyin\\Facades\\Pinyin',
+    ),
+  ),
 );

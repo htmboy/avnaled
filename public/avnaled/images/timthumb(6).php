@@ -1,1 +1,0 @@
-<h1>A TimThumb error has occured</h1>The following error(s) occured:<br /><ul><li>The remote file is not a valid image. Mimetype = ''/www/wwwroot/www.kibxg.com/wp-content/themes/abctheme/cache/timthumbB2GzD3</li></ul><br /><br />Query String : src=https://www.bxgmf.com/wp-content/uploads/2019/1109.jpg&amp;w=278&amp;h=200&amp;zc=1<br />TimThumb version : 2.8.13</pre>

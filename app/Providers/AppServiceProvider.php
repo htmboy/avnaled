@@ -2,10 +2,11 @@
 
 namespace App\Providers;
 
-use App\Http\ViewComposers\FooterComposer;
-use App\Http\ViewComposers\HeaderComposer;
-use App\Http\ViewComposers\LeftbarComposer;
-use App\Http\ViewComposers\RecommendComposer;
+use App\Http\ViewComposers\AvnaledFooterComposer;
+use App\Http\ViewComposers\AvnaledHeaderComposer;
+use App\Http\ViewComposers\AvnaledLeftbarComposer;
+use App\Http\ViewComposers\AvnaledRecommendComposer;
+use App\Http\ViewComposers\PokHeaderComposer;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -28,13 +29,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('spectacle.common.header', HeaderComposer::class);
+        View::composer('avnaled.common.header', AvnaledHeaderComposer::class);
 
-        View::composer('spectacle.common.footer', FooterComposer::class);
+        View::composer('avnaled.common.footer', AvnaledFooterComposer::class);
 
-        View::composer('spectacle.common.leftBar', LeftbarComposer::class);
+        View::composer('avnaled.common.leftBar', AvnaledLeftbarComposer::class);
 
-        View::composer('spectacle.common.recommended', RecommendComposer::class);
+        View::composer('avnaled.common.recommended', AvnaledRecommendComposer::class);
+
+        View::composer('pok.common.header', PokHeaderComposer::class);
 
     }
 }

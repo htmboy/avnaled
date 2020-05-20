@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Spectacle;
+namespace App\Http\Controllers\Avnaled;
 
 use App\Models\Carousel;
 use App\Models\Article;
@@ -21,7 +21,7 @@ class CasesController extends Controller
     {
         list($title, $keywords, $description) = Setting::getSeo('cases_seo');
         $articles = Article::spectacle()->where('cat_id', 2)->paginate(10);
-        return view('spectacle.casesList', compact(
+        return view('avnaled.casesList', compact(
             'title', 'keywords', 'description', 'articles'
         ));
     }

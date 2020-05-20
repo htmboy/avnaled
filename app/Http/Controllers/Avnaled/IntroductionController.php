@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Spectacle;
+namespace App\Http\Controllers\Avnaled;
 
 use App\Models\Carousel;
 use App\Models\Article;
@@ -20,7 +20,7 @@ class IntroductionController extends Controller
     public function introduction()
     {
         list($title, $keywords, $description) = Setting::getSeo('introduction_seo');
-        return view('spectacle.introduction', compact('title', 'keywords', 'description'));
+        return view('avnaled.introduction', compact('title', 'keywords', 'description'));
     }
 
 }

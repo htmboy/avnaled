@@ -28,11 +28,13 @@
     24 => 'Laravel\\Tinker\\TinkerServiceProvider',
     25 => 'Carbon\\Laravel\\ServiceProvider',
     26 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    27 => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
-    28 => 'App\\Providers\\AppServiceProvider',
-    29 => 'App\\Providers\\AuthServiceProvider',
-    30 => 'App\\Providers\\EventServiceProvider',
-    31 => 'App\\Providers\\RouteServiceProvider',
+    27 => 'Overtrue\\LaravelPinyin\\ServiceProvider',
+    28 => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
+    29 => 'App\\Providers\\AppServiceProvider',
+    30 => 'App\\Providers\\AuthServiceProvider',
+    31 => 'App\\Providers\\EventServiceProvider',
+    32 => 'App\\Providers\\RouteServiceProvider',
+    33 => 'Overtrue\\LaravelPinyin\\ServiceProvider',
   ),
   'eager' => 
   array (
@@ -161,6 +163,8 @@
     'validation.presence' => 'Illuminate\\Validation\\ValidationServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
     'NunoMaduro\\Collision\\Contracts\\Provider' => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    'Overtrue\\Pinyin\\Pinyin' => 'Overtrue\\LaravelPinyin\\ServiceProvider',
+    'pinyin' => 'Overtrue\\LaravelPinyin\\ServiceProvider',
     'translator' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
     'translation.loader' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
     'Overtrue\\LaravelLang\\Commands\\Publish' => 'Overtrue\\LaravelLang\\TranslationServiceProvider',
@@ -204,6 +208,9 @@
     array (
     ),
     'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider' => 
+    array (
+    ),
+    'Overtrue\\LaravelPinyin\\ServiceProvider' => 
     array (
     ),
     'Overtrue\\LaravelLang\\TranslationServiceProvider' => 

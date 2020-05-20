@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Spectacle;
+namespace App\Http\Controllers\Avnaled;
 
 use App\Models\Carousel;
 use App\Models\Article;
@@ -23,7 +23,7 @@ class SearchController extends Controller
         $query = $request->get('query');
 
         $articles = Article::spectacle()->where('content', 'like', '%'.$query.'%')->paginate(15);
-        return view('spectacle.searchList', compact('title', 'keywords', 'description', 'articles', 'query'));
+        return view('avnaled.searchList', compact('title', 'keywords', 'description', 'articles', 'query'));
     }
 
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Spectacle;
+namespace App\Http\Controllers\Avnaled;
 
 use App\Models\Carousel;
 use App\Models\Article;
@@ -20,7 +20,7 @@ class ContactController extends Controller
     public function contact()
     {
         list($title, $keywords, $description) = Setting::getSeo('contact_seo');
-        return view('spectacle.contact', compact('title', 'keywords', 'description'));
+        return view('avnaled.contact', compact('title', 'keywords', 'description'));
     }
 
 }

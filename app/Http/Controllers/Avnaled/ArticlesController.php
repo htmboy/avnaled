@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Spectacle;
+namespace App\Http\Controllers\Avnaled;
 
 use App\Models\Carousel;
 use App\Models\Article;
@@ -21,14 +21,14 @@ class ArticlesController extends Controller
     {
         list($title, $keywords, $description) = Setting::getSeo('article_seo');
         $articles = Article::spectacle()->paginate(10);
-        return view('spectacle.article', compact('title', 'keywords', 'description', 'articles'));
+        return view('avnaled.article', compact('title', 'keywords', 'description', 'articles'));
     }
 
     public function articleList($articleCategory)
     {
         list($title, $keywords, $description) = Setting::getSeo('article_seo');
         $articles = Article::spectacle()->where('cat_id', Article::$typeMap[$articleCategory])->paginate(10);
-        return view('spectacle.articleList', compact(
+        return view('avnaled.articleList', compact(
             'title', 'keywords', 'description', 'articles'
         ));
     }
@@ -39,6 +39,6 @@ class ArticlesController extends Controller
         $article_recommends = Article::spectacle()->limit(10)->get();
         $sql = Article::spectacle()->where('id', '<', $article->id)->latest('id')->take(1);
         $last_next = Article::spectacle()->where('id', '>', $article->id)->oldest('id')->take(1)->union($sql)->get();
-        return view('spectacle.articleDetail', compact('article', 'related', 'article_recommends', 'last_next'));
+        return view('avnaled.articleDetail', compact('article', 'related', 'article_recommends', 'last_next'));
     }
 }

@@ -1,0 +1,14 @@
+.slide { width: 100%; height: 527px; position: relative; -webkit-user-select: none; -moz-user-select: none; -ms-user-select:none;text-align:center;}
+.slide-item { width:100%; height: 527px; overflow: hidden; position: absolute; top: 0; text-align:center;}
+.slide-item img { text-align: center;}
+
+.slide-prev { left: 5%; background: url("/avnaled/img/left1s.png") no-repeat 0 0;}
+.slide-next { right: 5%; background: url("/avnaled/img/right1s.png") no-repeat 0 0; }
+.slide-prev, .slide-next {position: absolute; top: 50%; margin-top: -36px; width:73px; height: 93px; cursor: pointer; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -ms-transition: opacity 1s; -o-transition: all 0.5s; transition: all 0.5s; opacity:0.5; }
+.slide-prev:hover { background: url("/avnaled/img/left2s.png") no-repeat 0 0;}
+.slide-next:hover { background: url("/avnaled/img/right2s.png") no-repeat 0 0;}
+
+.slide-paging { font-size: 10px; height: 8px; line-height: 8px; position: absolute; bottom: 25px; right: 0; width: 100%; text-align: center}
+.slide-paging span { display: inline-block; width: 100px; height: 8px; margin-right: 1px; cursor: pointer; background:#fff}
+.slide-paging span { -webkit-transition: background-color 1s; -moz-transition: background-color 1s; -ms-transition: background-color 1s; -o-transition: background-color 1s; transition: background-color 1s; }
+.slide-paging .current { background:#137F39}

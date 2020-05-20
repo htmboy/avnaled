@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Spectacle;
+namespace App\Http\Controllers\Avnaled;
 
 use App\Models\Carousel;
 use App\Models\Article;
@@ -27,7 +27,7 @@ class SpectacleController extends Controller
         $news = Article::where('cat_id', 2)->orderBy('sort', 'desc')->limit(3)->get();
         $answers = Article::where('cat_id', 3)->orderBy('sort', 'desc')->limit(10)->get();
         $cases = Article::where('cat_id', 4)->orderBy('sort', 'desc')->get();
-        return view('spectacle.index', compact('carousels', 'title', 'keywords', 'description', 'products', 'articles',
+        return view('avnaled.index', compact('carousels', 'title', 'keywords', 'description', 'products', 'articles',
             'conpany_news', 'news', 'answers', 'cases'
         ));
     }
@@ -36,7 +36,7 @@ class SpectacleController extends Controller
     {
         list($title, $keywords, $description) = Setting::getSeo('cases_seo');
         $articles = Article::where('cat_id', 2)->orderBy('sort', 'desc')->paginate(10);
-        return view('spectacle.casesList', compact(
+        return view('avnaled.casesList', compact(
             'title', 'keywords', 'description', 'articles'
         ));
     }
@@ -44,7 +44,7 @@ class SpectacleController extends Controller
     public function product(){
         list($title, $keywords, $description) = Setting::getSeo('product_seo');
         $products = Product::orderBy('sort', 'desc')->paginate(10);
-        return view('spectacle.product', compact('title', 'keywords', 'description', 'products'));
+        return view('avnaled.product', compact('title', 'keywords', 'description', 'products'));
     }
 
     public function productList($id)
@@ -59,13 +59,13 @@ class SpectacleController extends Controller
         $productCategory = ProductCategory::where('pid', $param[$id])->get('id');
         $products = Product::whereIn('cat_id', array_values($productCategory->toArray()))->orderBy('sort', 'desc')->paginate(12);
         // $products = Product::where('cat_id', $param[$id])->orderBy('sort', 'desc')->paginate(10);
-        return view('spectacle.productList', compact('title', 'keywords', 'description', 'products'));
+        return view('avnaled.productList', compact('title', 'keywords', 'description', 'products'));
     }
     public function productSecondaryList($id)
     {
         list($title, $keywords, $description) = Setting::getSeo('product_seo');
         $products = Product::where('cat_id', $id)->orderBy('sort', 'desc')->paginate(10);
-        return view('spectacle.productList', compact('title', 'keywords', 'description', 'products'));
+        return view('avnaled.productList', compact('title', 'keywords', 'description', 'products'));
     }
 
 
@@ -75,21 +75,21 @@ class SpectacleController extends Controller
         $product_recommends = Product::whereIn('cat_id', array_values($productCategory->toArray()))->orderBy('sort', 'desc')->limit(4)->get();
         // $product_recommends = Product::where('cat_id', 1)->orderBy('sort', 'desc')->limit(4)->get();
         $article_recommends = Article::orderBy('sort', 'desc')->limit(10)->get();
-        return view('spectacle.productDetail', compact('product', 'product_recommends', 'article_recommends'));
+        return view('avnaled.productDetail', compact('product', 'product_recommends', 'article_recommends'));
     }
 
     public function article()
     {
         list($title, $keywords, $description) = Setting::getSeo('article_seo');
         $articles = Article::orderBy('sort', 'desc')->paginate(10);
-        return view('spectacle.article', compact('title', 'keywords', 'description', 'articles'));
+        return view('avnaled.article', compact('title', 'keywords', 'description', 'articles'));
     }
 
     public function articleList()
     {
         list($title, $keywords, $description) = Setting::getSeo('article_seo');
         $articles = Article::where('cat_id', 2)->orderBy('sort', 'desc')->paginate(10);
-        return view('spectacle.articleList', compact(
+        return view('avnaled.articleList', compact(
             'title', 'keywords', 'description', 'articles'
         ));
     }
@@ -100,25 +100,25 @@ class SpectacleController extends Controller
         $article_recommends = Article::orderBy('sort', 'desc')->limit(10)->get();
         $sql = Article::where('id', '<', $article->id)->latest('id')->take(1);
         $last_next = Article::where('id', '>', $article->id)->oldest('id')->take(1)->union($sql)->orderBy('id', 'asc')->get();
-        return view('spectacle.articleDetail', compact('article', 'related', 'article_recommends', 'last_next'));
+        return view('avnaled.articleDetail', compact('article', 'related', 'article_recommends', 'last_next'));
     }
 
     public function contact()
     {
         list($title, $keywords, $description) = Setting::getSeo('contact_seo');
-        return view('spectacle.contact', compact('title', 'keywords', 'description'));
+        return view('avnaled.contact', compact('title', 'keywords', 'description'));
     }
 
     public function history()
     {
         list($title, $keywords, $description) = Setting::getSeo('history_seo');
-        return view('spectacle.history', compact('title', 'keywords', 'description'));
+        return view('avnaled.history', compact('title', 'keywords', 'description'));
     }
 
     public function introduction()
     {
         list($title, $keywords, $description) = Setting::getSeo('introduction_seo');
-        return view('spectacle.introduction', compact('title', 'keywords', 'description'));
+        return view('avnaled.introduction', compact('title', 'keywords', 'description'));
     }
 
     public function search(Request $request)
@@ -128,6 +128,6 @@ class SpectacleController extends Controller
 
         $articles = Article::where('content', 'like', '%'.$query.'%')->paginate(15);
 //        $articles = Article::search($query)->paginate(16);
-        return view('spectacle.searchList', compact('title', 'keywords', 'description', 'articles', 'query'));
+        return view('avnaled.searchList', compact('title', 'keywords', 'description', 'articles', 'query'));
     }
 }

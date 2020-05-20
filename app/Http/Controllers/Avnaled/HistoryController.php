@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Spectacle;
+namespace App\Http\Controllers\Avnaled;
 
 use App\Models\Carousel;
 use App\Models\Article;
@@ -20,7 +20,7 @@ class HistoryController extends Controller
     public function history()
     {
         list($title, $keywords, $description) = Setting::getSeo('history_seo');
-        return view('spectacle.history', compact('title', 'keywords', 'description'));
+        return view('avnaled.history', compact('title', 'keywords', 'description'));
     }
 
 }
