@@ -58,8 +58,8 @@
                 {!! $article->content !!}
             </div>
             <ul class="content-exp">
-                @if($article->lastItem())
-                <li><span>上一篇：</span><a href='{{route('pok.art_detail', [$article->lastItem()->id])}}'>{{$article->lastItem()->title}}</a></li>
+                @if($article->previousItem())
+                <li><span>上一篇：</span><a href='{{route('pok.art_detail', [$article->previousItem()->id])}}'>{{$article->previousItem()->title}}</a></li>
                 @else
                     <li><span>上一篇：</span>没有了</li>
                 @endif

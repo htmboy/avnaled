@@ -25,47 +25,27 @@ class Article extends BaseModel
         'hangyexinwen' => self::TYPE_HANGYEXINWEN,
     ];
 
-    // 全局条件限制
-//    protected static function boot()
-//    {
-//        parent::boot();
-//        static::addGlobalScope(new SpectacleScope);
-//    }
-
     public function category(){
         return $this->belongsTo('App\Models\ArticleCategory', 'cat_id', 'id');
     }
 
-    // 定义索引里面的type
-    public function searchableAs()
+    public function previousItem()
     {
-        return "article";
-    }
 
-    // 定义有那些字段需要搜索
-    public function toSearchableArray()
-    {
-        return [
-            'title' => $this->title,
-            'content' => $this->content,
-            'author' => $this->author,
-        ];
-    }
-
-    public function lastItem()
-    {
-        return self::spectacle()->select(['title', 'id', 'cat_id', 'sort'])->where([
+        return self::select(['title', 'id', 'cat_id', 'sort'])->where([
+            ['is_show', 1],
             ['cat_id', '=', $this->cat_id],
-            ['id', '<', $this->id],
-        ])->orderBy('id')->last();
+            ['sort', '<', $this->sort],
+        ])->orderByDesc('sort')->first();
     }
 
     public function nextItem()
     {
-        return self::spectacle()->select(['title', 'id', 'cat_id', 'sort'])->where([
+        return self::select(['title', 'id', 'cat_id', 'sort'])->where([
+            ['is_show', 1],
             ['cat_id', '=', $this->cat_id],
-            ['id', '>', $this->id],
-        ])->orderBy('id')->first();
+            ['sort', '>', $this->sort],
+        ])->orderBy('sort')->first();
     }
     
 }
