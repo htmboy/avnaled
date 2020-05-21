@@ -28,16 +28,7 @@
 <div class="banner-sub img-center"> <img src="/pok/images/neiye.jpg"> </div>
 <div class="container clearfix">
     <div class="ct2-sd ct2-sd-right">
-        <div class="panel-sd">
-            <div class="tit">产品展示</div>
-            <ul class="lanmu">
-                <li class=""> <a href="/products/fg.html">不锈钢方管</a> </li>
-                <li class=""> <a href="/products/wfg.html">不锈钢无缝管</a> </li>
-                <li class=""> <a href="/products/mxg.html">不锈钢毛细管</a> </li>
-                <li class=""> <a href="/products/jxg.html">不锈钢矩形管</a> </li>
-
-            </ul>
-        </div>
+        @include('pok.common.sidebarShow')
 
         @include('pok.common.recommendedProduct')
     </div>

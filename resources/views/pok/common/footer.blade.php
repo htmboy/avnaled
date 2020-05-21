@@ -1,3 +1,18 @@
+<div class="section" style="padding-top: 0;">
+    <div class="container">
+
+        <div class="eyou-link" data-aos="fade-up">
+            <h4>友情链接 <small>/ LINKS</small></h4>
+            <ul class="clearfix">
+                @foreach($links as $link)
+                <li><a href="{{$link->link}}" target="_blank">{{$link->name}}</a></li>
+                @endforeach
+            </ul>
+        </div>
+
+    </div>
+</div>
+
 <div class="footer">
     <div class="footer-link">
         <div class="container">

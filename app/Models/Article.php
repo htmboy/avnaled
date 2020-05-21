@@ -51,5 +51,21 @@ class Article extends BaseModel
             'author' => $this->author,
         ];
     }
+
+    public function lastItem()
+    {
+        return self::spectacle()->select(['title', 'id', 'cat_id', 'sort'])->where([
+            ['cat_id', '=', $this->cat_id],
+            ['id', '<', $this->id],
+        ])->orderBy('id')->last();
+    }
+
+    public function nextItem()
+    {
+        return self::spectacle()->select(['title', 'id', 'cat_id', 'sort'])->where([
+            ['cat_id', '=', $this->cat_id],
+            ['id', '>', $this->id],
+        ])->orderBy('id')->first();
+    }
     
 }

@@ -76,17 +76,15 @@
         <div class="in-prd-cate">
             <div class="tit">产品展示<small>PRODUCT CATEGORIES</small></div>
             <ul class="lanmu">
-                <li><a href="/products/g.html">不锈钢管</a></li>
-                <li><a href="/products/fg.html">不锈钢方管</a></li>
-                <li><a href="/products/wfg.html">不锈钢无缝管</a></li>
-                <li><a href="/products/304.html">304不锈钢管</a></li>
-                <li><a href="/products/316l.html">316L不锈钢管</a></li>
-                <li><a href="/products/310s.html">310S不锈钢管</a></li>
+                @foreach($productCategories as $productCategory)
+                <li><a href="{{route('pok.pro_secondary', ['product' => $productCategory->id])}}">{{$productCategory->name}}</a></li>
+                @endforeach
+
 
             </ul>
             <div class="zx">
-                <p style="background-image: url(/pok/images/icon2.png);">微信号码：<strong> 712965082 </strong></p>
-                <p style="background-image: url(/pok/images/icon3.png);">咨询热线：<strong> 136-2032-8609 </strong></p>
+                <p style="background-image: url(/pok/images/icon2.png);">QQ 号码：<strong> 755930694 </strong></p>
+                <p style="background-image: url(/pok/images/icon3.png);">咨询热线：<strong> 189-2311-7087 </strong></p>
             </div>
         </div>
         <div class="in-prd-con">
@@ -99,62 +97,22 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <ul class="list-1 clearfix">
-
-                            <li><div class="wrap"> <a href="/products/304.html" class="img-cover">
-                                        <span style="background-image: url(/pok/images/p-1.jpg);"></span></a>
+                            @foreach($products as $product)
+                            <li><div class="wrap"> <a href="{{route('pok.product', ['product' => $product->id])}}" class="img-cover">
+                                        <span style="background-image: url(/storage/{{$product->thumbnail}});"></span></a>
                                     <div class="text">
-                                        <h4><a href="/products/304.html">304不锈钢管</a></h4>
+                                        <h4><a href="{{route('pok.product', ['product' => $product->id])}}">{{$product->title}}</a></h4>
                                         <p>
                                             <a id="contact_weixin" onclick="openWindow(this)" class="bt">立即咨询</a>
-                                            <a href="/products/304.html" class="bt">查看详情</a> </p>
+                                            <a href="{{route('pok.pro_detail', ['product' => $product->id])}}" class="bt">查看详情</a> </p>
                                     </div></div>
                             </li>
-
-                            <li><div class="wrap"> <a href="/products/316l.html" class="img-cover">
-                                        <span style="background-image: url(/pok/images/p-2.jpg);"></span></a>
-                                    <div class="text">
-                                        <h4><a href="/products/316l.html">316L不锈钢管</a></h4>
-                                        <p> <a id="contact_weixin" onclick="openWindow(this)" class="bt">立即咨询</a> <a href="/products/316l.html" class="bt">查看详情</a> </p>
-                                    </div></div>
-                            </li>
-
-                            <li><div class="wrap"> <a href="/products/lsfg.html" class="img-cover">
-                                        <span style="background-image: url(/pok/images/p-3.jpg);"></span></a>
-                                    <div class="text">
-                                        <h4><a href="/products/lsfg.html">不锈钢拉丝方管</a></h4>
-                                        <p> <a id="contact_weixin" onclick="openWindow(this)" class="bt">立即咨询</a> <a href="/products/lsfg.html" class="bt">查看详情</a> </p>
-                                    </div></div>
-                            </li>
-
-                            <li><div class="wrap"> <a href="/products/gyhg.html" class="img-cover">
-                                        <span style="background-image: url(/pok/images/p-4.jpg);"></span></a>
-                                    <div class="text">
-                                        <h4><a href="/products/gyhg.html">不锈钢工业焊管</a></h4>
-                                        <p> <a id="contact_weixin" onclick="openWindow(this)" class="bt">立即咨询</a> <a href="/products/gyhg.html" class="bt">查看详情</a> </p>
-                                    </div></div>
-                            </li>
-
-                            <li><div class="wrap"> <a href="/products/wfg.html" class="img-cover">
-                                        <span style="background-image: url(/pok/images/p-5.jpg);"></span></a>
-                                    <div class="text">
-                                        <h4><a href="/products/wfg.html">不锈钢无缝管</a></h4>
-                                        <p> <a id="contact_weixin" onclick="openWindow(this)" class="bt">立即咨询</a> <a href="/products/wfg.html" class="bt">查看详情</a> </p>
-                                    </div></div>
-                            </li>
-
-                            <li><div class="wrap"> <a href="/products/bg.html" class="img-cover">
-                                        <span style="background-image: url(/pok/images/p-6.jpg);"></span></a>
-                                    <div class="text">
-                                        <h4><a href="/products/bg.html">不锈钢扁钢</a></h4>
-                                        <p> <a id="contact_weixin" onclick="openWindow(this)" class="bt">立即咨询</a> <a href="/products/bg.html" class="bt">查看详情</a> </p>
-                                    </div></div>
-                            </li>
-
+                            @endforeach
                         </ul>
                     </div>
 
                     <div id="light_weixin" class="white_content">
-                        <img src='/pok/images/wechat.jpg' />
+                        <img src='/pok/images/wechat.gif' />
                         <div class="ewmwb">扫描二维码，联系微信客服</div>
                     </div>
                     <div id="fade" class="black_overlay"  onClick="closeWindow()"></div>
@@ -174,10 +132,10 @@
             <dl class="clearfix">
                 <dt class="img-center"> <img src="/pok/images/about.jpg" alt="公司简介"> </dt>
                 <dd>
-                    <p>佛山市裕成不锈钢有限公司是一家集生产、研发、销售于一体的不锈钢管专业生产企业，主营：316、316L、304、304L不锈钢管。</p>
-                    <p>产品符合中国GB∕T 12771-2008、美国ASTM A312等规范，被广泛用于石油、造纸、化工、食品卫生、医疗、装饰傢俱等工程，产品遍布中国各大中城市及世界各国。</p>
-                    <p>公司以“质量至上、诚信为本”的宗旨，以出众的质量、优惠的价格、优质的服务与广大新老客户合作双赢，共同走向成功！</p>
-                    <a href="/about.html" class="more">&raquo; 查看详情</a> </dd>
+                    <p>广东澳镭照明电器有限公司始创于2006年，是一家集LED工业照明灯具研发、生产、销售及LED工厂节能照明改造服务于一体的综合型照明企业。</p>
+                    <p>14年来，澳镭照明已经在LED工业照明领域成功开发了150多款产品，其中LED工矿灯、LED投光灯、LED泛光灯、LED隧道灯、LED路灯等工业LED灯具均为澳镭的核心产品。</p>
+                    <p>澳镭照明，14年来为中国工厂的节能照明改造事业贡献了一份坚实的企业力量，立志成为中国LED工业照明领域首选服务品牌。</p>
+                    <a href="{{route('pok.introduction')}}" class="more">&raquo; 查看详情</a> </dd>
             </dl>
         </div>
     </div>
@@ -186,21 +144,19 @@
     <div class="container wow fadeInUp">
         <div class="in-case-tit">工程案例</div>
         <ul class="list-2 clearfix">
-
-            <li> <a href="/al/1.html">
-                    <div class="img-cover"><span style="background-image: url(/pok/images/l-1.jpg);"></span></div> <div class="text">案例展示一</div> </a> </li>
-
-            <li> <a href="/al/2.html">
-                    <div class="img-cover"><span style="background-image: url(/pok/images/l-2.jpg);"></span></div> <div class="text">案例展示二</div> </a> </li>
-
-            <li> <a href="/al/3.html">
-                    <div class="img-cover"><span style="background-image: url(/pok/images/l-3.jpg);"></span></div> <div class="text">案例展示三</div> </a> </li>
-
-            <li> <a href="/al/4.html">
-                    <div class="img-cover"><span style="background-image: url(/pok/images/l-4.jpg);"></span></div> <div class="text">案例展示四</div> </a> </li>
+            @foreach($cases as $case)
+            <li>
+                <a href="{{route('pok.art_detail', ['article' => $case->id])}}">
+                    <div class="img-cover">
+                        <span style="background-image: url(/storage/{{$case->thumbnail}});"></span>
+                    </div>
+                    <div class="text">{{$case->title}}</div>
+                </a>
+            </li>
+            @endforeach
 
         </ul>
-        <div class="in-case-btn"> <a href="/al/">查看更多</a> </div>
+        <div class="in-case-btn"> <a href="{{route('pok.cases')}}">查看更多</a> </div>
     </div>
 </div>
 <div class="section">
@@ -211,7 +167,7 @@
         <div class="clearfix">
             <div class="in-news-left">
                 <div class="in-news-box">
-                    <div class="in-news-tit"> <a href="/news/" class="more">MORE</a>
+                    <div class="in-news-tit"> <a href="{{route('pok.art_category', ['articleCategory' => 2])}}" class="more">MORE</a>
                         <ul class="news-menu">
                             <li class="active"><a href="javascript:;">新闻资讯</a> </li>
                             <li><a href="javascript:;">行业资讯</a> </li>
@@ -226,22 +182,23 @@
                                     <div class="in-news-list">
 
                                         <dl>
-                                            <dt class="img-center"><a href="/news/1.html"><img src="/pok/images/p-3.jpg"></a></dt>
+                                            <dt class="img-center"><a href="{{route('pok.art_detail', ['article' => $conpany_news->first()->id])}}"><img src="/storage/{{$conpany_news->first()->thumbnail}}"></a></dt>
                                             <dd>
-                                                <h4><a href="/news/1.html" >不锈钢焊管拉丝后要注意防锈</a></h4>
-                                                <p>不锈钢焊管在使用时为了美观会使用拉丝、镜面抛光等工艺，这些都是对不锈钢焊管表面进行加工，这种加工工艺对不锈钢焊管表面有什么影响呢？...</p>
-                                                <a href="/news/1.html" class="more">查看详情 &raquo;</a> </dd>
+                                                <h4><a href="{{route('pok.art_detail', ['article' => $conpany_news->first()->id])}}" >{{$conpany_news->first()->title}}</a></h4>
+                                                <p>{{Str::limit(strip_tags($conpany_news->first()->content), 200)}}</p>
+                                                <a href="{{route('pok.art_detail', ['article' => $conpany_news->first()->id])}}" class="more">查看详情 &raquo;</a> </dd>
                                         </dl>
 
                                         <ul>
-                                            <li><a href="/news/2.html"><div class="tel">316L不锈钢管为什么被广泛应用在海洋环境中？</div> <span> 2020-05-02</span></a> </li>
-                                            <li><a href="/news/3.html"><div class="tel">怎样增强不锈钢管的耐腐蚀性？</div> <span> 2020-05-03</span></a> </li>
-                                            <li><a href="/news/4.html"><div class="tel">不锈钢焊管和碳钢管的差别在哪里？</div> <span> 2020-05-04</span></a> </li>
-                                            <li><a href="/news/5.html"><div class="tel">304L不锈钢管与304不锈钢管有什么不同？</div> <span> 2020-05-05</span></a> </li>
-                                            <li><a href="/news/6.html"><div class="tel">304不锈钢焊管会有磁性吗？</div> <span> 2020-05-06</span></a> </li>
-                                            <li><a href="/news/7.html"><div class="tel">如何去除不锈钢焊管切割时留下的毛刺？</div> <span> 2020-05-07</span></a> </li>
-                                            <li><a href="/news/8.html"><div class="tel">304不锈钢管的强度和硬度</div> <span> 2020-05-08</span></a> </li>
-                                            <li><a href="/news/9.html"><div class="tel">不锈钢焊管碳元素的特性</div> <span> 2020-05-09</span></a> </li>
+                                            @foreach($conpany_news as $conpany_new)
+                                            <li>
+                                                <a href="{{route('pok.art_detail', ['article' => $conpany_new->id])}}">
+                                                    <div class="tel">{{$conpany_new->title}}</div>
+                                                    <span>{{date('Y-m-d', strtotime($conpany_new->updated_at))}}</span>
+                                                </a>
+                                            </li>
+                                            @endforeach
+
                                         </ul>
                                     </div>
 
@@ -252,23 +209,22 @@
                                     <div class="in-news-list">
 
                                         <dl>
-                                            <dt class="img-center"><a href="/news/10.html"><img src="/pok/images/p-2.jpg"></a></dt>
+                                            <dt class="img-center"><a href="{{route('pok.art_detail', ['article' => $news->first()->id])}}"><img src="/storage/{{$news->first()->thumbnail}}"></a></dt>
                                             <dd>
-                                                <h4><a href="/news/10.html">说316L不锈钢焊管耐应力腐蚀</a></h4>
-                                                <p>316L不锈钢焊管的耐腐蚀性优于其他材质的不锈钢管，具有优异的耐应力腐蚀破裂的能力...</p>
-                                                <a href="/news/10.html" class="more">查看详情 &raquo;</a> </dd>
+                                                <h4><a href="{{route('pok.art_detail', ['article' => $news->first()->id])}}">{{$news->first()->title}}</a></h4>
+                                                <p>{{Str::limit(strip_tags($news->first()->content), 200)}}</p>
+                                                <a href="{{route('pok.art_detail', ['article' => $news->first()->id])}}" class="more">查看详情 &raquo;</a> </dd>
                                         </dl>
 
                                         <ul>
-                                            <li><a href="/news/11.html"><div class="tel">不锈钢管在汽车行业中的应用</div> <span> 2020-05-11</span></a> </li>
-                                            <li><a href="/news/12.html"><div class="tel">解析304不锈钢管和201不锈钢管的耐压区别</div> <span> 2020-05-12</span></a> </li>
-                                            <li><a href="/news/13.html"><div class="tel">碳元素在304不锈钢管中有着至关重要的作用</div> <span> 2020-05-13</span></a> </li>
-                                            <li><a href="/news/14.html"><div class="tel">怎样延长不锈钢管的使用寿命？</div> <span> 2020-05-14</span></a> </li>
-                                            <li><a href="/news/15.html"><div class="tel">铜元素在201不锈钢管中的作用</div> <span> 2020-05-15</span></a> </li>
-                                            <li><a href="/news/16.html"><div class="tel">201不锈钢管会生锈吗？</div> <span> 2020-05-16</span></a> </li>
-                                            <li><a href="/news/17.html"><div class="tel">怎样处理不锈钢焊管表面的锈斑？</div> <span> 2020-05-17</span></a> </li>
-                                            <li><a href="/news/18.html"><div class="tel">不锈钢盘管的退火处理需要注意什么？</div> <span> 2020-05-18</span></a> </li>
-
+                                            @foreach($news as $new)
+                                                <li>
+                                                    <a href="{{route('pok.art_detail', ['article' => $new->id])}}">
+                                                        <div class="tel">{{$new->title}}</div>
+                                                        <span>{{date('Y-m-d', strtotime($new->updated_at))}}</span>
+                                                    </a>
+                                                </li>
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -279,19 +235,18 @@
             </div>
             <div class="in-news-right">
                 <div class="in-news-box">
-                    <div class="in-news-tit"> <a href="/wenti/" class="more">MORE</a> 常见问题 </div>
+                    <div class="in-news-tit"> <a href="{{route('pok.art_category', ['articleCategory' => 3])}}" class="more">MORE</a> 常见问题 </div>
 
                     <div id="marquee">
                         <ul>
-                            <li> <a href="/wenti/1.html"><h4>SUS304和316不锈钢哪个好</h4>
-                                    <p>一般常用的是304，但特殊要求的才采用316，如是化学品盛装容器可选用316不锈钢... </p></a> </li>
-
-                            <li> <a href="/wenti/2.html"><h4>2205和2507双相不锈钢板有什么区别</h4>
-                                    <p>2507双相钢不锈钢是一种铁素体—奥氏体(双相)不锈钢,它综合了许多铁素体钢和奥氏体钢最有益的性能... </p></a> </li>
-
-                            <li> <a href="/wenti/3.html"><h4>904l是什么材质</h4>
-                                    <p>904L（N08904，1.4539）超级奥氏体不锈钢中含14.0-18.0%铬， 24.0-26.0%镍，4.5%钼... </p></a> </li>
-
+                            @foreach($answers as $answer)
+                            <li>
+                                <a href="{{route('pok.art_detail', ['article' => $answer->id])}}">
+                                    <h4>{{$answer->title}}</h4>
+                                    <p>{{Str::limit(strip_tags($answer->content), 20)}}</p>
+                                </a>
+                            </li>
+                            @endforeach
                         </ul>
                     </div>
 
@@ -300,8 +255,6 @@
         </div>
     </div>
 </div>
-
-@include('pok.common.links')
 
 @include('pok.common.footer')
 

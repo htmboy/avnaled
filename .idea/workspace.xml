@@ -2,574 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1adf72b5-8a91-4124-8640-0790e3811ff1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/ViewComposers/AvnaledFooterComposer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/ViewComposers/AvnaledHeaderComposer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/ViewComposers/AvnaledLeftbarComposer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bootstrap/helpers.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/css/animate.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/css/eyou.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/css/swiper.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/images/foot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/images/wechat.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/js/eyou.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/js/jquery.kxbdmarquee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/js/swiper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pok/js/wow.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pok/common/footer.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pok/common/header.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pok/common/links.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pok/common/search.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pok/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pok/introduction.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pok/products.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/pok.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/avnaled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/avnaled.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/ViewComposers/PokRecommendComposer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/ViewComposers/PokRecommendProductComposer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/ViewComposers/PokSidebarShowComposer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/article.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/articleDetail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/common/pagination.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/common/recommended.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/common/recommendedProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/common/sidebarShow.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/history.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/productDetail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/pok/productList.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Common/Site.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Common/Site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/CasesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/CasesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/HistoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/IntroductionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/IntroductionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/SpectacleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Avnaled/SpectacleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/CasesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/CasesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/HistoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/IntroductionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/IntroductionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/ProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/SearchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/SearchController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Spectacle/SpectacleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/SpectacleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/ViewComposers/FooterComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/ViewComposers/PokFooterComposer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/ViewComposers/HeaderComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/ViewComposers/PokHeaderComposer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/ViewComposers/LeftbarComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/ViewComposers/PokLeftbarComposer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/ViewComposers/RecommendComposer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/ViewComposers/AvnaledRecommendComposer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Pok/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Pok/ProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Pok/ProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/packages.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/packages.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/cache/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/css/ny.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/backBg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ban1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ban2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ban3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/bg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/bg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/bzbg1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/bzbg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/bzbg3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/bzbg4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/clqqan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/cpnavbg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/cppicbg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/da.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ddbg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ddbg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/dian.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/dianshi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/do_phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/dress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ewm(2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ewm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ggImg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ggImg1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/htop_line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hz9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hztimg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/hztimg2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/im_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/im_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/jt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/kf-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/khbg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/kk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/line5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/pbt1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/pbt2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/phone2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/pinpai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/sj2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/smore.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(10).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(11).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(12).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(13).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(14).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(15).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(2).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(3).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(4).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(5).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(6).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(7).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(8).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb(9).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/timthumb.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/tmtop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/wen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/wx1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ysbg1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/ysbg2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/images/yy2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/js/SuperSlide.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/js/js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avnaled/js/sticky-kit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/api" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/api" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/css/oms.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/css/oms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/css/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/css/owl.carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/css/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/css/slider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/getscript" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/getscript" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img(2)" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img(2)" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img(3)" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img(3)" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img(4)" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img(4)" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/1234.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/1234.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/16c150d6d71f4fc2912b60a078e01d19(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/16c150d6d71f4fc2912b60a078e01d19(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/16c150d6d71f4fc2912b60a078e01d19(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/16c150d6d71f4fc2912b60a078e01d19(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/16c150d6d71f4fc2912b60a078e01d19(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/16c150d6d71f4fc2912b60a078e01d19(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/16c150d6d71f4fc2912b60a078e01d19(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/16c150d6d71f4fc2912b60a078e01d19(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/16c150d6d71f4fc2912b60a078e01d19.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/16c150d6d71f4fc2912b60a078e01d19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160519152606_6410.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160519152606_6410.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160520111402_6290.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160520111402_6290.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234311_72454(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234311_72454(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234311_72454(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234311_72454(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234311_72454(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234311_72454(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234311_72454(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234311_72454(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234311_72454.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234311_72454.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234422_63481(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234422_63481(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234422_63481(3).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234422_63481(3).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234422_63481(4).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234422_63481(4).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234422_63481(5).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234422_63481(5).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160724234422_63481.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160724234422_63481.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202204_12493.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202204_12493.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202217_73866.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202217_73866.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202231_57048.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202231_57048.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202242_95679.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202242_95679.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202252_63767.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202252_63767.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202303_65769.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202303_65769.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202314_35109.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202314_35109.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202325_72377.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202325_72377.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809202336_49473.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809202336_49473.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809204514_41083(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809204514_41083(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809204514_41083.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809204514_41083.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809204529_38679(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809204529_38679(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160809204529_38679.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160809204529_38679.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160810052707_26443(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160810052707_26443(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160810052707_26443.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160810052707_26443.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160810052709_65810(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160810052709_65810(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160810052709_65810.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160810052709_65810.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160810052711_80922(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160810052711_80922(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/20160810052711_80922.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/20160810052711_80922.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5795e24f6673c(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5795e24f6673c(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5795e24f6673c.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5795e24f6673c.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5795e2caca5c5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5795e2caca5c5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5795e3e9ce74a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5795e3e9ce74a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5795e41b98709(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5795e41b98709(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5795e41b98709.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5795e41b98709.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/57aaa0d6ca648.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/57aaa0d6ca648.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/57aaa7fad65aa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/57aaa7fad65aa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/57aaa9d4a41d2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/57aaa9d4a41d2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/59783c238cd42(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/59783c238cd42(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/59783c238cd42(3).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/59783c238cd42(3).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/59783c238cd42(4).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/59783c238cd42(4).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/59783c238cd42(5).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/59783c238cd42(5).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/59783c238cd42.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/59783c238cd42.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a153c3581b6a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a153c3581b6a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a311697b0807.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a311697b0807.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a40aecb9d6da.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a40aecb9d6da.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a52df41057ab.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a52df41057ab.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a52df4f0d1bd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a52df4f0d1bd.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a52df59d3791.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a52df59d3791.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a52df64a1e1c.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a52df64a1e1c.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a52df6ff1fd9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a52df6ff1fd9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a52df7877eb9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a52df7877eb9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a531c1e4df56.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a531c1e4df56.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a5322a577eb9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a5322a577eb9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a5327dab1240.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a5327dab1240.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a5327e6d3791.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a5327e6d3791.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a5327f059671.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a5327f059671.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a533a6b202ea.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a533a6b202ea.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a533a7510ec6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a533a7510ec6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a533e35741b0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a533e35741b0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a533e3e61083.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a533e3e61083.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a533e457f8cb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a533e457f8cb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a533e4c46544.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a533e4c46544.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a5349682f70e.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a5349682f70e.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a534ce659671.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a534ce659671.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a534ced2ba05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a534ced2ba05.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a5351db835d4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a5351db835d4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a543a8780759.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a543a8780759.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a543a8d6d62c.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a543a8d6d62c.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a543a93c14f2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a543a93c14f2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a543a9993886.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a543a9993886.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a543aa002930.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a543aa002930.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a5594112c893.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a5594112c893.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a559417bd7e9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a559417bd7e9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a55941e9efa1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a55941e9efa1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a55942571335.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a55942571335.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59edbd0a342(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59edbd0a342(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59edbd0a342.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59edbd0a342.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59eded8be74(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59eded8be74(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59eded8be74.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59eded8be74.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59ee2c52aed(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59ee2c52aed(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59ee2c52aed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59ee2c52aed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59ee479b298(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59ee479b298(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59ee479b298.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59ee479b298.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59ee5a52aed(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59ee5a52aed(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a59ee5a52aed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a59ee5a52aed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a6985bb8bdcc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a6985bb8bdcc.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5a77fce5887dd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5a77fce5887dd.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5aaa0a2e93dcb.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5aaa0a2e93dcb.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5ad83609cdd68.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5ad83609cdd68.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5ae430032ed8a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5ae430032ed8a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5af2dc90cf104.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5af2dc90cf104.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5b054d3ed61f1.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5b054d3ed61f1.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5b0e8daaa8585.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5b0e8daaa8585.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5b28ee8b67c28.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5b28ee8b67c28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5b31f7a3c06c5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5b31f7a3c06c5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5bb0a69a2226e.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5bb0a69a2226e.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5bc1d1054f33a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5bc1d1054f33a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5bcf085ea1325.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5bcf085ea1325.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5bd2915d33503.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5bd2915d33503.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5bd6e4b849c69.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5bd6e4b849c69.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5bdadd7386cfc.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5bdadd7386cfc.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5be2c140f09bf.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5be2c140f09bf.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c4959a26c526.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c4959a26c526.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c4a747e76621.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c4a747e76621.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c6e70b7b8902.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c6e70b7b8902.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c6faafd774a8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c6faafd774a8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c73b3bd97fbe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c73b3bd97fbe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c74a5fb11ca0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c74a5fb11ca0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c78f4d17fca4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c78f4d17fca4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c79e6253b542.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c79e6253b542.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5c79f6a62f5b9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5c79f6a62f5b9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d6ce81773d9a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d6ce81773d9a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d761fc9b4dd2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d761fc9b4dd2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d7a1418b0c37.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d7a1418b0c37.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d7a1418e34b5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d7a1418e34b5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d7a141905b3c.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d7a141905b3c.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d7a141930efd.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d7a141930efd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d7a141944327.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d7a141944327.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d7a14196987d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d7a14196987d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d7a141aa046d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d7a141aa046d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5d7a15c220b8a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5d7a15c220b8a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e8c4816e11c8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e8c4816e11c8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e8d9c668c6fa.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e8d9c668c6fa.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e8ee09181df2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e8ee09181df2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e9034d83e857.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e9034d83e857.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e91895b97fa9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e91895b97fa9.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e943055cfb79.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e943055cfb79.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e957e436f44e.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e957e436f44e.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e96d2da56890.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e96d2da56890.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e98232590d13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e98232590d13.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e996306b59f8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e996306b59f8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e9d706abdeab.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e9d706abdeab.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5e9eb43e2e1b9.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5e9eb43e2e1b9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5ea01342acebd.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5ea01342acebd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5ea29ccb5076d.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5ea29ccb5076d.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/5ea40a5b26c1a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/5ea40a5b26c1a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/a.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/a1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/a1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/a2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/a2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/acc_sc(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/acc_sc(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/acc_sc(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/acc_sc(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/acc_sc(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/acc_sc(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/acc_sc(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/acc_sc(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/acc_sc.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/acc_sc.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/arraw.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/arraw.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/article_btn.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/article_btn.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/banner4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/banner4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bigMapIcon(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bigMapIcon(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bigMapIcon(3).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bigMapIcon(3).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bigMapIcon(4).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bigMapIcon(4).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bigMapIcon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bigMapIcon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bridge(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bridge(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bridge(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bridge(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bridge(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bridge(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bridge(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bridge(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bridge.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bridge.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/browser.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/browser.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/buynowsmalls.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/buynowsmalls.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/bz_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/bz_bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/close(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/close(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/close(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/close(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/close(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/close(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/close(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/close(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/copyright_logo(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/copyright_logo(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/copyright_logo(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/copyright_logo(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/copyright_logo(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/copyright_logo(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/copyright_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/copyright_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dd84bf88f2f443eeab559005c05d4346(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dd84bf88f2f443eeab559005c05d4346(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dd84bf88f2f443eeab559005c05d4346(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dd84bf88f2f443eeab559005c05d4346(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dd84bf88f2f443eeab559005c05d4346(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dd84bf88f2f443eeab559005c05d4346(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dd84bf88f2f443eeab559005c05d4346(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dd84bf88f2f443eeab559005c05d4346(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dd84bf88f2f443eeab559005c05d4346.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dd84bf88f2f443eeab559005c05d4346.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ding.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ding.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dn_sc(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dn_sc(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dn_sc(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dn_sc(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dn_sc(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dn_sc(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dn_sc(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dn_sc(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/dn_sc.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/dn_sc.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ds1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ds1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ds2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ds2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ds_bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ds_bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f1(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f1(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f1(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f1(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f1(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f1(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f1(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f1(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f3(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f3(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f3(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f3(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f3(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f3(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f3(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f3(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f3.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f4(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f4(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f4(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f4(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f4(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f4(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f4(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f4(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f4.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f4.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f5(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f5(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f5(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f5(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f5(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f5(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f5(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f5(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f5.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f5.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f_line(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f_line(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f_line(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f_line(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f_line(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f_line(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f_line(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f_line(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/f_line.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/f_line.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/favicon(2).ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/favicon(2).ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/favicon(3).ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/favicon(3).ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/favicon(4).ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/favicon(4).ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/favicon(5).ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/favicon(5).ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/fline(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/fline(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/fline(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/fline(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/fline(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/fline(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/fline(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/fline(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/fline.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/fline.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/genCode(2).action" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/genCode(2).action" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/genCode(3).action" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/genCode(3).action" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/genCode(4).action" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/genCode(4).action" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/genCode.action" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/genCode.action" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/h.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/h.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/h01.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/h01.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/h03.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/h03.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/h04.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/h04.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ico55(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ico55(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ico55(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ico55(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ico55.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ico55.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon1(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon1(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon1(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon1(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon2(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon2(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon2(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon2(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon3(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon3(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon3(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon3(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon4(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon4(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon4(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon4(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon5(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon5(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon5(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon5(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icon5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icon5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/icons4.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/icons4.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/indimg30.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/indimg30.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/inviteColorBack1(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/inviteColorBack1(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/inviteColorBack1(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/inviteColorBack1(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/inviteColorBack1(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/inviteColorBack1(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/inviteColorBack1(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/inviteColorBack1(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/inviteColorBack1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/inviteColorBack1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/kh_jt2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/kh_jt2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/l01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/l01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/left1s.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/left1s.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_h(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_h(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_h(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_h(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_h(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_h(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_h(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_h(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_h.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_h.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_line(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_line(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_line(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_line(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_line(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_line(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_line(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_line(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/logo_line.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/logo_line.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/lx(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/lx(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/lx(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/lx(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/lx(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/lx(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/lx(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/lx(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/lx.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/lx.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/m_bg_1(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/m_bg_1(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/m_bg_1(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/m_bg_1(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/m_bg_1(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/m_bg_1(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/m_bg_1(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/m_bg_1(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/m_bg_1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/m_bg_1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/marker_red_sprite(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/marker_red_sprite(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/marker_red_sprite(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/marker_red_sprite(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/marker_red_sprite(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/marker_red_sprite(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/marker_red_sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/marker_red_sprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/new_03(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/new_03(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/new_03(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/new_03(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/new_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/new_03.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/news_28.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/news_28.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodeMin(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodeMin(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodeMin(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodeMin(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodeMin(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodeMin(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodeMin(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodeMin(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodeMin.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodeMin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodelocation(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodelocation(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodelocation(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodelocation(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodelocation(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodelocation(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodelocation(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodelocation(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodelocation.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodelocation.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodemail(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodemail(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodemail(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodemail(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodemail(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodemail(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodemail(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodemail(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodemail.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodemail.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodephone(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodephone(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodephone(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodephone(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodephone(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodephone(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodephone(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodephone(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/nodephone.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/nodephone.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/phone_sc(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/phone_sc(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/phone_sc(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/phone_sc(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/phone_sc(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/phone_sc(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/phone_sc(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/phone_sc(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/phone_sc.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/phone_sc.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/pro3_btnl.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/pro3_btnl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/pro3_btnr.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/pro3_btnr.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/progress.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/progress.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/q.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/q.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/r01.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/r01.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/right1s.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/right1s.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/rx.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/rx.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/search.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/slink.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/slink.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou1(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou1(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou1(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou1(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou1(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou1(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou1(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou1(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou2(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou2(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou2(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou2(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou2(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou2(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou2(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou2(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou_icon(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou_icon(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou_icon(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou_icon(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou_icon(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou_icon(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou_icon(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou_icon(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/sou_icon.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/sou_icon.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ss-1(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ss-1(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ss-1(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ss-1(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ss-1(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ss-1(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ss-1(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ss-1(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/ss-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/ss-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a59ee479b298(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a59ee479b298(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a59ee479b298(3).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a59ee479b298(3).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a59ee479b298.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a59ee479b298.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a59ee5a52aed(2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a59ee5a52aed(2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a59ee5a52aed(3).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a59ee5a52aed(3).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a59ee5a52aed.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a59ee5a52aed.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a61c15202888(2).JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a61c15202888(2).JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a61c15202888(3).JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a61c15202888(3).JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a61c15202888.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a61c15202888.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/thumb_5a62db8d6d584.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/thumb_5a62db8d6d584.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/tj-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/tj-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/tj-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/tj-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/tj-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/tj-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/tj-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/tj-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/top(2).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/top(2).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/top(3).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/top(3).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/top(4).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/top(4).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/top(5).gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/top(5).gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/top.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/top.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/user(2).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/user(2).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/user(3).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/user(3).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/user(4).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/user(4).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/user(5).png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/user(5).png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/white-close.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/white-close.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/white-min.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/white-min.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/white-restore.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/white-restore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/背景" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/背景" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/背景(2)" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/背景(2)" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/img/背景(3)" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/img/背景(3)" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/10100818.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/10100818.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/11.0.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/11.0.1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/ab77b6ea7f3fbf79.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/ab77b6ea7f3fbf79.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/c.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/c.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/hm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/hm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/invite.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/invite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/looyu.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/looyu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/main.833c272c.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/main.833c272c.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/mip-cambrian.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/mip-cambrian.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/nav.hover.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/nav.hover.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/open_qq_chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/open_qq_chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/owl.carousel.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/pc_nb.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/pc_nb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/pro.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/pro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/push.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/push.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/s.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/s.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/js/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/js/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/spectacle/saved_resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/avnaled/saved_resource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/avnaled/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/article.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/article.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/articleDetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/articleDetail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/articleList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/articleList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/casesList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/casesList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/leftBar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/leftBar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/pagination.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/pagination.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/recommended.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/recommended.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/recommendedArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/recommendedArticle.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/common/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/history.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/history.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/introduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/introduction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/productDetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/productDetail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/productList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/productList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/searchList.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/searchList.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/spectacle/zsjm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/zsjm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/avnaled.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/avnaled.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/spectacle.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pok/common/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/common/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pok/common/links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/common/links.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pok/common/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/common/search.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pok/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pok/introduction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/introduction.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pok/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/products.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -595,56 +50,67 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pok/introduction.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/ArticlesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1176">
-              <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
+            <state relative-caret-position="748">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newsite.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="131" column="14" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pok/article.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="536">
+              <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+              <folding>
+                <element signature="e#4914#4918#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/pok/products.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Models/Article.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="74" column="65" selection-start-line="74" selection-start-column="65" selection-end-line="74" selection-end-column="65" />
+            <state relative-caret-position="397">
+              <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/pok/articleDetail.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="68" column="53" lean-forward="true" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
               <folding>
-                <element signature="e#5101#5105#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#5139#5143#0#HTML" expanded="true" />
+                <element signature="e#5179#5183#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/IntroductionController.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/pok/common/recommended.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/ProductsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="22" column="89" selection-start-line="22" selection-start-column="81" selection-end-line="22" selection-end-column="89" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pok/common/header.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="60" />
+            <state relative-caret-position="418">
+              <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -703,27 +169,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/avnaled/common/leftBar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/common/recommended.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/common/recommendedArticle.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/common/search.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/article.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/articleDetail.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/articleList.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/casesList.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/contact.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/history.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/introduction.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/product.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/productDetail.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/productList.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/avnaled/search.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/avnaled/searchList.blade.php" />
         <option value="$PROJECT_DIR$/public/avnaled/css/oms.css" />
-        <option value="$PROJECT_DIR$/resources/views/pok/common/search.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/content/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pok/common/links.blade.php" />
         <option value="$PROJECT_DIR$/routes/pok.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/avnaled/FooterComposer.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/avnaled/HeaderComposer.php" />
@@ -738,22 +187,39 @@
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/AvnaledRecommendComposer.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokFooterComposer.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokLeftbarComposer.php" />
-        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokHeaderComposer.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/vendor/overtrue/laravel-pinyin/src/helpers.php" />
         <option value="$PROJECT_DIR$/bootstrap/helpers" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Pok/IndexController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/bootstrap/helpers.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/common/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/content/introduction.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pok/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Pok/IndexController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/common/links.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/common/footer.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokSearchComposer.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/common/search.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokRecommendProductComposer.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/introduction.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Pok/ProductsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/history.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokRecommendComposer.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/common/recommendedProduct.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/products.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/common/sidebarRight.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokSidebarShowComposer.php" />
+        <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/common/sidebarShow.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/productDetail.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Pok/ProductsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/productList.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/common/pagination.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/article.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/articleDetail.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/common/recommended.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/Article.php" />
       </list>
     </option>
   </component>
@@ -853,9 +319,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="173" />
-    <option name="y" value="99" />
-    <option name="width" value="1549" />
+    <option name="x" value="286" />
+    <option name="y" value="76" />
+    <option name="width" value="1855" />
     <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -866,6 +332,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -915,36 +382,47 @@
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
               <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="ViewComposers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
               <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
               <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="pok" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Providers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
               <item name="avnaled" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
               <item name="avnaled" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="pok" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="pok" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
@@ -960,14 +438,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/pok/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pok/common" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -975,19 +452,19 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\avnaled\resources\views\pok\common" />
+      <recent name="D:\avnaled\app\Http\ViewComposers" />
+      <recent name="D:\avnaled\public\pok\images" />
+      <recent name="D:\avnaled\storage\app" />
+      <recent name="D:\avnaled\public\avnaled\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\avnaled\resources\views\pok" />
       <recent name="D:\avnaled\app\Http\ViewComposers" />
       <recent name="D:\avnaled\app\Http\ViewComposers\avnaled" />
       <recent name="D:\avnaled\public\avnaled\images" />
       <recent name="D:\avnaled\public\backstage\js" />
-      <recent name="D:\avnaled\public\spectacle" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\avnaled\public\pok\images" />
-      <recent name="D:\avnaled\app\Http\ViewComposers" />
-      <recent name="D:\avnaled\storage\app" />
-      <recent name="D:\avnaled\public\avnaled\images" />
-      <recent name="D:\avnaled\app\Http\Controllers\Avnaled" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -1058,18 +535,19 @@
       <workItem from="1589520879280" duration="11790000" />
       <workItem from="1589591948614" duration="713000" />
       <workItem from="1589768694514" duration="3185000" />
-      <workItem from="1589941201875" duration="20140000" />
+      <workItem from="1589941201875" duration="20394000" />
+      <workItem from="1590029618566" duration="22530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="435962000" />
+    <option name="totallyTimeSpent" value="458746000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="173" y="99" width="1549" height="977" extended-state="0" />
+    <frame x="286" y="76" width="1855" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.22364002" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.19610028" />
       <window_info id="Structure" order="1" sideWeight="0.5006784" side_tool="true" weight="0.15884861" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1082,7 +560,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.31079477" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.2811159" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1115,256 +593,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/casesList.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/contact.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <caret line="83" column="34" selection-start-line="83" selection-start-column="34" selection-end-line="83" selection-end-column="34" />
-          <caret line="86" column="149" selection-start-line="86" selection-start-column="149" selection-end-line="86" selection-end-column="149" />
-          <caret line="113" column="44" selection-start-line="113" selection-start-column="44" selection-end-line="113" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/history.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <caret line="127" column="44" selection-start-line="127" selection-start-column="44" selection-end-line="127" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <caret line="15" column="46" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="46" />
-          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
-          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
-          <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
-          <caret line="119" column="21" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
-          <caret line="128" column="27" selection-start-line="128" selection-start-column="27" selection-end-line="128" selection-end-column="27" />
-          <caret line="135" column="29" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
-          <caret line="156" column="37" selection-start-line="156" selection-start-column="37" selection-end-line="156" selection-end-column="37" />
-          <caret line="161" column="27" selection-start-line="161" selection-start-column="27" selection-end-line="161" selection-end-column="27" />
-          <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
-          <caret line="171" column="27" selection-start-line="171" selection-start-column="27" selection-end-line="171" selection-end-column="27" />
-          <caret line="177" column="29" selection-start-line="177" selection-start-column="29" selection-end-line="177" selection-end-column="29" />
-          <caret line="189" column="27" selection-start-line="189" selection-start-column="27" selection-end-line="189" selection-end-column="27" />
-          <caret line="191" column="25" selection-start-line="191" selection-start-column="25" selection-end-line="191" selection-end-column="25" />
-          <caret line="199" column="27" selection-start-line="199" selection-start-column="27" selection-end-line="199" selection-end-column="27" />
-          <caret line="205" column="29" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
-          <caret line="215" column="27" selection-start-line="215" selection-start-column="27" selection-end-line="215" selection-end-column="27" />
-          <caret line="217" column="25" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="25" />
-          <caret line="220" column="25" selection-start-line="220" selection-start-column="25" selection-end-line="220" selection-end-column="25" />
-          <caret line="221" column="28" selection-start-line="221" selection-start-column="28" selection-end-line="221" selection-end-column="28" />
-          <caret line="228" column="29" selection-start-line="228" selection-start-column="29" selection-end-line="228" selection-end-column="29" />
-          <caret line="246" column="37" selection-start-line="246" selection-start-column="37" selection-end-line="246" selection-end-column="37" />
-          <caret line="251" column="25" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="25" />
-          <caret line="261" column="44" selection-start-line="261" selection-start-column="44" selection-end-line="261" selection-end-column="44" />
-          <caret line="267" column="44" selection-start-line="267" selection-start-column="44" selection-end-line="267" selection-end-column="44" />
-          <caret line="268" column="44" selection-start-line="268" selection-start-column="44" selection-end-line="268" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/introduction.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
-          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
-          <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
-          <caret line="95" column="44" selection-start-line="95" selection-start-column="44" selection-end-line="95" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/product.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/productDetail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <caret line="47" column="44" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
-          <caret line="107" column="186" selection-start-line="107" selection-start-column="186" selection-end-line="107" selection-end-column="186" />
-          <caret line="128" column="37" selection-start-line="128" selection-start-column="37" selection-end-line="128" selection-end-column="37" />
-          <caret line="145" column="33" selection-start-line="145" selection-start-column="33" selection-end-line="145" selection-end-column="33" />
-          <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
-          <caret line="157" column="53" selection-start-line="157" selection-start-column="53" selection-end-line="157" selection-end-column="53" />
-          <caret line="171" column="44" selection-start-line="171" selection-start-column="44" selection-end-line="171" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/productList.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
-          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/searchList.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
-          <caret line="48" column="37" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="37" />
-          <caret line="52" column="45" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
-          <caret line="61" column="39" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
-          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/avnaled/css/oms.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2787">
-          <caret line="314" column="19" lean-forward="true" selection-start-line="314" selection-start-column="19" selection-end-line="314" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/avnaled/img/logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/avnaled/img/logo_h(3).gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/avnaled/img/logo_h(4).gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/avnaled/img/logo_h(2).gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/search.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/links.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Avnaled/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/pok/RecommendComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/avnaled/AvnaledFooterComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/avnaled/AvnaledHeaderComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/avnaled/AvnaledLeftbarComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/avnaled/AvnaledRecommendComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/AvnaledFooterComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/AvnaledHeaderComposer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1376,20 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/AvnaledRecommendComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/PokFooterComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1407,13 +621,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/pok.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="80" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
         </state>
       </provider>
     </entry>
@@ -1455,16 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
-          <folding>
-            <element signature="e#33#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1482,65 +679,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/content/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret line="228" column="6" lean-forward="true" selection-end-line="228" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/content/introduction.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="e#1293#1297#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="77" column="19" lean-forward="true" selection-start-line="77" selection-start-column="19" selection-end-line="77" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/introduction.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="63" column="28" lean-forward="true" selection-start-line="63" selection-start-column="28" selection-end-line="63" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/content/index.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/content/introduction.blade.php" />
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/app.blade.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/IntroductionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1548,25 +689,271 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/ProductsController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="22" column="89" selection-start-line="22" selection-start-column="81" selection-end-line="22" selection-end-column="89" />
+        <state relative-caret-position="294">
+          <caret line="232" column="25" selection-start-line="232" selection-start-column="16" selection-end-line="232" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-462">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/links.blade.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/PokSearchComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/PokFooterComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="175" column="46" lean-forward="true" selection-start-line="175" selection-start-column="46" selection-end-line="175" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/PokRecommendProductComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/introduction.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/history.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#4911#4915#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/AvnaledRecommendComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/PokSidebarShowComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/recommendedProduct.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pok/products.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/ViewComposers/PokRecommendComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pok.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="85" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/productDetail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="74" column="65" selection-start-line="74" selection-start-column="65" selection-end-line="74" selection-end-column="65" />
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
           <folding>
-            <element signature="e#5101#5105#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#div#1;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#div#1;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#div#1;n#div#3;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#5546#5550#0#HTML" expanded="true" />
+            <element signature="e#5590#5594#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/sidebarShow.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="e#33#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/ArticlesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/productList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/ProductsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="40" column="88" selection-start-line="40" selection-start-column="88" selection-end-line="40" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/common/pagination.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="39" lean-forward="true" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/articleList.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/pagination.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newsite.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="131" column="14" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/recommended.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Pok/ArticlesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/articleDetail.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="68" column="53" lean-forward="true" selection-start-line="68" selection-start-column="53" selection-end-line="68" selection-end-column="53" />
+          <folding>
+            <element signature="e#5139#5143#0#HTML" expanded="true" />
+            <element signature="e#5179#5183#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/article.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="51" column="42" lean-forward="true" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="e#4914#4918#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
         </state>
       </provider>
     </entry>

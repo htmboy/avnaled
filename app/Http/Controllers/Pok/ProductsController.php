@@ -32,8 +32,12 @@ class ProductsController extends Controller
     }
     public function productSecondaryList($id)
     {
+        $category = ProductCategory::where('pid', 2)->get(['id', 'name'])->keyBy('id')->map(function ($item) {
+            return implode('', pinyin($item->name, PINYIN_DEFAULT));
+        });
+        $category_id = array_search($id, $category->toArray());
         list($title, $keywords, $description) = Setting::getSeo('product_seo');
-        $products = Product::spectacle()->where('cat_id', $id)->paginate(10);
+        $products = Product::spectacle()->where('cat_id', $category_id)->paginate(10);
         return view('pok.productList', compact('title', 'keywords', 'description', 'products'));
     }
 
