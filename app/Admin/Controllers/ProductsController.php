@@ -3,6 +3,7 @@
 namespace App\Admin\Controllers;
 
 use App\Admin\Actions\Product\Gallery;
+use App\Common\GlobalConfiguration;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use Encore\Admin\Controllers\AdminController;
@@ -37,7 +38,9 @@ class ProductsController extends AdminController
 //        $grid->column('cat_id', '分类')->filter(ProductCategory::getProductMap());
         $grid->model()->orderByDesc('sort');
         $grid->column('id');
-        $grid->category()->name();
+        $grid->column('cat_id')->editable('select', ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
+            return $item->name;
+        }));
         $grid->column('title');
         $grid->column('thumbnail')->image('/storage', 80);
         $grid->column('updated_at')->date('Y-m-d');
@@ -47,6 +50,7 @@ class ProductsController extends AdminController
         ];
         $grid->column('is_show')->switch($states);
         $grid->column('sort')->editable();
+        $grid->column('cat_sort')->editable();
 
         return $grid;
     }

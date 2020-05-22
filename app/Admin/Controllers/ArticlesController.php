@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Common\GlobalConfiguration;
 use App\Models\Article;
 use App\Models\ArticleCategory;
 use App\Models\ProductCategory;
@@ -28,8 +29,14 @@ class ArticlesController extends AdminController
     {
         $grid = new Grid(new Article());
 
+        $grid->filter(function ($filter){
+            $filter->disableIdFilter();
+            $filter->equal('domain_id')->select(GlobalConfiguration::$domainMap);
+            $filter->equal('map_id')->select(Article::category());
+        });
         $grid->column('id', __('Id'));
-        $grid->category();
+        $grid->column('domain_id')->editable('select', GlobalConfiguration::$domainMap);
+        $grid->column('map_id', __('map_id'))->editable('select', GlobalConfiguration::$articleMap);
         $grid->column('title', __('Title'));
         $grid->column('thumbnail', __('Thumbnail'))->image('/storage', 80);
         $grid->column('author', __('Author'));
@@ -40,6 +47,7 @@ class ArticlesController extends AdminController
         ];
         $grid->column('is_show', __('Is show'))->switch($states);
         $grid->column('sort', __('Sort'))->editable();
+        $grid->column('cat_sort', __('Cat Sort'))->editable();
 
         return $grid;
     }
@@ -83,9 +91,8 @@ class ArticlesController extends AdminController
     {
         $form = new Form(new Article());
 
-        $form->select('cat_id')->options(ArticleCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
-            return $item->name;
-        }));
+        $form->select('domain_id')->options(GlobalConfiguration::$domainMap);
+        $form->select('map_id')->options(Article::category());
         $form->text('seo_title', __('Seo title'));
         $form->text('seo_keywords', __('Seo keywords'));
         $form->text('seo_description', __('Seo description'));
@@ -94,9 +101,12 @@ class ArticlesController extends AdminController
         $form->text('author', __('Author'))->default('澳镭照明-新闻部');
         $form->text('clicks', __('Clicks'));
         $form->switch('is_show', __('Is show'));
-        $form->number('sort')->default(ArticleCategory::count() + 1);
-        $form->ckeditor('content', __('Content'));
-
+        $form->number('sort')->default(Article::count() + 1);
+        $form->ueditor('content', __('Content'));
+        $form->hidden('cat_sort');
+        $form->saving(function (Form $form){
+            $form->cat_sort = Article::where('map_id', $form->map_id)->count() + 1;
+        });
         return $form;
     }
 }

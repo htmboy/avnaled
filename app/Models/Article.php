@@ -2,31 +2,22 @@
 
 namespace App\Models;
 
+use App\Common\GlobalConfiguration;
 use App\Models\Scopes\SpectacleScope;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
 class Article extends BaseModel
 {
-//    use Searchable;
 
     protected $table = 'aoo_article';
-//    protected $guarded = [];
 
-    const TYPE_GONGSIXINWEN = 1;
-    const TYPE_KEHUANLI = 2;
-    const TYPE_WENYUDA = 3;
-    const TYPE_HANGYEXINWEN = 4;
+    public static function category(){
+        return GlobalConfiguration::$articleMap;
+    }
 
-    public static $typeMap = [
-        'gongsixinwen' => self::TYPE_GONGSIXINWEN,
-        'kehuanli' => self::TYPE_KEHUANLI,
-        'wenyuda' => self::TYPE_WENYUDA,
-        'hangyexinwen' => self::TYPE_HANGYEXINWEN,
-    ];
-
-    public function category(){
-        return $this->belongsTo('App\Models\ArticleCategory', 'cat_id', 'id');
+    public function scopePok($query){
+        return $query->where('domain_id', GlobalConfiguration::DOMAIN_POK);
     }
 
     public function previousItem()

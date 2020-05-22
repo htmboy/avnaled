@@ -473,8 +473,7 @@ DROP TABLE IF EXISTS `aoo_product_category`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `aoo_product_category` (
   `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `map_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `pid` tinyint(3) unsigned NOT NULL,
+  `map_id` tinyint(3) unsigned NOT NULL,
   `name` varchar(255) NOT NULL,
   `is_show` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `sort` tinyint(3) unsigned NOT NULL,

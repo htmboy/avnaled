@@ -34,9 +34,13 @@ class ProductCategoryController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new ProductCategory());
+
+
+        $grid->disableFilter();
+
         $grid->model()->orderByDesc('sort');
         $grid->column('id', __('Id'));
-        $grid->column('map_id', __('mapId'))->using(ProductCategory::getProductMap());
+        $grid->column('map_id', __('mapId'))->editable('select', ProductCategory::getProductMap());
         $grid->column('name', __('Name'));
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],

@@ -27,7 +27,8 @@ git reflog
 git reset --hard 98abc5a
 
 修改软链接
-ln -snf 【新目标目录】 【软链接地址】
+ln -snf 【软链接指向的位置】 【软链接存放的位置】
+ln -s ../storage/app public/storage
 
 window创建软链接
 cd public

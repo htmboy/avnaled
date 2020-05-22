@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Common\GlobalConfiguration;
 use App\Models\Carousel;
 use App\Models\ProductCategory;
 use Encore\Admin\Controllers\AdminController;
@@ -27,8 +28,12 @@ class CarouselController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Carousel());
+        $grid->filter(function ($filter){
+            $filter->disableIdFilter();
+            $filter->equal('domain_id')->select(GlobalConfiguration::$domainMap);
+        });
         $grid->model()->orderBy('sort', 'desc');
-        $grid->column('id');
+        $grid->column('domain_id')->editable('select', GlobalConfiguration::$domainMap);
         $grid->column('title');
         $grid->column('site')->image('/storage');
         $grid->column('link')->link();
@@ -56,13 +61,14 @@ class CarouselController extends AdminController
     protected function form()
     {
         $form = new Form(new Carousel());
-
+        $form->model()->orderByDesc('sort');
+        $form->select('domain_id')->options(GlobalConfiguration::$domainMap);
         $form->text('title');
         $form->text('alt');
         $form->image('site');
         $form->url('link');
         $form->switch('is_show');
-        $form->number('sort');
+        $form->number('sort')->default(Carousel::count() + 1);
 
         return $form;
     }
