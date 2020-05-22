@@ -27,8 +27,8 @@ class ArticlesController extends Controller
     public function articleList($articleCategory)
     {
         list($title, $keywords, $description) = Setting::getSeo('article_seo');
-        $articles = Article::spectacle()->where('cat_id', Article::$typeMap[$articleCategory])->paginate(10);
-        return view('pok.articleList', compact(
+        $articles = Article::spectacle()->where('cat_id', $articleCategory)->paginate(10);
+        return view('pok.article', compact(
             'title', 'keywords', 'description', 'articles'
         ));
     }

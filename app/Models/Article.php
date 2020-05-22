@@ -10,7 +10,7 @@ class Article extends BaseModel
 {
 //    use Searchable;
 
-    protected $table = 'avna_article';
+    protected $table = 'aooled_article';
 //    protected $guarded = [];
 
     const TYPE_GONGSIXINWEN = 1;

@@ -43,8 +43,9 @@
                 <li class="dropdown">
                     <i class="arr"></i> <a href="{{route('pok.article')}}">新闻资讯</a>
                     <div class="dropdown-box">
-                        <p><a href="/hangye/">行业资讯</a></p>
-                        <p><a href="/wenti/">常见问题</a></p>
+                        @foreach($articleCategories as $article)
+                        <p><a href="{{route('pok.art_category', ['articleCategory' => $article->id])}}">{{$article->name}}</a></p>
+                        @endforeach
                     </div>
                 </li>
                 <li class="">  <a href="{{route('pok.cases')}}">工程案例</a> </li>

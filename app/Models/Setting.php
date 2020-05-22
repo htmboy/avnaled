@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Setting extends BaseModel
 {
-    protected $table = 'avna_setting';
+    protected $table = 'aooledavna_setting';
     protected $keyType = 'string';
     protected $primaryKey = 'key';
     public $incrementing = false;

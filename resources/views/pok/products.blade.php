@@ -60,10 +60,7 @@
                 @endforeach
 
             </ul>
-            <div class="pages">
-                <div class="pagination">
-                    共<strong>1</strong>页 <strong>6</strong>条        </div>
-            </div>
+            {{$products->links('pok.common.pagination')}}
         </div>
 
         @include('pok.common.recommended')

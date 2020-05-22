@@ -29,7 +29,7 @@ class ArticlesController extends AdminController
         $grid = new Grid(new Article());
 
         $grid->column('id', __('Id'));
-        $grid->category()->name();
+        $grid->category();
         $grid->column('title', __('Title'));
         $grid->column('thumbnail', __('Thumbnail'))->image('/storage', 80);
         $grid->column('author', __('Author'));

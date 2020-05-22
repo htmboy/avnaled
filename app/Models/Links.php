@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Links extends BaseModel
 {
-    protected $table = 'avna_links';
+    protected $table = 'aooled_links';
 
 }

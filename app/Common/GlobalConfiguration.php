@@ -6,9 +6,9 @@ namespace App\Http\Common;
 
 class GlobalConfiguration
 {
-    const DOMAIN_ALL = 0;
-    const DOMAIN_AVNALED = 1;
-    const DOMAIN_POK = 2;
+    const DOMAIN_ALL = 1;
+    const DOMAIN_AVNALED = 2;
+    const DOMAIN_POK = 3;
 
     const PRODUCT_HIGH_BAY_LIGHT = 1;
     const PRODUCT_FLOODLIGHT= 2;

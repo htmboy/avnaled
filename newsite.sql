@@ -17,42 +17,46 @@
 #
 #
 #
--- 轮播图表
-create table avna_carousel(
+create database aooled_group;
+-- 轮播图（单独）
+create table aoo_carousel(
 	id tinyint unsigned not null primary key auto_increment,
+	domain_id tinyint unsigned not null,
 	title varchar(255) not null,
 	alt varchar(255) not null,
 	site varchar(255) not null,
 	link varchar(255) not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
+	created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
-create table avna_links(
+-- 友情链接（单独）
+create table aoo_link(
 	id tinyint unsigned not null primary key auto_increment,
+	domain_id tinyint unsigned not null,
 	name varchar(255) not null,
 	link tinytext not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
+	created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
--- 分类表
-create table avna_product_category(
+-- 产品分类（一对多产品）
+create table aoo_product_category(
 	id tinyint unsigned not null primary key auto_increment,
+	map_id tinyint unsigned not null default 0,
+	pid tinyint unsigned not null,
 	name varchar(255) not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
 #
--- 产品表
-create table avna_product(
+-- 产品 （一对多图片，多对一产品分类）
+create table aoo_product(
 	id tinyint unsigned not null primary key auto_increment,
 	cat_id tinyint unsigned not null,
 	seo_title varchar(128) not null,
@@ -74,53 +78,56 @@ create table avna_product(
 	material varchar(255) not null,
 	characteristic varchar(255) not null,
 	content text not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
+	created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null,
-	cat_sort tinyint unsigned not null default 0,
+	cat_sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
--- 首页产品展现
-create table avna_index_product(
+-- 首页产品展现 （一对一产品）
+create table aoo_index_product(
 	id tinyint unsigned not null primary key auto_increment,
+	domain_id tinyint unsigned not null,
 	pro_id tinyint unsigned not null,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
--- 产品轮播图表
-create table avna_product_gallery(
+-- 产品轮播图表（单独）
+create table aoo_product_gallery(
 	id tinyint unsigned not null primary key auto_increment,
 	pro_id tinyint unsigned not null,
 	gallery varchar(255) not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
+	created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 # 
 # 
--- 文章类目
-create table avna_article_category(
-	id tinyint unsigned not null primary key auto_increment,
-	pid tinyint unsigned not null default 0,
-	name varchar(255) not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
-	is_show tinyint unsigned not null default 0,
-	sort tinyint unsigned not null
-)engine=myisam default charset=utf8;
+-- 文章类目（一对多文章）
+# create table aoo_article_category(
+# 	id tinyint unsigned not null primary key auto_increment,
+# 	pid tinyint unsigned not null default 0,
+# 	name varchar(255) not null,
+# 	created_at timestamp not null,
+# 	updated_at timestamp not null,
+# 	is_show tinyint unsigned not null default 0,
+# 	sort tinyint unsigned not null
+# )engine=myisam default charset=utf8;
 #
-create table avna_index_article(
+-- 文章首页展示（一对一文章）
+create table aoo_index_article(
    id tinyint unsigned not null primary key auto_increment,
    art_id tinyint unsigned not null,
    sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 # 
--- 文章
-create table avna_article(
+-- 文章（单独）
+create table aoo_article(
 	id int unsigned not null primary key auto_increment,
-	cat_id tinyint unsigned not null,
+	domain_id tinyint unsigned not null,
+	map_id tinyint unsigned not null,
 	seo_title varchar(128) not null,
 	seo_keywords varchar(128) not null,
 	seo_description varchar(255) not null,
@@ -129,44 +136,44 @@ create table avna_article(
 	author varchar(255) not null,
 	clicks tinyint unsigned not null,
 	content text not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
+	created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null,
 	cat_sort tinyint unsigned not null
 )engine=myisam default charset=utf8;
 #
 #
--- 文章封面图表
-create table avna_article_cover(
-	id tinyint unsigned not null primary key auto_increment,
-	art_id tinyint unsigned not null,
-	title varchar(255) not null,
-	alt varchar(255) not null,
-	site varchar(255) not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
-    is_show tinyint unsigned not null,
-	sort tinyint unsigned not null
-)engine=myisam default charset=utf8;
+-- 文章图表
+# create table aoo_article_cover(
+# 	id tinyint unsigned not null primary key auto_increment,
+# 	art_id tinyint unsigned not null,
+# 	title varchar(255) not null,
+# 	alt varchar(255) not null,
+# 	site varchar(255) not null,
+# 	created_at timestamp not null,
+# 	updated_at timestamp not null,
+#     is_show tinyint unsigned not null,
+# 	sort tinyint unsigned not null
+# )engine=myisam default charset=utf8;
 
-create table avna_user(
-	id tinyint unsigned not null primary key auto_increment,
-	username varchar(255) not null,
-	password varchar(255) not null,
-	remember_token varchar(100) not null,
-	created_at timestamp not null,
-	updated_at timestamp not null,
-	active tinyint unsigned not null
-)engine=myisam default charset=utf8;
+# create table aoo_user(
+# 	id tinyint unsigned not null primary key auto_increment,
+# 	username varchar(255) not null,
+# 	password varchar(255) not null,
+# 	remember_token varchar(100) not null,
+# 	created_at timestamp not null,
+# 	updated_at timestamp not null,
+# 	active tinyint unsigned not null
+# )engine=myisam default charset=utf8;
 
-create table avna_setting(
-	`key` varchar(255) not null,
-	value varchar(255) not null,
-	description varchar(255) not null,
-	created_at timestamp not null,
-	updated_at timestamp not null
-)engine=myisam default charset=utf8;
+# create table aoo_setting(
+# 	`key` varchar(255) not null,
+# 	value varchar(255) not null,
+# 	description varchar(255) not null,
+# 	created_at timestamp not null,
+# 	updated_at timestamp not null
+# )engine=myisam default charset=utf8;
 #############################
 # 
 # avna 仿站
