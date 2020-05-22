@@ -6,6 +6,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    protected $table = 'aooled_user';
+    protected $table = 'avna_user';
     protected $guarded = [];
 }

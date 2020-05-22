@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Links extends BaseModel
+class Link extends BaseModel
 {
-    protected $table = 'aooled_links';
+    protected $table = 'avna_links';
 
 }

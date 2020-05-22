@@ -10,7 +10,7 @@ class ProductCategory extends BaseModel
 {
     use ModelTree, AdminBuilder;
 
-    protected $table = 'aooled_product_category';
+    protected $table = 'avna_product_category';
 
 
     public function __construct(array $attributes = [])

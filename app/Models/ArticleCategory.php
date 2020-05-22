@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ArticleCategory extends BaseModel
 {
-    protected $table = 'aooled_article_category';
+    protected $table = 'avna_article_category';
 
 
 }

@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Carousel extends BaseModel
 {
-    protected $table = 'aooled_carousel';
+    protected $table = 'avna_carousel';
 }

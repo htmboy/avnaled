@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends BaseModel
 {
-    protected $table = 'aooled_product';
+    protected $table = 'avna_product';
 
     const TYPE_GONGKUANGDENG = 1;
     const TYPE_FANGUANGDENG = 2;

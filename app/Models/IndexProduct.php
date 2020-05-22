@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class IndexProduct extends Model
 {
-    protected $table = 'aooled_index_product';
+    protected $table = 'avna_index_product';
 
     public $timestamps = false;
 
