@@ -2,31 +2,20 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\ArticleCategory;
 use App\Models\ProductCategory;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
+use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
+use Encore\Admin\Show;
 use Encore\Admin\Traits\ModelTree;
 
 class ProductCategoryController extends AdminController
 {
-    use ModelTree;
-    /**
-     * Title for current resource.
-     *
-     * @var string
-     */
 
-    public function index(Content $content)
-    {
-        return Admin::content(function (Content $content) {
-            $content->header('产品类目');
-            $content->body(ProductCategory::tree());
-        });
-    }
-
-
+    protected $title = '产品类目';
     /**
      * Make a form builder.
      *
@@ -35,13 +24,40 @@ class ProductCategoryController extends AdminController
     protected function form()
     {
         $form = new Form(new ProductCategory());
-
-        $form->select('pid')->options(ProductCategory::getParentCategory(['id', 'name'])->keyBy('id')->map(function ($item) {
-            return $item->name;
-        }));
+        $form->select('map_id')->options(ProductCategory::getProductMap())->required();
         $form->text('name')->rules('required');
         $form->switch('is_show');
         $form->number('sort')->default(ProductCategory::count() + 1);
         return $form;
+    }
+
+    protected function grid()
+    {
+        $grid = new Grid(new ProductCategory());
+        $grid->model()->orderByDesc('sort');
+        $grid->column('id', __('Id'));
+        $grid->column('map_id', __('mapId'))->using(ProductCategory::getProductMap());
+        $grid->column('name', __('Name'));
+        $states = [
+            'on' => ['value' => 1, 'text' => '显示'],
+            'off' => ['value' => 0, 'text' => '不显示'],
+        ];
+        $grid->column('is_show', __('Is show'))->switch($states);
+        $grid->column('sort', __('Sort'))->editable();
+        return $grid;
+    }
+
+    protected function detail($id)
+    {
+        $show = new Show(ArticleCategory::findOrFail($id));
+
+        $show->field('id', __('Id'));
+        $show->field('name', __('Name'));
+        $show->field('created_at', __('Created at'));
+        $show->field('updated_at', __('Updated at'));
+        $show->field('is_show', __('Is show'));
+        $show->field('sort', __('Sort'));
+
+        return $show;
     }
 }

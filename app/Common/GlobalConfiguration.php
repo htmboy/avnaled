@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Http\Common;
+namespace App\Common;
 
 
 class GlobalConfiguration

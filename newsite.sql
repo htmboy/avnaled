@@ -48,7 +48,6 @@ create table aoo_link(
 create table aoo_product_category(
 	id tinyint unsigned not null primary key auto_increment,
 	map_id tinyint unsigned not null default 0,
-	pid tinyint unsigned not null,
 	name varchar(255) not null,
 	is_show tinyint unsigned not null default 0,
 	sort tinyint unsigned not null

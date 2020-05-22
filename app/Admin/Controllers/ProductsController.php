@@ -27,9 +27,14 @@ class ProductsController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Product());
+        $grid->filter(function ($filter){
+            $filter->disableIdFilter();
+            $filter->equal('cat_id')->select(ProductCategory::getProductMap());
+        });
         $grid->actions(function ($actions){
             $actions->add(new Gallery);
         });
+//        $grid->column('cat_id', '分类')->filter(ProductCategory::getProductMap());
         $grid->model()->orderByDesc('sort');
         $grid->column('id');
         $grid->category()->name();
@@ -85,7 +90,7 @@ class ProductsController extends AdminController
     {
         $form = new Form(new Product());
         $form->column(1/2, function ($form) {
-            $form->select('cat_id')->options(ProductCategory::getChildCategory(['id', 'name'])->keyBy('id')->map(function ($item){
+            $form->select('cat_id')->options(ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
                 return $item->name;
             }));
             $form->text('seo_title', __('Seo title'));
@@ -94,7 +99,7 @@ class ProductsController extends AdminController
             $form->text('title');
             $form->image('thumbnail');
             $form->switch('is_show', __('Is show'));
-            $form->number('sort')->default(ProductCategory::count() + 1);
+            $form->number('sort')->default(Product::count() + 1);
         });
 
         $form->column(1/2, function ($form) {
@@ -111,6 +116,7 @@ class ProductsController extends AdminController
             $form->text('distance', __('Distance'));
             $form->text('material', __('Material'));
             $form->text('characteristic', __('Characteristic'));
+            $form->hidden('cat_sort');
 
         });
 
@@ -119,7 +125,9 @@ class ProductsController extends AdminController
             $form->ckeditor('content');
         });
 
-
+        $form->saving(function (Form $form){
+            $form->cat_sort = Product::where('cat_id', $form->cat_id)->count() + 1;
+        });
 
 
 
