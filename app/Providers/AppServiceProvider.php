@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
     {
         View::composer('avnaled.common.header', AvnaledHeaderComposer::class);
 
-        View::composer(['avnaled.common.footer', 'pok.common.footer'], AvnaledFooterComposer::class);
+        View::composer('avnaled.common.footer', AvnaledFooterComposer::class);
 
         View::composer('avnaled.common.leftBar', AvnaledLeftbarComposer::class);
 
@@ -48,6 +48,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer('pok.common.recommended', PokRecommendComposer::class);
 
         View::composer('pok.common.sidebarShow', PokSidebarShowComposer::class);
+
+        View::composer('pok.common.footer', PokFooterComposer::class);
 
     }
 }

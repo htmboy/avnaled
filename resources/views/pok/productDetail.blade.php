@@ -41,14 +41,19 @@
                 <div class="pc-slide">
                     <div class="view">
                         <div class="swiper-container swiper-container-horizontal">
-
                             <div class="swiper-wrapper">
-                                @foreach($product->gallery as $gallery)
                                 <div class="swiper-slide img-center">
-                                    <div class="imgauto"> <img src="/storage/{{$gallery->gallery}}" rel="/storage/{{$gallery->gallery}}" class="jqzoom" /> </div>
-                                </div>
-                                @endforeach
+                                @if($product->gallery->isNotEmpty())
 
+                                @foreach($product->gallery as $gallery)
+
+                                    <div class="imgauto"> <img src="/storage/{{$gallery->gallery}}" rel="/storage/{{$gallery->gallery}}" class="jqzoom" /> </div>
+
+                                @endforeach
+                                @else
+                                        <div class="imgauto"> <img src="/storage/{{$product->thumbnail}}" rel="/storage/{{$product->thumbnail}}" class="jqzoom" /> </div>
+                                @endif
+                                </div>
                             </div>
 
                         </div>

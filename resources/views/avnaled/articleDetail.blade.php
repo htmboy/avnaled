@@ -17,7 +17,6 @@
     <script src="/avnaled/js/html5shiv.min.js"></script>
     <![endif]-->
     <script src="/avnaled/js/index.js"></script>
-
 </head>
 <body>
 @include('avnaled.common.header')
@@ -59,15 +58,15 @@
                     <div class="clear"></div>
                     <div class="gduo" id="gduo">
                         <span>下一篇：
-                            @if($last_next[1])
-                            <a href="/avnaled/article/detail/{{$last_next[1]->id}}.html">{{$last_next[1]->title}}</a>
+                            @if($article->previousItem())
+                            <a href="/avnaled/article/detail/{{$article->previousItem()->id}}.html">{{$article->previousItem()->title}}</a>
                                 @else
                             没有了
                                 @endif
                         </span>
                         <span>上一篇：
-                            @if($last_next[0])
-                                <a href="/avnaled/article/detail/{{$last_next[0]->id}}.html">{{$last_next[0]->title}}</a>
+                            @if($article->nextItem())
+                                <a href="/avnaled/article/detail/{{$article->nextItem()->id}}.html">{{$article->nextItem()->title}}</a>
                             @else
                                 没有了
                             @endif
@@ -110,31 +109,7 @@
 </div>
 <!--第二种内容详细end-->
 
-<div class="footer">
-    <div class="foot">
-        <div class="foot_t"><ul class="foot_link" style="width:118px"><h3>产品系列</h3><li><a href="/sxmqq/">水性木器漆</a></li><li><a href="/sxqmq/">墙面乳胶漆</a></li><li><a href="/sxdbq/">水性地板漆</a></li><li><a href="/sxhwmq/">户外木器漆</a></li></ul><ul class="foot_link" style="width:118px"><h3>招商加盟</h3><li><a href="/jmys.html">加盟优势</a></li><li><a href="/jmtj.html">加盟条件</a></li><li><a href="/jmlc.html">加盟流程</a></li><li><a href="/jmjz/">客户见证</a></li></ul><ul class="foot_link" style="width:118px"><h3>大荷品牌</h3><li><a href="/gsjjz.html">关于大荷</a></li><li><a href="/fzlc.html">发展历程</a></li><li><a href="/dhkx">大荷快讯</a></li><li><a href="/qiyewenhua">企业文化</a></li></ul><div class="foot_code" style="width:490px"><ul class="code">
-                    <li>
-                        <img src="/avnaled/img/20160724234311_72454.gif" width="80" height="80" alt="大荷漆" title="大荷漆" align /><em>微信公众号</em>
-                    </li>
-                    <li>
-                        <img src="/avnaled/img/20160724234422_63481.jpg" alt="大荷水性漆" title="大荷水性漆" width="80" height="80" align="" /><em>手机客户端</em>
-                    </li>
-                </ul>
-                <p>
-                    服务热线：400 118 1123
-                </p>
-                <p class="p04">
-                    公司地址：深圳罗湖区梨园路东583号
-                </p>
-                <p class="p02">
-                    公司传真：0755-8243 8377
-                </p>
-                <p class="p03">
-                    总经理信箱：zkhotline@vip.sina.com
-                </p></div></div>
-        <div class="copyright">版权所有 &copy;2016 深圳市大荷科技有限公司, All Rights Reserved. &nbsp;备案号: <a href="http://www.beian.miit.gov.cn" title="粤ICP备10222602号-2" target="_blank" rel="nofollow">粤ICP备10222602号-2</a> <a href="/sitemap.html">网站地图</a> <span style="white-space:normal;"> </span><span style="white-space:normal;"></span></div>
-    </div>
-</div>
+@include('avnaled.common.footer')
 <!--footer-->
 <div id="roll" style="display:none"><div title="回到顶部" id="roll_top"></div></div>
 

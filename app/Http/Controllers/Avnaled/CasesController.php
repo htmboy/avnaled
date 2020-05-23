@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Avnaled;
 
+use App\Common\DomainConfig;
 use App\Models\Carousel;
 use App\Models\Article;
 use App\Models\Links;
@@ -19,8 +20,9 @@ class CasesController extends Controller
 
     public function cases()
     {
-        list($title, $keywords, $description) = Setting::getSeo('cases_seo');
-        $articles = Article::spectacle()->where('cat_id', 2)->paginate(10);
+        list($title, $keywords, $description) = ['title', 'keywords', 'description'];
+        $articles = Article::spectacle()->whereIn('domain_id', [DomainConfig::DOMAIN_ALL, DomainConfig::DOMAIN_AVNALED])
+            ->where('map_id', Article::ARTICLE_CASES)->paginate(10);
         return view('avnaled.casesList', compact(
             'title', 'keywords', 'description', 'articles'
         ));

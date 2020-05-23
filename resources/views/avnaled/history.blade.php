@@ -20,16 +20,7 @@
 <!--banner-bar-->
 
 
-<section class="pagemenu tr">
-    <div class="container">
-        <ul class="ul-list">
-            <li><a href="/avnaled/introduction.html" >公司简介</a></li>
-            <li><a href="/avnaled/history.html" class="this">发展历程</a></li>
-            <li><a href="/avnaled/article/1.html" >企业文化</a></li>
-            <li><a href="/avnaled/contact.html">联系我们</a></li>
-        </ul>
-    </div>
-</section>
+@include('avnaled.common.pageMenu')
 <!--pagemenu-->
 <div class="content">
     <div class="container info p45"><div class="lmt">

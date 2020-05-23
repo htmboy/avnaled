@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -12,8 +10,9 @@
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
     <title>企业文化</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="title" content="{{$title}}">
+    <meta name="description" content="{{$description}}" />
+    <meta name="keywords" content="{{$keywords}}" />
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="/pok/css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="/pok/css/eyou.css" />
@@ -35,15 +34,15 @@
         <div class="panel-sd">
             <div class="tit">关于我们</div>
             <ul class="lanmu">
-                <li class=""> <a href="/about.html">公司简介</a> </li>
-                <li class="open active"> <a href="/wenhua.html">企业文化</a> </li>
+                <li class=""> <a href="{{route('pok.introduction')}}">公司简介</a> </li>
+                <li class="open active"> <a href="{{route('pok.history')}}">企业文化</a> </li>
             </ul>
         </div>
 
         @include('pok.common.recommendedProduct')
     </div>
     <div class="ct2-mn">
-        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='/about.html'>关于我们</a></div>
+        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.introduction')}}'>关于我们</a></div>
         <div class="mn-box">
             <div class="content-body">
 
@@ -63,7 +62,7 @@
 
                 <p>我们崇尚价值，产品的性价比是价值的重要体现，我们为客户提供的是适合他们需求具有良好价值的产品。</p>
 
-                <p><img src="/uploads/wenhua.png"></p>
+                <p><img src="/pok/images/wenhua.png"></p>
 
                 <br /><br />
 

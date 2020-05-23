@@ -3,7 +3,7 @@
         <div class="tit"> 产品中心 <i>Product Center</i> </div>
         <div class="nr">
             @foreach($productCategories as $productCategory)
-            <h3><a href="/avnaled/product/secondary/{{$productCategory->id}}.html">{{$productCategory->name}}</a></h3>
+            <h3><a href="/avnaled/product/{{$productCategory->id}}.html">{{$productCategory->name}}</a></h3>
             @endforeach
         </div>
     </div>

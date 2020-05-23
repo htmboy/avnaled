@@ -77,7 +77,7 @@
             <div class="tit">产品展示<small>PRODUCT CATEGORIES</small></div>
             <ul class="lanmu">
                 @foreach($productCategories as $productCategory)
-                <li><a href="{{route('pok.pro_secondary', ['product' => $productCategory->id])}}">{{$productCategory->name}}</a></li>
+                <li><a href="{{route('pok.pro_category', ['product' => $productCategory->id])}}">{{$productCategory->name}}</a></li>
                 @endforeach
 
 

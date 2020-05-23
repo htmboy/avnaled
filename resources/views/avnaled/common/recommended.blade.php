@@ -26,7 +26,7 @@
         <dl>
             <dt>
                 <a href="/avnaled/article/detail/{{$article_recommends->first()->id}}.html" target="_blank">
-                    <img src="{{$article_recommends->first()->thumbnail}}" alt="{{$article_recommends->first()->title}}" />
+                    <img src="/storage/{{$article_recommends->first()->thumbnail}}" alt="{{$article_recommends->first()->title}}" />
                     <p>{{$article_recommends->first()->title}}</p>
                 </a>
             </dt>

@@ -19,8 +19,9 @@ class HistoryController extends Controller
 
     public function history()
     {
-        list($title, $keywords, $description) = Setting::getSeo('history_seo');
-        return view('avnaled.history', compact('title', 'keywords', 'description'));
+        list($title, $keywords, $description) = ['title', 'keywords', 'description'];
+        $company_id = Article::ARTICLE_COMPANY_NEWS;
+        return view('avnaled.history', compact('title', 'keywords', 'description', 'company_id'));
     }
 
 }

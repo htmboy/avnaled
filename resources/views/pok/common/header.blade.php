@@ -34,7 +34,7 @@
 
                     <div class="dropdown-box">
                         @foreach($fanguangdengCategories as $fgd)
-                        <p><a href="{{route('pok.pro_secondary', ['product' => pin($fgd->name)])}}">{{$fgd->name}}</a></p>
+                        <p><a href="{{route('pok.pro_category', ['product' => $fgd->id])}}">{{$fgd->name}}</a></p>
                         @endforeach
                     </div>
 
@@ -43,8 +43,8 @@
                 <li class="dropdown">
                     <i class="arr"></i> <a href="{{route('pok.article')}}">新闻资讯</a>
                     <div class="dropdown-box">
-                        @foreach($articleCategories as $article)
-                        <p><a href="{{route('pok.art_category', ['articleCategory' => $article->id])}}">{{$article->name}}</a></p>
+                        @foreach($articleCategories as $key => $article)
+                        <p><a href="{{route('pok.art_category', ['articleCategory' => $key])}}">{{$article}}</a></p>
                         @endforeach
                     </div>
                 </li>

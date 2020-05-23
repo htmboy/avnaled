@@ -19,7 +19,7 @@ class HistoryController extends Controller
 
     public function history()
     {
-        list($title, $keywords, $description) = Setting::getSeo('history_seo');
+        list($title, $keywords, $description) = ['title', 'keyword', 'description'];
         return view('pok.history', compact('title', 'keywords', 'description'));
     }
 

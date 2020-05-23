@@ -13,9 +13,15 @@ class ProductCategory extends BaseModel
     protected $table = 'aoo_product_category';
     public $timestamps = false;
 
+    const PRODUCT_HIGH_BAY_LIGHT = 1;
+    const PRODUCT_FLOODLIGHT= 2;
 
-    public static function getProductMap()
-    {
-        return GlobalConfiguration::$productMap;
+    public static $productMap = [
+        self::PRODUCT_HIGH_BAY_LIGHT => '工矿灯',
+        self::PRODUCT_FLOODLIGHT => '泛光灯'
+    ];
+
+    public function product(){
+        return $this->hasMany('App\Models\Product', 'cat_id', 'id');
     }
 }

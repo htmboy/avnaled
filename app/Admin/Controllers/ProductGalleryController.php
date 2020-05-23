@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\ProductCategory;
 use App\Models\ProductGallery;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
@@ -80,7 +81,7 @@ class ProductGalleryController extends AdminController
         $form->text('pro_id')->default($proId)->readonly();
         $form->image('gallery', __('Gallery'));
         $form->switch('is_show', __('Is show'));
-        $form->text('sort', __('Sort'))->default(0);
+        $form->text('sort', __('Sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1);
 
         $form->tools(function (Form\Tools $tools) use ($proId){
             $tools->disableList();

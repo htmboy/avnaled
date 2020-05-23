@@ -22,14 +22,15 @@ class IndexController extends Controller
     public function index()
     {
 
-        list($title, $keywords, $description) = Setting::getSeo('index_seo');
+        list($title, $keywords, $description) = ['title', 'keywords', 'description'];
         $carousels = Carousel::spectacle()->get();
-        $productCategories = ProductCategory::spectacle()->where('pid', 1)->get();
-        $products = Product::spectacle()->whereIn('cat_id', array_values($productCategories->toArray()))->limit(8)->get();
-        $conpany_news = Article::spectacle()->where('cat_id', 1)->limit(8)->get();
-        $news = Article::spectacle()->where('cat_id', 2)->limit(8)->get();
-        $answers = Article::spectacle()->where('cat_id', 3)->limit(10)->get();
-        $cases = Article::spectacle()->where('cat_id', 4)->limit(8)->get();
+        $productCategories = ProductCategory::spectacle()->where('map_id', ProductCategory::PRODUCT_FLOODLIGHT)->get();
+        $products = Product::where('is_show', 1)->whereIn('cat_id', array_values($productCategories->toArray()))
+            ->orderByDesc('cat_sort')->limit(8)->get();
+        $conpany_news = Article::spectacle()->where('map_id', Article::ARTICLE_COMPANY_NEWS)->limit(8)->get();
+        $news = Article::spectacle()->where('map_id', Article::ARTICLE_INDUSTRY_NEWS)->limit(8)->get();
+        $answers = Article::spectacle()->where('map_id', Article::ARTICLE_Q_AND_A)->limit(10)->get();
+        $cases = Article::spectacle()->where('map_id', Article::ARTICLE_CASES)->limit(8)->get();
         return view('pok.index', compact(
             'title', 'keywords', 'description', 'carousels', 'productCategories', 'products', 'conpany_news', 'news', 'answers', 'cases'
         ));

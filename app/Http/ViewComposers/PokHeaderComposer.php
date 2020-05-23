@@ -14,13 +14,11 @@ class PokHeaderComposer
 {
     public function compose(View $view)
     {
-        $typePro = Product::$typeMap;
-        $typeArt = Article::$typeMap;
-        $fanguangdengCategories = ProductCategory::spectacle()->where('pid', 2)->get();
-        $productCategories = ProductCategory::spectacle()->where('pid', 0)->get();
-        $articleCategories = ArticleCategory::spectacle()->get();
+        $fanguangdengCategories = ProductCategory::spectacle()->where('map_id', ProductCategory::PRODUCT_FLOODLIGHT)->get();
+        $productCategories = ProductCategory::spectacle()->get();
+        $articleCategories = Article::$articleMap;
         $view->with(compact(
-            'fanguangdengCategories', 'productCategories', 'articleCategories', 'typePro', 'typeArt'
+            'fanguangdengCategories', 'productCategories', 'articleCategories'
         ));
     }
 

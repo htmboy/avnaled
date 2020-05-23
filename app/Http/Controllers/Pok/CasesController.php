@@ -19,7 +19,7 @@ class CasesController extends Controller
 
     public function cases()
     {
-        list($title, $keywords, $description) = Setting::getSeo('cases_seo');
+        list($title, $keywords, $description) = ['title', 'keyword', 'description'];
         $articles = Article::spectacle()->where('cat_id', 2)->paginate(10);
         return view('pok.casesList', compact(
             'title', 'keywords', 'description', 'articles'

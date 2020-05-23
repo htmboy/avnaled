@@ -3,22 +3,21 @@
         <div class="foot_t">
             <ul class="foot_link" style="width:118px">
                 <h3>产品系列</h3>
-                <li><a href="/avnaled/product/gongkuangdeng.html">星脉系列工矿灯</a></li>
-                <li><a href="/avnaled/product/fanguangdeng.html">黑豹系列泛光灯</a></li>
-                <li><a href="/avnaled/product/gongkuangdeng.html">天梭系列飞碟灯</a></li>
-                <li><a href="/avnaled/product/touguangdeng.html">瑞星系列投光灯</a></li>
+                @foreach($productMap as $key => $product)
+                <li><a href="/avnaled/product/{{$key}}.html">{{$product}}</a></li>
+                @endforeach
             </ul>
             <ul class="foot_link" style="width:118px">
                 <h3>解决方案</h3>
-                <li><a href="/avnaled/article/2.html">装灯案例</a></li>
-                <li><a href="/avnaled/article/3.html">常见问题</a></li>
+                <li><a href="/avnaled/article/{{$case_id}}.html">装灯案例</a></li>
+                <li><a href="/avnaled/article/{{$QA_id}}.html">常见问题</a></li>
                 <li><a href="/avnaled/contact.html">联系我们</a></li>
             </ul>
             <ul class="foot_link" style="width:118px">
                 <h3>澳镭品牌</h3>
                 <li><a href="/avnaled/introduction.html">关于澳镭</a></li>
                 <li><a href="/avnaled/history.html">发展历程</a></li>
-                <li><a href="/avnaled/article/1.html">澳镭动态</a></li>
+                <li><a href="/avnaled/article/{{$company_id}}.html">澳镭动态</a></li>
             </ul>
             <div class="foot_code" style="width:490px">
                 <ul class="code">

@@ -19,7 +19,7 @@ class IntroductionController extends Controller
 
     public function introduction()
     {
-        list($title, $keywords, $description) = Setting::getSeo('introduction_seo');
+        list($title, $keywords, $description) = ['title', 'keywords', 'description'];
         return view('pok.introduction', compact('title', 'keywords', 'description'));
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Admin\Controllers\LinkController;
 use Illuminate\Routing\Router;
 
 Admin::routes();
@@ -17,4 +18,5 @@ Route::group([
     $router->resource('product-galleries', 'ProductGalleryController');
     $router->resource('articles', 'ArticlesController');
     $router->resource('article-categories', 'ArticleCategoryController');
+    $router->resource('links', 'LinkController');
 });

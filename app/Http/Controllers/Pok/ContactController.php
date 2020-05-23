@@ -19,7 +19,7 @@ class ContactController extends Controller
 
     public function contact()
     {
-        list($title, $keywords, $description) = Setting::getSeo('contact_seo');
+        list($title, $keywords, $description) = ['title', 'keyword', 'description'];
         return view('pok.contact', compact('title', 'keywords', 'description'));
     }
 

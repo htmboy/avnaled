@@ -19,14 +19,14 @@ class ArticlesController extends Controller
 
     public function article()
     {
-        list($title, $keywords, $description) = Setting::getSeo('article_seo');
+        list($title, $keywords, $description) = ['title', 'keyword', 'description'];
         $articles = Article::spectacle()->paginate(10);
         return view('pok.article', compact('title', 'keywords', 'description', 'articles'));
     }
 
     public function articleList($articleCategory)
     {
-        list($title, $keywords, $description) = Setting::getSeo('article_seo');
+        list($title, $keywords, $description) = ['title', 'keyword', 'description'];
         $articles = Article::spectacle()->where('cat_id', $articleCategory)->paginate(10);
         return view('pok.article', compact(
             'title', 'keywords', 'description', 'articles'

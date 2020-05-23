@@ -13,7 +13,7 @@ class PokSidebarShowComposer
 {
     public function compose(View $view)
     {
-        $productCategories = ProductCategory::spectacle()->where('pid', 1)->get();
+        $productCategories = ProductCategory::spectacle()->where('map_id', ProductCategory::PRODUCT_FLOODLIGHT)->get();
 
         $view->with(compact('productCategories'));
 

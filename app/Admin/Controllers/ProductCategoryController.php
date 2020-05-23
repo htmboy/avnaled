@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Common\GlobalConfiguration;
 use App\Models\ArticleCategory;
 use App\Models\ProductCategory;
 use Encore\Admin\Controllers\AdminController;
@@ -24,7 +25,8 @@ class ProductCategoryController extends AdminController
     protected function form()
     {
         $form = new Form(new ProductCategory());
-        $form->select('map_id')->options(ProductCategory::getProductMap())->required();
+
+        $form->select('map_id')->options(ProductCategory::$productMap)->required();
         $form->text('name')->rules('required');
         $form->switch('is_show');
         $form->number('sort')->default(ProductCategory::count() + 1);
@@ -35,12 +37,15 @@ class ProductCategoryController extends AdminController
     {
         $grid = new Grid(new ProductCategory());
 
+        $grid->filter(function ($filter){
+            $filter->disableIdFilter();
+            $filter->equal('map_id')->select(ProductCategory::$productMap);
+        });
 
-        $grid->disableFilter();
 
         $grid->model()->orderByDesc('sort');
         $grid->column('id', __('Id'));
-        $grid->column('map_id', __('mapId'))->editable('select', ProductCategory::getProductMap());
+        $grid->column('map_id', __('mapId'))->editable('select', ProductCategory::$productMap);
         $grid->column('name', __('Name'));
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],

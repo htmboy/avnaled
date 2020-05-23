@@ -19,8 +19,11 @@ class ContactController extends Controller
 
     public function contact()
     {
-        list($title, $keywords, $description) = Setting::getSeo('contact_seo');
-        return view('avnaled.contact', compact('title', 'keywords', 'description'));
+        list($title, $keywords, $description) = ['title', 'keywords', 'description'];
+        $company_id = Article::ARTICLE_COMPANY_NEWS;
+        return view('avnaled.contact', compact(
+            'title', 'keywords', 'description', 'company_id'
+        ));
     }
 
 }

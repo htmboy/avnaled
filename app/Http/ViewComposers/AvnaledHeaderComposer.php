@@ -4,6 +4,7 @@
 namespace App\Http\ViewComposers;
 
 
+use App\Common\GlobalConfiguration;
 use App\Models\Article;
 use App\Models\ArticleCategory;
 use App\Models\Links;
@@ -15,14 +16,21 @@ class AvnaledHeaderComposer
 {
     public function compose(View $view)
     {
-        $typePro = Product::$typeMap;
-        $typeArt = Article::$typeMap;
-        $gongkuandengCategories = ProductCategory::spectacle()->where('pid', 1)->get();
-        $xingmais = ProductCategory::find(4)->product;
-        $productCategories = ProductCategory::spectacle()->where('pid', 0)->get();
-        $articleCategories = ArticleCategory::spectacle()->get();
+        $typePro = Product::getCategoryMap();
+        $typeArt = Article::$articleMap;
+        $gongkuandengCategories = ProductCategory::where([
+            ['map_id', ProductCategory::PRODUCT_HIGH_BAY_LIGHT],
+            ['is_show', 1],
+        ])->get();
+        $gongkuangdeng = ProductCategory::where('map_id', ProductCategory::PRODUCT_HIGH_BAY_LIGHT)->orderByDesc('sort')->with('product')->first();
+        $productCategories = ProductCategory::spectacle()->where('map_id', ProductCategory::PRODUCT_HIGH_BAY_LIGHT)->get();
+//        dd($productCategories);
+        $articleCategories = Article::$articleMap;
+        $case_id = Article::ARTICLE_CASES;
+        $QA_id = Article::ARTICLE_Q_AND_A;
         $view->with(compact(
-            'gongkuandengCategories', 'xingmais', 'productCategories', 'articleCategories', 'typePro', 'typeArt'
+            'gongkuandengCategories', 'gongkuangdeng', 'productCategories', 'articleCategories', 'typePro', 'typeArt',
+            'case_id', 'QA_id'
         ));
     }
 

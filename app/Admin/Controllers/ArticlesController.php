@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Common\DomainConfig;
 use App\Common\GlobalConfiguration;
 use App\Models\Article;
 use App\Models\ArticleCategory;
@@ -28,15 +29,15 @@ class ArticlesController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Article());
-
         $grid->filter(function ($filter){
             $filter->disableIdFilter();
-            $filter->equal('domain_id')->select(GlobalConfiguration::$domainMap);
-            $filter->equal('map_id')->select(Article::category());
+            $filter->equal('domain_id')->select(DomainConfig::$domainMap);
+            $filter->equal('map_id')->select(Article::$articleMap);
         });
+        $grid->model()->orderByDesc('sort');
         $grid->column('id', __('Id'));
-        $grid->column('domain_id')->editable('select', GlobalConfiguration::$domainMap);
-        $grid->column('map_id', __('map_id'))->editable('select', GlobalConfiguration::$articleMap);
+        $grid->column('domain_id')->editable('select', DomainConfig::$domainMap);
+        $grid->column('map_id', __('map_id'))->editable('select', DomainConfig::$articleMap);
         $grid->column('title', __('Title'));
         $grid->column('thumbnail', __('Thumbnail'))->image('/storage', 80);
         $grid->column('author', __('Author'));
@@ -91,7 +92,7 @@ class ArticlesController extends AdminController
     {
         $form = new Form(new Article());
 
-        $form->select('domain_id')->options(GlobalConfiguration::$domainMap);
+        $form->select('domain_id')->options(DomainConfig::$domainMap);
         $form->select('map_id')->options(Article::category());
         $form->text('seo_title', __('Seo title'));
         $form->text('seo_keywords', __('Seo keywords'));

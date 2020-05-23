@@ -19,7 +19,7 @@ class SearchController extends Controller
 
     public function search(Request $request)
     {
-        list($title, $keywords, $description) = Setting::getSeo('index_seo');
+        list($title, $keywords, $description) = ['title', 'keyword', 'description'];
         $query = $request->get('query');
 
         $articles = Article::spectacle()->where('content', 'like', '%'.$query.'%')->paginate(15);

@@ -19,8 +19,9 @@ class IntroductionController extends Controller
 
     public function introduction()
     {
-        list($title, $keywords, $description) = Setting::getSeo('introduction_seo');
-        return view('avnaled.introduction', compact('title', 'keywords', 'description'));
+        list($title, $keywords, $description) = ['title', 'keywords', 'description'];
+        $company_id = Article::ARTICLE_COMPANY_NEWS;
+        return view('avnaled.introduction', compact('title', 'keywords', 'description', 'company_id'));
     }
 
 }

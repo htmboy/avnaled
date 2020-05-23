@@ -30,7 +30,9 @@ class ProductsController extends AdminController
         $grid = new Grid(new Product());
         $grid->filter(function ($filter){
             $filter->disableIdFilter();
-            $filter->equal('cat_id')->select(ProductCategory::getProductMap());
+            $filter->equal('cat_id')->select(ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
+                return $item->name;
+            }));
         });
         $grid->actions(function ($actions){
             $actions->add(new Gallery);
@@ -126,7 +128,7 @@ class ProductsController extends AdminController
 
         $form->column(12, function ($form) {
 
-            $form->ckeditor('content');
+            $form->ueditor('content');
         });
 
         $form->saving(function (Form $form){
