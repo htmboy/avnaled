@@ -35,13 +35,10 @@
         @include('pok.common.recommendedProduct')
     </div>
     <div class="ct2-mn">
-        <div class="position">当前位置：
-            <a href='{{route('pok.index')}}' class=''>首页</a> &gt;
-            <a href='{{route('pok.article')}}'>新闻咨询 </a> &gt;
-            <a href='{{route('pok.art_category', ['articleCategory' => $articles->first()->map_id])}}'>{{$articles->first()->getCategoryMap()[$articles->first()->map_id]}}</a>
-        </div>
+        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='{{route('pok.search', ['word' => $word])}}'>搜索：{{$word}}</a></div>
         <div class="mn-box">
             <ul class="list-4">
+                @if($articles->isNotEmpty())
                 @foreach($articles as $article)
                 <li> <a href="{{route('pok.art_detail', ['article' => $article->id])}}">
                         <div class="more">查看详情</div>
@@ -54,7 +51,10 @@
                         </div>
                     </a> </li>
                 @endforeach
+                    @else
+                    精彩的工业照明新闻即将为您呈现！请持续关注！
 
+                    @endif
             </ul>
             {{$articles->links('pok.common.pagination')}}
 

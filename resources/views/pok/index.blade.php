@@ -62,8 +62,8 @@
 
     <div class="swiper-wrapper">
 
-        <div class="swiper-slide" style="background-image: url(/pok/images/banner.jpg);" onClick="window.open('/products/');"></div>
-        <div class="swiper-slide" style="background-image: url(/pok/images/banner.jpg);" onClick="window.open('/products/');"></div>
+        <div class="swiper-slide" style="background-image: url(/pok/images/banner.jpg);" onClick="window.open('{{route('pok.product')}}');"></div>
+        <div class="swiper-slide" style="background-image: url(/pok/images/banner.jpg);" onClick="window.open('{{route('pok.product')}}');"></div>
     </div>
 
     <div class="swiper-pagination"></div>

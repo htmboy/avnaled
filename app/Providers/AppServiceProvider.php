@@ -6,10 +6,13 @@ use App\Http\ViewComposers\AvnaledFooterComposer;
 use App\Http\ViewComposers\AvnaledHeaderComposer;
 use App\Http\ViewComposers\AvnaledLeftbarComposer;
 use App\Http\ViewComposers\AvnaledRecommendComposer;
+use App\Http\ViewComposers\AvnaledSearchComposer;
 use App\Http\ViewComposers\PokFooterComposer;
 use App\Http\ViewComposers\PokHeaderComposer;
+use App\Http\ViewComposers\PokNewsMenuComposer;
 use App\Http\ViewComposers\PokRecommendComposer;
 use App\Http\ViewComposers\PokRecommendProductComposer;
+use App\Http\ViewComposers\PokSearchComposer;
 use App\Http\ViewComposers\PokSidebarShowComposer;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -41,6 +44,8 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer('avnaled.common.recommended', AvnaledRecommendComposer::class);
 
+        View::composer(['avnaled.common.search', 'avnaled.common.label'], AvnaledSearchComposer::class);
+
         View::composer('pok.common.header', PokHeaderComposer::class);
 
         View::composer('pok.common.recommendedProduct', PokRecommendProductComposer::class);
@@ -49,7 +54,11 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer('pok.common.sidebarShow', PokSidebarShowComposer::class);
 
+        View::composer('pok.common.newsMenu', PokNewsMenuComposer::class);
+
         View::composer('pok.common.footer', PokFooterComposer::class);
+
+        View::composer('pok.common.search', PokSearchComposer::class);
 
     }
 }

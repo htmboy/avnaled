@@ -10,9 +10,7 @@
     </div>
     <div class="clear"></div>
     <div class="info_key">
-        <span>【本文标签】：</span>
-        <a target="_blank" href="http://www.dhq898.com/sxmqq">水性木器漆</a>
-        <a target="_blank" href="http://www.dhq898.com/sxqmq">墙面乳胶漆</a> <br>
+        @include('avnaled.common.label')
         <span>【责任编辑】：</span>
         澳镭照明<em></em>版权所有：
         <a href="http://www.aooled.com" target="_blank">http://www.aooled.com</a>转载请注明出处 </div>

@@ -43,7 +43,7 @@
 
     </div>
     <div class="ct2-mn">
-        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='{{route('pok.introduction')}}'>关于我们</a></div>
+        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.introduction')}}'>关于我们</a></div>
         <div class="mn-box">
             <div class="content-body">
 

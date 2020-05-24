@@ -9,9 +9,10 @@
     <meta name="applicable-device" content="pc,wap">
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
-    <title>联系我们</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>{{$title}}</title>
+    <meta name="title" content="{{$title}}">
+    <meta name="description" content="{{$description}}" />
+    <meta name="keywords" content="{{$keywords}}" />
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="/pok/css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="/pok/css/eyou.css" />
@@ -34,7 +35,7 @@
     </div>
 
     <div class="ct2-mn">
-        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='/contact.html'>联系我们</a></div>
+        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.contact')}}'>联系我们</a></div>
         <div class="mn-box">
             <ul class="contact">
                 <li><i class="iconfont icon-qq"></i>QQ客服：712965082</li>

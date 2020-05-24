@@ -9,9 +9,10 @@
     <meta name="applicable-device" content="pc,wap">
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
-    <title>不锈钢角钢</title>
-    <meta name="description" content="不锈钢角钢是两边互相垂直成角形的长条钢材；有等边不锈钢角钢和不等边不锈钢角钢之分。" />
-    <meta name="keywords" content="不锈钢角钢" />
+    <title>{{$product->title}}</title>
+    <meta name="title" content="{{$product->seo_title}}">
+    <meta name="description" content="{{$product->seo_description}}" />
+    <meta name="keywords" content="{{$product->seo_keywords}}" />
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="/pok/css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="/pok/css/eyou.css" />
@@ -35,7 +36,7 @@
         @include('pok.common.recommendedProduct')
     </div>
     <div class="ct2-mn ct2-mn-left">
-        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='/products/' class=''>产品展示</a> &gt; 产品内容</div>
+        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.product')}}' class=''>产品展示</a> &gt; <a href='{{route('pok.pro_category', ['productCategory' => $product->category->id])}}' class=''>{{$product->category->name}}</a> &gt;{{$product->title}}</div>
         <div class="mn-box">
             <div class="eyou-showcase clearfix">
                 <div class="pc-slide">

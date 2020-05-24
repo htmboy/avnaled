@@ -143,6 +143,22 @@ create table aoo_article(
 )engine=myisam default charset=utf8;
 #
 #
+create table aoo_search_word(
+	id tinyint unsigned not null primary key auto_increment,
+	domain_id tinyint unsigned not null,
+	keyword varchar(255) not null,
+	link varchar(255),
+	created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+	updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	is_show tinyint unsigned not null,
+	sort tinyint unsigned not null
+)engine=myisam default charset=utf8;
+
+
+
+
+
+
 -- 文章图表
 # create table aoo_article_cover(
 # 	id tinyint unsigned not null primary key auto_increment,

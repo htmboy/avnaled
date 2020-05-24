@@ -10,7 +10,7 @@ Route::prefix('avnaled')->group(function(){
 
     Route::get('/product.html', 'Avnaled\ProductsController@product')->name('avnaled.product');
     Route::get('/product/{product}.html', 'Avnaled\ProductsController@productList')->name('avnaled.pro_category');
-    Route::get('/product/secondary/{product}.html', 'Avnaled\ProductsController@productSecondaryList')->name('avnaled.pro_secondary');
+//    Route::get('/product/secondary/{product}.html', 'Avnaled\ProductsController@productSecondaryList')->name('avnaled.pro_secondary');
     Route::get('/product/detail/{product}.html', 'Avnaled\ProductsController@productDetail')->name('avnaled.pro_detail');
 
     Route::get('/article.html', 'Avnaled\ArticlesController@article')->name('avnaled.article');

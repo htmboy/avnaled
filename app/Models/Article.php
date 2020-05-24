@@ -25,6 +25,15 @@ class Article extends BaseModel
         self::ARTICLE_Q_AND_A => '问与答'
     ];
 
+    public function getCategoryMap(){
+        return [
+            self::ARTICLE_CASES => '客户案例',
+            self::ARTICLE_COMPANY_NEWS => '公司动态',
+            self::ARTICLE_INDUSTRY_NEWS => '行业新闻',
+            self::ARTICLE_Q_AND_A => '问与答'
+        ];
+    }
+
     public function scopePok($query){
         return $query->where('domain_id', DomainConfig::DOMAIN_POK);
     }

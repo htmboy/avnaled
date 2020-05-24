@@ -30,21 +30,15 @@
 <div class="banner-sub img-center"> <img src="/pok/images/neiye.jpg"> </div>
 <div class="container clearfix">
     <div class="ct2-sd">
-        <div class="panel-sd">
-            <div class="tit">新闻资讯</div>
-            <ul class="lanmu">
-                <li class="open active"> <a href="/news/">新闻资讯</a> </li>
-                <li class=""> <a href="/hangye/">行业资讯</a> </li>
-                <li class=""> <a href="/wenti/">常见问题</a> </li>
-            </ul>
-        </div>
+        @include('pok.common.newsMenu')
 
         @include('pok.common.recommendedProduct')
 
     </div>
 
     <div class="ct2-mn">
-        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='/news/' class=''>新闻资讯</a> &gt; 新闻内容</div>
+        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.article')}}'>新闻咨询 </a> &gt;<a href='{{route('pok.art_category', ['articleCategory' => $article->map_id])}}' class=''>{{$article->getCategoryMap()[$article->map_id]}}</a> &gt;
+            <a href="{{route('pok.art_detail', ['article' => $article->id])}}">{{$article->title}}</a></div>
         <div class="mn-box">
             <div class="content-title">
                 <h1>{{$article->title}}</h1>

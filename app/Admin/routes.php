@@ -19,4 +19,5 @@ Route::group([
     $router->resource('articles', 'ArticlesController');
     $router->resource('article-categories', 'ArticleCategoryController');
     $router->resource('links', 'LinkController');
+    $router->resource('search-words', 'SearchWordController');
 });

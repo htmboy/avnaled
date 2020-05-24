@@ -33,10 +33,16 @@
         @include('pok.common.recommendedProduct')
     </div>
     <div class="ct2-mn ct2-mn-left">
-        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='/products/'>产品展示</a></div>
+        <div class="position">当前位置：
+            <a href='{{route('pok.index')}}' class=''>首页</a> &gt;
+            <a href='{{route('pok.product')}}'>产品展示</a> >
+            @if($products->isNotEmpty())
+            <a href='{{route('pok.pro_category', ['productCategory' => $products->first()->cat_id])}}'>{{$products->first()->category->name}}</a>
+                @endif
+        </div>
         <div class="mn-box">
             <ul class="list-1 clearfix">
-
+                @if($products->isNotEmpty())
                 @foreach($products as $product)
                 <li>
                     <div class="wrap">
@@ -49,6 +55,9 @@
                                 <a href="{{route('pok.pro_detail', ['product' => $product->id])}}" class="bt">查看详情</a></p></div></div>
                 </li>
                 @endforeach
+                    @else
+                        产品正在更新升级！升级后产品性能更好，质保更长，性价比更高。敬请关注......
+                    @endif
 
             </ul>
             {{$products->links('pok.common.pagination')}}

@@ -10,7 +10,7 @@ Route::prefix('pok')->group(function(){
 
     Route::get('/product.html', 'Pok\ProductsController@product')->name('pok.product');
     Route::get('/product/{product}.html', 'Pok\ProductsController@productList')->name('pok.pro_category');
-    Route::get('/product/secondary/{product}.html', 'Pok\ProductsController@productSecondaryList')->name('pok.pro_secondary');
+//    Route::get('/product/secondary/{product}.html', 'Pok\ProductsController@productSecondaryList')->name('pok.pro_secondary');
     Route::get('/product/detail/{product}.html', 'Pok\ProductsController@productDetail')->name('pok.pro_detail');
 
     Route::get('/article.html', 'Pok\ArticlesController@article')->name('pok.article');

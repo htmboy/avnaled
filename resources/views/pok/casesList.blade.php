@@ -26,7 +26,7 @@
 
 @include('pok.common.search')
 
-<div class="banner-sub img-center"> <img src="/images/neiye.jpg"> </div>
+<div class="banner-sub img-center"> <img src="/pok/images/neiye.jpg"> </div>
 <div class="container clearfix">
     <div class="ct2-sd">
 
@@ -35,17 +35,20 @@
 
     </div>
     <div class="ct2-mn">
-        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='/al/'>工程案例</a></div>
+        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.cases')}}'>工程案例</a></div>
         <div class="mn-box">
             <ul class="list-3 list-3-1 clearfix">
+                @if($articles->isNotEmpty())
                 @foreach($articles as $article)
                 <li>
-                    <a href="/al/4.html">
+                    <a href="{{route('pok.art_detail', ['article' => $article->id])}}">
                         <div class="img-cover">
                             <span style="background-image: url(/storage/{{$article->thumbnail}});"></span></div>
                         <div class="text">{{$article->title}}</div></a> </li>
                 @endforeach
-
+                @else
+                    精彩案例大片即将为您呈现！请持续关注！
+                @endif
             </ul>
             {{$articles->links('pok.common.pagination')}}
         </div>

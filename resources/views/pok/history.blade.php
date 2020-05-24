@@ -9,7 +9,7 @@
     <meta name="applicable-device" content="pc,wap">
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
-    <title>企业文化</title>
+    <title>{{$title}}</title>
     <meta name="title" content="{{$title}}">
     <meta name="description" content="{{$description}}" />
     <meta name="keywords" content="{{$keywords}}" />
@@ -27,7 +27,7 @@
 
 @include('pok.common.search')
 
-<div class="banner-sub img-center"> <img src="images/neiye.jpg"> </div>
+<div class="banner-sub img-center"> <img src="/pok/images/neiye.jpg"> </div>
 
 <div class="container clearfix">
     <div class="ct2-sd">
