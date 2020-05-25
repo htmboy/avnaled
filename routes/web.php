@@ -15,6 +15,8 @@
 //    return redirect()->route('avnaled.index');
 //});
 
+// usage inside a laravel route
+
 // spectacle 路由
 include_once 'avnaled.php';
 

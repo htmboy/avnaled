@@ -78,14 +78,22 @@ class ProductGalleryController extends AdminController
     {
         $form = new Form(new ProductGallery());
         $proId = $this->request->get('pro_id');
-        $form->text('pro_id')->default($proId)->readonly();
-        $form->image('gallery', __('Gallery'))->uniqueName();
+        $form->text('pro_id')->default($proId)->rules('required')->readonly();
+        $form->image('gallery', '图片')->uniqueName()->rules('required|max:100', [
+            'required' => '必须上传图片'
+        ])->resize(400, 300);
         $form->switch('is_show', __('Is show'));
-        $form->text('sort', __('Sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1);
+        $form->text('sort', __('Sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1)->rules('required', [
+            'required' => '排序不能为空'
+        ]);
 
         $form->tools(function (Form\Tools $tools) use ($proId){
             $tools->disableList();
             $tools->add('<a class="btn btn-sm btn-danger" href='.route('products.show', ['product' => $proId]) .'><i class="fa fa-list"></i>&nbsp;&nbsp;list</a>');
+        });
+
+        $form->saved(function (Form $form)use($proId){
+            return redirect()->route('products.show', ['product' => $proId]);
         });
 
         return $form;

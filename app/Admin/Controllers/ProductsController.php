@@ -98,37 +98,37 @@ class ProductsController extends AdminController
         $form->column(1/2, function ($form) {
             $form->select('cat_id')->options(ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
                 return $item->name;
-            }));
-            $form->text('seo_title', __('Seo title'));
-            $form->text('seo_keywords');
-            $form->text('seo_description');
-            $form->text('title');
-            $form->image('thumbnail');
+            }))->rules('required');
+            $form->text('seo_title', __('Seo title'))->rules('required|max:80');
+            $form->text('seo_keywords')->rules('required|max:80');
+            $form->text('seo_description')->rules('required|max:80');
+            $form->text('title')->rules('required|max:80');
+            $form->image('thumbnail')->uniqueName()->resize(400, 300)->rules('required|max:100');
             $form->switch('is_show', __('Is show'));
-            $form->number('sort')->default(Product::count() + 1);
+            $form->number('sort')->default(Product::count() + 1)->rules('required');
         });
 
         $form->column(1/2, function ($form) {
-            $form->text('number');
-            $form->text('watts');
-            $form->text('size');
-            $form->text('color', __('Color'));
-            $form->text('package', __('Package'));
-            $form->text('weight', __('Weight'));
-            $form->text('voltage', __('Voltage'));
-            $form->text('angle', __('Angle'));
-            $form->text('waterproof', __('Waterproof'));
-            $form->text('life', __('Life'));
-            $form->text('distance', __('Distance'));
-            $form->text('material', __('Material'));
-            $form->text('characteristic', __('Characteristic'));
+            $form->text('number')->rules('required|max:100');
+            $form->text('watts')->rules('required|max:100');
+            $form->text('size')->rules('required|max:100');
+            $form->text('color', __('Color'))->rules('required|max:100');
+            $form->text('package', __('Package'))->rules('required|max:100');
+            $form->text('weight', __('Weight'))->rules('required|max:100');
+            $form->text('voltage', __('Voltage'))->rules('required|max:100');
+            $form->text('angle', __('Angle'))->rules('required|max:100');
+            $form->text('waterproof', __('Waterproof'))->rules('required|max:100');
+            $form->text('life', __('Life'))->rules('required|max:100');
+            $form->text('distance', __('Distance'))->rules('required|max:100');
+            $form->text('material', __('Material'))->rules('required|max:100');
+            $form->text('characteristic', __('Characteristic'))->rules('required|max:100');
             $form->hidden('cat_sort');
 
         });
 
         $form->column(12, function ($form) {
 
-            $form->ueditor('content');
+            $form->ueditor('content')->rules('required');
         });
 
         $form->saving(function (Form $form){

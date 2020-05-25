@@ -12,7 +12,7 @@ class Gallery extends RowAction
     public function href()
     {
         parent::href();
-        return "/admin/product-galleries?pro_id=".$this->getKey();
+        return route('products.show', ['pro_id' => $this->getKey()]);
     }
 
 }

@@ -77,11 +77,11 @@ class LinkController extends AdminController
     {
         $form = new Form(new Link());
 
-        $form->select('domain_id', __('Domain id'))->options(DomainConfig::$domainMap);
-        $form->text('name', __('Name'));
-        $form->url('link', __('Link'));
+        $form->select('domain_id', __('Domain id'))->options(DomainConfig::$domainMap)->rules('required');
+        $form->text('name', __('Name'))->rules('required|max:80');
+        $form->url('link', __('Link'))->rules('required|max:100');
         $form->switch('is_show', __('Is show'));
-        $form->number('sort', __('Sort'))->default(Link::count() + 1);
+        $form->number('sort', __('Sort'))->default(Link::count() + 1)->rules('required');
 
         return $form;
     }

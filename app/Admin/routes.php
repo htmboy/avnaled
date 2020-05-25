@@ -15,7 +15,7 @@ Route::group([
     $router->resource('carousels', 'CarouselController');
     $router->resource('product-categories', 'ProductCategoryController');
     $router->resource('products', 'ProductsController');
-    $router->resource('product-galleries', 'ProductGalleryController');
+    $router->resource('product-galleries', 'ProductGalleryController')->except(['index', 'show']);
     $router->resource('articles', 'ArticlesController');
     $router->resource('article-categories', 'ArticleCategoryController');
     $router->resource('links', 'LinkController');

@@ -26,10 +26,10 @@ class ProductCategoryController extends AdminController
     {
         $form = new Form(new ProductCategory());
 
-        $form->select('map_id')->options(ProductCategory::$productMap)->required();
-        $form->text('name')->rules('required');
+        $form->select('map_id')->options(ProductCategory::$productMap)->rules('required');
+        $form->text('name')->rules('required|max:80');
         $form->switch('is_show');
-        $form->number('sort')->default(ProductCategory::count() + 1);
+        $form->number('sort')->default(ProductCategory::count() + 1)->rules('required');
         return $form;
     }
 

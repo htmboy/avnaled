@@ -92,18 +92,18 @@ class ArticlesController extends AdminController
     {
         $form = new Form(new Article());
 
-        $form->select('domain_id')->options(DomainConfig::$domainMap);
-        $form->select('map_id')->options(Article::category());
-        $form->text('seo_title', __('Seo title'));
-        $form->text('seo_keywords', __('Seo keywords'));
-        $form->text('seo_description', __('Seo description'));
-        $form->text('title', __('Title'));
-        $form->image('thumbnail', '新闻封面');
+        $form->select('domain_id')->options(DomainConfig::$domainMap)->rules('required');
+        $form->select('map_id')->options(Article::category())->rules('required');
+        $form->text('seo_title', __('Seo title'))->rules('required|max:40');
+        $form->text('seo_keywords', __('Seo keywords'))->rules('required|max:40');
+        $form->text('seo_description', __('Seo description'))->rules('required|max:80');
+        $form->text('title', __('Title'))->rules('required|max:80');
+        $form->image('thumbnail', '新闻封面')->rules('required|max:80');
         $form->text('author', __('Author'))->default('澳镭照明-新闻部');
-        $form->text('clicks', __('Clicks'));
+        $form->number('clicks', __('Clicks'))->default('20')->rules('required');
         $form->switch('is_show', __('Is show'));
-        $form->number('sort')->default(Article::count() + 1);
-        $form->ueditor('content', __('Content'));
+        $form->number('sort')->default(Article::count() + 1)->rules('required');
+        $form->ueditor('content', __('Content'))->rules('required');
         $form->hidden('cat_sort');
         $form->saving(function (Form $form){
             $form->cat_sort = Article::where('map_id', $form->map_id)->count() + 1;

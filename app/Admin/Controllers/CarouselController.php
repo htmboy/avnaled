@@ -62,13 +62,13 @@ class CarouselController extends AdminController
     {
         $form = new Form(new Carousel());
         $form->model()->orderByDesc('sort');
-        $form->select('domain_id')->options(DomainConfig::$domainMap);
-        $form->text('title');
-        $form->text('alt');
-        $form->image('site');
-        $form->url('link');
+        $form->select('domain_id')->options(DomainConfig::$domainMap)->rules('required|max:80');
+        $form->text('title')->rules('required|max:80');
+        $form->text('alt')->rules('required|max:80');
+        $form->image('site')->uniqueName()->rules('required|max:100');
+        $form->url('link')->rules('required|max:100');
         $form->switch('is_show');
-        $form->number('sort')->default(Carousel::count() + 1);
+        $form->number('sort')->default(Carousel::count() + 1)->rules('required');
 
         return $form;
     }

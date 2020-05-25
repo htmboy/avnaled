@@ -79,11 +79,11 @@ class SearchWordController extends AdminController
     {
         $form = new Form(new SearchWord());
 
-        $form->select('domain_id', __('Domain id'))->options(DomainConfig::$domainMap);
-        $form->text('keyword', __('Keyword'));
+        $form->select('domain_id', __('Domain id'))->options(DomainConfig::$domainMap)->rules('required');
+        $form->text('keyword', __('Keyword'))->rules('required|max:100');
         $form->url('link', __('Link'));
         $form->switch('is_show', __('Is show'));
-        $form->number('sort', __('Sort'))->default(SearchWord::count() +1 );
+        $form->number('sort', __('Sort'))->default(SearchWord::count() +1 )->rules('required');
 
         return $form;
     }
