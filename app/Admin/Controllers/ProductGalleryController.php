@@ -79,7 +79,7 @@ class ProductGalleryController extends AdminController
         $form = new Form(new ProductGallery());
         $proId = $this->request->get('pro_id');
         $form->text('pro_id')->default($proId)->readonly();
-        $form->image('gallery', __('Gallery'));
+        $form->image('gallery', __('Gallery'))->uniqueName();
         $form->switch('is_show', __('Is show'));
         $form->text('sort', __('Sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1);
 

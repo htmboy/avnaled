@@ -9,10 +9,10 @@
     <meta name="applicable-device" content="pc,wap">
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
-    <title>{{$title}}</title>
-    <meta name="title" content="{{$title}}">
-    <meta name="description" content="{{$description}}" />
-    <meta name="keywords" content="{{$keywords}}" />
+    <title>搜索_{{$word}}_{{$title}}</title>
+    <meta name="title" content="搜索{{$word}}的结果。{{$title}}">
+    <meta name="keywords" content="{{$word}},{{$keywords}}" />
+    <meta name="description" content="{{$word}}的搜索结果。{{$description}}" />
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="/pok/css/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="/pok/css/eyou.css" />
@@ -35,7 +35,7 @@
         @include('pok.common.recommendedProduct')
     </div>
     <div class="ct2-mn">
-        <div class="position">当前位置： <a href='/' class=''>首页</a> &gt; <a href='{{route('pok.search', ['word' => $word])}}'>搜索：{{$word}}</a></div>
+        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.search', ['word' => $word])}}'>搜索：{{$word}}</a></div>
         <div class="mn-box">
             <ul class="list-4">
                 @if($articles->isNotEmpty())

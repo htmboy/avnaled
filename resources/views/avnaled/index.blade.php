@@ -36,7 +36,7 @@
   <div id="slide" class="slide">
     @foreach($carousels as $carousel)
     <div class="slide-item">
-      <a href="http://{{$carousel->link}}">
+      <a href="{{$carousel->link}}">
         <img src="/storage/{{$carousel->site}}" alt="{{$carousel->alt}}" width="1920" height="527" />
       </a>
     </div>
@@ -51,7 +51,7 @@
 <!--search-->
 <div class="ds" style="margin-bottom:50px">
   <div class="tit1">
-    <a href="/avnaled/product.html">
+    <a href="{{route('avnaled.product')}}">
       澳镭照明工矿灯 用灯光点亮世界<em>Light the world with aooled</em>
     </a>
     <span>13年生产研发和9年装灯经验</span></div>
@@ -83,7 +83,7 @@
 <div class="bz">
   <div class="content">
     <div class="tit1">
-      <a href="/avnaled/product.html" title="" target="_blank">
+      <a href="{{route('avnaled.product')}}" title="" target="_blank">
         六大产品共同特性介绍<em>Six qualities for buying with confidence</em>
       </a>
       <span>六大品质保障为您的工厂及客户提供一站式的保姆服务</span>
@@ -117,7 +117,7 @@
 <!--bz-->
 <div class="jm">
   <div class="tit1">
-    <a href="/avnaled/product/1.html" target="_blank">
+    <a href="{{route('avnaled.product')}}" target="_blank">
       产品中心<em>Franchisees to witness</em>
     </a>
     <span>澳镭照明工业级照明专用系列LED工矿灯</span></div>
@@ -126,14 +126,14 @@
       @foreach($products as $product)
       <dl>
         <dt>
-          <a href="/avnaled/product/detail/{{$product->id}}.html" target="_blank">
+          <a href="{{route('avnaled.pro_detail', ['product' => $product->id])}}" target="_blank">
             <img src="/storage/{{$product->thumbnail}}" alt="{{$product->title}}"/>
           </a>
         </dt>
         <dd>
           <p>{{$product->characteristic}}</p>
           <span>
-            <a href="/avnaled/product/detail/{{$product->id}}.html" target="_blank">{{$product->title}}</a>
+            <a href="{{route('avnaled.pro_detail', ['product' => $product->id])}}" target="_blank">{{$product->title}}</a>
           </span>
         </dd>
       </dl>
@@ -154,14 +154,14 @@
 </div>
 <!--jm-->
 <div class="new" style="margin-bottom:50px">
-  <div class="tit1"><a href="/avnaled/article.html" title="新闻中心" target="_blank">新闻中心<em>latest　news</em></a></div>
+  <div class="tit1"><a href="{{route('avnaled.article')}}" title="新闻中心" target="_blank">新闻中心<em>latest　news</em></a></div>
   <div class="content">
     <div class="dy fl">
       <div class="tit2">
         <span class="fr">
-          <a href="/avnaled/article/4.html" title="more" target="_blank">more +</a>
+          <a href="{{route('avnaled.art_category', ['articleCategory' => $news->first()->map_id])}}" title="more" target="_blank">more +</a>
         </span>
-        <a href="/avnaled/article/4.html" title="行业新闻" target="_blank">
+        <a href="{{route('avnaled.art_category', ['articleCategory' => $news->first()->map_id])}}" title="行业新闻" target="_blank">
           行业新闻/
           <span>NEWS</span>
         </a>
@@ -169,13 +169,13 @@
       @foreach($news as $new)
       <dl>
         <dt>
-          <a href="/avnaled/article/detail/{{$new->id}}.html" target="_blank">
+          <a href="{{route('avnaled.art_detail', ['article' => $new->id])}}" target="_blank">
             <img src="/storage/{{$new->thumbnail}}" style="display: block;">
           </a>
         </dt>
         <dd>
           <h3>
-            <a href="/avnaled/article/detail/{{$new->id}}.html" target="_blank">
+            <a href="{{route('avnaled.art_detail', ['article' => $new->id])}}" target="_blank">
               {{$new->title}}
             </a>
           </h3>
@@ -187,9 +187,9 @@
     <div class="dy dy2 fl">
       <div class="tit2">
         <span class="fr">
-          <a href="/avnaled/article/1.html" title="more" target="_blank">more +</a>
+          <a href="{{route('avnaled.art_category', ['articleCategory' => $conpany_news->first()->map_id])}}" title="more" target="_blank">more +</a>
         </span>
-        <a href="/avnaled/article/1.html" title="澳镭动态" target="_blank">
+        <a href="{{route('avnaled.art_category', ['articleCategory' => $conpany_news->first()->map_id])}}" title="澳镭动态" target="_blank">
           澳镭动态/
           <span>INFORMATION</span>
         </a>
@@ -197,13 +197,13 @@
       @foreach($conpany_news as $conpany_new)
       <dl>
         <dt>
-          <a href="/avnaled/article/detail/{{$conpany_new->id}}.html" target="_blank">
+          <a href="{{route('avnaled.art_detail', ['article' => $conpany_new->id])}}" target="_blank">
             <img src="/storage/{{$conpany_new->thumbnail}}" title="{{$conpany_new->title}}" style="display: block;">
           </a>
         </dt>
         <dd>
           <h3>
-            <a href="/avnaled/article/detail/{{$conpany_new->id}}.html" target="_blank">{{$conpany_new->title}}</a>
+            <a href="{{route('avnaled.art_detail', ['article' => $conpany_new->id])}}" target="_blank">{{$conpany_new->title}}</a>
           </h3>
           <p>{{mb_substr(strip_tags($conpany_new->content), 0, 40)}}</p>
         </dd>
@@ -213,12 +213,12 @@
     <div class="faq fr">
       <div class="tit2">
         <span class="fr">
-          <a href="/avnaled/article/3.html" target="_blank">more +</a>
+          <a href="{{route('avnaled.art_category', ['articleCategory' => $answers->first()->map_id])}}" target="_blank">more +</a>
         </span>
-        <a href="/avnaled/article/3.html" target="_blank">常见问答/<span>QUESTIONS</span></a>
+        <a href="{{route('avnaled.art_category', ['articleCategory' => $answers->first()->map_id])}}" target="_blank">常见问答/<span>QUESTIONS</span></a>
       </div>
       <h4>
-        <a href='/avnaled/article/3.html'>
+        <a href='{{route('avnaled.art_category', ['articleCategory' => $answers->first()->map_id])}}'>
           <img src='/avnaled/img/20160520111402_6290.jpg' alt='常见问答' />
         </a>
       </h4>
@@ -226,7 +226,7 @@
         @foreach($answers as $answer)
         <dl>
           <dt>
-            <a href="/avnaled/article/detail/{{$answer->id}}.html" target="_blank">
+            <a href="{{route('avnaled.art_detail', ['article' => $answer->id])}}" target="_blank">
               {{$answer->title}}
             </a>
           </dt>
@@ -244,12 +244,12 @@
 </script>
 <!--new-->
 <div class="fangan">
-  <div class="tit1"><a href="/avnaled/article/2.html" target="_blank">客户案例<em>Cases Show</em></a></div>
+  <div class="tit1"><a href="{{route('avnaled.art_category', ['articleCategory' => $cases->first()->map_id])}}" target="_blank">客户案例<em>Cases Show</em></a></div>
   <div class="fangan_main">
     <div id="fangan" class="owl-carousel" style="width:1080px">
       @foreach($cases as $case)
       <div class="item">
-        <a href="/avnaled/article/detail/{{$case->id}}.html">
+        <a href="{{route('avnaled.art_detail', ['article' => $case->id])}}">
           <img src="/storage/{{$case->thumbnail}}" alt="{{$case->title}}" />
         </a>
         <div class="txt">{{$case->title}}</div>

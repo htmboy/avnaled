@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect()->route('avnaled.index');
-});
+//Route::get('/', function () {
+//    return redirect()->route('avnaled.index');
+//});
 
 // spectacle 路由
 include_once 'avnaled.php';

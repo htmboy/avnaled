@@ -37,7 +37,7 @@
                         <div class="info_con_tit">
                             <div class="n_tit">
                                 <span class="fr" style="margin:0px;">
-                                    <a href="/avnaled/article/list.html" title="返回列表" target="_blank">
+                                    <a href="{{route('avnaled.article')}}" title="返回列表" target="_blank">
                                         <img src="/avnaled/img/article_btn.gif" alt="返回列表">
                                     </a>
                                 </span>
@@ -59,14 +59,14 @@
                     <div class="gduo" id="gduo">
                         <span>下一篇：
                             @if($article->previousItem())
-                            <a href="/avnaled/article/detail/{{$article->previousItem()->id}}.html">{{$article->previousItem()->title}}</a>
+                            <a href="{{route('avnaled.art_detail', ['article' => $article->previousItem()->id])}}">{{$article->previousItem()->title}}</a>
                                 @else
                             没有了
                                 @endif
                         </span>
                         <span>上一篇：
                             @if($article->nextItem())
-                                <a href="/avnaled/article/detail/{{$article->nextItem()->id}}.html">{{$article->nextItem()->title}}</a>
+                                <a href="{{route('avnaled.art_detail', ['article' => $article->nextItem()->id])}}">{{$article->nextItem()->title}}</a>
                             @else
                                 没有了
                             @endif
@@ -85,14 +85,14 @@
                 <ul class="n_rt_ul">
                     @foreach($related as $key => $value)
 
-                    <li{{$key<3?' class=cur':''}}><h4><a href="/avnaled/article/detail/{{$value->id}}.html" target="_blank">{{$value->title}}</a></h4></li>
+                    <li{{$key<3?' class=cur':''}}><h4><a href="{{route('avnaled.art_detail', ['article' => $value->id])}}" target="_blank">{{$value->title}}</a></h4></li>
                     @endforeach
 
                 </ul>
-                <h3 class="t03 new_third"><a href="/news">最新资讯文章</a></h3>
+                <h3 class="t03 new_third"><a href="javascript:;">最新资讯文章</a></h3>
                 <ul class="n_rt_ul" id="cntrLastArticle">
                     @foreach($article_recommends as $key => $value)
-                    <li{{$key<3?' class=cur':''}}><h4><a href="/avnaled/article/detail/{{$value->id}}.html" target="_blank">{{$value->title}}</a></h4></li>
+                    <li{{$key<3?' class=cur':''}}><h4><a href="{{route('avnaled.art_detail', ['article' => $value->id])}}" target="_blank">{{$value->title}}</a></h4></li>
                     @endforeach
                 </ul>
             </div>

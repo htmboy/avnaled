@@ -34,7 +34,7 @@
 
                     <div class="dropdown-box">
                         @foreach($fanguangdengCategories as $fgd)
-                        <p><a href="{{route('pok.pro_category', ['product' => $fgd->id])}}">{{$fgd->name}}</a></p>
+                        <p><a href="{{route('pok.pro_category', ['productcategory' => $fgd->id])}}">{{$fgd->name}}</a></p>
                         @endforeach
                     </div>
 

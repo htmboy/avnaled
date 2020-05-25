@@ -24,6 +24,7 @@ class AvnaledHeaderComposer
         ])->get();
         $gongkuangdeng = ProductCategory::where('map_id', ProductCategory::PRODUCT_HIGH_BAY_LIGHT)->orderByDesc('sort')->with('product')->first();
         $productCategories = ProductCategory::spectacle()->where('map_id', ProductCategory::PRODUCT_HIGH_BAY_LIGHT)->get();
+
 //        dd($productCategories);
         $articleCategories = Article::$articleMap;
         $case_id = Article::ARTICLE_CASES;

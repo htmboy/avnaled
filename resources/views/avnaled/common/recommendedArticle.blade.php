@@ -3,7 +3,7 @@
     <div class="info_b">
         <ul class="p_list_ul">
             @foreach($article_recommends as $article_recommend)
-            <li><h4><a target="_blank" href="/avnaled/article/detail/{{$article_recommend->id}}.html">{{$article_recommend->title}}</a></h4></li>
+            <li><h4><a target="_blank" href="{{route('avnaled.art_detail', ['article' => $article_recommend->id])}}">{{$article_recommend->title}}</a></h4></li>
             @endforeach
         </ul>
         <div class="clear"></div>

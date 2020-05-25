@@ -15,7 +15,7 @@ class Controller extends BaseController
 
     public function __construct()
     {
-        $this->SEOConfig = (include_once app_path('Common\SEOConfig.php'))['avnaled'];
+        $this->SEOConfig = (include_once app_path('Common/SEOConfig.php'))['avnaled'];
     }
 
 }

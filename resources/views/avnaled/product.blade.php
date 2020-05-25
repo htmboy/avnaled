@@ -28,12 +28,12 @@
                 @foreach($products as $product)
                 <div class="pro_box">
                     <div class="pro_img">
-                        <a href="/avnaled/product/detail/{{$product->id}}.html" target="_blank">
+                        <a href="{{route('avnaled.pro_detail', ['product' => $product->id])}}" target="_blank">
                             <img src="/storage/{{$product->thumbnail}}" alt="封闭底漆 水性木器漆">
                         </a>
                     </div>
                     <div class="pro_name">
-                        <a href="/avnaled/product/detail/{{$product->id}}.html" target="_blank">
+                        <a href="{{route('avnaled.pro_detail', ['product' => $product->id])}}" target="_blank">
                             {{$product->title}}
                         </a>
                     </div>

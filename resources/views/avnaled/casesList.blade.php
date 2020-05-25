@@ -28,12 +28,12 @@
                 @foreach($articles as $article)
                 <div class="new3_con">
                     <div class="new3_img">
-                        <a href="/avnaled/article/detail/{{$article->id}}.html" target="_blank">
+                        <a href="{{route('avnaled.art_detail', ['article' => $article->id])}}" target="_blank">
                             <img src="/storage/{{$article->thumbnail}}">
                         </a>
                     </div>
                     <div class="new3_name">
-                        <a href="/avnaled/article/detail/{{$article->id}}.html" target="_blank" looyu_bound="1">
+                        <a href="{{route('avnaled.art_detail', ['article' => $article->id])}}" target="_blank" looyu_bound="1">
                             {{$article->title}}
                         </a>
                     </div>

@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="renderer" content="webkit" />
-    <title>搜索_{{$word}}_澳镭工矿灯</title>
-    <meta name="keywords" content="{{$word}},澳镭工矿灯" />
-    <meta name="description" content="{{$word}}的搜索结果。" />
+    <title>搜索_{{$word}}_{{$title}}</title>
+    <meta name="title" content="搜索{{$word}}的结果。{{$title}}">
+    <meta name="keywords" content="{{$word}},{{$keywords}}" />
+    <meta name="description" content="{{$word}}的搜索结果。{{$description}}" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link href="/avnaled/css/base.css" rel="stylesheet" />
     <script src="/avnaled/js/index.js"></script>
@@ -24,7 +25,7 @@
             <span>当前位置：</span>
             <a href="">首页</a> » 站内搜索 » 关键词：{{$word}}</div>
         <div class="home_ss_r">
-            <form name="searchForm" method="get" action="/avnaled/search.html/">
+            <form name="searchForm" method="get" action="{{route('avnaled.search')}}">
                 <input type="text" onclick="this.value=''" name="word" class="inp01" value="{{$word}}" onfocus="if(this.value=='大荷水性漆'){this.value='';}"  onblur="if(this.value==''){this.value='led工矿灯';}" />
                 <input type="submit" value="" class="inp02" />
             </form>
@@ -46,13 +47,13 @@
 
                 @foreach($articles as $article)
                 <div class="new2_con">
-                    <a href="/avnaled/article/detail/{{$article->id}}.html" target="_blank" class="new2_img">
+                    <a href="{{route('avnaled.art_detail', ['article' => $article->id])}}" target="_blank" class="new2_img">
                         <img width="300"  src="/storage/{{$article->thumbnail}}">
                     </a>
                     <div class="new2_txt">
-                        <h2><a href="/avnaled/article/detail/{{$article->id}}.html" target="_blank">{{$article->title}}</a></h2>
+                        <h2><a href="{{route('avnaled.art_detail', ['article' => $article->id])}}" target="_blank">{{$article->title}}</a></h2>
                         <p>{{mb_substr(strip_tags($article->content), 0, 100)}}</p>
-                        <span><a href="/avnaled/article/detail/{{$article->id}}.html" class="btn_more">查看详情</a></span>
+                        <span><a href="{{route('avnaled.art_detail', ['article' => $article->id])}}" class="btn_more">查看详情</a></span>
                     </div>
                 </div>
                 @endforeach

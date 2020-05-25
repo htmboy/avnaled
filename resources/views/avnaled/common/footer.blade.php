@@ -4,20 +4,20 @@
             <ul class="foot_link" style="width:118px">
                 <h3>产品系列</h3>
                 @foreach($productMap as $key => $product)
-                <li><a href="/avnaled/product/{{$key}}.html">{{$product}}</a></li>
+                <li><a href="{{route('avnaled.pro_category', ['productCategory' => $key])}}">{{$product}}</a></li>
                 @endforeach
             </ul>
             <ul class="foot_link" style="width:118px">
                 <h3>解决方案</h3>
-                <li><a href="/avnaled/article/{{$case_id}}.html">装灯案例</a></li>
-                <li><a href="/avnaled/article/{{$QA_id}}.html">常见问题</a></li>
-                <li><a href="/avnaled/contact.html">联系我们</a></li>
+                <li><a href="{{route('avnaled.art_category', ['articleCategory' => $case_id])}}">装灯案例</a></li>
+                <li><a href="{{route('avnaled.art_category', ['articleCategory' => $QA_id])}}">常见问题</a></li>
+                <li><a href="{{route('avnaled.contact')}}">联系我们</a></li>
             </ul>
             <ul class="foot_link" style="width:118px">
                 <h3>澳镭品牌</h3>
-                <li><a href="/avnaled/introduction.html">关于澳镭</a></li>
-                <li><a href="/avnaled/history.html">发展历程</a></li>
-                <li><a href="/avnaled/article/{{$company_id}}.html">澳镭动态</a></li>
+                <li><a href="{{route('avnaled.introduction')}}">关于澳镭</a></li>
+                <li><a href="{{route('avnaled.history')}}">发展历程</a></li>
+                <li><a href="{{route('avnaled.art_category', ['articleCategory' => $company_id])}}">澳镭动态</a></li>
             </ul>
             <div class="foot_code" style="width:490px">
                 <ul class="code">
@@ -44,7 +44,7 @@
         </div>
         <div class="frilinks">
             @foreach($links as $link)
-                <a href="http://{{$link->link}}" target="_blank">{{$link->name}}</a>
+                <a href="{{$link->link}}" target="_blank">{{$link->name}}</a>
             @endforeach
         </div>
         <div class="frilinksSubmit">

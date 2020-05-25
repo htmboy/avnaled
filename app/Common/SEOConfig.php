@@ -57,6 +57,12 @@ return [
             'title' => 'led工矿灯|article',
             'keywords' => 'led工矿灯|article',
             'description' => 'led工矿灯|article',
+        ],
+
+        'search' => [
+            'title' => 'title|search',
+            'keywords' => 'title|search',
+            'description' => 'title|search',
         ]
 
     ],
@@ -116,6 +122,12 @@ return [
             'title' => 'led泛光灯|article',
             'keywords' => 'led泛光灯|article',
             'description' => 'led泛光灯|article',
+        ],
+
+        'search' => [
+            'title' => 'title|search',
+            'keywords' => 'title|search',
+            'description' => 'title|search',
         ]
 
     ]

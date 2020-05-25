@@ -126,7 +126,7 @@
             <ul>
                 @foreach($product_recommends as $product)
                 <li>
-                    <a href="/avnaled/product/detail/{{$product->id}}.html">
+                    <a href="{{route('avnaled.pro_detail', ['product' => $product->id])}}">
                         <img src="/storage/{{$product->thumbnail}}" alt="{{$product->title}}">
                         <span>{{$product->title}}</span>
                     </a>
@@ -143,7 +143,7 @@
         </h3>
         <div class="news_random news_random_ new-s">
             <div class="latest_dl">
-                <a href="/avnaled/article/detail/{{$article_recommends->first()->id}}.html" target="_blank">
+                <a href="{{route('avnaled.art_detail', ['article' => $article_recommends->first()->id])}}" target="_blank">
                     <img src="/avnaled/img/5e9eb43e2e1b9.png" alt="{{$article_recommends->first()->title}}" />
                     <span>
                         <p>{{$article_recommends->first()->title}}</p>
@@ -155,7 +155,7 @@
                 @foreach($article_recommends as $key => $article)
                 <li class="{{$key%2?'fr':'fl'}}">
                     <span class="fr">2020-04-20</span>
-                    <a target="_blank" href="/avnaled/article/detail/{{$article->id}}.html">{{$article->title}}</a>
+                    <a target="_blank" href="{{route('avnaled.art_detail', ['article' => $article->id])}}">{{$article->title}}</a>
                 </li>
                 @endforeach
             </ul>

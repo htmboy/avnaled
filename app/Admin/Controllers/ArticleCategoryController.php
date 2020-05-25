@@ -69,9 +69,9 @@ class ArticleCategoryController extends AdminController
     {
         $form = new Form(new ArticleCategory());
 
-        $form->text('name', '类目名称');
+        $form->text('name', '类目名称')->rules('required|min:2|max:20');
         $form->switch('is_show', __('Is show'));
-        $form->text('sort', __('Sort'));
+        $form->text('sort', __('Sort'))->default(ArticleCategory::count());
 
         return $form;
     }

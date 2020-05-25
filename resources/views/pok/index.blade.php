@@ -62,8 +62,9 @@
 
     <div class="swiper-wrapper">
 
-        <div class="swiper-slide" style="background-image: url(/pok/images/banner.jpg);" onClick="window.open('{{route('pok.product')}}');"></div>
-        <div class="swiper-slide" style="background-image: url(/pok/images/banner.jpg);" onClick="window.open('{{route('pok.product')}}');"></div>
+        @foreach($carousels as $carousel)
+        <div class="swiper-slide" style="background-image: url(/storage/{{$carousel->site}});" onClick="window.open('{{$carousel->link}}');"></div>
+        @endforeach
     </div>
 
     <div class="swiper-pagination"></div>
