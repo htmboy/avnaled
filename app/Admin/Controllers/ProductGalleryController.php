@@ -36,7 +36,7 @@ class ProductGalleryController extends AdminController
         $grid->model()->where('pro_id', $this->request->get('pro_id'));
         $grid->column('id', __('Id'));
         $grid->column('pro_id', __('Pro id'));
-        $grid->gallery()->image('/storage', '80');
+        $grid->gallery()->image('/storage', 90);
         $grid->column('updated_at', __('Updated at'));
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],

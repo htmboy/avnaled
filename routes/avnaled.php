@@ -1,6 +1,8 @@
 <?php
 
 Route::prefix('avnaled')->group(function(){
+// Route::domain('tst.avnaled.com')->group(function(){
+
 
     Route::get('', 'Avnaled\IndexController@index');
     Route::get('index.html', 'Avnaled\IndexController@index')->name('avnaled.index');

@@ -44,7 +44,8 @@ class ProductsController extends AdminController
             return $item->name;
         }));
         $grid->column('title');
-        $grid->column('thumbnail')->image('/storage', 80);
+        $grid->column('thumbnail')->image('/storage', 90);
+        $grid->column('thumbnail_vertical')->image('/storage', 50);
         $grid->column('updated_at')->date('Y-m-d');
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],

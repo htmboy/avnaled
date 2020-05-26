@@ -4,6 +4,8 @@
 namespace App\Common;
 
 
+use phpDocumentor\Reflection\Types\Self_;
+
 class DomainConfig
 {
     const DOMAIN_ALL = 1;
@@ -16,6 +18,12 @@ class DomainConfig
         self::DOMAIN_POK => 'pok.com'
     ];
 
+    public static function getDomainMap($domain = null)
+    {
+        if($domain)
+            return self::$domainMap[$domain];
+        return self::$domainMap;
+    }
 
 
 }

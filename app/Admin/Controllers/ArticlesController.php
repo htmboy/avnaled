@@ -32,15 +32,15 @@ class ArticlesController extends AdminController
         $grid->filter(function ($filter){
             $filter->disableIdFilter();
             $filter->equal('domain_id')->select(DomainConfig::$domainMap);
-            $filter->equal('map_id')->select(Article::$articleMap);
+            $filter->equal('map_id')->select(Article::getCategoryMap());
         });
         $grid->model()->orderByDesc('sort');
         $grid->column('id', __('Id'));
         $grid->column('domain_id')->editable('select', DomainConfig::$domainMap);
-        $grid->column('map_id', __('map_id'))->editable('select', DomainConfig::$articleMap);
+        $grid->column('map_id', __('map_id'))->editable('select', DomainConfig::$domainMap);
         $grid->column('title', __('Title'));
-        $grid->column('thumbnail', __('图片1'))->image('/storage', 80);
-        $grid->column('thumbnail_vertical', __('图片2'))->image('/storage', 40);
+        $grid->column('thumbnail', '图片1')->image('/storage', 90);
+        $grid->column('thumbnail_vertical', '图片2(竖)')->image('/storage', 50);
         $grid->column('author', __('Author'));
         $grid->column('updated_at', __('Updated at'));
         $states = [
@@ -95,13 +95,13 @@ class ArticlesController extends AdminController
         $form = new Form(new Article());
 
         $form->select('domain_id')->options(DomainConfig::$domainMap)->rules('required');
-        $form->select('map_id')->options(Article::category())->rules('required');
+        $form->select('map_id')->options(Article::getCategoryMap())->rules('required');
         $form->text('seo_title', __('Seo title'))->rules('required|max:40');
         $form->text('seo_keywords', __('Seo keywords'))->rules('required|max:40');
         $form->text('seo_description', __('Seo description'))->rules('required|max:80');
         $form->text('title', __('Title'))->rules('required|max:80');
-        $form->image('thumbnail', '图片比例 3:2(横)')->rules('required|max:100')->resize(450, 300);
-        $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->rules('required|max:100')->resize(300, 400);
+        $form->image('thumbnail', '图片比例 3:2(横)')->uniqueName()->rules('required|max:100')->resize(450, 300);
+        $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->uniqueName()->rules('required|max:100')->resize(300, 400);
         $form->text('author', __('Author'))->default('澳镭照明-新闻部');
         $form->number('clicks', __('Clicks'))->default('20')->rules('required');
         $form->switch('is_show', __('Is show'));

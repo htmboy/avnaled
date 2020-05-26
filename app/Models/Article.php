@@ -7,6 +7,7 @@ use App\Common\GlobalConfiguration;
 use App\Models\Scopes\SpectacleScope;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use phpDocumentor\Reflection\Types\Self_;
 
 class Article extends BaseModel
 {
@@ -25,13 +26,10 @@ class Article extends BaseModel
         self::ARTICLE_Q_AND_A => '问与答'
     ];
 
-    public static function getCategoryMap(){
-        return [
-            self::ARTICLE_CASES => '客户案例',
-            self::ARTICLE_COMPANY_NEWS => '公司动态',
-            self::ARTICLE_INDUSTRY_NEWS => '行业新闻',
-            self::ARTICLE_Q_AND_A => '问与答'
-        ];
+    public static function getCategoryMap($category = null){
+        if($category)
+            return self::$articleMap[$category];
+        return self::$articleMap;
     }
 
     public function scopePok($query){
