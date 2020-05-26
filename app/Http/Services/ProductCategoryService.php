@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: htmboy
  * Date: 20-5-26
- * Time: 下午8:01
+ * Time: 下午8:23
  */
 
 namespace App\Http\Services;
@@ -11,8 +11,9 @@ namespace App\Http\Services;
 
 use Illuminate\Database\Eloquent\Collection;
 
-interface CarouselService
+interface ProductCategoryService
 {
-    // 按照域名id查询轮播图
-    public function queryAll(int $domain):Collection;
+    // 根据主类id查子类目
+    public function queryAll(int $id):Collection;
+
 }

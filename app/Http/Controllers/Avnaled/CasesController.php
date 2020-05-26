@@ -3,19 +3,20 @@
 namespace App\Http\Controllers\Avnaled;
 
 use App\Common\DomainConfig;
+use App\Http\Services\Implement\ArticleServiceImpl;
+use App\Http\Services\Implement\ThemePosterServiceImpl;
 use App\Models\Article;
 use App\Models\ThemePoster;
 
 class CasesController extends Controller
 {
 
-    public function cases()
+    public function cases(ArticleServiceImpl $articleServiceImpl, ThemePosterServiceImpl $posterServiceImpl)
     {
-        $articles = Article::spectacle()->whereIn('domain_id', [DomainConfig::DOMAIN_ALL, DomainConfig::DOMAIN_AVNALED])
-            ->where('map_id', Article::ARTICLE_CASES)->paginate(10);
-        $poster = ThemePoster::where([
-            ['is_show', 1], ['type', ThemePoster::TYPE_ARTICLE], ['type_id', Article::ARTICLE_CASES], ['domain_id', DomainConfig::DOMAIN_AVNALED]
-        ])->first();
+        $articles = $articleServiceImpl->queryPaginate($this->domain,10, Article::ARTICLE_CASES);
+
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_ARTICLE, Article::ARTICLE_CASES, $this->domain);
+
         return view('avnaled.casesList', array_merge(
             $this->SEOConfig['cases'],
             compact('articles', 'poster')

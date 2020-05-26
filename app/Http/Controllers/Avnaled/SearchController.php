@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Avnaled;
 
 use App\Common\DomainConfig;
+use App\Http\Services\Implement\ArticleServiceImpl;
+use App\Http\Services\Implement\ThemePosterServiceImpl;
 use App\Models\Article;
 use App\Models\ThemePoster;
 use Illuminate\Http\Request;
@@ -10,15 +12,16 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
 
-    public function search(Request $request)
+    public function search(Request $request,
+                           ThemePosterServiceImpl $posterServiceImpl,
+                           ArticleServiceImpl $articleServiceImpl)
     {
         $word = $request->get('word');
-//        dd($this->SEOConfig['search']);
-        $poster = ThemePoster::where([
-            ['is_show', 1], ['type', ThemePoster::TYPE_PRODUCT], ['type_id', 0], ['domain_id', DomainConfig::DOMAIN_AVNALED]
-        ])->first();
-        $articles = Article::spectacle()->whereIn('domain_id', [DomainConfig::DOMAIN_ALL, DomainConfig::DOMAIN_AVNALED])
-            ->where('title', 'like', '%'.$word.'%')->orWhere('content', 'like', '%'.$word.'%')->paginate(8);
+
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, 0, $this->domain);
+
+        $articles = $articleServiceImpl->querySearch($word, 8, $this->domain);
+
         return view('avnaled.searchList', array_merge(
             $this->SEOConfig['search'],
             compact( 'word', 'articles', 'poster')

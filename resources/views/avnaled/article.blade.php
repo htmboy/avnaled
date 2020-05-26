@@ -14,7 +14,7 @@
 @include('avnaled.common.header')
 
 <div class="page_banner">
-    @if($poster)
+    @if($poster->exists)
         <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
     @else
         <img src="/avnaled/img/5795e3e9ce74a.jpg" alt="工矿灯品牌">

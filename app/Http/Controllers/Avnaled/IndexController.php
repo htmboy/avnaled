@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Avnaled;
 
 use App\Common\DomainConfig;
+use App\Http\Services\Implement\ArticleServiceImpl;
+use App\Http\Services\Implement\CarouselServiceImpl;
+use App\Http\Services\Implement\ProductCategoryServiceImpl;
+use App\Http\Services\Implement\ProductServiceImpl;
 use App\Models\Article;
 use App\Models\Carousel;
 use App\Models\Product;
@@ -12,15 +16,26 @@ use Intervention\Image\Facades\Image;
 class IndexController extends Controller
 {
 
-    public function index()
+    public function index(CarouselServiceImpl $carouselServiceImpl,
+                          ProductCategoryServiceImpl $categoryServiceImpl,
+                          ProductServiceImpl $productServiceImpl,
+                          ArticleServiceImpl $articleServiceImpl)
     {
-        $carousels = Carousel::spectacle()->whereIn('domain_id', [DomainConfig::DOMAIN_ALL, DomainConfig::DOMAIN_AVNALED])->get();
-        $productCategory = ProductCategory::spectacle()->where('map_id', ProductCategory::PRODUCT_HIGH_BAY_LIGHT)->get('id');
-        $products = Product::spectacle()->whereIn('cat_id', array_values($productCategory->toArray()))->limit(8)->get();
-        $conpany_news = Article::spectacle()->where('map_id', Article::ARTICLE_COMPANY_NEWS)->limit(3)->get();
-        $news = Article::spectacle()->where('map_id', Article::ARTICLE_INDUSTRY_NEWS)->limit(3)->get();
-        $answers = Article::spectacle()->where('map_id', Article::ARTICLE_Q_AND_A)->limit(10)->get();
-        $cases = Article::spectacle()->where('map_id', Article::ARTICLE_CASES)->get();
+
+        $carousels = $carouselServiceImpl->queryAll($this->domain);
+
+        $productCategory = $categoryServiceImpl->queryAll($this->productType);
+
+        $products = $productServiceImpl->queryLimit(array_values($productCategory->toArray()), 8);
+
+        $conpany_news = $articleServiceImpl->queryLimit($this->domain, 3, Article::ARTICLE_COMPANY_NEWS);
+
+        $news = $articleServiceImpl->queryLimit($this->domain, 3, Article::ARTICLE_INDUSTRY_NEWS);
+
+        $answers = $articleServiceImpl->queryLimit($this->domain, 10, Article::ARTICLE_Q_AND_A);
+
+        $cases = $articleServiceImpl->queryLimit($this->domain, 6, Article::ARTICLE_CASES);
+
         return view('avnaled.index', array_merge(
             $this->SEOConfig['index'],
             compact('carousels', 'products', 'articles',

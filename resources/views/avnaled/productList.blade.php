@@ -16,7 +16,7 @@
 
 
 <div class="page_banner">
-    @if($poster)
+    @if($poster->exists)
         <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
     @else
         <img src="/avnaled/img/5795e24f6673c.jpg" alt="工矿灯品牌">

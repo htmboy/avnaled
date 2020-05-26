@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Backstage;
 
-use App\Http\Services\CarouselService;
+use App\Http\Services\CarouselServiceImpl;
 use App\Models\Carousel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -20,7 +20,7 @@ class CarouselController extends Controller
         return view('backstage.carousel.carouselAdd');
     }
 
-    public function store(Request $request, CarouselService $carouselService)
+    public function store(Request $request, CarouselServiceImpl $carouselService)
     {
         $carouselService->store($request);
         return redirect()->route('carousel.index');
@@ -32,7 +32,7 @@ class CarouselController extends Controller
         return view('backstage.carousel.carouselEdit', compact('carousel'));
     }
 
-    public function update(Carousel $carousel, Request $request, CarouselService $carouselService)
+    public function update(Carousel $carousel, Request $request, CarouselServiceImpl $carouselService)
     {
         $carouselService->update($carousel, $request);
         return redirect()->route('carousel.index');
