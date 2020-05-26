@@ -127,7 +127,7 @@
       <dl>
         <dt>
           <a href="{{route('avnaled.pro_detail', ['product' => $product->id])}}" target="_blank">
-            <img src="/storage/{{$product->thumbnail}}" alt="{{$product->title}}"/>
+            <img src="/storage/{{$product->thumbnail}}" alt="{{$product->seo_keywords}}"/>
           </a>
         </dt>
         <dd>
@@ -170,7 +170,7 @@
       <dl>
         <dt>
           <a href="{{route('avnaled.art_detail', ['article' => $new->id])}}" target="_blank">
-            <img src="/storage/{{$new->thumbnail}}" style="display: block;">
+            <img src="/storage/{{$new->thumbnail}}" alt="{{$new->seo_keywords}}" style="display: block;">
           </a>
         </dt>
         <dd>
@@ -198,7 +198,7 @@
       <dl>
         <dt>
           <a href="{{route('avnaled.art_detail', ['article' => $conpany_new->id])}}" target="_blank">
-            <img src="/storage/{{$conpany_new->thumbnail}}" title="{{$conpany_new->title}}" style="display: block;">
+            <img src="/storage/{{$conpany_new->thumbnail}}" title="{{$conpany_new->title}}" alt="{{$conpany_new->seo_keywords}}" style="display: block;">
           </a>
         </dt>
         <dd>

@@ -20,4 +20,5 @@ Route::group([
     $router->resource('article-categories', 'ArticleCategoryController');
     $router->resource('links', 'LinkController');
     $router->resource('search-words', 'SearchWordController');
+    $router->resource('theme-posters', 'ThemePosterController');
 });

@@ -3,6 +3,7 @@
 Route::prefix('pok')->group(function(){
 
     Route::get('/index.html', 'Pok\IndexController@index')->name('pok.index');
+    Route::get('', 'Pok\IndexController@index');
     Route::get('/cases.html', 'Pok\CasesController@cases')->name('pok.cases');
     Route::get('/contact.html', 'Pok\ContactController@contact')->name('pok.contact');
     Route::get('/history.html', 'Pok\HistoryController@history')->name('pok.history');

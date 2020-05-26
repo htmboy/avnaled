@@ -19,7 +19,7 @@
         .news_random { margin:25px auto 0;}
         .new-s .latest_dl { float:left; width:300px; padding:0; height:150px; position:relative; overflow:hidden;}
         .new-s .latest_dl a { display:block; height:100%; width:100%; float:left;}
-        .new-s .latest_dl img { width:100%; height:150px;}
+        .new-s .latest_dl img { width:100%;position: absolute;top: -80px;}
         .new-s .latest_dl span { width:100%; height:30px; line-height:30px; position:absolute; left:0; top:120px; background:rgba(0,0,0,0.7); display:block; font:12px 'Microsoft  YaHei'; color:#fff; transition:all 0.3s;}
         .new-s .latest_dl span p { width:100%; height:30px; line-height:30px; text-align:center; font-size:14px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
         .new-s .latest_dl span em { font-style:normal; line-height:20px; width:94%; margin:10px 3%; max-height:100px; float:left; overflow:hidden; text-index:2em;}
@@ -38,7 +38,11 @@
 
 
 <div class="page_banner">
-    <img src="/avnaled/img/5795e2caca5c5.jpg">
+    @if($poster)
+        <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
+    @else
+        <img src="/avnaled/img/5795e2caca5c5.jpg" alt="工矿灯品牌">
+    @endif
 </div>
 <!--banner-bar-->
 @include('avnaled.common.search')

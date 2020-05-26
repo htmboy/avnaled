@@ -21,7 +21,13 @@
 <body>
 @include('avnaled.common.header')
 
-<div class="page_banner"></div>
+<div class="page_banner">
+    @if($poster)
+        <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
+    @else
+        <img src="/avnaled/img/5795e3e9ce74a.jpg" alt="工矿灯品牌">
+    @endif
+</div>
 <!--banner-bar-->
 @include('avnaled.common.search')
 <!--page-search-->

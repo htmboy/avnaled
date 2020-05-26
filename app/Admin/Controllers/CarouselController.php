@@ -65,7 +65,7 @@ class CarouselController extends AdminController
         $form->select('domain_id')->options(DomainConfig::$domainMap)->rules('required|max:80');
         $form->text('title')->rules('required|max:80');
         $form->text('alt')->rules('required|max:80');
-        $form->image('site')->uniqueName()->rules('required|max:100');
+        $form->image('site', '图片尺寸 1920*527')->uniqueName()->rules('required|max:150')->resize(1920, 527);
         $form->url('link')->rules('required|max:100');
         $form->switch('is_show');
         $form->number('sort')->default(Carousel::count() + 1)->rules('required');

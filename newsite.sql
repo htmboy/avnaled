@@ -63,6 +63,7 @@ create table aoo_product(
 	seo_description varchar(255) not null,
 	title varchar(255) not null,
 	thumbnail varchar(255) not null,
+	thumbnail_vertical varchar(255) not null,
 	`number` varchar(255) not null,
 	watts varchar(20) not null,
 	size varchar(255) not null,
@@ -132,6 +133,7 @@ create table aoo_article(
 	seo_description varchar(255) not null,
 	title varchar(255) not null,
 	thumbnail varchar(255) not null,
+	thumbnail_vertical varchar(255) not null,
 	author varchar(255) not null,
 	clicks tinyint unsigned not null,
 	content longtext not null,
@@ -155,8 +157,19 @@ create table aoo_search_word(
 )engine=myisam default charset=utf8;
 
 
-
-
+create table aoo_theme_poster(
+	 id tinyint unsigned not null primary key auto_increment,
+	 domain_id tinyint unsigned not null,
+	 type tinyint unsigned not null,
+	 type_id tinyint unsigned not null,
+	 title varchar(255) not null,
+	 alt varchar(255) not null,
+	 site varchar(255) not null,
+	 link varchar(255),
+	 created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+	 updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	 is_show tinyint unsigned not null default 0
+)engine=myisam default charset=utf8;
 
 
 -- 文章图表

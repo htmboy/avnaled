@@ -2,7 +2,7 @@
 
 Route::prefix('avnaled')->group(function(){
 
-    Route::get('/', 'Avnaled\IndexController@index');
+    Route::get('', 'Avnaled\IndexController@index');
     Route::get('index.html', 'Avnaled\IndexController@index')->name('avnaled.index');
     Route::get('cases.html', 'Avnaled\CasesController@cases')->name('avnaled.cases');
     Route::get('contact.html', 'Avnaled\ContactController@contact')->name('avnaled.contact');

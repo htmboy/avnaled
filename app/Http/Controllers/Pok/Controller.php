@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Pok;
 
+use App\Common\DomainConfig;
+use App\Models\Article;
+use App\Models\ThemePoster;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -15,6 +18,7 @@ class Controller extends BaseController
 
     public function __construct()
     {
+
         $this->SEOConfig = (include_once app_path('Common/SEOConfig.php'))['pok'];
     }
 

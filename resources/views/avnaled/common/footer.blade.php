@@ -22,13 +22,13 @@
             <div class="foot_code" style="width:490px">
                 <ul class="code">
                     <li>
-                        <img src="/avnaled/img/indimg30.gif" width="80" height="80" align="" />
+                        <img src="/avnaled/img/indimg30.jpg" width="80" height="80" align="" />
                         <em>微信公众号</em>
                     </li>
-                    <li>
-                        <img src="/avnaled/img/indimg30.gif" width="80" height="80" align="" />
-                        <em>手机客户端</em>
-                    </li>
+{{--                    <li>--}}
+{{--                        <img src="/avnaled/img/indimg30.gif" width="80" height="80" align="" />--}}
+{{--                        <em>手机客户端</em>--}}
+{{--                    </li>--}}
                 </ul>
                 <p>服务热线：400 6666 804</p>
                 <p class="p02">咨询电话：18923117087</p>

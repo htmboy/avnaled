@@ -25,7 +25,7 @@
     <div class="news_random news_random_ new-s">
         <dl>
             <dt>
-                <a href="{{route('avnaled.art_detail', ['article' => $article_recommends->first()->id])}}" target="_blank">
+                <a href="{{route('avnaled.art_detail', ['article' => $article_recommends->first()->id])}}" target="_blank" style="display: block;width: 300px;height: 162px;overflow: hidden">
                     <img src="/storage/{{$article_recommends->first()->thumbnail}}" alt="{{$article_recommends->first()->title}}" />
                     <p>{{$article_recommends->first()->title}}</p>
                 </a>

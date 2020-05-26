@@ -33,7 +33,7 @@
             <p>公司地址：广东省佛山市南海区罗村华南国际LED电光源灯饰城C区8路36~38栋-澳镭照明</p>
             <p><a href="http://www.beian.miit.gov.cn/" rel="nofollow" target="_blank">粤ICP备20551857号</a></p>
         </div>
-        <div class="footer-ewm"> <div class="img-center"><img src="/pok/images/wechat.gif" /></div>微信扫一扫 </div>
+        <div class="footer-ewm"> <div class="img-center"><img src="/pok/images/wechat.jpg" /></div>微信扫一扫 </div>
     </div>
 </div>
 

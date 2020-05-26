@@ -79,9 +79,9 @@ class ProductGalleryController extends AdminController
         $form = new Form(new ProductGallery());
         $proId = $this->request->get('pro_id');
         $form->text('pro_id')->default($proId)->rules('required')->readonly();
-        $form->image('gallery', '图片')->uniqueName()->rules('required|max:100', [
+        $form->image('gallery', '图片比例3:2')->uniqueName()->rules('required|max:100', [
             'required' => '必须上传图片'
-        ])->resize(400, 300);
+        ])->resize(450, 300);
         $form->switch('is_show', __('Is show'));
         $form->text('sort', __('Sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1)->rules('required', [
             'required' => '排序不能为空'

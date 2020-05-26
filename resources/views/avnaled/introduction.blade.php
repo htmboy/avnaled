@@ -15,7 +15,11 @@
 @include('avnaled.common.header')
 
 <div class="page_banner">
-    <img src="/avnaled/img/banner4.jpg" width="100%">
+    @if($poster)
+        <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
+    @else
+        <img src="/avnaled/img/banner4.jpg" alt="工矿灯品牌">
+    @endif
 </div>
 <!--banner-bar-->
 

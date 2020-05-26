@@ -10,19 +10,26 @@
     <link href="/avnaled/css/base.css" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" />
     <script src="/avnaled/js/index.js"></script>
-    <script type="text/javascript" src="https://api.map.baidu.com/api?type=webgl&v=1.0&ak=LFFflyLuEDdsbSs1gh4GEN38DXznzKUQ"></script>
 </head>
 <body>
 @include('avnaled.common.header')
 
-<div class="page_banner"><img src="/avnaled/img/banner4.jpg" width="100%"></div>
+<div class="page_banner">
+
+    @if($poster)
+        <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
+    @else
+        <img src="/avnaled/img/banner4.jpg" alt="工矿灯品牌">
+    @endif
+</div>
 <!--banner-bar-->
 
 
 @include('avnaled.common.pageMenu')
 <!--pagemenu-->
 <div class="content">
-    <div class="container info p45"><p>
+    <div class="container info p45">
+        <p>
             <span style="font-size:16px;"><strong> 广东澳镭照明电器有限公司</strong></span>
         </p>
         <p>
@@ -48,41 +55,27 @@
 
         </p>
         <p>
-            <script type="text/javascript">
-                // GL版命名空间为BMapGL
-                // 按住鼠标右键，修改倾斜角和角度
-                var map = new BMapGL.Map("allmap");    // 创建Map实例
-                map.centerAndZoom(new BMapGL.Point(116.280190, 40.049191), 19);  // 初始化地图,设置中心点坐标和地图级别
-                map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-                map.setHeading(64.5);
-                map.setTilt(73);
-            </script>
+
         </p>
         <p>
-	<span style="font-size:16px;">
-	<table style="width:100%;" cellpadding="2" cellspacing="0" align="left" border="0" class="ke-zeroborder">
-		<tbody>
-			<tr>
-				<td>
-					<span style="color:#666666;font-size:14px;white-space:normal;">微信公众平台</span><span style="color:#666666;font-size:14px;white-space:normal;">：</span><br />
-            </td>
-        <td>
-            <span style="color:#666666;font-size:14px;white-space:normal;">手机客户端：</span><br />
-        </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="/avnaled/img/indimg30.gif" width="150" height="150" style="font-size:16px;white-space:normal;" /><br />
-            </td>
-            <td>
-                <a href="http://blog.sina.com.cn/daheqi" target="_blank" ref="nofollow" style="font-size:16px;white-space:normal;"><img src="/avnaled/img/indimg30.gif" alt="水性漆加盟" width="150" height="150" title="水性漆加盟" /></a><br />
-            </td>
-        </tr>
-        </tbody>
-        </table>
-        <br />
-        <br />
-        </span>
+            <span style="font-size:16px;">
+                <table style="width:100%" cellpadding="2" cellspacing="0" align="left" border="0" class="ke-zeroborder">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span style="color:#666666;font-size:14px;white-space:normal;">微信公众平台</span><span style="color:#666666;font-size:14px;white-space:normal;">：</span><br />
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="/avnaled/img/indimg30.jpg" width="150" height="150" style="font-size:16px;white-space:normal;" /><br />
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table><br /><br />
+            </span>
         </p>
         <p>
             <br />
@@ -94,7 +87,8 @@
             html,body{margin:0;padding:0;}
             .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
             .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-        </style></div>
+        </style>
+    </div>
 </div>
 <!--content-->
 

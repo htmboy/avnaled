@@ -27,7 +27,13 @@
 
 @include('pok.common.search')
 
-<div class="banner-sub img-center"> <img src="/pok/images/neiye.jpg"> </div>
+<div class="banner-sub img-center">
+    @if($poster)
+        <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}" title="{{$poster->title}}">
+    @else
+        <img src="/pok/images/neiye.jpg">
+    @endif
+</div>
 
 <div class="container clearfix">
     <div class="ct2-sd">

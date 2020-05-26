@@ -15,7 +15,11 @@
 @include('avnaled.common.header')
 
 <div class="page_banner">
+    @if($poster)
+    <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
+    @else
     <img src="/avnaled/img/5795e3e9ce74a.jpg" alt="工矿灯品牌">
+    @endif
 </div>
 <!--banner-bar-->
 @include('avnaled.common.search')
@@ -29,7 +33,7 @@
                 <div class="new3_con">
                     <div class="new3_img">
                         <a href="{{route('avnaled.art_detail', ['article' => $article->id])}}" target="_blank">
-                            <img src="/storage/{{$article->thumbnail}}">
+                            <img src="/storage/{{$article->thumbnail_vertical}}">
                         </a>
                     </div>
                     <div class="new3_name">

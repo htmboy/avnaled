@@ -103,7 +103,8 @@ class ProductsController extends AdminController
             $form->text('seo_keywords')->rules('required|max:80');
             $form->text('seo_description')->rules('required|max:80');
             $form->text('title')->rules('required|max:80');
-            $form->image('thumbnail')->uniqueName()->resize(400, 300)->rules('required|max:100');
+            $form->image('thumbnail', '图片比例 3:2(横)')->rules('required|max:100')->resize(450, 300);
+            $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->rules('required|max:100')->resize(300, 400);
             $form->switch('is_show', __('Is show'));
             $form->number('sort')->default(Product::count() + 1)->rules('required');
         });

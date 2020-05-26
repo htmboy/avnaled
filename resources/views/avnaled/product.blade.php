@@ -15,7 +15,13 @@
 @include('avnaled.common.header')
 
 
-<div class="page_banner"><img src="/avnaled/img/5795e24f6673c.jpg"></div>
+<div class="page_banner">
+    @if($poster)
+        <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
+    @else
+        <img src="/avnaled/img/5795e24f6673c.jpg" alt="工矿灯品牌">
+    @endif
+</div>
 <!--banner-bar-->
 @include('avnaled.common.search')
 <!--page-search-->
@@ -29,7 +35,7 @@
                 <div class="pro_box">
                     <div class="pro_img">
                         <a href="{{route('avnaled.pro_detail', ['product' => $product->id])}}" target="_blank">
-                            <img src="/storage/{{$product->thumbnail}}" alt="封闭底漆 水性木器漆">
+                            <img src="/storage/{{$product->thumbnail}}" alt="{{$product->seo_keywords}}">
                         </a>
                     </div>
                     <div class="pro_name">

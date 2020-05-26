@@ -15,7 +15,11 @@
 @include('avnaled.common.header')
 
 <div class="page_banner">
-    <img src="/avnaled/img/5795e3e9ce74a.jpg" alt="工矿灯品牌">
+    @if($poster)
+        <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
+    @else
+        <img src="/avnaled/img/5795e3e9ce74a.jpg" alt="工矿灯品牌">
+    @endif
 </div>
 <!--banner-bar-->
 @include('avnaled.common.search')
@@ -28,7 +32,7 @@
                 @foreach($articles as $article)
                 <div class="new2_con">
                     <a href="{{route('avnaled.art_detail', ['article' => $article->id])}}" target="_blank" class="new2_img">
-                        <img src="/storage/{{$article->thumbnail}}" width="150" alt="{{$article->title}}">
+                        <img src="/storage/{{$article->thumbnail_vertical}}" width="150" alt="{{$article->title}}">
                     </a>
                     <div class="new2_txt">
                         <h2><a href="{{route('avnaled.art_detail', ['article' => $article->id])}}" target="_blank">{{$article->title}}</a></h2>
