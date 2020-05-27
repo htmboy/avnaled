@@ -88,10 +88,24 @@
             <div class="content-body">
                 {!!$product->content!!}
             </div>
-            <div class="eyou-tag">标签：<a href='https://www.bxgty.com/'>304L不锈钢管</a> <a href='https://www.bxgty.com/'>304L不锈钢方管</a> </div>
+            <div class="eyou-tag">标签：{{$product->seo_keywords}} </div>
             <ul class="content-exp">
-                <li><span>上一篇：</span><a href='/products/lsfg.html'>不锈钢拉丝方管</a></li>
-                <li><span>下一篇：</span><a href='/products/gyhg.html'>不锈钢工业焊管</a></li>
+                <li><span>上一篇：</span>
+                @if($product->previousItem())
+
+                    <a href='{{route('pok.pro_detail', ['article' => $product->previousItem()->id])}}'>{{$product->previousItem()->title}}</a>
+                    @else
+                        没有了
+                    @endif
+                </li>
+
+                <li><span>下一篇：</span>
+                    @if($product->nextItem())
+                    <a href='{{route('pok.pro_detail', ['article' => $product->nextItem()->id])}}'>{{$product->nextItem()->title}}</a>
+                    @else
+                        没有了
+                    @endif
+                </li>
             </ul>
         </div>
 

@@ -31,13 +31,13 @@ class ArticlesController extends AdminController
         $grid = new Grid(new Article());
         $grid->filter(function ($filter){
             $filter->disableIdFilter();
-            $filter->equal('domain_id')->select(DomainConfig::$domainMap);
+            $filter->equal('domain_id')->select(DomainConfig::getDomainMap());
             $filter->equal('map_id')->select(Article::getCategoryMap());
         });
         $grid->model()->orderByDesc('sort');
         $grid->column('id', __('Id'));
-        $grid->column('domain_id')->editable('select', DomainConfig::$domainMap);
-        $grid->column('map_id', __('map_id'))->editable('select', DomainConfig::$domainMap);
+        $grid->column('domain_id')->editable('select', DomainConfig::getDomainMap());
+        $grid->column('map_id', __('map_id'))->editable('select', DomainConfig::getDomainMap());
         $grid->column('title', __('Title'));
         $grid->column('thumbnail', '图片1')->image('/storage', 90);
         $grid->column('thumbnail_vertical', '图片2(竖)')->image('/storage', 50);
@@ -94,7 +94,7 @@ class ArticlesController extends AdminController
     {
         $form = new Form(new Article());
 
-        $form->select('domain_id')->options(DomainConfig::$domainMap)->rules('required');
+        $form->select('domain_id')->options(DomainConfig::getDomainMap())->rules('required');
         $form->select('map_id')->options(Article::getCategoryMap())->rules('required');
         $form->text('seo_title', __('Seo title'))->rules('required|max:40');
         $form->text('seo_keywords', __('Seo keywords'))->rules('required|max:40');

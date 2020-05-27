@@ -29,11 +29,11 @@ class SearchWordController extends AdminController
         $grid = new Grid(new SearchWord());
         $grid->filter(function ($filter){
             $filter->disableIdFilter();
-            $filter->equal('domain_id')->select(DomainConfig::$domainMap);
+            $filter->equal('domain_id')->select(DomainConfig::getDomainMap());
         });
         $grid->model()->orderByDesc('sort');
         $grid->column('id', __('Id'));
-        $grid->column('domain_id', __('Domain id'))->editable('select', DomainConfig::$domainMap);
+        $grid->column('domain_id', __('Domain id'))->editable('select', DomainConfig::getDomainMap());
         $grid->column('keyword', __('Keyword'));
         $grid->column('link', __('Link'));
         $grid->column('created_at', __('Created at'));
@@ -79,7 +79,7 @@ class SearchWordController extends AdminController
     {
         $form = new Form(new SearchWord());
 
-        $form->select('domain_id', __('Domain id'))->options(DomainConfig::$domainMap)->rules('required');
+        $form->select('domain_id', __('Domain id'))->options(DomainConfig::getDomainMap())->rules('required');
         $form->text('keyword', __('Keyword'))->rules('required|max:100');
         $form->url('link', __('Link'));
         $form->switch('is_show', __('Is show'));

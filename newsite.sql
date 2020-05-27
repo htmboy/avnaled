@@ -172,6 +172,21 @@ create table aoo_theme_poster(
 )engine=myisam default charset=utf8;
 
 
+create table aoo_config(
+	 id tinyint unsigned not null primary key auto_increment,
+	 `key` varchar(255) not null,
+	 value json not null,
+	 created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+	 updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+)engine=myisam default charset=utf8;
+
+# create table aoo_site_group(
+#    id tinyint unsigned not null primary key auto_increment,
+#    name varchar(255) not null,
+#    domain varchar(255) not null,
+#    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+#    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+# )
 -- 文章图表
 # create table aoo_article_cover(
 # 	id tinyint unsigned not null primary key auto_increment,

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Avnaled;
 
 use App\Common\DomainConfig;
+use App\Models\Config;
 use App\Models\ProductCategory;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
@@ -19,7 +20,7 @@ class Controller extends BaseController
 
     public function __construct()
     {
-        $this->SEOConfig = (include_once app_path('Common/SEOConfig.php'))['avnaled'];
+        $this->SEOConfig = json_decode(Config::where('key', 'seo.avnaled')->first()->value, true);
         $this->domain = DomainConfig::DOMAIN_AVNALED;
         $this->productType = ProductCategory::PRODUCT_HIGH_BAY_LIGHT;
     }

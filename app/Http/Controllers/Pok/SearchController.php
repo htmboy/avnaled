@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Pok;
 
 use App\Common\DomainConfig;
+use App\Http\Services\Implement\ArticleServiceImpl;
+use App\Http\Services\Implement\ThemePosterServiceImpl;
 use App\Models\Article;
 use App\Models\ThemePoster;
 use Illuminate\Http\Request;
@@ -10,16 +12,16 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
 
-    public function search(Request $request)
+    public function search(Request $request, ThemePosterServiceImpl $posterServiceImpl,
+                           ArticleServiceImpl $articleServiceImpl)
     {
 
-        $poster = ThemePoster::where([
-            ['is_show', 1], ['type', ThemePoster::TYPE_PRODUCT], ['type_id', 0], ['domain_id', DomainConfig::DOMAIN_POK]
-        ])->first();
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, 0, $this->domain);
+
         $word = $request->get('word');
 
-        $articles = Article::spectacle()->whereIn('domain_id', [DomainConfig::DOMAIN_ALL, DomainConfig::DOMAIN_POK])
-            ->where('title', 'like', '%'.$word.'%')->orWhere('content', 'like', '%'.$word.'%')->paginate(8);
+        $articles = $articleServiceImpl->querySearch($word, 8, $this->domain);
+
         return view('pok.searchList', array_merge(
             $this->SEOConfig['search'],
             compact( 'articles', 'word', 'poster')

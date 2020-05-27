@@ -5,6 +5,7 @@ namespace App\Http\ViewComposers;
 
 
 use App\Common\DomainConfig;
+use App\Http\Services\Implement\SearchWordServiceImpl;
 use App\Models\SearchWord;
 use Illuminate\View\View;
 
@@ -12,7 +13,8 @@ class PokSearchComposer
 {
     public function compose(View $view)
     {
-        $words = SearchWord::spectacle()->whereIn('domain_id', [DomainConfig::DOMAIN_ALL, DomainConfig::DOMAIN_POK])->limit(6)->get();
+        $words = (new SearchWordServiceImpl)->queryAll(DomainConfig::DOMAIN_POK, 6);
+
         $view->with(compact('words'));
 
     }

@@ -4,6 +4,7 @@
 namespace App\Http\ViewComposers;
 
 
+use App\Http\Services\Implement\ProductCategoryServiceImpl;
 use App\Models\Article;
 use App\Models\Product;
 use App\Models\ProductCategory;
@@ -13,7 +14,7 @@ class PokSidebarShowComposer
 {
     public function compose(View $view)
     {
-        $productCategories = ProductCategory::spectacle()->where('map_id', ProductCategory::PRODUCT_FLOODLIGHT)->get();
+        $productCategories = (new ProductCategoryServiceImpl)->queryAll(ProductCategory::PRODUCT_FLOODLIGHT);
 
         $view->with(compact('productCategories'));
 

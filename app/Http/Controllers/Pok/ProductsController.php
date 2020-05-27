@@ -2,43 +2,50 @@
 
 namespace App\Http\Controllers\Pok;
 
-use App\Common\DomainConfig;
+use App\Http\Services\Implement\ProductCategoryServiceImpl;
+use App\Http\Services\Implement\ProductServiceImpl;
+use App\Http\Services\Implement\ThemePosterServiceImpl;
 use App\Models\Product;
-use App\Models\ProductCategory;
 use App\Models\ThemePoster;
 
 class ProductsController extends Controller
 {
 
-    public function product(){
-        $poster = ThemePoster::where([
-            ['is_show', 1], ['type', ThemePoster::TYPE_PRODUCT], ['type_id', 0], ['domain_id', DomainConfig::DOMAIN_POK]
-        ])->first();
-        $productCategories = ProductCategory::where('map_id', ProductCategory::PRODUCT_FLOODLIGHT)->get('id');
-        $products = Product::spectacle()->whereIn('cat_id', array_values($productCategories->toArray()))->paginate(10);
+    public function product(ThemePosterServiceImpl $posterServiceImpl,
+                            ProductCategoryServiceImpl $productCategoryServiceImpl,
+                            ProductServiceImpl $productServiceImpl)
+    {
+
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, 0, $this->productType);
+
+        $productCategories = $productCategoryServiceImpl->queryAll($this->productType);
+
+        $products = $productServiceImpl->queryPaginate(array_values($productCategories->toArray()), 10);
+
         return view('pok.products', array_merge(
             $this->SEOConfig['product'],
             compact('products', 'poster')
         ));
     }
 
-    public function productList($id)
+    public function productList($id, ThemePosterServiceImpl $posterServiceImpl, ProductServiceImpl $productServiceImpl)
     {
-        $poster = ThemePoster::where([
-            ['is_show', 1], ['type', ThemePoster::TYPE_PRODUCT], ['type_id', $id], ['domain_id', DomainConfig::DOMAIN_POK]
-        ])->first();
-        $products = Product::spectacle()->where('cat_id', $id)->paginate(12);
+
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $id, $this->productType);
+
+        $products = $productServiceImpl->queryPaginate([$id], 12);
+
         return view('pok.productList', array_merge(
             $this->SEOConfig['productList'],
             compact('products', 'poster')
         ));
     }
 
-    public function productDetail(Product $product)
+    public function productDetail(Product $product,
+                                  ThemePosterServiceImpl $posterServiceImpl)
     {
-        $poster = ThemePoster::where([
-            ['is_show', 1], ['type', ThemePoster::TYPE_PRODUCT], ['type_id', $product->cat_id], ['domain_id', DomainConfig::DOMAIN_POK]
-        ])->first();
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $product->cat_id, $this->productType);
+
         return view('pok.productDetail', compact('product', 'poster'));
     }
 

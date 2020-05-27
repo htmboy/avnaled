@@ -3,18 +3,21 @@
 namespace App\Http\Controllers\Pok;
 
 use App\Common\DomainConfig;
+use App\Http\Services\Implement\ArticleServiceImpl;
+use App\Http\Services\Implement\ThemePosterServiceImpl;
 use App\Models\Article;
 use App\Models\ThemePoster;
 
 class CasesController extends Controller
 {
 
-    public function cases()
+    public function cases(ArticleServiceImpl $articleServiceImpl, ThemePosterServiceImpl $posterServiceImpl)
     {
-        $poster = ThemePoster::where([
-            ['is_show', 1], ['type', ThemePoster::TYPE_ARTICLE], ['type_id', Article::ARTICLE_CASES], ['domain_id', DomainConfig::DOMAIN_POK]
-        ])->first();
-        $articles = Article::spectacle()->where('map_id', Article::ARTICLE_CASES)->whereIn('domain_id', [DomainConfig::DOMAIN_ALL, DomainConfig::DOMAIN_POK])->paginate(10);
+
+        $articles = $articleServiceImpl->queryPaginate($this->domain, 10, Article::ARTICLE_CASES);
+
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_ARTICLE, Article::ARTICLE_CASES, $this->domain);
+
         return view('pok.casesList', array_merge(
             $this->SEOConfig['cases'],
             compact('articles', 'poster')

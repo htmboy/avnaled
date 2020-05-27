@@ -14,8 +14,7 @@ class PokNewsMenuComposer
 {
     public function compose(View $view)
     {
-        $articleCategories = Article::$articleMap;
-        $view->with(compact('articleCategories'));
+        $view->with(['articleCategories' => Article::$articleMap]);
     }
 
 }

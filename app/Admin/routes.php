@@ -21,4 +21,5 @@ Route::group([
     $router->resource('links', 'LinkController');
     $router->resource('search-words', 'SearchWordController');
     $router->resource('theme-posters', 'ThemePosterController');
+    $router->resource('configs', 'ConfigController');
 });

@@ -17,4 +17,5 @@ interface ProductService
     public function queryLimit(Array $map_id, int $limit): Collection;
 
     public function queryPaginate(Array $cat_id, int $limit):LengthAwarePaginator;
+
 }

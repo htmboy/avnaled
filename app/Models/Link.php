@@ -10,8 +10,4 @@ class Link extends BaseModel
 {
     protected $table = 'aoo_link';
 
-    public static function getDomainMap()
-    {
-        return DomainConfig::$domainMap;
-    }
 }

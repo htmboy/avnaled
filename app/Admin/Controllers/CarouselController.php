@@ -30,10 +30,10 @@ class CarouselController extends AdminController
         $grid = new Grid(new Carousel());
         $grid->filter(function ($filter){
             $filter->disableIdFilter();
-            $filter->equal('domain_id')->select(DomainConfig::$domainMap);
+            $filter->equal('domain_id')->select(DomainConfig::getDomainMap());
         });
         $grid->model()->orderBy('sort', 'desc');
-        $grid->column('domain_id')->editable('select', DomainConfig::$domainMap);
+        $grid->column('domain_id')->editable('select', DomainConfig::getDomainMap());
         $grid->column('title');
         $grid->column('site')->image('/storage');
         $grid->column('link')->link();
@@ -62,7 +62,7 @@ class CarouselController extends AdminController
     {
         $form = new Form(new Carousel());
         $form->model()->orderByDesc('sort');
-        $form->select('domain_id')->options(DomainConfig::$domainMap)->rules('required|max:80');
+        $form->select('domain_id')->options(DomainConfig::getDomainMap())->rules('required|max:80');
         $form->text('title')->rules('required|max:80');
         $form->text('alt')->rules('required|max:80');
         $form->image('site', '图片尺寸 1920*527')->uniqueName()->rules('required|max:150')->resize(1920, 527);

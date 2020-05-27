@@ -27,4 +27,23 @@ class Product extends BaseModel
     {
         return $this->hasMany('App\Models\ProductGallery', 'pro_id', 'id');
     }
+
+    public function previousItem()
+    {
+
+        return self::select(['title', 'id'])->where([
+            ['is_show', 1],
+            ['cat_id', '=', $this->cat_id],
+            ['sort', '<', $this->sort],
+        ])->orderByDesc('sort')->first();
+    }
+
+    public function nextItem()
+    {
+        return self::select(['title', 'id'])->where([
+            ['is_show', 1],
+            ['cat_id', '=', $this->cat_id],
+            ['sort', '>', $this->sort],
+        ])->orderBy('sort')->first();
+    }
 }

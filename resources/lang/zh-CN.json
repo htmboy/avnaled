@@ -27,5 +27,16 @@
   "Cat id": "类目",
   "Seo keywords": "SEO 关键词",
   "Seo description": "SEO 描述",
-  "Seo title": "SEO 标题"
+  "Seo title": "SEO 标题",
+
+  "index":"首页",
+  "cases": "案例",
+  "contact": "联系我们",
+  "history": "历史",
+  "introduction": "简介",
+  "product": "产品中心",
+  "productList": "产品列表",
+  "article": "新闻中心",
+  "articleList": "新闻列表",
+  "search": "搜索页"
 }
