@@ -25,6 +25,11 @@ class ProductServiceImpl implements ProductService
 
     public function queryPaginate(array $cat_id, int $limit): LengthAwarePaginator
     {
-        return Product::whereIn('cat_id', $cat_id)->orderByDesc('cat_sort')->paginate($limit);
+        return Product::where('is_show', 1)->whereIn('cat_id', $cat_id)->orderByDesc('cat_sort')->paginate($limit);
+    }
+
+    public function queryAllPaginate(int $limit): LengthAwarePaginator
+    {
+        return Product::where('is_show', 1)->orderByDesc('cat_sort')->paginate($limit);
     }
 }

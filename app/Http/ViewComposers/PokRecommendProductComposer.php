@@ -9,6 +9,7 @@ use App\Http\Services\Implement\ArticleServiceImpl;
 use App\Http\Services\Implement\ProductCategoryServiceImpl;
 use App\Http\Services\Implement\ProductServiceImpl;
 use App\Models\Article;
+use App\Models\Config;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use Illuminate\View\View;
@@ -37,7 +38,9 @@ class PokRecommendProductComposer
 
         $article_recommends = $this->articleServiceImpl->queryLimit(DomainConfig::DOMAIN_POK, 10);
 
-        $view->with(compact('product_recommends', 'article_recommends'));
+        $settings = json_decode(Config::where('key', 'setting')->first()->value, true);
+
+        $view->with(compact('product_recommends', 'article_recommends', 'settings'));
 
     }
 

@@ -26,7 +26,7 @@ class GlobalSetting extends Form
      */
     public function handle(Request $request)
     {
-        dd($request->input());
+//        dd($request->input());
         $config = Config::where('key', 'setting')->first();
 
         if($config){
@@ -55,11 +55,10 @@ class GlobalSetting extends Form
 
         $this->text('qq',  'qq号码')->rules('required');
         $this->text('mobile',  '手机号码')->rules('required');
-        $this->text('400',  '400号码')->rules('required');
-        $this->text('tell',  '固话号码')->rules('required');
+        $this->text('free',  '400号码')->rules('required');
+        $this->text('tel',  '固话号码')->rules('required');
         $this->email('email',  '邮箱地址')->rules('required');
         $this->text('address',  '公司地址')->rules('required');
-//        $this->image('wechat',  '微信二维码')->uniqueName()->rules('required');
 
     }
 
@@ -71,18 +70,21 @@ class GlobalSetting extends Form
     public function data()
     {
         $config = Config::where('key', 'setting')->first();
-        if (!$config)
+        if (!$config){
             return [];
+        }
+
+
         $data = json_decode($config->value, true);
 
         return [
-            'qq' => $data['qq'],
-            'mobile' => $data['mobile'],
-            '400' => $data['400'],
-            'tel' => $data['tel'],
-            'email' => $data['email'],
-            'address' => $data['address'],
-//            'wechat' => $data['wechat']
+            'qq' => isset($data['qq'])?$data['qq']:null,
+            'mobile' => isset($data['mobile'])?$data['mobile']:null,
+            'free' => isset($data['free'])?$data['free']:null,
+            'tel' => isset($data['tel'])?$data['tel']:null,
+            'email' => isset($data['email'])?$data['email']:null,
+            'address' => isset($data['address'])?$data['address']:null,
         ];
+
     }
 }

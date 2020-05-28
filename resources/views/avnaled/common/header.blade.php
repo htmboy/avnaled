@@ -10,10 +10,10 @@
 </div>
 
 <div class="header_m">
-    <h2><a href="/"><img src="/avnaled/img/logo.png" alt="澳镭照明工矿灯"></a></h2>
+    <h2><a href="/"><img src="/avnaled/img/logo.png" alt="led工矿灯"></a></h2>
     <h3>工业照明领域首选服务品牌<em>SINCE  2007</em></h3>
     <h4>
-        <p>免费咨询热线<em>400 6666 804</em></p>
+        <p>免费咨询热线<em>{{$settings['free']}}</em></p>
         <span>工厂车间照明专家</span>
     </h4>
 </div>

@@ -68,7 +68,7 @@
 
                 <p>我们崇尚价值，产品的性价比是价值的重要体现，我们为客户提供的是适合他们需求具有良好价值的产品。</p>
 
-                <p><img src="/pok/images/wenhua.png"></p>
+                <p><img src="/pok/images/wenhua.jpg"></p>
 
                 <br /><br />
 

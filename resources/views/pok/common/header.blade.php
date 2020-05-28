@@ -8,7 +8,7 @@
 
     <div class="container clearfix"> <a href="javascript:;" class="menu-btn"><span></span></a>
         <div class="logo img-center"><a href="{{route('pok.index')}}"><img src="/pok/images/logo.png"></a></div>
-        <div class="tel">全国咨询热线：<strong>189-2311-7087</strong></div>
+        <div class="tel">全国咨询热线：<strong>{{$settings['free']}}</strong></div>
     </div>
 
     <div class="nav">

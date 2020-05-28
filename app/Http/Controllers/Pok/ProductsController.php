@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Pok;
 use App\Http\Services\Implement\ProductCategoryServiceImpl;
 use App\Http\Services\Implement\ProductServiceImpl;
 use App\Http\Services\Implement\ThemePosterServiceImpl;
+use App\Models\Config;
 use App\Models\Product;
 use App\Models\ThemePoster;
 
@@ -18,9 +19,7 @@ class ProductsController extends Controller
 
         $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, 0, $this->productType);
 
-        $productCategories = $productCategoryServiceImpl->queryAll($this->productType);
-
-        $products = $productServiceImpl->queryPaginate(array_values($productCategories->toArray()), 10);
+        $products = $productServiceImpl->queryAllPaginate(10);
 
         return view('pok.products', array_merge(
             $this->SEOConfig['product'],
@@ -45,6 +44,7 @@ class ProductsController extends Controller
                                   ThemePosterServiceImpl $posterServiceImpl)
     {
         $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $product->cat_id, $this->productType);
+
 
         return view('pok.productDetail', compact('product', 'poster'));
     }

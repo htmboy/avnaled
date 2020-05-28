@@ -18,4 +18,6 @@ interface ProductService
 
     public function queryPaginate(Array $cat_id, int $limit):LengthAwarePaginator;
 
+    public function queryAllPaginate(int $limit):LengthAwarePaginator;
+
 }

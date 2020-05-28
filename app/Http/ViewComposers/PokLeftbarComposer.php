@@ -11,6 +11,6 @@ class PokLeftbarComposer
     public function compose(View $view)
     {
         // 使用 with 方法注入变量
-        $view->with('productCategories', (new ProductCategoryServiceImpl)->queryAll(ProductCategory::PRODUCT_FLOODLIGHT));
+        $view->with('productCategories', (new ProductCategoryServiceImpl)->queryAll()->sortByDesc('map_id'));
     }
 }

@@ -18,7 +18,7 @@
     @if($poster->exists)
         <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
     @else
-        <img src="/avnaled/img/banner4.jpg" alt="工矿灯品牌">
+        <img src="/avnaled/img/banner4.jpg" alt="{{$keywords}}">
     @endif
 </div>
 <!--banner-bar-->

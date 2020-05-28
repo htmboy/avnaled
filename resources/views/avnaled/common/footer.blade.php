@@ -30,10 +30,10 @@
 {{--                        <em>手机客户端</em>--}}
 {{--                    </li>--}}
                 </ul>
-                <p>服务热线：400 6666 804</p>
-                <p class="p02">咨询电话：18923117087</p>
-                <p class="p03">总经理信箱：755930694@qq.com</p>
-                <p class="p04">地址：广东省佛山市南海区罗村华南国际LED电光源灯饰城C区8路36~38栋</p>
+                <p>服务热线：{{$settings['free']}}</p>
+                <p class="p02">咨询电话：{{$settings['mobile']}}</p>
+                <a href="tencent://message/?uin={{$settings['qq']}}&Menu=yes"><p class="p03">QQ咨询：{{$settings['qq']}}</p></a>
+                <p class="p04">地址：{{$settings['address']}}</p>
             </div>
         </div>
         <div class="copyright">
@@ -48,7 +48,7 @@
             @endforeach
         </div>
         <div class="frilinksSubmit">
-            <a href="javascript:;" class="wap_qq">联系QQ:755930694</a>
+            <a href="javascript:;" class="wap_qq">联系QQ:{{$settings['qq']}}</a>
         </div>
     </div>
 </div>

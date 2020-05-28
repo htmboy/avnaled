@@ -41,7 +41,7 @@
     @if($poster->exists)
         <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
     @else
-        <img src="/avnaled/img/5795e2caca5c5.jpg" alt="工矿灯品牌">
+        <img src="/avnaled/img/5795e2caca5c5.jpg" alt="{{$product->seo_keywords}}">
     @endif
 </div>
 <!--banner-bar-->
@@ -107,9 +107,9 @@
                     <dd>{{$product->characteristic}}</dd>
                 </dl>
             </div>
-            <div class="pd_hotline"> <span>全国服务热线：</span><span class="font_hotline">400 6666 804</span> </div>
+            <div class="pd_hotline"> <span>全国服务热线：</span><span class="font_hotline">{{$settings['free']}}</span> </div>
             <div class="propar" style="text-align: center; padding-top: 20px;">
-                <div class="proparp"> <a href="http://wpa.qq.com/msgrd?v=3&amp;site=澳镭照明&amp;menu=yes&amp;uin=755930694" target="_blank" title="立即咨询"><img style="border: 0" src="/avnaled/img/buynowsmalls.gif" alt="立即咨询"></a> </div>
+                <div class="proparp"> <a href="http://wpa.qq.com/msgrd?v=3&amp;site=澳镭照明&amp;menu=yes&amp;uin={{$settings['qq']}}" target="_blank" title="立即咨询"><img style="border: 0" src="/avnaled/img/buynowsmalls.gif" alt="立即咨询"></a> </div>
             </div>
         </div>
     </div>

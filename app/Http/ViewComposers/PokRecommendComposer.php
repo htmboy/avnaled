@@ -30,7 +30,7 @@ class PokRecommendComposer
     public function compose(View $view)
     {
 
-        $productCategory = $this->productCategoryServiceImpl->queryAll(ProductCategory::PRODUCT_FLOODLIGHT);
+        $productCategory = (new ProductCategoryServiceImpl)->queryAll()->sortByDesc('map_id');
 
         $product_recommends = $this->productServiceImpl->queryLimit(array_values($productCategory->toArray()), 3);
 

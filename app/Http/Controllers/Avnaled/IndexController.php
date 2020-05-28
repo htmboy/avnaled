@@ -9,6 +9,7 @@ use App\Http\Services\Implement\ProductCategoryServiceImpl;
 use App\Http\Services\Implement\ProductServiceImpl;
 use App\Models\Article;
 use App\Models\Carousel;
+use App\Models\Config;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use Intervention\Image\Facades\Image;
@@ -36,10 +37,12 @@ class IndexController extends Controller
 
         $cases = $articleServiceImpl->queryLimit($this->domain, 6, Article::ARTICLE_CASES);
 
+        $settings = json_decode(Config::where('key', 'setting')->first()->value, true);
+
         return view('avnaled.index', array_merge(
             $this->SEOConfig['index'],
             compact('carousels', 'products', 'articles',
-            'conpany_news', 'news', 'answers', 'cases')
+            'conpany_news', 'news', 'answers', 'cases', 'settings')
         ));
     }
 

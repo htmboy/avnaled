@@ -19,9 +19,9 @@
     <div class="tit">联系我们</div>
     <div class="contact-sd">
         <h4>广东澳镭照明电器有限公司</h4>
-        <p>地址：广东省佛山市南海区罗村华南国际LED电光源灯饰城C区8路36~38栋-澳镭照明</p>
-        <p>Q Q：755930694</p>
-        <p>电话：189-2311-7087</p>
+        <p>地址：{{$settings['address']}}</p>
+        <p>Q Q：<a href="tencent://message/?uin={{$settings['qq']}}&Menu=yes">{{$settings['qq']}}</a></p>
+        <p>电话：{{$settings['mobile']}}</p>
         <p>网址：{{route('pok.index')}}</p>
     </div>
 </div>

@@ -84,8 +84,8 @@
 
             </ul>
             <div class="zx">
-                <p style="background-image: url(/pok/images/icon2.png);">QQ 号码：<strong> 755930694 </strong></p>
-                <p style="background-image: url(/pok/images/icon3.png);">咨询热线：<strong> 189-2311-7087 </strong></p>
+                <p style="background-image: url(/pok/images/icon2.png);">QQ 号码：<strong> <a href="tencent://message/?uin={{$settings['qq']}}&Menu=yes">{{$settings['qq']}}</a></strong></p>
+                <p style="background-image: url(/pok/images/icon3.png);">咨询热线：<strong> {{$settings['mobile']}} </strong></p>
             </div>
         </div>
         <div class="in-prd-con">
@@ -113,7 +113,7 @@
                     </div>
 
                     <div id="light_weixin" class="white_content">
-                        <img src='/pok/images/wechat.gif' />
+                        <img src='/pok/images/wechat2.jpg' />
                         <div class="ewmwb">扫描二维码，联系微信客服</div>
                     </div>
                     <div id="fade" class="black_overlay"  onClick="closeWindow()"></div>

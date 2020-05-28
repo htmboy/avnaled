@@ -44,11 +44,11 @@
         <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.contact')}}'>联系我们</a></div>
         <div class="mn-box">
             <ul class="contact">
-                <li><i class="iconfont icon-qq"></i>QQ客服：712965082</li>
-                <li><i class="iconfont icon-tel"></i>联系电话：189-2311-7087</li>
-                <li><i class="iconfont icon-fax"></i>免费电话：400-6666-804</li>
-                <li><i class="iconfont icon-email"></i>E-mail：755930694@qq.com</li>
-                <li><i class="iconfont icon-dizhi"></i>地址：广东省佛山市南海区罗村华南国际LED电光源灯饰城C区8路36~38栋-澳镭照明</li>
+                <li><i class="iconfont icon-qq"></i>QQ客服：<a href="tencent://message/?uin={{$settings['qq']}}&Menu=yes">{{$settings['qq']}}</a></li>
+                <li><i class="iconfont icon-tel"></i>联系电话：{{$settings['mobile']}}</li>
+                <li><i class="iconfont icon-fax"></i>免费电话：{{$settings['free']}}</li>
+                <li><i class="iconfont icon-email"></i>E-mail：{{$settings['email']}}</li>
+                <li><i class="iconfont icon-dizhi"></i>地址：{{$settings['address']}}</li>
             </ul>
         </div>
 

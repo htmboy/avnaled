@@ -13,19 +13,19 @@
             <div class="dianh">
                 <div class="dianhua">
                     <p class="phone">
-                        400 6666 804
+                        {{$settings['free']}}
                     </p>
                     <p class="mobile">
-                        18923117087
+                        {{$settings['mobile']}}
                     </p>
                     <p class="fax">
-                        0757-8875 5137
+                        {{$settings['tel']}}
                     </p>
-                    <p class="email">
-                        755930694@qq.com
+                    <p class="QQ">
+                        QQ：<a href="tencent://message/?uin={{$settings['qq']}}&Menu=yes">{{$settings['qq']}}</a>
                     </p>
                     <p class="addr">
-                        广东省佛山市南海区罗村华南国际LED电光源灯饰城C区8路36~38栋
+                        {{$settings['address']}}
                     </p>
                 </div>
             </div>

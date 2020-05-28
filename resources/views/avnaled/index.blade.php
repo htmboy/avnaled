@@ -147,7 +147,7 @@
     </div>
   </div>
   <div class="jmmore">
-    <a href="http://wpa.qq.com/msgrd?v=3&uin=755930694&site=qq&menu=yes" rel="nofollow" title="现在咨询" target="_blank">
+    <a href="http://wpa.qq.com/msgrd?v=3&uin={{$settings['qq']}}&site=qq&menu=yes" rel="nofollow" title="现在咨询" target="_blank">
       现在咨询
     </a>
   </div>

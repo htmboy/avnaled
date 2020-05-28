@@ -19,7 +19,7 @@
     @if($poster->exists)
         <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
     @else
-        <img src="/avnaled/img/banner4.jpg" alt="工矿灯品牌">
+        <img src="/avnaled/img/banner4.jpg" alt="{{$keywords}}">
     @endif
 </div>
 <!--banner-bar-->
@@ -33,19 +33,19 @@
             <span style="font-size:16px;"><strong> 广东澳镭照明电器有限公司</strong></span>
         </p>
         <p>
-            <span style="font-size:14px;color:#666666;">公司地址：广东省佛山市南海区罗村华南国际LED电光源灯饰城C区8路36~38栋-澳镭照明</span>
+            <span style="font-size:14px;color:#666666;">公司地址：{{$settings['address']}}</span>
         </p>
         <p>
-            <span style="color:#666666;font-size:14px;">免费电话：400 6666 804</span>
+            <span style="color:#666666;font-size:14px;">免费电话：{{$settings['free']}}</span>
         </p>
         <p>
-            <span style="color:#666666;font-size:14px;">公司电话：0757-88755137</span>
+            <span style="color:#666666;font-size:14px;">公司电话：{{$settings['tel']}}</span>
         </p>
         <p>
-            <span style="color:#666666;font-size:14px;">公司传真：0757-81808183</span>
+            <span style="color:#666666;font-size:14px;">公司手机：{{$settings['mobile']}}</span>
         </p>
         <p>
-            <span style="color:#666666;font-size:14px;">公司邮箱：755930694@qq.com</span>
+            <span style="color:#666666;font-size:14px;">QQ咨询：<a href="tencent://message/?uin={{$settings['qq']}}&Menu=yes">{{$settings['qq']}}</a></span>
         </p>
         <p>
             <span style="color:#666666;font-size:14px;"><span style=" font-size:14px;color:#666666;"></span><br />

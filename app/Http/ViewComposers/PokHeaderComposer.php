@@ -6,6 +6,7 @@ namespace App\Http\ViewComposers;
 
 use App\Http\Services\Implement\ProductCategoryServiceImpl;
 use App\Models\Article;
+use App\Models\Config;
 use App\Models\ProductCategory;
 use Illuminate\View\View;
 
@@ -19,12 +20,14 @@ class PokHeaderComposer
 
     public function compose(View $view)
     {
-        $fanguangdengCategories = $this->productCategoryServiceImpl->queryAll(ProductCategory::PRODUCT_FLOODLIGHT);
+        $fanguangdengCategories = (new ProductCategoryServiceImpl)->queryAll()->sortByDesc('map_id');
 
         $articleCategories = Article::$articleMap;
 
+        $settings = json_decode(Config::where('key', 'setting')->first()->value, true);
+
         $view->with(compact(
-            'fanguangdengCategories', 'articleCategories'
+            'fanguangdengCategories', 'articleCategories', 'settings'
         ));
     }
 

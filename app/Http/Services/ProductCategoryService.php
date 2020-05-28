@@ -14,6 +14,6 @@ use Illuminate\Database\Eloquent\Collection;
 interface ProductCategoryService
 {
     // 根据主类id查子类目
-    public function queryAll(int $id):Collection;
+    public function queryAll(int $id = null):Collection;
 
 }

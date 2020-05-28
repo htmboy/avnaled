@@ -14,7 +14,7 @@ class PokSidebarShowComposer
 {
     public function compose(View $view)
     {
-        $productCategories = (new ProductCategoryServiceImpl)->queryAll(ProductCategory::PRODUCT_FLOODLIGHT);
+        $productCategories = (new ProductCategoryServiceImpl)->queryAll()->sortByDesc('map_id');
 
         $view->with(compact('productCategories'));
 
