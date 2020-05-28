@@ -37,7 +37,7 @@ class ArticlesController extends AdminController
         $grid->model()->orderByDesc('sort');
         $grid->column('id', __('Id'));
         $grid->column('domain_id')->editable('select', DomainConfig::getDomainMap());
-        $grid->column('map_id', __('map_id'))->editable('select', DomainConfig::getDomainMap());
+        $grid->column('map_id', __('map_id'))->editable('select', Article::getCategoryMap());
         $grid->column('title', __('Title'));
         $grid->column('thumbnail', '图片1')->image('/storage', 90);
         $grid->column('thumbnail_vertical', '图片2(竖)')->image('/storage', 50);
