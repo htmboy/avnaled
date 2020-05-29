@@ -31,7 +31,7 @@
             <p>电话：{{$settings['mobile']}}</p>
             <p>Q Q：<a href="tencent://message/?uin={{$settings['qq']}}&Menu=yes">{{$settings['qq']}}</a></p>
             <p>公司地址：{{$settings['address']}}</p>
-            <p><a href="http://www.beian.miit.gov.cn/" rel="nofollow" target="_blank">粤ICP备20551857号</a></p>
+            <p><a href="http://www.beian.miit.gov.cn/" rel="nofollow" target="_blank">{{$settings['record']}}</a></p>
         </div>
         <div class="footer-ewm"> <div class="img-center"><img src="/pok/images/wechat.jpg" /></div>微信扫一扫 </div>
     </div>

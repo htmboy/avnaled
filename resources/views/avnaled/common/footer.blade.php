@@ -38,7 +38,7 @@
         </div>
         <div class="copyright">
             版权所有 &copy;2006-{{date('Y'), time()}} 广东澳镭照明电器有限公司, All Rights Reserved. &nbsp;备案号:
-            <a href="http://www.beian.miit.gov.cn" title="粤ICP备10222602号-2" target="_blank" rel="nofollow">粤ICP备10222602号-2</a>
+            <a href="http://www.beian.miit.gov.cn" title="{{$settings['record']}}" target="_blank" rel="nofollow">粤ICP备10222602号-2</a>
             <span style="white-space:normal;"> </span>
             <span style="white-space:normal;"></span>
         </div>

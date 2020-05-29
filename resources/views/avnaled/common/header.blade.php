@@ -52,3 +52,12 @@
         <li><a href="{{route('avnaled.contact')}}">联系我们</a></li>
     </ul>
 </div>
+
+<script>
+    var nav = document.getElementById('nav');
+    var navItem = nav.getElementsByTagName('a');
+    for (var i = 0; i < navItem.length; i++){
+        if (navItem[i].href.replace(location.protocol + '//' + location.host, '') == location.pathname)
+            navItem[i].setAttribute('class', 'hover')
+    }
+</script>

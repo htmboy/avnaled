@@ -16,7 +16,7 @@
 
             <ul>
 
-                <li class="active"><a href="{{route('pok.index')}}">首页</a></li>
+                <li><a href="{{route('pok.index')}}">首页</a></li>
 
                 <li class="dropdown">
                     <i class="arr"></i>
@@ -55,3 +55,15 @@
         </div>
     </div>
 </div>
+<script>
+    var nav = document.getElementsByClassName('nav')[0];
+    var navItem = nav.getElementsByTagName('a');
+    for (var i = 0; i < navItem.length; i++){
+        if (navItem[i].href.replace(location.protocol + '//' + location.host, '') == location.pathname){
+            if(navItem[i].parentElement.nodeName == 'P')
+                navItem[i].parentElement.parentElement.parentElement.setAttribute('class', navItem[i].parentElement.parentElement.parentElement.getAttribute('class') + ' active')
+            else
+                navItem[i].parentElement.setAttribute('class', navItem[i].parentElement.getAttribute('class') + ' active')
+        }
+    }
+</script>

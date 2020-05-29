@@ -1,9 +1,8 @@
 <div class="panel-sd">
     <div class="tit">热销产品</div>
     <ul class="list-3">
-
         @foreach($product_recommends as $product)
-        <li>
+        <li class="active">
             <a href="{{route('pok.pro_detail', ['product' => $product->id])}}">
                 <div class="img-center">
                     <img src="/storage/{{$product->thumbnail}}">

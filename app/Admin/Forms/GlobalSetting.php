@@ -59,6 +59,7 @@ class GlobalSetting extends Form
         $this->text('tel',  '固话号码')->rules('required');
         $this->email('email',  '邮箱地址')->rules('required');
         $this->text('address',  '公司地址')->rules('required');
+        $this->text('record',  '备案')->rules('required');
 
     }
 
@@ -84,6 +85,7 @@ class GlobalSetting extends Form
             'tel' => isset($data['tel'])?$data['tel']:null,
             'email' => isset($data['email'])?$data['email']:null,
             'address' => isset($data['address'])?$data['address']:null,
+            'record' => isset($data['record'])?$data['record']:null,
         ];
 
     }
