@@ -4,8 +4,10 @@
     <list default="true" id="1adf72b5-8a91-4124-8640-0790e3811ff1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Admin/Forms/GlobalSetting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/Forms/GlobalSetting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/avnaled/common/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/avnaled/common/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/avnaled/common/pageMenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/avnaled/common/pageMenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pok/common/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/common/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pok/common/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/common/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pok/common/newsMenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/common/newsMenu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pok/common/recommendedProduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pok/common/recommendedProduct.blade.php" afterDir="false" />
@@ -35,17 +37,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Admin/Forms/GlobalSetting.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,12 +122,10 @@
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokLeftbarComposer.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokRecommendComposer.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokSidebarShowComposer.php" />
-        <option value="$PROJECT_DIR$/resources/views/pok/common/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/contact.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/ViewComposers/PokRecommendProductComposer.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Pok/IndexController.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/avnaled/common/footer.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/avnaled/common/leftBar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/avnaled/contact.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/avnaled/productDetail.blade.php" />
@@ -151,6 +141,8 @@
         <option value="$PROJECT_DIR$/resources/views/pok/common/newsMenu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pok/common/header.blade.php" />
         <option value="$PROJECT_DIR$/app/Admin/Forms/GlobalSetting.php" />
+        <option value="$PROJECT_DIR$/resources/views/avnaled/common/footer.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/pok/common/footer.blade.php" />
       </list>
     </option>
   </component>
@@ -274,24 +266,6 @@
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
               <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
-              <item name="avnaled" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="Forms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avnaled" type="b2602c69:ProjectViewProjectNode" />
@@ -435,18 +409,17 @@
       <workItem from="1590646229019" duration="13374000" />
       <workItem from="1590660759624" duration="668000" />
       <workItem from="1590712104503" duration="150000" />
-      <workItem from="1590733928389" duration="8347000" />
+      <workItem from="1590733928389" duration="8651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="649810000" />
+    <option name="totallyTimeSpent" value="650114000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="180" y="1" width="1617" height="965" extended-state="0" />
-    <editor active="true" />
+    <frame x="180" y="1" width="1617" height="965" extended-state="1" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.23506744" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932158" visible="true" weight="0.23506744" />
       <window_info id="Structure" order="1" sideWeight="0.5006784" side_tool="true" weight="0.15884861" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,7 +432,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.16738197" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.5631769" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -492,13 +465,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/pok/contact.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pok/common/pagination.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -576,13 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-734">
           <caret line="84" column="17" lean-forward="true" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/common/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="34" column="125" selection-start-line="34" selection-start-column="125" selection-end-line="34" selection-end-column="125" />
         </state>
       </provider>
     </entry>
@@ -804,10 +763,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pok/common/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/avnaled/common/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Admin/Forms/GlobalSetting.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+        <state relative-caret-position="1298">
+          <caret line="61" column="53" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
         </state>
       </provider>
     </entry>
