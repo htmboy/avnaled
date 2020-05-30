@@ -11,6 +11,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Http\Request;
 
 class ArticlesController extends AdminController
 {
@@ -20,6 +21,12 @@ class ArticlesController extends AdminController
      * @var string
      */
     protected $title = '新闻';
+    protected $request;
+
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
 
     /**
      * Make a grid builder.
@@ -28,6 +35,8 @@ class ArticlesController extends AdminController
      */
     protected function grid()
     {
+
+
         $grid = new Grid(new Article());
         $grid->filter(function ($filter){
             $filter->disableIdFilter();
@@ -92,6 +101,8 @@ class ArticlesController extends AdminController
      */
     protected function form()
     {
+        $file = $this->request->file('thumbnail');
+        $file_ver = $this->request->file('thumbnail_vertical');
         $form = new Form(new Article());
 
         $form->select('domain_id')->options(DomainConfig::getDomainMap())->rules('required');
@@ -100,8 +111,12 @@ class ArticlesController extends AdminController
         $form->text('seo_keywords', __('Seo keywords'))->rules('required|max:40');
         $form->text('seo_description', __('Seo description'))->rules('required|max:80');
         $form->text('title', __('Title'))->rules('required|max:80');
-        $form->image('thumbnail', '图片比例 3:2(横)')->uniqueName()->rules('required|max:100')->resize(450, 300);
-        $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->uniqueName()->rules('required|max:100')->resize(300, 400);
+        $form->image('thumbnail', '图片比例 3:2(横)')
+            ->move('articles/'.date('Ym', time()), date('dHis', time()).'.'.$file->getClientOriginalExtension())
+            ->rules('required|max:100')->resize(450, 300);
+        $form->image('thumbnail_vertical', '图片比例 3:4(竖)')
+            ->move('articles/'.date('Ym', time()), date('dHis', time()).'_ver.'.$file_ver->getClientOriginalExtension())
+            ->rules('required|max:100')->resize(300, 400);
         $form->text('author', __('Author'))->default('澳镭照明-新闻部');
         $form->number('clicks', __('Clicks'))->default('20')->rules('required');
         $form->switch('is_show', __('Is show'));

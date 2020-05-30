@@ -10,6 +10,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use function foo\func;
+use Illuminate\Http\Request;
 
 class CarouselController extends AdminController
 {
@@ -19,6 +20,12 @@ class CarouselController extends AdminController
      * @var string
      */
     protected $title = '轮播图';
+    protected $request;
+
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
 
     /**
      * Make a grid builder.
@@ -27,6 +34,7 @@ class CarouselController extends AdminController
      */
     protected function grid()
     {
+
         $grid = new Grid(new Carousel());
         $grid->filter(function ($filter){
             $filter->disableIdFilter();
@@ -60,12 +68,15 @@ class CarouselController extends AdminController
      */
     protected function form()
     {
+        $file = $this->request->file('site');
         $form = new Form(new Carousel());
         $form->model()->orderByDesc('sort');
         $form->select('domain_id')->options(DomainConfig::getDomainMap())->rules('required|max:80');
         $form->text('title')->rules('required|max:80');
         $form->text('alt')->rules('required|max:80');
-        $form->image('site', '图片尺寸 1920*527')->uniqueName()->rules('required|max:150')->resize(1920, 527);
+        $form->image('site', '图片尺寸 1920*527')
+            ->move('carousel/'.date('Ym', time()), date('dHis', time()).'.'.$file->getClientOriginalExtension())
+            ->rules('required|max:150')->resize(1920, 527);
         $form->url('link')->rules('required|max:100');
         $form->switch('is_show');
         $form->number('sort')->default(Carousel::count() + 1)->rules('required');

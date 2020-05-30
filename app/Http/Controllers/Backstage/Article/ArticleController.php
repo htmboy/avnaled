@@ -38,7 +38,7 @@ class ArticleController extends Controller
         $name = date('dHis', time()).'.'.$file->getClientOriginalExtension();
         $mimeType = $file->getClientMimeType();
         // 验证图片 type
-        $thumbnail = $file->storeAs('articles/'.$path, $name);
+        $thumbnail = $file->storeAs('articles/'.date('Ym', time()), $name);
         $article = $request->only('cat_id', 'seo_title', 'seo_keywords', 'seo_description', 'created_at', 'title', 'author', 'clicks');
         $article['content'] = htmlspecialchars_decode($request->get('content'));
         $article['thumbnail'] = $thumbnail;

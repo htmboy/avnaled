@@ -10,6 +10,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Http\Request;
 
 class ThemePosterController extends AdminController
 {
@@ -19,6 +20,12 @@ class ThemePosterController extends AdminController
      * @var string
      */
     protected $title = '主题海报';
+    protected $request;
+
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
 
     /**
      * Make a grid builder.
@@ -76,6 +83,7 @@ class ThemePosterController extends AdminController
      */
     protected function form()
     {
+        $file = $this->request->file('site');
         $form = new Form(new ThemePoster());
 
         $form->select('domain_id', __('Domain id'))->options(DomainConfig::getDomainMap())->rules('required');
@@ -83,7 +91,9 @@ class ThemePosterController extends AdminController
         $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Article::getCategoryMap(), Product::getCategoryMap()->toArray()))->rules('required');
         $form->text('title', __('Title'))->rules('required');
         $form->text('alt', __('Alt'))->rules('required');
-        $form->image('site', '图片尺寸 1600*300')->uniqueName()->rules('required|max:150')->resize(1600, 300);
+        $form->image('site', '图片尺寸 1600*300')
+            ->move('poster/'.date('Ym', time()), date('dHis', time()).'.'.$file->getClientOriginalExtension())
+            ->rules('required|max:150')->resize(1600, 300);
         $form->url('link', __('Link'));
         $form->switch('is_show', __('Is show'));
 

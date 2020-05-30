@@ -10,6 +10,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Http\Request;
 
 class ProductsController extends AdminController
 {
@@ -19,6 +20,12 @@ class ProductsController extends AdminController
      * @var string
      */
     protected $title = '产品';
+    protected $request;
+
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
 
     /**
      * Make a grid builder.
@@ -95,8 +102,10 @@ class ProductsController extends AdminController
      */
     protected function form()
     {
+        $file = $this->request->file('thumbnail');
+        $file_ver = $this->request->file('thumbnail_vertical');
         $form = new Form(new Product());
-        $form->column(1/2, function ($form) {
+        $form->column(1/2, function ($form)use($file, $file_ver) {
             $form->select('cat_id')->options(ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
                 return $item->name;
             }))->rules('required');
@@ -104,8 +113,12 @@ class ProductsController extends AdminController
             $form->text('seo_keywords')->rules('required|max:80');
             $form->text('seo_description')->rules('required|max:80');
             $form->text('title')->rules('required|max:80');
-            $form->image('thumbnail', '图片比例 3:2(横)')->rules('required|max:100')->resize(450, 300);
-            $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->rules('required|max:100')->resize(300, 400);
+            $form->image('thumbnail', '图片比例 3:2(横)')
+                ->move('products/'.date('Ym', time()), date('dHis', time()).'.'.$file->getClientOriginalExtension())
+                ->rules('required|max:100')->resize(450, 300);
+            $form->image('thumbnail_vertical', '图片比例 3:4(竖)')
+                ->move('products/'.date('Ym', time()), date('dHis', time()).'_ver.'.$file_ver->getClientOriginalExtension())
+                ->rules('required|max:100')->resize(300, 400);
             $form->switch('is_show', __('Is show'));
             $form->number('sort')->default(Product::count() + 1)->rules('required');
         });
