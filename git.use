@@ -25,6 +25,7 @@ git回滚
 git reflog
 回滚reset：
 git reset --hard 98abc5a
+git checkout 98abc5a
 
 修改软链接
 ln -snf 【软链接指向的位置】 【软链接存放的位置】
