@@ -26,7 +26,8 @@
 
 @include('pok.common.search')
 
-<div class="banner-sub img-center">@if($poster)
+<div class="banner-sub img-center">
+    @if($poster->exists)
         <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}" title="{{$poster->title}}">
     @else
         <img src="/pok/images/neiye.jpg">

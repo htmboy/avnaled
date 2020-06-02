@@ -41,7 +41,7 @@
     @if($poster->exists)
         <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
     @else
-        <img src="/avnaled/img/5795e2caca5c5.jpg" alt="{{$product->seo_keywords}}">
+        <img src="/avnaled/img/5795e3e9ce74a.jpg" alt="{{$product->seo_keywords}}">
     @endif
 </div>
 <!--banner-bar-->
