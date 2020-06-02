@@ -42,7 +42,7 @@ class ThemePosterController extends AdminController
         $grid->column('type_id', __('Type id'))->editable('select', array_merge(['0' => '总列表'], Article::getCategoryMap(), Product::getCategoryMap()->toArray()));
         $grid->column('title', __('Title'));
         $grid->column('alt', __('Alt'));
-        $grid->column('site', __('Site'));
+        $grid->column('site', __('Site'))->image();
         $grid->column('link', __('Link'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
