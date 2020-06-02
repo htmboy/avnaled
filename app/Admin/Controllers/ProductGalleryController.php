@@ -18,12 +18,7 @@ class ProductGalleryController extends AdminController
      * @var string
      */
     protected $title = '产品图片';
-    protected $request;
 
-    public function __construct(Request $request)
-    {
-        $this->request = $request;
-    }
 
     /**
      * Make a grid builder.
@@ -80,8 +75,7 @@ class ProductGalleryController extends AdminController
         $form = new Form(new ProductGallery());
         $proId = $this->request->get('pro_id');
         $form->text('pro_id')->default($proId)->rules('required')->readonly();
-        $form->image('gallery', '图片比例3:2')
-            ->move('products/'.date('Ym', time()), date('dHis', time()).'_gal.'.$file->getClientOriginalExtension())
+        $form->image('gallery', '图片比例3:2')->uniqueName()
             ->rules('required|max:100')->resize(450, 300);
         $form->switch('is_show', __('Is show'));
         $form->text('sort', __('Sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1)->rules('required', [

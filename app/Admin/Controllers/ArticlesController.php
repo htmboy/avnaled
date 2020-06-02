@@ -111,11 +111,9 @@ class ArticlesController extends AdminController
         $form->text('seo_keywords', __('Seo keywords'))->rules('required|max:40');
         $form->text('seo_description', __('Seo description'))->rules('required|max:80');
         $form->text('title', __('Title'))->rules('required|max:80');
-        $form->image('thumbnail', '图片比例 3:2(横)')
-            ->move('articles/'.date('Ym', time()), date('dHis', time()).'.'.$file->getClientOriginalExtension())
+        $form->image('thumbnail', '图片比例 3:2(横)')->uniqueName()
             ->rules('required|max:100')->resize(450, 300);
-        $form->image('thumbnail_vertical', '图片比例 3:4(竖)')
-            ->move('articles/'.date('Ym', time()), date('dHis', time()).'_ver.'.$file_ver->getClientOriginalExtension())
+        $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->uniqueName()
             ->rules('required|max:100')->resize(300, 400);
         $form->text('author', __('Author'))->default('澳镭照明-新闻部');
         $form->number('clicks', __('Clicks'))->default('20')->rules('required');

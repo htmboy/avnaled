@@ -20,12 +20,7 @@ class CarouselController extends AdminController
      * @var string
      */
     protected $title = '轮播图';
-    protected $request;
 
-    public function __construct(Request $request)
-    {
-        $this->request = $request;
-    }
 
     /**
      * Make a grid builder.
@@ -68,14 +63,12 @@ class CarouselController extends AdminController
      */
     protected function form()
     {
-        $file = $this->request->file('site');
         $form = new Form(new Carousel());
         $form->model()->orderByDesc('sort');
         $form->select('domain_id')->options(DomainConfig::getDomainMap())->rules('required|max:80');
         $form->text('title')->rules('required|max:80');
         $form->text('alt')->rules('required|max:80');
-        $form->image('site', '图片尺寸 1920*527')
-            ->move('carousel/'.date('Ym', time()), date('dHis', time()).'.'.$file->getClientOriginalExtension())
+        $form->image('site', '图片尺寸 1920*527')->uniqueName()
             ->rules('required|max:150')->resize(1920, 527);
         $form->url('link')->rules('required|max:100');
         $form->switch('is_show');

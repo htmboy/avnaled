@@ -1,7 +1,7 @@
 <?php
 
-// Route::prefix('pok')->group(function(){
-Route::domain('tst.pinyiled.com')->group(function(){
+Route::prefix('pok')->group(function(){
+// Route::domain('tst.pinyiled.com')->group(function(){
 
     Route::get('index.html', 'Pok\IndexController@index')->name('pok.index');
     Route::get('', 'Pok\IndexController@index');

@@ -28,7 +28,8 @@ class ProductsController extends Controller
 
     public function productList($id, ThemePosterServiceImpl $posterServiceImpl, ProductServiceImpl $productServiceImpl)
     {
-        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $id, $this->productType);
+//        dd($id,$this->domain);
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $id, $this->domain);
 
         $products = $productServiceImpl->queryPaginate([$id], 9);
 
