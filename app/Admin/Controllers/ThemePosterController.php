@@ -37,16 +37,20 @@ class ThemePosterController extends AdminController
         $grid = new Grid(new ThemePoster());
 
         $grid->column('id', __('Id'));
-        $grid->column('domain_id', __('Domain id'));
-        $grid->column('type', __('Type'));
-        $grid->column('type_id', __('Type id'));
+        $grid->column('domain_id', __('Domain id'))->editable('select', DomainConfig::getDomainMap());
+        $grid->column('type', __('Type'))->editable('select', ThemePoster::getTypeMap());
+        $grid->column('type_id', __('Type id'))->editable('select', array_merge(['0' => '总列表'], Article::getCategoryMap(), Product::getCategoryMap()->toArray()));
         $grid->column('title', __('Title'));
         $grid->column('alt', __('Alt'));
         $grid->column('site', __('Site'));
         $grid->column('link', __('Link'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
-        $grid->column('is_show', __('Is show'));
+        $states = [
+            'on'  => ['value' => 1, 'text' => '打开', 'color' => 'primary'],
+            'off' => ['value' => 2, 'text' => '关闭', 'color' => 'default'],
+        ];
+        $grid->column('is_show', __('Is show'))->switch($states);
 
         return $grid;
     }
@@ -71,6 +75,7 @@ class ThemePosterController extends AdminController
         $show->field('link', __('Link'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
+
         $show->field('is_show', __('Is show'));
 
         return $show;

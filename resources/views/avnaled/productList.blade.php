@@ -19,7 +19,7 @@
     @if($poster->exists)
         <img src="/storage/{{$poster->site}}" alt="{{$poster->alt}}">
     @else
-        <img src="/avnaled/img/5795e24f6673c.jpg" alt="{{$keywords}}">
+        <img src="/avnaled/img/5795e3e9ce74a.jpg" alt="{{$keywords}}">
     @endif
 </div>
 <!--banner-bar-->

@@ -18,6 +18,11 @@ git push -u origin master
 git强制覆盖本地命令（单条执行）：
     git fetch --all && git reset --hard origin/master && git pull
 
+切换到指定分支，并更新工作区
+$ git checkout [branch-name]
+合并指定分支到当前分支
+    $ git merge [branch]
+
 https://github.com/htmboy/avnaled.git
 
 git回滚
@@ -25,6 +30,7 @@ git回滚
 git reflog
 回滚reset：
 git reset --hard 98abc5a
+git checkout 98abc5a
 
 修改软链接
 ln -snf 【软链接指向的位置】 【软链接存放的位置】

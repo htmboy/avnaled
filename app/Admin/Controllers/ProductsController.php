@@ -113,12 +113,17 @@ class ProductsController extends AdminController
             $form->text('seo_keywords')->rules('required|max:80');
             $form->text('seo_description')->rules('required|max:80');
             $form->text('title')->rules('required|max:80');
+<<<<<<< HEAD
             $form->image('thumbnail', '图片比例 3:2(横)')
                 ->move('products/'.date('Ym', time()), date('dHis', time()).'.'.$file->getClientOriginalExtension())
                 ->rules('required|max:100')->resize(450, 300);
             $form->image('thumbnail_vertical', '图片比例 3:4(竖)')
                 ->move('products/'.date('Ym', time()), date('dHis', time()).'_ver.'.$file_ver->getClientOriginalExtension())
                 ->rules('required|max:100')->resize(300, 400);
+=======
+            $form->image('thumbnail', '图片比例 3:2(横)')->uniqueName()->rules('required|max:100')->resize(450, 300);
+            $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->uniqueName()->rules('required|max:100')->resize(300, 400);
+>>>>>>> 5cda636
             $form->switch('is_show', __('Is show'));
             $form->number('sort')->default(Product::count() + 1)->rules('required');
         });
