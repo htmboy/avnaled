@@ -44,7 +44,7 @@
         <div class="position">当前位置：
             <a href='{{route('pok.index')}}' class=''>首页</a> &gt;
             <a href='{{route('pok.article')}}'>新闻咨询 </a> &gt;
-            <a href='{{route('pok.art_category', ['articleCategory' => $articles->first()->map_id])}}'>{{$articles->first()->getCategoryMap()[$articles->first()->map_id]}}</a>
+            <a href='{{route('pok.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($articles->first()->map_id))])}}'>{{$articles->first()->getCategoryMap($articles->first()->map_id)}}</a>
         </div>
         <div class="mn-box">
             <ul class="list-4">

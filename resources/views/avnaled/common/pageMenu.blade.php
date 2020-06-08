@@ -3,7 +3,6 @@
         <ul class="ul-list" id="page_nav">
             <li><a href="{{route('avnaled.introduction')}}">公司简介</a></li>
             <li><a href="{{route('avnaled.history')}}">发展历程</a></li>
-{{--            <li><a href="{{route('avnaled.art_category', ['articleCategory' => $company_id])}}" >企业文化</a></li>--}}
             <li><a href="{{route('avnaled.contact')}}">联系我们</a></li>
         </ul>
     </div>

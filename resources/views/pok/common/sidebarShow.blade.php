@@ -3,7 +3,7 @@
     <ul class="lanmu"  id="page_nav">
         @foreach($productCategories as $category)
         <li class="open">
-            <a href="{{route('pok.pro_category', ['product' => $category->id])}}">{{$category->name}}</a>
+            <a href="{{route('pok.pro_category', ['productCategory' => pin($category->name)])}}">{{$category->name}}</a>
         </li>
         @endforeach
 

@@ -78,7 +78,7 @@
             <div class="tit">产品展示<small>PRODUCT CATEGORIES</small></div>
             <ul class="lanmu">
                 @foreach($productCategories as $productCategory)
-                <li><a href="{{route('pok.pro_category', ['product' => $productCategory->id])}}">{{$productCategory->name}}</a></li>
+                <li><a href="{{route('pok.pro_category', ['productCategory' => pin($productCategory->name)])}}">{{$productCategory->name}}</a></li>
                 @endforeach
 
 
@@ -168,7 +168,8 @@
         <div class="clearfix">
             <div class="in-news-left">
                 <div class="in-news-box">
-                    <div class="in-news-tit"> <a href="{{route('pok.art_category', ['articleCategory' => 2])}}" class="more">MORE</a>
+                    <div class="in-news-tit">
+                        <a href="{{route('pok.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap(\App\Models\Article::ARTICLE_INDUSTRY_NEWS))])}}" class="more">MORE</a>
                         <ul class="news-menu">
                             <li class="active"><a href="javascript:;">新闻资讯</a> </li>
                             <li><a href="javascript:;">行业资讯</a> </li>
@@ -236,7 +237,7 @@
             </div>
             <div class="in-news-right">
                 <div class="in-news-box">
-                    <div class="in-news-tit"> <a href="{{route('pok.art_category', ['articleCategory' => 3])}}" class="more">MORE</a> 常见问题 </div>
+                    <div class="in-news-tit"> <a href="{{route('pok.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap(\App\Models\Article::ARTICLE_Q_AND_A))])}}" class="more">MORE</a> 常见问题 </div>
 
                     <div id="marquee">
                         <ul>

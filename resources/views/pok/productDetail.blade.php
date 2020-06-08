@@ -42,7 +42,7 @@
         @include('pok.common.recommendedProduct')
     </div>
     <div class="ct2-mn ct2-mn-left">
-        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.product')}}' class=''>产品展示</a> &gt; <a href='{{route('pok.pro_category', ['productCategory' => $product->category->id])}}' class=''>{{$product->category->name}}</a> &gt;{{$product->title}}</div>
+        <div class="position">当前位置： <a href='{{route('pok.index')}}' class=''>首页</a> &gt; <a href='{{route('pok.product')}}' class=''>产品展示</a> &gt; <a href='{{route('pok.pro_category', ['productCategory' => pin($product->category->name)])}}' class=''>{{$product->category->name}}</a> &gt;{{$product->title}}</div>
         <div class="mn-box">
             <div class="eyou-showcase clearfix">
                 <div class="pc-slide">

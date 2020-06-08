@@ -24,15 +24,19 @@ class ArticlesController extends Controller
         ));
     }
 
-    public function articleList($articleCategory,
+    public function articleList($cat,
                                 ThemePosterServiceImpl $posterServiceImpl,
                                 ArticleServiceImpl $articleServiceImpl)
     {
+        $cat_col = collect(Article::getCategoryMap())->map(function($item){
+            return pin($item);
+        });
+        $cat_id = array_search($cat, $cat_col->toArray());
 
-        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_ARTICLE, $articleCategory, $this->domain);
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_ARTICLE, $cat_id, $this->domain);
 
 
-        $articles = $articleServiceImpl->queryPaginate($this->domain, 10, $articleCategory);
+        $articles = $articleServiceImpl->queryPaginate($this->domain, 10, $cat_id);
 
         return view('pok.article', array_merge(
             $this->SEOConfig['articleList'],

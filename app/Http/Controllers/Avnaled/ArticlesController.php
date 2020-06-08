@@ -7,6 +7,7 @@ use App\Http\Services\Implement\ArticleServiceImpl;
 use App\Http\Services\Implement\ThemePosterServiceImpl;
 use App\Models\Article;
 use App\Models\ThemePoster;
+use mysql_xdevapi\Collection;
 
 class ArticlesController extends Controller
 {
@@ -24,13 +25,17 @@ class ArticlesController extends Controller
         ));
     }
 
-    public function articleList($id,
+    public function articleList($cat,
                                 ThemePosterServiceImpl $posterServiceImpl,
                                 ArticleServiceImpl $articleServiceImpl)
     {
-        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_ARTICLE, $id, $this->domain);
+        $cat_col = collect(Article::getCategoryMap())->map(function($item){
+            return pin($item);
+        });
+        $cat_id = array_search($cat, $cat_col->toArray());
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_ARTICLE, $cat_id, $this->domain);
 
-        $articles = $articleServiceImpl->queryPaginate($this->domain, 10, $id);
+        $articles = $articleServiceImpl->queryPaginate($this->domain, 10, $cat_id);
 
         return view('avnaled.articleList', array_merge(
             $this->SEOConfig['articleList'],

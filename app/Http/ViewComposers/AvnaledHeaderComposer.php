@@ -31,15 +31,15 @@ class AvnaledHeaderComposer
 
         $articleCategories = $typeArt;
 
-        $case_id = Article::ARTICLE_CASES;
+        $case = Article::getCategoryMap(Article::ARTICLE_CASES);
 
-        $QA_id = Article::ARTICLE_Q_AND_A;
+        $QA = Article::getCategoryMap(Article::ARTICLE_Q_AND_A);
 
         $settings = json_decode(Config::where('key', 'setting')->first()->value, true);
 
         $view->with(compact(
             'productCategories', 'gongkuangdeng', 'articleCategories', 'typePro', 'typeArt',
-            'case_id', 'QA_id', 'settings'
+            'case', 'QA', 'settings'
         ));
     }
 

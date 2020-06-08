@@ -2,7 +2,7 @@
     <div class="tit">新闻资讯</div>
     <ul class="lanmu" id="news_nav">
         @foreach($articleCategories as $key => $name)
-        <li class=""> <a href="{{route('pok.art_category', ['articleCategory' => $key])}}">{{$name}}</a> </li>
+        <li class=""> <a href="{{route('pok.art_category', ['articleCategory' => pin($name)])}}">{{$name}}</a> </li>
         @endforeach
     </ul>
 </div>

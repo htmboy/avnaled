@@ -21,16 +21,16 @@ class AvnaledFooterComposer
 
         $productMap = Product::getCategoryMap(ProductCategory::PRODUCT_HIGH_BAY_LIGHT);
 
-        $case_id = Article::ARTICLE_CASES;
+        $case = Article::getCategoryMap(Article::ARTICLE_CASES);
 
-        $QA_id = Article::ARTICLE_Q_AND_A;
+        $QA = Article::getCategoryMap(Article::ARTICLE_Q_AND_A);
 
-        $company_id = Article::ARTICLE_COMPANY_NEWS;
+        $company = Article::getCategoryMap(Article::ARTICLE_COMPANY_NEWS);
 
         $settings = json_decode(Config::where('key', 'setting')->first()->value, true);
 
         $view->with(compact(
-            'links', 'productMap', 'case_id', 'QA_id', 'company_id', 'settings'
+            'links', 'productMap', 'case', 'QA', 'company', 'settings'
         ));
     }
 

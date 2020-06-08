@@ -43,7 +43,7 @@
             <a href='{{route('pok.index')}}' class=''>首页</a> &gt;
             <a href='{{route('pok.product')}}'>产品展示</a> >
             @if($products->isNotEmpty())
-            <a href='{{route('pok.pro_category', ['productCategory' => $products->first()->cat_id])}}'>{{$products->first()->category->name}}</a>
+            <a href='{{route('pok.pro_category', ['productCategory' => pin($products->first()->category->name)])}}'>{{$products->first()->category->name}}</a>
                 @endif
         </div>
         <div class="mn-box">

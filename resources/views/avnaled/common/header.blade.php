@@ -32,20 +32,20 @@
         <li><a href="{{route('avnaled.product')}}">产品中心</a>
             <ul>
                 @foreach($productCategories as $productCategory)
-                    <li><a href="{{route('avnaled.pro_category', ['productCategory' => $productCategory->id])}}">{{$productCategory->name}}</a></li>
+                    <li><a href="{{route('avnaled.pro_category', ['productCategory' => pin($productCategory->name)])}}">{{$productCategory->name}}</a></li>
                 @endforeach
             </ul>
         </li>
         <li><a href="javascript:void(0)">解决方案</a>
             <ul>
-                <li><a href="{{route('avnaled.art_category', ['articleCategory' => $case_id])}}">装灯案例</a></li>
-                <li><a href="{{route('avnaled.art_category', ['articleCategory' => $QA_id])}}">常见问题</a></li>
+                <li><a href="{{route('avnaled.art_category', ['articleCategory' => pin($case)])}}">装灯案例</a></li>
+                <li><a href="{{route('avnaled.art_category', ['articleCategory' => pin($QA)])}}">常见问题</a></li>
             </ul>
         </li>
         <li><a href="{{route('avnaled.article')}}">新闻中心</a>
             <ul>
-                @foreach($articleCategories as $key => $articleCategory)
-                    <li><a href="{{route('avnaled.art_category', ['articleCategory' => $key])}}">{{$articleCategory}}</a></li>
+                @foreach($articleCategories as $articleCategory)
+                    <li><a href="{{route('avnaled.art_category', ['articleCategory' => pin($articleCategory)])}}">{{$articleCategory}}</a></li>
                 @endforeach
             </ul>
         </li>

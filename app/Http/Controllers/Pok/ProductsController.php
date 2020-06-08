@@ -7,6 +7,7 @@ use App\Http\Services\Implement\ProductServiceImpl;
 use App\Http\Services\Implement\ThemePosterServiceImpl;
 use App\Models\Config;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use App\Models\ThemePoster;
 
 class ProductsController extends Controller
@@ -27,12 +28,15 @@ class ProductsController extends Controller
         ));
     }
 
-    public function productList($id, ThemePosterServiceImpl $posterServiceImpl, ProductServiceImpl $productServiceImpl)
+    public function productList($cat, ThemePosterServiceImpl $posterServiceImpl, ProductServiceImpl $productServiceImpl)
     {
+        $cat_col = ProductCategory::get(['name', 'id'])->keyBy('id')->map(function($item){
+            return pin($item->name);
+        });
+        $cat_id = array_search($cat, $cat_col->toArray());
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $cat_id, $this->domain);
 
-        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $id, $this->domain);
-
-        $products = $productServiceImpl->queryPaginate([$id], 12);
+        $products = $productServiceImpl->queryPaginate([$cat_id], 12);
 
         return view('pok.productList', array_merge(
             $this->SEOConfig['productList'],

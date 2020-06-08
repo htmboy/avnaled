@@ -159,9 +159,9 @@
     <div class="dy fl">
       <div class="tit2">
         <span class="fr">
-          <a href="{{route('avnaled.art_category', ['articleCategory' => $news->first()->map_id])}}" title="more" target="_blank">more +</a>
+          <a href="{{route('avnaled.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($news->first()->map_id))])}}" title="more" target="_blank">more +</a>
         </span>
-        <a href="{{route('avnaled.art_category', ['articleCategory' => $news->first()->map_id])}}" title="行业新闻" target="_blank">
+        <a href="{{route('avnaled.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($news->first()->map_id))])}}" title="行业新闻" target="_blank">
           行业新闻/
           <span>NEWS</span>
         </a>
@@ -187,9 +187,9 @@
     <div class="dy dy2 fl">
       <div class="tit2">
         <span class="fr">
-          <a href="{{route('avnaled.art_category', ['articleCategory' => $conpany_news->first()->map_id])}}" title="more" target="_blank">more +</a>
+          <a href="{{route('avnaled.art_category', ['articleCategory' => $conpany_news->pin(\App\Models\Article::getCategoryMap(first()->map_id))])}}" title="more" target="_blank">more +</a>
         </span>
-        <a href="{{route('avnaled.art_category', ['articleCategory' => $conpany_news->first()->map_id])}}" title="澳镭动态" target="_blank">
+        <a href="{{route('avnaled.art_category', ['articleCategory' => $conpany_news->pin(\App\Models\Article::getCategoryMap(first()->map_id))])}}" title="澳镭动态" target="_blank">
           澳镭动态/
           <span>INFORMATION</span>
         </a>
@@ -213,12 +213,12 @@
     <div class="faq fr">
       <div class="tit2">
         <span class="fr">
-          <a href="{{route('avnaled.art_category', ['articleCategory' => $answers->first()->map_id])}}" target="_blank">more +</a>
+          <a href="{{route('avnaled.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($answers->first()->map_id))])}}" target="_blank">more +</a>
         </span>
-        <a href="{{route('avnaled.art_category', ['articleCategory' => $answers->first()->map_id])}}" target="_blank">常见问答/<span>QUESTIONS</span></a>
+        <a href="{{route('avnaled.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($answers->first()->map_id))])}}" target="_blank">常见问答/<span>QUESTIONS</span></a>
       </div>
       <h4>
-        <a href='{{route('avnaled.art_category', ['articleCategory' => $answers->first()->map_id])}}'>
+        <a href='{{route('avnaled.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($answers->first()->map_id))])}}'>
           <img src='/avnaled/img/20160520111402_6290.jpg' alt='常见问答' />
         </a>
       </h4>
@@ -244,7 +244,7 @@
 </script>
 <!--new-->
 <div class="fangan">
-  <div class="tit1"><a href="{{route('avnaled.art_category', ['articleCategory' => $cases->first()->map_id])}}" target="_blank">客户案例<em>Cases Show</em></a></div>
+  <div class="tit1"><a href="{{route('avnaled.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($cases->first()->map_id))])}}" target="_blank">客户案例<em>Cases Show</em></a></div>
   <div class="fangan_main">
     <div id="fangan" class="owl-carousel" style="width:1080px">
       @foreach($cases as $case)
