@@ -814,17 +814,17 @@
     },
     {
         "name": "encore/laravel-admin",
-        "version": "v1.7.16",
-        "version_normalized": "1.7.16.0",
+        "version": "v1.8.0",
+        "version_normalized": "1.8.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/z-song/laravel-admin.git",
-            "reference": "fe01b0f0d00366db907e9538a7e21c3325b63b50"
+            "reference": "f634551afc5d062431f9e6581a70f0f3a041a556"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/fe01b0f0d00366db907e9538a7e21c3325b63b50",
-            "reference": "fe01b0f0d00366db907e9538a7e21c3325b63b50",
+            "url": "https://api.github.com/repos/z-song/laravel-admin/zipball/f634551afc5d062431f9e6581a70f0f3a041a556",
+            "reference": "f634551afc5d062431f9e6581a70f0f3a041a556",
             "shasum": "",
             "mirrors": [
                 {
@@ -849,7 +849,7 @@
             "intervention/image": "Required to handling and manipulation upload images (~2.3).",
             "spatie/eloquent-sortable": "Required to built orderable gird."
         },
-        "time": "2020-05-09T03:47:29+00:00",
+        "time": "2020-05-27T08:55:40+00:00",
         "type": "library",
         "extra": {
             "laravel": {

@@ -85,8 +85,14 @@ class ThemePosterController extends AdminController
         $form = new Form(new ThemePoster());
 
         $form->select('domain_id', __('Domain id'))->options(DomainConfig::getDomainMap())->rules('required');
-        $form->select('type', __('Pro cat id'))->options(ThemePoster::getTypeMap())->rules('required');
-        $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Article::getCategoryMap(), Product::getCategoryMap()->toArray()))->rules('required');
+        $form->radio('type', __('Pro cat id'))->options(ThemePoster::getTypeMap())->when(1, function (Form $form){
+            $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Product::getCategoryMap()->toArray()))->rules('required');
+
+        })->when(2, function (Form $form){
+            $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Article::getCategoryMap()))->rules('required');
+
+        });
+//        $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Article::getCategoryMap(), Product::getCategoryMap()->toArray()))->rules('required');
         $form->text('title', __('Title'))->rules('required');
         $form->text('alt', __('Alt'))->rules('required');
         $form->image('site', '图片尺寸 1600*300')
