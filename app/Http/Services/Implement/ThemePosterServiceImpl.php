@@ -18,7 +18,6 @@ class ThemePosterServiceImpl implements ThemePosterService
 
     public function queryOne(int $type, int $map_id, int $domain): ThemePoster
     {
-//        dd($type, $map_id, $domain);
         return ThemePoster::where([['is_show', 1], ['type', $type], ['type_id', $map_id]])
             ->whereIn('domain_id', [DomainConfig::DOMAIN_ALL, $domain])->first()
             ??new ThemePoster();

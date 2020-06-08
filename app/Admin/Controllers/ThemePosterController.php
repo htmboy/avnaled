@@ -5,6 +5,7 @@ namespace App\Admin\Controllers;
 use App\Common\DomainConfig;
 use App\Models\Article;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use App\Models\ThemePoster;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
@@ -31,9 +32,16 @@ class ThemePosterController extends AdminController
         $grid = new Grid(new ThemePoster());
 
         $grid->column('id', __('Id'));
-        $grid->column('domain_id', __('Domain id'))->editable('select', DomainConfig::getDomainMap());
-        $grid->column('type', __('Type'));
-        $grid->column('type_id', __('Type id'));
+        $grid->column('domain_id', '域名')->editable('select', DomainConfig::getDomainMap());
+        $grid->column('type', '类型')->using(ThemePoster::getTypeMap());
+        $grid->column('type_id', '二级类型')->display(function ($type_id){
+            if ($this->type == ThemePoster::TYPE_PRODUCT)
+                return array_merge([0 =>'总列表'], Product::getCategoryMap()->toArray())[$type_id];
+            if ($this->type == ThemePoster::TYPE_ARTICLE)
+                return array_merge([0 =>'总列表'], Article::getCategoryMap())[$type_id];
+            return '未知类型';
+        });
+//        $grid->column('type_id', '二级类型');
         $grid->column('title', __('Title'));
         $grid->column('alt', __('Alt'));
         $grid->column('site', __('Site'))->image();

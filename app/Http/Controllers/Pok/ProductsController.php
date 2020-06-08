@@ -17,7 +17,7 @@ class ProductsController extends Controller
                             ProductServiceImpl $productServiceImpl)
     {
 
-        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, 0, $this->productType);
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, 0, $this->domain);
 
         $products = $productServiceImpl->queryAllPaginate(10);
 
@@ -30,7 +30,7 @@ class ProductsController extends Controller
     public function productList($id, ThemePosterServiceImpl $posterServiceImpl, ProductServiceImpl $productServiceImpl)
     {
 
-        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $id, $this->productType);
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $id, $this->domain);
 
         $products = $productServiceImpl->queryPaginate([$id], 12);
 
@@ -43,7 +43,7 @@ class ProductsController extends Controller
     public function productDetail(Product $product,
                                   ThemePosterServiceImpl $posterServiceImpl)
     {
-        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $product->cat_id, $this->productType);
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $product->cat_id, $this->domain);
 
 
         return view('pok.productDetail', compact('product', 'poster'));

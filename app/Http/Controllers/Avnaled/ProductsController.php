@@ -14,10 +14,8 @@ class ProductsController extends Controller
 {
 
     public function product(ThemePosterServiceImpl $posterServiceImpl,
-                            ProductCategoryServiceImpl $productCategoryServiceImpl,
                             ProductServiceImpl $productServiceImpl){
-        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, 0, $this->productType);
-
+        $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, 0, $this->domain);
         $products = $productServiceImpl->queryAllPaginate( 9);
 
         return view('avnaled.product', array_merge(
@@ -28,7 +26,6 @@ class ProductsController extends Controller
 
     public function productList($id, ThemePosterServiceImpl $posterServiceImpl, ProductServiceImpl $productServiceImpl)
     {
-//        dd($id,$this->domain);
         $poster = $posterServiceImpl->queryOne(ThemePoster::TYPE_PRODUCT, $id, $this->domain);
 
         $products = $productServiceImpl->queryPaginate([$id], 9);
