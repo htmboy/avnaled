@@ -32,8 +32,8 @@ class ThemePosterController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('domain_id', __('Domain id'))->editable('select', DomainConfig::getDomainMap());
-        $grid->column('type', __('Type'))->editable('select', ThemePoster::getTypeMap());
-        $grid->column('type_id', __('Type id'))->editable('select', array_merge(['0' => '总列表'], Article::getCategoryMap(), Product::getCategoryMap()->toArray()));
+        $grid->column('type', __('Type'));
+        $grid->column('type_id', __('Type id'));
         $grid->column('title', __('Title'));
         $grid->column('alt', __('Alt'));
         $grid->column('site', __('Site'))->image();
@@ -84,7 +84,7 @@ class ThemePosterController extends AdminController
     {
         $form = new Form(new ThemePoster());
 
-        $form->select('domain_id', __('Domain id'))->options(DomainConfig::getDomainMap())->rules('required');
+        $form->select('domain_id', '域名')->options(DomainConfig::getDomainMap())->rules('required');
         $form->radio('type', __('Pro cat id'))->options(ThemePoster::getTypeMap())->when(1, function (Form $form){
             $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Product::getCategoryMap()->toArray()))->rules('required');
 
