@@ -52,3 +52,4 @@
     <h2>您的浏览器版本太低，请升级您的浏览器</h2>
 </div>
 <![endif]-->
+{!! isset($settings['script'])?$settings['script']:'' !!}

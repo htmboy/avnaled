@@ -52,3 +52,4 @@
         </div>
     </div>
 </div>
+{!! isset($settings['script'])?$settings['script']:'' !!}

@@ -187,9 +187,9 @@
     <div class="dy dy2 fl">
       <div class="tit2">
         <span class="fr">
-          <a href="{{route('avnaled.art_category', ['articleCategory' => $conpany_news->pin(\App\Models\Article::getCategoryMap(first()->map_id))])}}" title="more" target="_blank">more +</a>
+          <a href="{{route('avnaled.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($conpany_news->first()->map_id))])}}" title="more" target="_blank">more +</a>
         </span>
-        <a href="{{route('avnaled.art_category', ['articleCategory' => $conpany_news->pin(\App\Models\Article::getCategoryMap(first()->map_id))])}}" title="澳镭动态" target="_blank">
+        <a href="{{route('avnaled.art_category', ['articleCategory' => pin(\App\Models\Article::getCategoryMap($conpany_news->first()->map_id))])}}" title="澳镭动态" target="_blank">
           澳镭动态/
           <span>INFORMATION</span>
         </a>
