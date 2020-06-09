@@ -26,10 +26,10 @@ class ProductCategoryController extends AdminController
     {
         $form = new Form(new ProductCategory());
 
-        $form->select('map_id')->options(ProductCategory::$productMap)->rules('required');
-        $form->text('name')->rules('required|max:80');
-        $form->switch('is_show');
-        $form->number('sort')->default(ProductCategory::count() + 1)->rules('required');
+        $form->select('map_id', __('map_id'))->options(ProductCategory::$productMap)->rules('required');
+        $form->text('name', __('name'))->rules('required|max:80');
+        $form->switch('is_show', __('is_show'));
+        $form->number('sort', __('sort'))->default(ProductCategory::count() + 1)->rules('required');
         return $form;
     }
 
@@ -44,28 +44,28 @@ class ProductCategoryController extends AdminController
 
 
         $grid->model()->orderByDesc('sort');
-        $grid->column('id', __('Id'));
-        $grid->column('map_id', __('mapId'))->editable('select', ProductCategory::$productMap);
-        $grid->column('name', __('Name'));
+        $grid->column('id', __('id'));
+        $grid->column('map_id', __('map_id'))->editable('select', ProductCategory::$productMap);
+        $grid->column('name', __('name'));
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],
             'off' => ['value' => 0, 'text' => '不显示'],
         ];
-        $grid->column('is_show', __('Is show'))->switch($states);
-        $grid->column('sort', __('Sort'))->editable();
+        $grid->column('is_show', __('is_show'))->switch($states);
+        $grid->column('sort', __('sort'))->editable();
         return $grid;
     }
 
     protected function detail($id)
     {
-        $show = new Show(ArticleCategory::findOrFail($id));
+        $show = new Show(ProductCategory::findOrFail($id));
 
-        $show->field('id', __('Id'));
-        $show->field('name', __('Name'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
-        $show->field('is_show', __('Is show'));
-        $show->field('sort', __('Sort'));
+        $show->field('id', __('id'));
+        $show->field('name', __('name'));
+        $show->field('created_at', __('created_at'));
+        $show->field('updated_at', __('updated_at'));
+        $show->field('is_show', __('is_show'));
+        $show->field('sort', __('sort'));
 
         return $show;
     }

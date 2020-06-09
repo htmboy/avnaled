@@ -60,7 +60,7 @@ class GlobalSetting extends Form
         $this->email('email',  '邮箱地址')->rules('required');
         $this->text('address',  '公司地址')->rules('required');
         $this->text('record',  '备案')->rules('required');
-        $this->textarea('script',  '备案');
+        $this->textarea('script',  'js代码');
 
     }
 

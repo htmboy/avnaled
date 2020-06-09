@@ -29,16 +29,16 @@ class ProductGalleryController extends AdminController
     {
         $grid = new Grid(new ProductGallery());
         $grid->model()->where('pro_id', $this->request->get('pro_id'));
-        $grid->column('id', __('Id'));
-        $grid->column('pro_id', __('Pro id'));
-        $grid->gallery()->image('/storage', 90);
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('id', __('id'));
+        $grid->column('pro_id', __('pro_id'));
+        $grid->column('gallery', __('gallery'))->image('/storage', 90);
+        $grid->column('updated_at', __('updated_at'));
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],
             'off' => ['value' => 0, 'text' => '不显示'],
         ];
-        $grid->is_show()->switch($states);
-        $grid->column('sort', __('Sort'))->editable();
+        $grid->column('is_show', __('is_show'))->switch($states);
+        $grid->column('sort', __('sort'))->editable();
 
         return $grid;
     }
@@ -53,13 +53,13 @@ class ProductGalleryController extends AdminController
     {
         $show = new Show(ProductGallery::findOrFail($id));
 
-        $show->field('id', __('Id'));
-        $show->field('pro_id', __('Pro id'));
-        $show->field('gallery', __('Gallery'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
-        $show->field('is_show', __('Is show'));
-        $show->field('sort', __('Sort'));
+        $show->field('id', __('id'));
+        $show->field('pro_id', __('pro_id'));
+        $show->field('gallery', __('gallery'));
+        $show->field('created_at', __('created_at'));
+        $show->field('updated_at', __('updated_at'));
+        $show->field('is_show', __('is_show'));
+        $show->field('sort', __('sort'));
 
         return $show;
     }
@@ -74,11 +74,11 @@ class ProductGalleryController extends AdminController
         $file = $this->request->file('gallery');
         $form = new Form(new ProductGallery());
         $proId = $this->request->get('pro_id');
-        $form->text('pro_id')->default($proId)->rules('required')->readonly();
+        $form->text('pro_id', __('pro_id'))->default($proId)->rules('required')->readonly();
         $form->image('gallery', '图片比例3:2')->uniqueName()
             ->rules('required|max:100')->resize(450, 300);
-        $form->switch('is_show', __('Is show'));
-        $form->text('sort', __('Sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1)->rules('required', [
+        $form->switch('is_show', __('is_show'));
+        $form->text('sort', __('sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1)->rules('required', [
             'required' => '排序不能为空'
         ]);
 

@@ -32,27 +32,26 @@ class ThemePosterController extends AdminController
         $grid = new Grid(new ThemePoster());
 
         $grid->column('id', __('Id'));
-        $grid->column('domain_id', '域名')->editable('select', DomainConfig::getDomainMap());
-        $grid->column('type', '类型')->using(ThemePoster::getTypeMap());
-        $grid->column('type_id', '二级类型')->display(function ($type_id){
+        $grid->column('domain_id', __('domain_id'))->editable('select', DomainConfig::getDomainMap());
+        $grid->column('type', __('type'))->using(ThemePoster::getTypeMap());
+        $grid->column('type_id', __('type_id'))->display(function ($type_id){
             if ($this->type == ThemePoster::TYPE_PRODUCT)
                 return array_merge([0 =>'总列表'], Product::getCategoryMap()->toArray())[$type_id];
             if ($this->type == ThemePoster::TYPE_ARTICLE)
                 return array_merge([0 =>'总列表'], Article::getCategoryMap())[$type_id];
             return '未知类型';
         });
-//        $grid->column('type_id', '二级类型');
-        $grid->column('title', __('Title'));
-        $grid->column('alt', __('Alt'));
-        $grid->column('site', __('Site'))->image();
-        $grid->column('link', __('Link'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('title', __('title'));
+        $grid->column('alt', __('alt'));
+        $grid->column('site', __('site'))->image('/storage', 90);
+        $grid->column('link', __('link'));
+        $grid->column('created_at', __('created_at'));
+        $grid->column('updated_at', __('updated_at'));
         $states = [
             'on'  => ['value' => 1, 'text' => '打开', 'color' => 'primary'],
             'off' => ['value' => 2, 'text' => '关闭', 'color' => 'default'],
         ];
-        $grid->column('is_show', __('Is show'))->switch($states);
+        $grid->column('is_show', __('is_show'))->switch($states);
 
         return $grid;
     }
@@ -67,18 +66,18 @@ class ThemePosterController extends AdminController
     {
         $show = new Show(ThemePoster::findOrFail($id));
 
-        $show->field('id', __('Id'));
-        $show->field('domain_id', __('Domain id'));
-        $show->field('type', __('Type'));
-        $show->field('type_id', __('Type id'));
-        $show->field('title', __('Title'));
-        $show->field('alt', __('Alt'));
-        $show->field('site', __('Site'));
-        $show->field('link', __('Link'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
+        $show->field('id', __('id'));
+        $show->field('domain_id', __('domain_id'));
+        $show->field('type', __('type'));
+        $show->field('type_id', __('type_id'));
+        $show->field('title', __('title'));
+        $show->field('alt', __('alt'));
+        $show->field('site', __('site'));
+        $show->field('link', __('link'));
+        $show->field('created_at', __('created_at'));
+        $show->field('updated_at', __('updated_at'));
 
-        $show->field('is_show', __('Is show'));
+        $show->field('is_show', __('is_show'));
 
         return $show;
     }
@@ -92,22 +91,21 @@ class ThemePosterController extends AdminController
     {
         $form = new Form(new ThemePoster());
 
-        $form->select('domain_id', '域名')->options(DomainConfig::getDomainMap())->rules('required');
-        $form->radio('type', __('Pro cat id'))->options(ThemePoster::getTypeMap())->when(1, function (Form $form){
-            $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Product::getCategoryMap()->toArray()))->rules('required');
+        $form->select('domain_id', __('domain_id'))->options(DomainConfig::getDomainMap())->rules('required');
+        $form->radio('type', __('type'))->options(ThemePoster::getTypeMap())->when(1, function (Form $form){
+            $form->select('type_id', __('type_id'))->options(array_merge(['0' => '总列表'], Product::getCategoryMap()->toArray()))->rules('required');
 
         })->when(2, function (Form $form){
-            $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Article::getCategoryMap()))->rules('required');
+            $form->select('type_id', __('type_id'))->options(array_merge(['0' => '总列表'], Article::getCategoryMap()))->rules('required');
 
         });
-//        $form->select('type_id', __('Art cat id'))->options(array_merge(['0' => '总列表'], Article::getCategoryMap(), Product::getCategoryMap()->toArray()))->rules('required');
-        $form->text('title', __('Title'))->rules('required');
-        $form->text('alt', __('Alt'))->rules('required');
+        $form->text('title', __('title'))->rules('required');
+        $form->text('alt', __('alt'))->rules('required');
         $form->image('site', '图片尺寸 1600*300')
             ->uniqueName()
             ->rules('required|max:150')->resize(1600, 300);
-        $form->url('link', __('Link'));
-        $form->switch('is_show', __('Is show'));
+        $form->url('link', __('link'));
+        $form->switch('is_show', __('is_show'));
 
         return $form;
     }

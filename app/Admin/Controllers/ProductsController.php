@@ -40,21 +40,21 @@ class ProductsController extends AdminController
         });
 //        $grid->column('cat_id', '分类')->filter(ProductCategory::getProductMap());
         $grid->model()->orderByDesc('sort');
-        $grid->column('id');
-        $grid->column('cat_id')->editable('select', ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
+        $grid->column('id', __('id'));
+        $grid->column('cat_id', __('cat_id'))->editable('select', ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
             return $item->name;
         }));
-        $grid->column('title');
-        $grid->column('thumbnail')->image('/storage', 90);
-        $grid->column('thumbnail_vertical')->image('/storage', 50);
-        $grid->column('updated_at')->date('Y-m-d');
+        $grid->column('title', __('title'));
+        $grid->column('thumbnail', __('thumbnail'))->image('/storage', 90);
+        $grid->column('thumbnail_vertical', __('thumbnail_vertical'))->image('/storage', 50);
+        $grid->column('updated_at', __('updated_at'))->date('Y-m-d');
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],
             'off' => ['value' => 0, 'text' => '不显示'],
         ];
-        $grid->column('is_show')->switch($states);
-        $grid->column('sort')->editable();
-        $grid->column('cat_sort')->editable();
+        $grid->column('is_show', __('is_show'))->switch($states);
+        $grid->column('sort', __('sort'))->editable();
+        $grid->column('cat_sort', __('cat_sort'))->editable();
 
         return $grid;
     }
@@ -100,42 +100,42 @@ class ProductsController extends AdminController
         $file_ver = $this->request->file('thumbnail_vertical');
         $form = new Form(new Product());
         $form->column(1/2, function ($form)use($file, $file_ver) {
-            $form->select('cat_id')->options(ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
+            $form->select('cat_id', __('cat_id'))->options(ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
                 return $item->name;
             }))->rules('required');
-            $form->text('seo_title', __('Seo title'))->rules('required|max:80');
-            $form->text('seo_keywords')->rules('required|max:80');
-            $form->text('seo_description')->rules('required|max:80');
-            $form->text('title')->rules('required|max:80');
+            $form->text('seo_title', __('seo_title'))->rules('required|max:80');
+            $form->text('seo_keywords', __('seo_keywords'))->rules('required|max:80');
+            $form->text('seo_description', __('seo_description'))->rules('required|max:80');
+            $form->text('title', __('title'))->rules('required|max:80');
 
             $form->image('thumbnail', '图片比例 3:2(横)')->uniqueName()->rules('required|max:100')->resize(450, 300);
             $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->uniqueName()->rules('required|max:100')->resize(300, 400);
 
-            $form->switch('is_show', __('Is show'));
-            $form->number('sort')->default(Product::count() + 1)->rules('required');
+            $form->switch('is_show', __('is_show'));
+            $form->number('sort', __('sort'))->default(Product::count() + 1)->rules('required');
         });
 
         $form->column(1/2, function ($form) {
-            $form->text('number')->rules('required|max:100');
-            $form->text('watts')->rules('required|max:100');
-            $form->text('size')->rules('required|max:100');
-            $form->text('color', __('Color'))->rules('required|max:100');
-            $form->text('package', __('Package'))->rules('required|max:100');
-            $form->text('weight', __('Weight'))->rules('required|max:100');
-            $form->text('voltage', __('Voltage'))->rules('required|max:100');
-            $form->text('angle', __('Angle'))->rules('required|max:100');
-            $form->text('waterproof', __('Waterproof'))->rules('required|max:100');
-            $form->text('life', __('Life'))->rules('required|max:100');
-            $form->text('distance', __('Distance'))->rules('required|max:100');
-            $form->text('material', __('Material'))->rules('required|max:100');
-            $form->text('characteristic', __('Characteristic'))->rules('required|max:100');
-            $form->hidden('cat_sort');
+            $form->text('number', __('number'))->rules('required|max:100');
+            $form->text('watts', __('watts'))->rules('required|max:100');
+            $form->text('size', __('size'))->rules('required|max:100');
+            $form->text('color', __('color'))->rules('required|max:100');
+            $form->text('package', __('package'))->rules('required|max:100');
+            $form->text('weight', __('weight'))->rules('required|max:100');
+            $form->text('voltage', __('voltage'))->rules('required|max:100');
+            $form->text('angle', __('angle'))->rules('required|max:100');
+            $form->text('waterproof', __('waterproof'))->rules('required|max:100');
+            $form->text('life', __('life'))->rules('required|max:100');
+            $form->text('distance', __('distance'))->rules('required|max:100');
+            $form->text('material', __('material'))->rules('required|max:100');
+            $form->text('characteristic', __('characteristic'))->rules('required|max:100');
+            $form->hidden('cat_sort', __('cat_sort'));
 
         });
 
         $form->column(12, function ($form) {
 
-            $form->ueditor('content')->rules('required');
+            $form->ueditor('content', __('content'))->rules('required');
         });
 
         $form->saving(function (Form $form){
