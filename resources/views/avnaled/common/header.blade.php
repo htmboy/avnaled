@@ -29,7 +29,7 @@
                 @endforeach
             </ul>
         </li>
-        <li><a href="{{route('avnaled.product')}}">产品中心</a>
+        <li style="width: 12rem"><a href="{{route('avnaled.product')}}">产品中心</a>
             <ul>
                 @foreach($productCategories as $productCategory)
                     <li><a href="{{route('avnaled.pro_category', ['productCategory' => pin($productCategory->name)])}}">{{$productCategory->name}}</a></li>
