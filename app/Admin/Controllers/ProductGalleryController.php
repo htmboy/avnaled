@@ -71,7 +71,6 @@ class ProductGalleryController extends AdminController
      */
     protected function form()
     {
-        $file = $this->request->file('gallery');
         $form = new Form(new ProductGallery());
         $proId = $this->request->get('pro_id');
         $form->text('pro_id', __('pro_id'))->default($proId)->rules('required')->readonly();

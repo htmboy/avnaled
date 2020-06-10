@@ -96,8 +96,6 @@ class ProductsController extends AdminController
      */
     protected function form()
     {
-        $file = $this->request->file('thumbnail');
-        $file_ver = $this->request->file('thumbnail_vertical');
         $form = new Form(new Product());
         $form->column(1/2, function ($form)use($file, $file_ver) {
             $form->select('cat_id', __('cat_id'))->options(ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
