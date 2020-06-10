@@ -52,6 +52,7 @@
   "pro_id": "产品类目",
   "gallery": "产品图片",
   "type": "总类型",
-  "type_id": "类型"
+  "type_id": "类型",
+  "cat_id": "类目"
 
 }

@@ -97,7 +97,7 @@ class ProductsController extends AdminController
     protected function form()
     {
         $form = new Form(new Product());
-        $form->column(1/2, function ($form)use($file, $file_ver) {
+        $form->column(1/2, function ($form) {
             $form->select('cat_id', __('cat_id'))->options(ProductCategory::get(['id', 'name'])->keyBy('id')->map(function ($item){
                 return $item->name;
             }))->rules('required');
