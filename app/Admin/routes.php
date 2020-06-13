@@ -22,4 +22,5 @@ Route::group([
     $router->resource('search-words', 'SearchWordController');
     $router->resource('theme-posters', 'ThemePosterController');
     $router->resource('configs', 'ConfigController');
+    $router->get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index')->name('admin.log');
 });
