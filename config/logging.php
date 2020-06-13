@@ -89,6 +89,18 @@ return [
             'driver' => 'errorlog',
             'level' => 'debug',
         ],
+        'avnaledlog' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/avnaled/avnaled.log'),
+            'level' => 'info',
+            'days' => 60,
+        ],
+        'poklog' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/pok/pok.log'),
+            'level' => 'info',
+            'days' => 60,
+        ],
     ],
 
 ];
