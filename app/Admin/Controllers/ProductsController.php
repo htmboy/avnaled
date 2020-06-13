@@ -45,8 +45,8 @@ class ProductsController extends AdminController
             return $item->name;
         }));
         $grid->column('title', __('title'));
-        $grid->column('thumbnail', __('thumbnail'))->image('/storage', 90);
-        $grid->column('thumbnail_vertical', __('thumbnail_vertical'))->image('/storage', 50);
+        $grid->column('thumbnail', __('thumbnail'))->image('/storage', 80);
+        $grid->column('thumbnail_vertical', __('thumbnail_vertical'))->image('/storage', 60);
         $grid->column('updated_at', __('updated_at'))->date('Y-m-d');
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],
@@ -71,19 +71,19 @@ class ProductsController extends AdminController
 
 
 
-        $show->field('title');
-        $show->thumbnail()->image();
+        $show->field('title', __('title'));
+        $show->thumbnail(__('thumbnail'))->image();
 
-        $show->gallery('产品图片', function ($gallery) {
+        $show->gallery('轮播图片', function ($gallery) {
             $gallery->resource('/admin/product-galleries');
-            $gallery->id();
-            $gallery->gallery()->image();
+            $gallery->id('ID');
+            $gallery->gallery('图片比例4:3')->image('/storage', 80);
             $states = [
                 'on' => ['value' => 1, 'text' => '显示'],
                 'off' => ['value' => 0, 'text' => '不显示'],
             ];
-            $gallery->is_show()->switch($states);
-            $gallery->sort()->editable();
+            $gallery->is_show('是否显示')->switch($states);
+            $gallery->sort('排序')->editable();
         });
 
         return $show;
@@ -106,7 +106,7 @@ class ProductsController extends AdminController
             $form->text('seo_description', __('seo_description'))->rules('required|max:80');
             $form->text('title', __('title'))->rules('required|max:80');
 
-            $form->image('thumbnail', '图片比例 3:2(横)')->uniqueName()->rules('required|max:100')->resize(450, 300);
+            $form->image('thumbnail', '图片比例 4:3(横)')->uniqueName()->rules('required|max:100')->resize(400, 300);
             $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->uniqueName()->rules('required|max:100')->resize(300, 400);
 
             $form->switch('is_show', __('is_show'));

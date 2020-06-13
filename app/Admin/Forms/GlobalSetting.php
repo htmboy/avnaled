@@ -61,6 +61,8 @@ class GlobalSetting extends Form
         $this->text('address',  '公司地址')->rules('required');
         $this->text('record',  '备案')->rules('required');
         $this->textarea('script',  'js代码');
+        $this->textarea('blacklist',  '黑名单（填写ip值,ip与ip之间填写英文的“,”）');
+        $this->url('blacklistTo',  '黑名单跳转页面（不填写则返回json代码）');
 
     }
 
@@ -88,6 +90,8 @@ class GlobalSetting extends Form
             'address' => isset($data['address'])?$data['address']:null,
             'record' => isset($data['record'])?$data['record']:null,
             'script' => isset($data['script'])?$data['script']:null,
+            'blacklist' => isset($data['blacklist'])?$data['blacklist']:null,
+            'blacklistTo' => isset($data['blacklistTo'])?$data['blacklistTo']:null,
         ];
 
     }

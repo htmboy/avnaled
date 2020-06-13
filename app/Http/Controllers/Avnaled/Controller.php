@@ -21,6 +21,7 @@ class Controller extends BaseController
 
     public function __construct()
     {
+
         $this->SEOConfig = json_decode(Config::where('key', 'seo.avnaled')->first()->value, true);
         $this->domain = DomainConfig::DOMAIN_AVNALED;
         $this->productType = ProductCategory::PRODUCT_HIGH_BAY_LIGHT;

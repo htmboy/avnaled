@@ -18,7 +18,12 @@ class ProductGalleryController extends AdminController
      * @var string
      */
     protected $title = '产品图片';
+    protected $request;
 
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
 
     /**
      * Make a grid builder.
@@ -31,7 +36,7 @@ class ProductGalleryController extends AdminController
         $grid->model()->where('pro_id', $this->request->get('pro_id'));
         $grid->column('id', __('id'));
         $grid->column('pro_id', __('pro_id'));
-        $grid->column('gallery', __('gallery'))->image('/storage', 90);
+        $grid->column('gallery', '图片比例4:3')->image('/storage', 80);
         $grid->column('updated_at', __('updated_at'));
         $states = [
             'on' => ['value' => 1, 'text' => '显示'],
@@ -74,8 +79,8 @@ class ProductGalleryController extends AdminController
         $form = new Form(new ProductGallery());
         $proId = $this->request->get('pro_id');
         $form->text('pro_id', __('pro_id'))->default($proId)->rules('required')->readonly();
-        $form->image('gallery', '图片比例3:2')->uniqueName()
-            ->rules('required|max:100')->resize(450, 300);
+        $form->image('gallery', '图片比例4:3')->uniqueName()
+            ->rules('required|max:100')->resize(400, 300);
         $form->switch('is_show', __('is_show'));
         $form->text('sort', __('sort'))->default(ProductGallery::where('pro_id', $proId)->count() +1)->rules('required', [
             'required' => '排序不能为空'

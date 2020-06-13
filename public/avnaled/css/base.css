@@ -214,8 +214,8 @@ a:hover { text-decoration: underline;}
 .jm2 .p02 a{display:block; width:24px; height:49px; overflow:hidden; background:url("/avnaled/img/r01.png") no-repeat; position:absolute; top:145px; right:-60px}
 .jm2 .p02 a:hover{background:url("/avnaled/img/r11.png") no-repeat}
 .jm2 dl{ width:339px; float:left; display:inline; margin-right:30px}
-.jm2 dt{ width:323px; height:298px; padding:7px; border:1px solid #e5e5e5}
-.jm2 dt img{width:323px; height:298px}
+.jm2 dt{ width:323px; padding:7px; border:1px solid #e5e5e5}
+.jm2 dt img{width:323px}
 .jm2 dd p{ height:72px;line-height:24px;overflow:hidden;color:#666; padding:0 30px; text-align:center; margin:15px 0}
 .jm2 dd span a{ display:block; width:203px; height:36px; text-align:center; line-height:36px; overflow:hidden; border:1px solid #15813a; color:#15813a; margin:0 auto}
 .jm2 dd span a:hover{ border:1px solid #90bc2f; color:#90bc2f}
@@ -233,7 +233,7 @@ a:hover { text-decoration: underline;}
 .dy h3{ font-size:14px;font-weight:bold;line-height:16px}
 .dy dl{ height:145px; overflow:hidden}
 .dy dt{ width:155px; float:left}
-.dy dt img{ background:#fff; padding:5px; border:1px solid #e4e4e4; width:143px; height:113px; display:block}
+.dy dt img{ background:#fff; padding:5px; border:1px solid #e4e4e4; width:143px; display:block}
 .dy dd{ width:153px; float:right; overflow:hidden}
 .dy dd h4 a{ display:block; font-size: 16px; font-weight:bold; height:36px; overflow:hidden}
 .dy dd p{ height:60px;line-height:20px;overflow:hidden;margin-top:10px;color:#666;}
@@ -251,7 +251,7 @@ a:hover { text-decoration: underline;}
 #fangan .owl-carousel .owl-wrapper-outer { width:1080px; margin:0 auto}
 #fangan .item{position:relative;width:200px;height:304px;margin:0 auto;overflow:hidden; text-align:center}
 #fangan .owl-buttons div{position:absolute;top:200px;width:45px;height:80px;margin:0;padding:0;border-radius:0;overflow:hidden;_display:none}
-#fangan img { width:100%; height:264px}
+#fangan img { width:100%}
 #fangan .owl-prev{left:10px; background:url("/avnaled/img/l01.png") no-repeat center center}
 #fangan .owl-next{right:10px; background:url("/avnaled/img/r01.png") no-repeat center center}
 #fangan .txt{width:100%;height:40px;line-height:20px;font-size:12px; color:#333; text-align:center;overflow:hidden}
@@ -320,9 +320,9 @@ a:hover { text-decoration: underline;}
 .pro_main { background-color:#fff;zoom:1; overflow:hidden}
 .pro_wrap { overflow: hidden}
 .pro_box { width:265px; overflow:hidden; float:left; padding:0px 20px 0 0px}
-.pro_img img{width:257px; height:231px; border: 2px solid #f1f1f1; padding:5px; transition:all 0.3s}
+.pro_img img{width:265px; border: 2px solid #f1f1f1; padding:5px; transition:all 0.3s}
 .pro_img:hover img{ border-color:#EBDF97; opacity:0.7}
-.pro_name{ margin-bottom:10px; height:30px; width:238px; line-height:30px; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; position:relative; text-align:center}
+.pro_name{ margin-bottom:10px; height:30px; line-height:30px; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; position:relative; text-align:center}
 .pro_name a{ color:#4c4c4c;font-size:14px}
 
 /*产品列表下面的热门产品以及推荐新闻*/
@@ -336,7 +336,7 @@ a:hover { text-decoration: underline;}
 .news_random ul li { height:28px; line-height:28px; padding:0 17px 0 10px; width:397px; float:left; overflow:hidden}
 .news_random ul li a { background:url("/avnaled/img/ico55.gif") no-repeat 0 4px; padding-left:12px}
 .hot_pro { float:left; overflow:hidden; width: 255px; padding:20px 10px 0 10px;}
-.hot_pro img{width:249px; height:224px; border:0px solid #f1f1f1; padding:5px; transition:all 0.3s}
+.hot_pro img{width:270px; border:0px solid #f1f1f1; padding:5px; transition:all 0.3s}
 .hot_pro:hover img{ border-color:#EBDF97; opacity:0.7}
 .hot_name{ margin-top:3px; height:30px; width:255px; line-height:30px; overflow:hidden; text-overflow: ellipsis; white-space: nowrap; position:relative; text-align:center}
 .hot_name a{ color:#4c4c4c;font-size:14px}
@@ -392,15 +392,15 @@ a:hover { text-decoration: underline;}
 
 
 /*-------------------------产品详细--------------------------*/
-.pro_details { overflow: hidden; *zoom:1; height: 450px; border: 1px solid #ccc;margin-top: 10px}
-.details-slider-box{ width:500px; float:left; position:relative}
-.details-slider-box .btnl, .details-slider-box .btnr { position:absolute; top:215px; display:block; width:41px; height:41px; cursor:pointer}
+.pro_details { overflow: hidden; *zoom:1; height: 450px;margin-top: 10px}
+.details-slider-box{ margin-top: 30px; width:500px; float:left; position:relative}
+.details-slider-box .btnl, .details-slider-box .btnr { position:absolute; top:160px; display:block; width:41px; height:41px; cursor:pointer}
 .details-slider-box .btnl { background:url("/avnaled/img/pro3_btnl.png") no-repeat; left:0}
 .details-slider-box .btnr { background:url("/avnaled/img/pro3_btnr.png") no-repeat; right:0px}
-.details-slider-box li{height:450px}
-.details-slider-box li img { width:500px; height:450px}
+.details-slider-box li{}
+.details-slider-box li img { width:500px}
 
-.pro_attr { width:517px;height:428px;  float:right; padding: 10px 29px 10px 30px; border-left: 1px solid #ccc}
+.pro_attr { width:517px;height:428px;  float:right; padding: 10px 29px 10px 30px}
 .pro_attr h3 { font-size: 24px; height:30px; line-height:30px; color:#137F39; font-weight:bold; padding: 10px 0px}
 .pro_attr_p { font-size:14px; line-height:24px; margin-bottom: 2px; height:290px; overflow:hidden}
 .pro_attr_p dl {float:left;padding:8px 0;border-bottom:1px #eee solid}
@@ -460,7 +460,7 @@ a:hover { text-decoration: underline;}
 .pro_commend ul { padding-top:20px; overflow:hidden; *zoom:1; height:280px; margin-bottom:10px}
 .pro_commend ul li { width:255px; float:left; display:inline; margin-left: 20px;padding-bottom: 10px}
 .pro_commend ul li:first-child, .pro_commend ul li:nth-child(5n) { margin-left: 0}
-.pro_commend ul li img { width:255px; height:235px; transition:all 0.3s}
+.pro_commend ul li img { width:270px; transition:all 0.3s}
 .pro_commend ul li:hover img { opacity:0.7}
 .pro_commend ul li span { display:block; line-height:30px; height:30px; font-size:14px; text-align:center; overflow:hidden}
 

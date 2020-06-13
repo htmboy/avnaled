@@ -48,8 +48,8 @@ class ArticlesController extends AdminController
         $grid->column('domain_id', __('domain_id'))->editable('select', DomainConfig::getDomainMap());
         $grid->column('map_id', __('map_id'))->editable('select', Article::getCategoryMap());
         $grid->column('title', __('title'));
-        $grid->column('thumbnail', 'thumbnail')->image('/storage', 90);
-        $grid->column('thumbnail_vertical', 'thumbnail_vertical')->image('/storage', 50);
+        $grid->column('thumbnail', 'thumbnail')->image('/storage', 160);
+        $grid->column('thumbnail_vertical', 'thumbnail_vertical')->image('/storage', 90);
         $grid->column('author', __('author'));
         $grid->column('updated_at', __('updated_at'));
         $states = [
@@ -109,8 +109,8 @@ class ArticlesController extends AdminController
         $form->text('seo_keywords', __('seo_keywords'))->rules('required|max:40');
         $form->text('seo_description', __('seo_description'))->rules('required|max:80');
         $form->text('title', __('title'))->rules('required|max:80');
-        $form->image('thumbnail', '图片比例 3:2(横)')->uniqueName()
-            ->rules('required|max:100')->resize(450, 300);
+        $form->image('thumbnail', '图片比例 4:3(横)')->uniqueName()
+            ->rules('required|max:100')->resize(400, 300);
         $form->image('thumbnail_vertical', '图片比例 3:4(竖)')->uniqueName()
             ->rules('required|max:100')->resize(300, 400);
         $form->text('author', __('author'))->default('澳镭照明-新闻部');

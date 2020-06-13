@@ -3,15 +3,12 @@
 namespace App\Http\Controllers\Pok;
 
 use App\Common\DomainConfig;
-use App\Models\Article;
 use App\Models\Config;
-use App\Models\Product;
 use App\Models\ProductCategory;
-use App\Models\ThemePoster;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
